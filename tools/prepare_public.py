@@ -12,8 +12,9 @@ import shutil
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-TOP = ['README.md', 'LICENSE_NOTICE.md', '.gitignore', '.github/workflows/pages.yml',
-       'docs/PUBLIC_PROTOCOL.md', 'docs/CURRENT_AUDIT_STATUS.md']
+TOP = ['README.md', 'requirements-qc.txt', 'LICENSE_NOTICE.md', '.gitignore', '.github/workflows/pages.yml',
+       'docs/PUBLIC_PROTOCOL.md', 'docs/CURRENT_AUDIT_STATUS.md',
+       'docs/EVALUATION_PROTOCOL.md', 'docs/PHASE2_WEBSITE.md']
 REGISTRIES = ['search_level_task_crosswalk_198.csv', 'download_packages_47.csv',
     'source_family_crosswalk_123.csv', 'task_baselines_and_admission_198.csv',
     'RNAGym_NABench_DMS_ID_91.csv', 'miRBench_splits_3.csv']
@@ -39,7 +40,7 @@ def selected_files(root):
     selected += ['data/registries/' + f for f in REGISTRIES]
     selected += ['data/assets/download_assets.csv']
     selected += ['data/audit/' + f for f in AUDIT]
-    for folder, suffix in [('tools', '.py'), ('tests', '.py'), ('configs', '.json')]:
+    for folder, suffix in [('tools', '.py'), ('tests', '.py'), ('configs', '.json'), ('configs', '.yaml')]:
         selected += [str(p.relative_to(root)) for p in sorted((root / folder).glob('*' + suffix))]
     selected += [str(p.relative_to(root)) for p in sorted((root / 'data/task_bundles').glob('*.json'))]
     selected += [str(p.relative_to(root)) for p in sorted((root / 'site').rglob('*'))

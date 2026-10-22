@@ -1,0 +1,15 @@
+{
+  "schema_version": "1.0",
+  "canonicalization": "none; exact raw string identities; do not replace T/U",
+  "packages": {
+    "MRNA_GO_MF": {"sequence": "sequence", "tracks": ["cds", "splice"], "targets": {"target": "binary_vector"}, "readout": "GO molecular function annotation", "assay_kind": "annotation_proxy"},
+    "MRNA_MIRNA_TARGET": {"sequence": "sequence", "tracks": ["cds", "splice"], "target_prefix": "target_", "target_kind": "binary", "readout": "miRNA-specific target heads; keep each head separate"},
+    "MRNA_MRL_HL_LBKWK": {"sequence": "sequence", "tracks": ["cds", "splice"], "targets": {"target_ribosome_load": "continuous", "target_in_cell_half_life": "continuous"}, "readout": "MRL and half-life are separate readouts; never merge"},
+    "MRNA_MRL_SUGIMOTO": {"sequence": "sequence", "tracks": ["cds", "splice"], "targets": {"target": "continuous"}, "readout": "MRL"},
+    "MRNA_PROTEIN_LOCALIZATION": {"sequence": "sequence", "tracks": ["cds", "splice"], "targets": {"target": "binary_vector"}, "readout": "protein localization annotation", "assay_kind": "annotation_proxy"},
+    "MRNA_RNAHL_SALUKI_HUMAN": {"sequence": "sequence", "tracks": ["cds", "splice"], "targets": {"target": "continuous"}, "readout": "RNA half-life; units/transformation unresolved", "species_claim": "Homo sapiens"},
+    "MRNA_RNAHL_SALUKI_MOUSE": {"sequence": "sequence", "tracks": ["cds", "splice"], "targets": {"target": "continuous"}, "readout": "RNA half-life; units/transformation unresolved", "species_claim": "Mus musculus"},
+    "MRNA_UTR_VARIANTS_BOHN": {"sequence": "sequence", "tracks": ["cds", "splice"], "targets": {"target": "categorical_unverified"}, "readout": "UTR variant annotation; label meaning pending", "assay_kind": "variant_proxy"},
+    "MRNA_VEP_TRAITGYM_MRNA": {"sequence": "sequence", "tracks": ["cds", "splice"], "targets": {"target": "categorical_unverified"}, "readout": "variant effect annotation; label meaning pending", "assay_kind": "variant_proxy"}
+  }
+}

@@ -1,4 +1,51 @@
-# Audit status — 2026-10-22
+# Current scientific audit — 2026-10-23
+
+## Verified scope, not scientific admission
+
+The approved Phase 2 public aggregate snapshot covers 198 registered task rows,
+47 packages and 152 **candidate/source records**, not 152 independent assays.
+There are 31 source-verified rows (21 ENCODE experiment links, 9 mRNA
+paper/resource associations, 1 miRBench parent-study link), 189 held tasks,
+9 excluded rows, **0 admission candidates and 0 admitted tasks**.
+
+The prior full technical audit covers 45 acquired artifacts and 6,573,002,784
+bytes. Full file SHA evidence was reused. This round did not indiscriminately
+download more measurements, change raw labels, rebuild splits or run models.
+
+## Scientific corrections and remaining blockers
+
+- Author mRNABench default/homology split protocols were located for all 11
+  acquired files; fixed row assignments and group leakage remain unverified.
+- Saluki labels are dimensionless half-life PC1, not hours. Leppek ribosome
+  loading and in-cell half-life are separate readouts.
+- The miRNA-target HF license declaration conflicts with an explicit author-code
+  non-redistribution warning. It is **HOLD_LICENSE_CONFLICT**, not approved data.
+- All 7 miRBench versions have provisional compound identities; 954 mirror
+  rows are data representations, not an extra experiment. Cross-dataset input
+  sharing and discordant labels were retained, not silently merged.
+- RMDB shared sequences correspond to different recorded observations; chemical
+  probe and vector masks were compared. Assay/replicate identity remains unknown.
+- RNA3DB's 2026 official split has 401 shared PDB entries. Three convenient
+  archive-prefix coordinate samples are not representative stereochemical QC.
+- Five pickles remain non-executing. Competition solutions and upstream model
+  predictions/result tables are not admitted experimental labels or our scores.
+
+## Platform and publication boundaries
+
+Ten CPU synthetic baseline smokes and 179 local regression/browser tests passed.
+Real tasks remain disabled without the existing human-reviewed admission gate.
+Six FM tracks, RNA-LLM and Agent interfaces are separate. Model loadability is
+not established; Carbon-X identity/tokenizer/length/prompt remain blocked.
+
+Only code, public source indices and an explicitly approved aggregate snapshot
+are published. Local scientific reports, compound sample identities, source
+measurements, raw archives and reviewer records are not in this repository.
+The old homepage snapshot below remains historical and must not be interpreted
+as current progress. Visit [the Phase 2 Atlas](../site/phase2.html).
+
+---
+
+## Historical audit status — 2026-10-22
 
 ## Completed and bounded
 

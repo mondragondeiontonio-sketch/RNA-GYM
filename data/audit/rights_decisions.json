@@ -89,12 +89,10 @@
     "human_reviewer": null
   },
   "HF_65af1afc977fef855c33": {
-    "decision": "ALLOW_PUBLIC_QUARANTINE_POC",
-    "license": "cc-by-4.0 data-collection card claim",
-    "evidence_url": "https://huggingface.co/datasets/morrislab/mirna-target/blob/9fd768e7073d0c8a4f503009c8eb7fda7c12aaa1/README.md",
-    "evidence_sha256": "ea48127cdd143ff2edfa6da56c59388a7656868df14157c5e76e813f6fe719b8",
-    "evidence_transport": "USER_AUTHORIZED_HF_MIRROR_METADATA",
-    "scope": "Only local quarantine acquisition. Original assay rights, label semantics, identity and human admission unresolved.",
+    "decision": "HOLD_LICENSE",
+    "license": "CONFLICT: HF CC-BY-4.0 vs author explicit non-redistribution statement",
+    "evidence_url": "https://github.com/morrislab/mRNABench",
+    "scope": "No further download or redistribution until rights-holder clarification; prior quarantined raw is retained read-only. This is not experimental admission.",
     "human_reviewer": null
   },
   "HF_34f6495ae6d93242ca39": {
@@ -176,6 +174,219 @@
     "evidence_sha256": "ea48127cdd143ff2edfa6da56c59388a7656868df14157c5e76e813f6fe719b8",
     "evidence_transport": "USER_AUTHORIZED_HF_MIRROR_METADATA",
     "scope": "Only local quarantine acquisition. Original assay rights, label semantics, identity and human admission unresolved.",
+    "human_reviewer": null
+  },
+  "A0002": {
+    "decision": "ALLOW_PUBLIC_QUARANTINE_POC",
+    "license": "CC-BY-4.0 data-collection card claim",
+    "evidence_url": "https://huggingface.co/datasets/Marks-lab/RNAgym/blob/bc6ccf4c5bf445ca25991f2a74448ae7e153b9f6/README.md",
+    "evidence_sha256": "4df9018d8debf03ef5acc7e38a0bc57792315086e736e51d96bfc74cf8d580d0",
+    "evidence_transport": "USER_AUTHORIZED_MIRROR_METADATA",
+    "scope": "User-authorized local acquisition and QC only; original assay rights and human admission remain unresolved. No redistribution of raw measurements.",
+    "human_reviewer": null
+  },
+  "A0003": {
+    "decision": "ALLOW_PUBLIC_QUARANTINE_POC",
+    "license": "CC-BY-4.0 data-collection card claim",
+    "evidence_url": "https://huggingface.co/datasets/Marks-lab/RNAgym/blob/bc6ccf4c5bf445ca25991f2a74448ae7e153b9f6/README.md",
+    "evidence_sha256": "4df9018d8debf03ef5acc7e38a0bc57792315086e736e51d96bfc74cf8d580d0",
+    "evidence_transport": "USER_AUTHORIZED_MIRROR_METADATA",
+    "scope": "User-authorized local acquisition and QC only; original assay rights and human admission remain unresolved. No redistribution of raw measurements.",
+    "human_reviewer": null
+  },
+  "A0004": {
+    "decision": "ALLOW_PUBLIC_QUARANTINE_POC",
+    "license": "CC-BY-4.0 data-collection card claim",
+    "evidence_url": "https://huggingface.co/datasets/Marks-lab/RNAgym/blob/bc6ccf4c5bf445ca25991f2a74448ae7e153b9f6/README.md",
+    "evidence_sha256": "4df9018d8debf03ef5acc7e38a0bc57792315086e736e51d96bfc74cf8d580d0",
+    "evidence_transport": "USER_AUTHORIZED_MIRROR_METADATA",
+    "scope": "User-authorized local acquisition and QC only; original assay rights and human admission remain unresolved. No redistribution of raw measurements.",
+    "human_reviewer": null
+  },
+  "A0005": {
+    "decision": "ALLOW_PUBLIC_QUARANTINE_POC",
+    "license": "CC-BY-4.0 data-collection card claim",
+    "evidence_url": "https://huggingface.co/datasets/Marks-lab/RNAgym/blob/bc6ccf4c5bf445ca25991f2a74448ae7e153b9f6/README.md",
+    "evidence_sha256": "4df9018d8debf03ef5acc7e38a0bc57792315086e736e51d96bfc74cf8d580d0",
+    "evidence_transport": "USER_AUTHORIZED_MIRROR_METADATA",
+    "scope": "User-authorized local acquisition and QC only; original assay rights and human admission remain unresolved. No redistribution of raw measurements.",
+    "human_reviewer": null
+  },
+  "A0006": {
+    "decision": "ALLOW_PUBLIC_QUARANTINE_POC",
+    "license": "CC-BY-4.0 data-collection card claim",
+    "evidence_url": "https://huggingface.co/datasets/Marks-lab/RNAgym/blob/bc6ccf4c5bf445ca25991f2a74448ae7e153b9f6/README.md",
+    "evidence_sha256": "4df9018d8debf03ef5acc7e38a0bc57792315086e736e51d96bfc74cf8d580d0",
+    "evidence_transport": "USER_AUTHORIZED_MIRROR_METADATA",
+    "scope": "User-authorized local acquisition and QC only; original assay rights and human admission remain unresolved. No redistribution of raw measurements.",
+    "human_reviewer": null
+  },
+  "A0007": {
+    "decision": "ALLOW_PUBLIC_QUARANTINE_POC",
+    "license": "CC-BY-4.0 data-collection card claim",
+    "evidence_url": "https://huggingface.co/datasets/Marks-lab/RNAgym/blob/bc6ccf4c5bf445ca25991f2a74448ae7e153b9f6/README.md",
+    "evidence_sha256": "4df9018d8debf03ef5acc7e38a0bc57792315086e736e51d96bfc74cf8d580d0",
+    "evidence_transport": "USER_AUTHORIZED_MIRROR_METADATA",
+    "scope": "User-authorized local acquisition and QC only; original assay rights and human admission remain unresolved. No redistribution of raw measurements.",
+    "human_reviewer": null
+  },
+  "A0008": {
+    "decision": "ALLOW_PUBLIC_QUARANTINE_POC",
+    "license": "CC-BY-4.0 data-collection card claim",
+    "evidence_url": "https://huggingface.co/datasets/Marks-lab/RNAgym/blob/bc6ccf4c5bf445ca25991f2a74448ae7e153b9f6/README.md",
+    "evidence_sha256": "4df9018d8debf03ef5acc7e38a0bc57792315086e736e51d96bfc74cf8d580d0",
+    "evidence_transport": "USER_AUTHORIZED_MIRROR_METADATA",
+    "scope": "User-authorized local acquisition and QC only; original assay rights and human admission remain unresolved. No redistribution of raw measurements.",
+    "human_reviewer": null
+  },
+  "A0012": {
+    "decision": "ALLOW_PUBLIC_QUARANTINE_POC",
+    "license": "CC-BY-4.0 data-collection card claim",
+    "evidence_url": "https://huggingface.co/datasets/Marks-lab/RNAgym/blob/bc6ccf4c5bf445ca25991f2a74448ae7e153b9f6/README.md",
+    "evidence_sha256": "4df9018d8debf03ef5acc7e38a0bc57792315086e736e51d96bfc74cf8d580d0",
+    "evidence_transport": "USER_AUTHORIZED_MIRROR_METADATA",
+    "scope": "User-authorized local acquisition and QC only; original assay rights and human admission remain unresolved. No redistribution of raw measurements.",
+    "human_reviewer": null
+  },
+  "HF_287b2797cface258321d": {
+    "decision": "ALLOW_PUBLIC_QUARANTINE_POC",
+    "license": "CC-BY-4.0 data-collection card claim",
+    "evidence_url": "https://huggingface.co/datasets/Marks-lab/RNAgym/blob/bc6ccf4c5bf445ca25991f2a74448ae7e153b9f6/README.md",
+    "evidence_sha256": "4df9018d8debf03ef5acc7e38a0bc57792315086e736e51d96bfc74cf8d580d0",
+    "evidence_transport": "USER_AUTHORIZED_MIRROR_METADATA",
+    "scope": "User-authorized local acquisition and QC only; original assay rights and human admission remain unresolved. No redistribution of raw measurements.",
+    "human_reviewer": null
+  },
+  "HF_51b53dab485ecb3d7409": {
+    "decision": "ALLOW_PUBLIC_QUARANTINE_POC",
+    "license": "CC-BY-4.0 data-collection card claim",
+    "evidence_url": "https://huggingface.co/datasets/Marks-lab/RNAgym/blob/bc6ccf4c5bf445ca25991f2a74448ae7e153b9f6/README.md",
+    "evidence_sha256": "4df9018d8debf03ef5acc7e38a0bc57792315086e736e51d96bfc74cf8d580d0",
+    "evidence_transport": "USER_AUTHORIZED_MIRROR_METADATA",
+    "scope": "User-authorized local acquisition and QC only; original assay rights and human admission remain unresolved. No redistribution of raw measurements.",
+    "human_reviewer": null
+  },
+  "HF_e567b1f79ef75075abec": {
+    "decision": "ALLOW_PUBLIC_QUARANTINE_POC",
+    "license": "CC-BY-4.0 data-collection card claim",
+    "evidence_url": "https://huggingface.co/datasets/Marks-lab/RNAgym/blob/bc6ccf4c5bf445ca25991f2a74448ae7e153b9f6/README.md",
+    "evidence_sha256": "4df9018d8debf03ef5acc7e38a0bc57792315086e736e51d96bfc74cf8d580d0",
+    "evidence_transport": "USER_AUTHORIZED_MIRROR_METADATA",
+    "scope": "User-authorized local acquisition and QC only; original assay rights and human admission remain unresolved. No redistribution of raw measurements.",
+    "human_reviewer": null
+  },
+  "HF_077f265b2add15269941": {
+    "decision": "ALLOW_PUBLIC_QUARANTINE_POC",
+    "license": "CC-BY-4.0 data-collection card claim",
+    "evidence_url": "https://huggingface.co/datasets/Marks-lab/RNAgym/blob/bc6ccf4c5bf445ca25991f2a74448ae7e153b9f6/README.md",
+    "evidence_sha256": "4df9018d8debf03ef5acc7e38a0bc57792315086e736e51d96bfc74cf8d580d0",
+    "evidence_transport": "USER_AUTHORIZED_MIRROR_METADATA",
+    "scope": "User-authorized local acquisition and QC only; original assay rights and human admission remain unresolved. No redistribution of raw measurements.",
+    "human_reviewer": null
+  },
+  "HF_f8dd28395a17e62ed861": {
+    "decision": "ALLOW_PUBLIC_QUARANTINE_POC",
+    "license": "CC-BY-4.0 data-collection card claim",
+    "evidence_url": "https://huggingface.co/datasets/Marks-lab/RNAgym/blob/bc6ccf4c5bf445ca25991f2a74448ae7e153b9f6/README.md",
+    "evidence_sha256": "4df9018d8debf03ef5acc7e38a0bc57792315086e736e51d96bfc74cf8d580d0",
+    "evidence_transport": "USER_AUTHORIZED_MIRROR_METADATA",
+    "scope": "User-authorized local acquisition and QC only; original assay rights and human admission remain unresolved. No redistribution of raw measurements.",
+    "human_reviewer": null
+  },
+  "WANG_ZERO_738bc3a1b453": {
+    "decision": "ALLOW_PUBLIC_QUARANTINE_POC",
+    "license": "CC-BY-4.0 data record",
+    "evidence_url": "https://zenodo.org/records/18218776",
+    "evidence_sha256": "159724bb60b8c072f04e1f7c6213ec5f04abac14a90e98cfe529a4b1a58d693f",
+    "scope": "User-authorized local acquisition and QC only; no raw redistribution and no fabricated human assay approval.",
+    "human_reviewer": null
+  },
+  "EUKA_DS_76bc8e21672d": {
+    "decision": "ALLOW_PUBLIC_QUARANTINE_POC",
+    "license": "CC-BY-4.0 data record",
+    "evidence_url": "https://zenodo.org/records/21790090",
+    "evidence_sha256": "049517c1b7cc50fc78a7b9203a1972ca0c52f46f0caa9ad5a3ca794f604dbca9",
+    "scope": "User-authorized local acquisition and QC only; no raw redistribution and no fabricated human assay approval.",
+    "human_reviewer": null
+  },
+  "EUKA_DS_3369d8645b6f": {
+    "decision": "ALLOW_PUBLIC_QUARANTINE_POC",
+    "license": "CC-BY-4.0 data record",
+    "evidence_url": "https://zenodo.org/records/21790090",
+    "evidence_sha256": "049517c1b7cc50fc78a7b9203a1972ca0c52f46f0caa9ad5a3ca794f604dbca9",
+    "scope": "User-authorized local acquisition and QC only; no raw redistribution and no fabricated human assay approval.",
+    "human_reviewer": null
+  },
+  "EUKA_DS_1f3569ef982b": {
+    "decision": "ALLOW_PUBLIC_QUARANTINE_POC",
+    "license": "CC-BY-4.0 data record",
+    "evidence_url": "https://zenodo.org/records/21790090",
+    "evidence_sha256": "049517c1b7cc50fc78a7b9203a1972ca0c52f46f0caa9ad5a3ca794f604dbca9",
+    "scope": "User-authorized local acquisition and QC only; no raw redistribution and no fabricated human assay approval.",
+    "human_reviewer": null
+  },
+  "EUKA_DS_de91cc8d69ad": {
+    "decision": "ALLOW_PUBLIC_QUARANTINE_POC",
+    "license": "CC-BY-4.0 data record",
+    "evidence_url": "https://zenodo.org/records/21790090",
+    "evidence_sha256": "049517c1b7cc50fc78a7b9203a1972ca0c52f46f0caa9ad5a3ca794f604dbca9",
+    "scope": "User-authorized local acquisition and QC only; no raw redistribution and no fabricated human assay approval.",
+    "human_reviewer": null
+  },
+  "EUKA_DS_4ad49d0825bd": {
+    "decision": "ALLOW_PUBLIC_QUARANTINE_POC",
+    "license": "CC-BY-4.0 data record",
+    "evidence_url": "https://zenodo.org/records/21790090",
+    "evidence_sha256": "049517c1b7cc50fc78a7b9203a1972ca0c52f46f0caa9ad5a3ca794f604dbca9",
+    "scope": "User-authorized local acquisition and QC only; no raw redistribution and no fabricated human assay approval.",
+    "human_reviewer": null
+  },
+  "EUKA_DS_4fa6b4edab94": {
+    "decision": "ALLOW_PUBLIC_QUARANTINE_POC",
+    "license": "CC-BY-4.0 data record",
+    "evidence_url": "https://zenodo.org/records/21790090",
+    "evidence_sha256": "049517c1b7cc50fc78a7b9203a1972ca0c52f46f0caa9ad5a3ca794f604dbca9",
+    "scope": "User-authorized local acquisition and QC only; no raw redistribution and no fabricated human assay approval.",
+    "human_reviewer": null
+  },
+  "EUKA_DS_b528cb53f982": {
+    "decision": "ALLOW_PUBLIC_QUARANTINE_POC",
+    "license": "CC-BY-4.0 data record",
+    "evidence_url": "https://zenodo.org/records/21790090",
+    "evidence_sha256": "049517c1b7cc50fc78a7b9203a1972ca0c52f46f0caa9ad5a3ca794f604dbca9",
+    "scope": "User-authorized local acquisition and QC only; no raw redistribution and no fabricated human assay approval.",
+    "human_reviewer": null
+  },
+  "RNA3DB_20260105_rna3db_cmscans": {
+    "decision": "ALLOW_PUBLIC_QUARANTINE_POC",
+    "license": "CC0 original PDB coordinates; PDB-derived RNA3DB indices under MIT project; assay-level review pending",
+    "evidence_url": "https://www.rcsb.org/pages/usage-policy",
+    "evidence_sha256": "c6aa36181f58113d4fe98418c3c21062f5a9d8573d173575f3dd12ba4e7dec23",
+    "scope": "User-authorized local acquisition and QC only; no raw redistribution and no fabricated human assay approval.",
+    "human_reviewer": null
+  },
+  "RNA3DB_20260105_rna3db_jsons": {
+    "decision": "ALLOW_PUBLIC_QUARANTINE_POC",
+    "license": "CC0 original PDB coordinates; PDB-derived RNA3DB indices under MIT project; assay-level review pending",
+    "evidence_url": "https://www.rcsb.org/pages/usage-policy",
+    "evidence_sha256": "c6aa36181f58113d4fe98418c3c21062f5a9d8573d173575f3dd12ba4e7dec23",
+    "scope": "User-authorized local acquisition and QC only; no raw redistribution and no fabricated human assay approval.",
+    "human_reviewer": null
+  },
+  "RNA3DB_20260105_rna3db_mmcifs": {
+    "decision": "ALLOW_PUBLIC_QUARANTINE_POC",
+    "license": "CC0 original PDB coordinates; PDB-derived RNA3DB indices under MIT project; assay-level review pending",
+    "evidence_url": "https://www.rcsb.org/pages/usage-policy",
+    "evidence_sha256": "c6aa36181f58113d4fe98418c3c21062f5a9d8573d173575f3dd12ba4e7dec23",
+    "scope": "User-authorized local acquisition and QC only; no raw redistribution and no fabricated human assay approval.",
+    "human_reviewer": null
+  },
+  "RNA3DB_20251001_rna3db_jsons": {
+    "decision": "ALLOW_PUBLIC_QUARANTINE_POC",
+    "license": "CC0 original PDB coordinates; PDB-derived RNA3DB indices under MIT project; assay-level review pending",
+    "evidence_url": "https://www.rcsb.org/pages/usage-policy",
+    "evidence_sha256": "c6aa36181f58113d4fe98418c3c21062f5a9d8573d173575f3dd12ba4e7dec23",
+    "scope": "User-authorized local acquisition and QC only; no raw redistribution and no fabricated human assay approval.",
     "human_reviewer": null
   }
 }

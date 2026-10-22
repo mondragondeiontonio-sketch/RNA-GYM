@@ -13,6 +13,8 @@ import csv
 import datetime as dt
 import fcntl
 import hashlib
+import http.client
+import socket
 import json
 import os
 import re
@@ -33,11 +35,12 @@ ALLOWED_HOSTS = {'marks.hms.harvard.edu', 'raw.githubusercontent.com',
                  'huggingface.co', 'hf-mirror.com', 'zenodo.org', 'github.com', 'api.github.com'}
 STAGES = ('QUEUED', 'FETCHING', 'DOWNLOADED', 'HASHED', 'PARSED', 'QC_PASS',
           'DEDUP_PASS', 'REVIEW_READY', 'ADMITTED')
-SIGNED_CDN_HOSTS = {'cas-bridge.xethub.hf.co'}
+SIGNED_CDN_HOSTS = {'cas-bridge.xethub.hf.co', 'release-assets.githubusercontent.com'}
 SIGNED_QUERY_KEYS = {'Expires', 'Policy', 'Signature', 'Key-Pair-Id', 'X-Xet-Cas-Uid',
     'response-content-type', 'response-content-disposition', 'xip',
     'X-Amz-Algorithm', 'X-Amz-Credential', 'X-Amz-Date', 'X-Amz-Expires',
-    'X-Amz-SignedHeaders', 'X-Amz-Signature'}
+    'X-Amz-SignedHeaders', 'X-Amz-Signature',
+    'sp','sv','sr','spr','se','rscd','rsct','skoid','sktid','skt','ske','sks','skv','sig','jwt'}
 MAX_DEFAULT = 16 * 1024 * 1024
 RESERVE_BYTES = 64 * 1024 * 1024
 
@@ -205,11 +208,40 @@ class SafeRedirect(urllib.request.HTTPRedirectHandler):
         return super().redirect_request(req, fp, code, msg, headers, newurl)
 
 
+def ipv4_connection(address, timeout=socket._GLOBAL_DEFAULT_TIMEOUT, source_address=None, **kwargs):
+    # Same HTTPS hostname, route family only; no proxy, certificate bypass or credentials.
+    last_error = None
+    for family, kind, proto, _, target in socket.getaddrinfo(address[0], address[1], socket.AF_INET, socket.SOCK_STREAM):
+        sock = socket.socket(family, kind, proto)
+        try:
+            if timeout is not socket._GLOBAL_DEFAULT_TIMEOUT:
+                sock.settimeout(timeout)
+            if source_address:
+                sock.bind(source_address)
+            sock.connect(target)
+            return sock
+        except OSError as exc:
+            last_error = exc
+            sock.close()
+    raise last_error or OSError('no IPv4 route for approved HTTPS host')
+
+
+class IPv4HTTPSConnection(http.client.HTTPSConnection):
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        self._create_connection = ipv4_connection
+
+
+class IPv4HTTPSHandler(urllib.request.HTTPSHandler):
+    def https_open(self, req):
+        return self.do_open(IPv4HTTPSConnection, req, context=self._context, check_hostname=self._check_hostname)
+
+
 def open_https(url, *, headers=None, method=None, timeout=25):
     validate_url(url)
     h = {'User-Agent': 'RNA-Gym-audit/0.2', 'Accept-Encoding': 'identity'}
     h.update(headers or {})
-    return urllib.request.build_opener(SafeRedirect()).open(
+    return urllib.request.build_opener(IPv4HTTPSHandler(), SafeRedirect()).open(
         urllib.request.Request(url, headers=h, method=method), timeout=timeout)
 
 
@@ -478,6 +510,10 @@ def verify(row, out, *, db=None):
             if old == 'DOWNLOADED':
                 db.transition(key, 'HASHED', digest=actual,
                               evidence=[str(target.parent / 'provenance.json'), str(sums)])
+            elif old.startswith(('HOLD_', 'EXCLUDED_')) and db.job(key)['artifact_sha256'] == actual:
+                # Byte verification is independent of scientific/rights holds.
+                # Preserve the hold; never regress to HASHED or imply admission.
+                db.transition(key, old, digest=actual, detail={'event':'BYTES_REVERIFIED_UNDER_EXISTING_DISPOSITION'})
             elif old not in STAGES or STAGES.index(old) < STAGES.index('HASHED'):
                 raise ValueError('SQLite state must be reconciled before verify')
     elif db:

@@ -1,0 +1,611 @@
+{
+  "schema_version": "rnagym.baselines.v1",
+  "status": "PROVISIONAL",
+  "status_scope": "VERIFIED executable synthetic controls; real task registration BLOCKED pending admission",
+  "format": "JSON-compatible YAML 1.2; stdlib json-readable",
+  "real_task_defaults": {
+    "enabled": false,
+    "required_admission_states": [
+      "ADMITTED",
+      "ADMITTED_CORE",
+      "ADMITTED_EXTENDED"
+    ],
+    "human_approval_required": true,
+    "admission_candidate_is_insufficient": true,
+    "task_config_enabled_without_bound_gate_is_insufficient": true,
+    "task_config_required_fields": [
+      "task_id",
+      "baseline_id",
+      "problem_type",
+      "input_mode",
+      "alphabet",
+      "label_definition",
+      "label_unit",
+      "split_source",
+      "canonical_assay_id",
+      "admission_evidence"
+    ],
+    "approved_evaluation_binding_required": [
+      "task_id",
+      "input_sha256",
+      "split_sha256",
+      "label_definition",
+      "label_unit",
+      "problem_type",
+      "input_mode",
+      "split_source"
+    ]
+  },
+  "real_task_configs": [],
+  "identity": {
+    "algorithm": "exact-role-ordered-json-sha256-v1",
+    "sequence_transform": "NONE",
+    "pair_observation_fields": [
+      "mirna_id",
+      "mirna_sequence",
+      "target_id",
+      "target_sequence",
+      "assay_id",
+      "condition_id"
+    ],
+    "cross_assay_pair_key_fields": [
+      "mirna_sequence",
+      "target_sequence"
+    ],
+    "cross_split_exact_input": "REJECT",
+    "cross_split_preregistered_group": "REJECT",
+    "cross_assay_label_merge": "FORBIDDEN",
+    "same_split_repeated_condition_observation": "PRESERVE"
+  },
+  "readouts_never_merged": [
+    "MRL",
+    "TE",
+    "RSS",
+    "half_life",
+    "splicing",
+    "eCLIP"
+  ],
+  "baseline_families": {
+    "regression": [
+      "mean_null",
+      "median_null",
+      "sequence_stats_ridge",
+      "xgboost_regressor"
+    ],
+    "mutation_effect_scalar_regression": [
+      "mean_null",
+      "median_null",
+      "sequence_stats_ridge",
+      "xgboost_regressor"
+    ],
+    "classification_binding": [
+      "majority_null",
+      "prevalence_null",
+      "sequence_kmer_logistic",
+      "xgboost_classifier"
+    ],
+    "rna_pair": [
+      "pair_seed_match",
+      "pair_mirna_only",
+      "pair_target_only",
+      "pair_stats_logistic",
+      "rnacofold"
+    ],
+    "nucleotide_regression": [
+      "position_assay_null",
+      "rnaplfold_ridge",
+      "scratch_1d_cnn"
+    ],
+    "rna_2d": [
+      "rnafold",
+      "rnastructure",
+      "scratch_2d"
+    ],
+    "rna_3d": [
+      "geometric_3d",
+      "structure_predictor_3d"
+    ]
+  },
+  "baselines": [
+    {
+      "baseline_id": "mean_null",
+      "implementation_status": "VERIFIED",
+      "verification_scope": "SYNTHETIC_CPU_PROTOCOL_ONLY",
+      "entrypoint": "tools.evaluation_protocol:run",
+      "problem_type": "regression",
+      "input_mode": "sequence",
+      "features": "constant_train_mean",
+      "optimization_objective": "MSE",
+      "evaluation_metrics": [
+        "mse",
+        "mae",
+        "r2",
+        "pearson",
+        "spearman"
+      ],
+      "prediction_schema": {
+        "observation_id": "string",
+        "split": "validation|test",
+        "input_sha256": "sha256_exact_raw_role_ordered_strings",
+        "prediction": "finite_float_or_binary_probability"
+      },
+      "fit_split": "train_only",
+      "hpo": "NONE",
+      "threshold": null,
+      "dependencies": [],
+      "resources": {
+        "device": "CPU",
+        "threads_recommended": 1,
+        "max_rows": 10000,
+        "max_sequence_length": 10000
+      },
+      "evidence": [
+        "tests/test_evaluation_protocol.py",
+        "tools/evaluation_protocol.py"
+      ],
+      "real_task_enabled": false
+    },
+    {
+      "baseline_id": "median_null",
+      "implementation_status": "VERIFIED",
+      "verification_scope": "SYNTHETIC_CPU_PROTOCOL_ONLY",
+      "entrypoint": "tools.evaluation_protocol:run",
+      "problem_type": "regression",
+      "input_mode": "sequence",
+      "features": "constant_train_median",
+      "optimization_objective": "MAE",
+      "evaluation_metrics": [
+        "mse",
+        "mae",
+        "r2",
+        "pearson",
+        "spearman"
+      ],
+      "prediction_schema": {
+        "observation_id": "string",
+        "split": "validation|test",
+        "input_sha256": "sha256_exact_raw_role_ordered_strings",
+        "prediction": "finite_float_or_binary_probability"
+      },
+      "fit_split": "train_only",
+      "hpo": "NONE",
+      "threshold": null,
+      "dependencies": [],
+      "resources": {
+        "device": "CPU",
+        "threads_recommended": 1,
+        "max_rows": 10000,
+        "max_sequence_length": 10000
+      },
+      "evidence": [
+        "tests/test_evaluation_protocol.py",
+        "tools/evaluation_protocol.py"
+      ],
+      "real_task_enabled": false
+    },
+    {
+      "baseline_id": "sequence_stats_ridge",
+      "implementation_status": "VERIFIED",
+      "verification_scope": "SYNTHETIC_CPU_PROTOCOL_ONLY",
+      "entrypoint": "tools.evaluation_protocol:run",
+      "problem_type": "regression",
+      "input_mode": "sequence",
+      "features": "length_composition_runs_train_scaled",
+      "optimization_objective": "MSE_plus_L2",
+      "evaluation_metrics": [
+        "mse",
+        "mae",
+        "r2",
+        "pearson",
+        "spearman"
+      ],
+      "prediction_schema": {
+        "observation_id": "string",
+        "split": "validation|test",
+        "input_sha256": "sha256_exact_raw_role_ordered_strings",
+        "prediction": "finite_float_or_binary_probability"
+      },
+      "fit_split": "train_only",
+      "hpo": "NONE",
+      "threshold": null,
+      "dependencies": [
+        "scikit-learn"
+      ],
+      "resources": {
+        "device": "CPU",
+        "threads_recommended": 1,
+        "max_rows": 10000,
+        "max_sequence_length": 10000
+      },
+      "evidence": [
+        "tests/test_evaluation_protocol.py",
+        "tools/evaluation_protocol.py"
+      ],
+      "real_task_enabled": false
+    },
+    {
+      "baseline_id": "prevalence_null",
+      "implementation_status": "VERIFIED",
+      "verification_scope": "SYNTHETIC_CPU_PROTOCOL_ONLY",
+      "entrypoint": "tools.evaluation_protocol:run",
+      "problem_type": "binary_classification",
+      "input_mode": "any_scalar_binary",
+      "features": "constant_train_prevalence",
+      "optimization_objective": "binary_log_loss",
+      "evaluation_metrics": [
+        "accuracy",
+        "f1",
+        "auroc",
+        "brier",
+        "log_loss"
+      ],
+      "prediction_schema": {
+        "observation_id": "string",
+        "split": "validation|test",
+        "input_sha256": "sha256_exact_raw_role_ordered_strings",
+        "prediction": "finite_float_or_binary_probability"
+      },
+      "fit_split": "train_only",
+      "hpo": "NONE",
+      "threshold": 0.5,
+      "dependencies": [],
+      "resources": {
+        "device": "CPU",
+        "threads_recommended": 1,
+        "max_rows": 10000,
+        "max_sequence_length": 10000
+      },
+      "evidence": [
+        "tests/test_evaluation_protocol.py",
+        "tools/evaluation_protocol.py"
+      ],
+      "real_task_enabled": false
+    },
+    {
+      "baseline_id": "majority_null",
+      "implementation_status": "VERIFIED",
+      "verification_scope": "SYNTHETIC_CPU_PROTOCOL_ONLY",
+      "entrypoint": "tools.evaluation_protocol:run",
+      "problem_type": "binary_classification",
+      "input_mode": "any_scalar_binary",
+      "features": "constant_train_majority_tie_positive",
+      "optimization_objective": "zero_one",
+      "evaluation_metrics": [
+        "accuracy",
+        "f1",
+        "auroc",
+        "brier",
+        "log_loss"
+      ],
+      "prediction_schema": {
+        "observation_id": "string",
+        "split": "validation|test",
+        "input_sha256": "sha256_exact_raw_role_ordered_strings",
+        "prediction": "finite_float_or_binary_probability"
+      },
+      "fit_split": "train_only",
+      "hpo": "NONE",
+      "threshold": 0.5,
+      "dependencies": [],
+      "resources": {
+        "device": "CPU",
+        "threads_recommended": 1,
+        "max_rows": 10000,
+        "max_sequence_length": 10000
+      },
+      "evidence": [
+        "tests/test_evaluation_protocol.py",
+        "tools/evaluation_protocol.py"
+      ],
+      "real_task_enabled": false
+    },
+    {
+      "baseline_id": "sequence_kmer_logistic",
+      "implementation_status": "VERIFIED",
+      "verification_scope": "SYNTHETIC_CPU_PROTOCOL_ONLY",
+      "entrypoint": "tools.evaluation_protocol:run",
+      "problem_type": "binary_classification",
+      "input_mode": "sequence",
+      "features": "train_vocabulary_overlapping_kmer_frequency",
+      "optimization_objective": "binary_log_loss_plus_L2",
+      "evaluation_metrics": [
+        "accuracy",
+        "f1",
+        "auroc",
+        "brier",
+        "log_loss"
+      ],
+      "prediction_schema": {
+        "observation_id": "string",
+        "split": "validation|test",
+        "input_sha256": "sha256_exact_raw_role_ordered_strings",
+        "prediction": "finite_float_or_binary_probability"
+      },
+      "fit_split": "train_only",
+      "hpo": "NONE",
+      "threshold": 0.5,
+      "dependencies": [
+        "scikit-learn"
+      ],
+      "resources": {
+        "device": "CPU",
+        "threads_recommended": 1,
+        "max_rows": 10000,
+        "max_sequence_length": 10000
+      },
+      "evidence": [
+        "tests/test_evaluation_protocol.py",
+        "tools/evaluation_protocol.py"
+      ],
+      "real_task_enabled": false
+    },
+    {
+      "baseline_id": "pair_seed_match",
+      "implementation_status": "VERIFIED",
+      "verification_scope": "SYNTHETIC_CPU_PROTOCOL_ONLY",
+      "entrypoint": "tools.evaluation_protocol:run",
+      "problem_type": "binary_classification",
+      "input_mode": "rna_pair",
+      "features": "mirna_positions_2_8_reverse_complement_exact_no_wobble",
+      "optimization_objective": "no_fit_binary_seed_match",
+      "evaluation_metrics": [
+        "accuracy",
+        "f1",
+        "auroc",
+        "brier",
+        "log_loss"
+      ],
+      "prediction_schema": {
+        "observation_id": "string",
+        "split": "validation|test",
+        "input_sha256": "sha256_exact_raw_role_ordered_strings",
+        "prediction": "finite_float_or_binary_probability"
+      },
+      "fit_split": "train_only",
+      "hpo": "NONE",
+      "threshold": 0.5,
+      "dependencies": [],
+      "resources": {
+        "device": "CPU",
+        "threads_recommended": 1,
+        "max_rows": 10000,
+        "max_sequence_length": 10000
+      },
+      "evidence": [
+        "tests/test_evaluation_protocol.py",
+        "tools/evaluation_protocol.py"
+      ],
+      "real_task_enabled": false
+    },
+    {
+      "baseline_id": "pair_mirna_only",
+      "implementation_status": "VERIFIED",
+      "verification_scope": "SYNTHETIC_CPU_PROTOCOL_ONLY",
+      "entrypoint": "tools.evaluation_protocol:run",
+      "problem_type": "binary_classification",
+      "input_mode": "rna_pair",
+      "features": "mirna_only_train_kmer_logistic_shortcut_control",
+      "optimization_objective": "binary_log_loss_plus_L2",
+      "evaluation_metrics": [
+        "accuracy",
+        "f1",
+        "auroc",
+        "brier",
+        "log_loss"
+      ],
+      "prediction_schema": {
+        "observation_id": "string",
+        "split": "validation|test",
+        "input_sha256": "sha256_exact_raw_role_ordered_strings",
+        "prediction": "finite_float_or_binary_probability"
+      },
+      "fit_split": "train_only",
+      "hpo": "NONE",
+      "threshold": 0.5,
+      "dependencies": [
+        "scikit-learn"
+      ],
+      "resources": {
+        "device": "CPU",
+        "threads_recommended": 1,
+        "max_rows": 10000,
+        "max_sequence_length": 10000
+      },
+      "evidence": [
+        "tests/test_evaluation_protocol.py",
+        "tools/evaluation_protocol.py"
+      ],
+      "real_task_enabled": false
+    },
+    {
+      "baseline_id": "pair_target_only",
+      "implementation_status": "VERIFIED",
+      "verification_scope": "SYNTHETIC_CPU_PROTOCOL_ONLY",
+      "entrypoint": "tools.evaluation_protocol:run",
+      "problem_type": "binary_classification",
+      "input_mode": "rna_pair",
+      "features": "target_only_train_kmer_logistic_shortcut_control",
+      "optimization_objective": "binary_log_loss_plus_L2",
+      "evaluation_metrics": [
+        "accuracy",
+        "f1",
+        "auroc",
+        "brier",
+        "log_loss"
+      ],
+      "prediction_schema": {
+        "observation_id": "string",
+        "split": "validation|test",
+        "input_sha256": "sha256_exact_raw_role_ordered_strings",
+        "prediction": "finite_float_or_binary_probability"
+      },
+      "fit_split": "train_only",
+      "hpo": "NONE",
+      "threshold": 0.5,
+      "dependencies": [
+        "scikit-learn"
+      ],
+      "resources": {
+        "device": "CPU",
+        "threads_recommended": 1,
+        "max_rows": 10000,
+        "max_sequence_length": 10000
+      },
+      "evidence": [
+        "tests/test_evaluation_protocol.py",
+        "tools/evaluation_protocol.py"
+      ],
+      "real_task_enabled": false
+    },
+    {
+      "baseline_id": "pair_stats_logistic",
+      "implementation_status": "VERIFIED",
+      "verification_scope": "SYNTHETIC_CPU_PROTOCOL_ONLY",
+      "entrypoint": "tools.evaluation_protocol:run",
+      "problem_type": "binary_classification",
+      "input_mode": "rna_pair",
+      "features": "role_ordered_pair_stats_train_scaled",
+      "optimization_objective": "binary_log_loss_plus_L2",
+      "evaluation_metrics": [
+        "accuracy",
+        "f1",
+        "auroc",
+        "brier",
+        "log_loss"
+      ],
+      "prediction_schema": {
+        "observation_id": "string",
+        "split": "validation|test",
+        "input_sha256": "sha256_exact_raw_role_ordered_strings",
+        "prediction": "finite_float_or_binary_probability"
+      },
+      "fit_split": "train_only",
+      "hpo": "NONE",
+      "threshold": 0.5,
+      "dependencies": [
+        "scikit-learn"
+      ],
+      "resources": {
+        "device": "CPU",
+        "threads_recommended": 1,
+        "max_rows": 10000,
+        "max_sequence_length": 10000
+      },
+      "evidence": [
+        "tests/test_evaluation_protocol.py",
+        "tools/evaluation_protocol.py"
+      ],
+      "real_task_enabled": false
+    },
+    {
+      "baseline_id": "xgboost_regressor",
+      "implementation_status": "BLOCKED",
+      "reason": "NOT_IMPLEMENTED_OR_APPLICABILITY_NOT_REVIEWED",
+      "input_mode": "sequence",
+      "requirements": "installed XGBoost plus admitted scalar regression task",
+      "entrypoint": null,
+      "real_task_enabled": false
+    },
+    {
+      "baseline_id": "xgboost_classifier",
+      "implementation_status": "BLOCKED",
+      "reason": "NOT_IMPLEMENTED_OR_APPLICABILITY_NOT_REVIEWED",
+      "input_mode": "sequence",
+      "requirements": "installed XGBoost plus admitted binary task",
+      "entrypoint": null,
+      "real_task_enabled": false
+    },
+    {
+      "baseline_id": "rnacofold",
+      "implementation_status": "BLOCKED",
+      "reason": "NOT_IMPLEMENTED_OR_APPLICABILITY_NOT_REVIEWED",
+      "input_mode": "rna_pair",
+      "requirements": "ViennaRNA version, thermodynamic applicability and permitted inputs",
+      "entrypoint": null,
+      "real_task_enabled": false
+    },
+    {
+      "baseline_id": "position_assay_null",
+      "implementation_status": "BLOCKED",
+      "reason": "NOT_IMPLEMENTED_OR_APPLICABILITY_NOT_REVIEWED",
+      "input_mode": "nucleotide_regression",
+      "requirements": "mask, probe, condition and training-position support",
+      "entrypoint": null,
+      "real_task_enabled": false
+    },
+    {
+      "baseline_id": "rnaplfold_ridge",
+      "implementation_status": "BLOCKED",
+      "reason": "NOT_IMPLEMENTED_OR_APPLICABILITY_NOT_REVIEWED",
+      "input_mode": "nucleotide_regression",
+      "requirements": "ViennaRNA, train-only fit and per-position label alignment",
+      "entrypoint": null,
+      "real_task_enabled": false
+    },
+    {
+      "baseline_id": "scratch_1d_cnn",
+      "implementation_status": "BLOCKED",
+      "reason": "NOT_IMPLEMENTED_OR_APPLICABILITY_NOT_REVIEWED",
+      "input_mode": "nucleotide_regression",
+      "requirements": "explicit small-training authorization and task admission",
+      "entrypoint": null,
+      "real_task_enabled": false
+    },
+    {
+      "baseline_id": "rnafold",
+      "implementation_status": "BLOCKED",
+      "reason": "NOT_IMPLEMENTED_OR_APPLICABILITY_NOT_REVIEWED",
+      "input_mode": "rna_2d",
+      "requirements": "ViennaRNA, 2D edges/index/pseudoknot conventions",
+      "entrypoint": null,
+      "real_task_enabled": false
+    },
+    {
+      "baseline_id": "rnastructure",
+      "implementation_status": "BLOCKED",
+      "reason": "NOT_IMPLEMENTED_OR_APPLICABILITY_NOT_REVIEWED",
+      "input_mode": "rna_2d",
+      "requirements": "RNAstructure version and reviewed pairing evaluation",
+      "entrypoint": null,
+      "real_task_enabled": false
+    },
+    {
+      "baseline_id": "scratch_2d",
+      "implementation_status": "BLOCKED",
+      "reason": "NOT_IMPLEMENTED_OR_APPLICABILITY_NOT_REVIEWED",
+      "input_mode": "rna_2d",
+      "requirements": "explicit training authorization and admitted task",
+      "entrypoint": null,
+      "real_task_enabled": false
+    },
+    {
+      "baseline_id": "geometric_3d",
+      "implementation_status": "BLOCKED",
+      "reason": "NOT_IMPLEMENTED_OR_APPLICABILITY_NOT_REVIEWED",
+      "input_mode": "rna_3d",
+      "requirements": "assembly/chain/homology QC and defined coordinate prediction target",
+      "entrypoint": null,
+      "real_task_enabled": false
+    },
+    {
+      "baseline_id": "structure_predictor_3d",
+      "implementation_status": "BLOCKED",
+      "reason": "NOT_IMPLEMENTED_OR_APPLICABILITY_NOT_REVIEWED",
+      "input_mode": "rna_3d",
+      "requirements": "licensed pinned model, no benchmark template contamination",
+      "entrypoint": null,
+      "real_task_enabled": false
+    }
+  ],
+  "metric_aggregation": {
+    "cross_metric_raw_sum": "FORBIDDEN",
+    "family_weights": "PREREGISTRATION_REQUIRED",
+    "missing_tasks": "N/A_WITH_COVERAGE",
+    "ranking": "BLOCKED_PENDING_ADMISSION_RESULT_REVIEW_BOOTSTRAP_WEIGHT_SENSITIVITY"
+  },
+  "evidence": [
+    "tools/evaluation_protocol.py",
+    "tests/test_evaluation_protocol.py",
+    "docs/EVALUATION_PROTOCOL.md"
+  ]
+}
