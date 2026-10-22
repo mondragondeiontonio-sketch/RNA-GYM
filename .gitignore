@@ -1,0 +1,36 @@
+.venv/
+__pycache__/
+*.py[cod]
+.env
+.env.*
+*.token
+*.key
+*.pem
+runs/
+raw_cache/
+raw_data/
+private/
+private_data/
+models/
+checkpoints/
+*.pt
+*.pth
+*.safetensors
+*.fast5
+*.pod5
+.DS_Store
+# Authoritative local run state and content-addressed quarantine are never public.
+*.sqlite
+*.sqlite-*
+*.db
+*.db-*
+*.log
+.agents/
+.codex/
+# Starter audit narratives, conversation-style instructions and opaque workbooks.
+data/registries/*.xlsx
+docs/*
+!docs/PUBLIC_PROTOCOL.md
+!docs/CURRENT_AUDIT_STATUS.md
+
+*.sqlite.*

@@ -1,0 +1,36 @@
+{
+  "task_id": "T0120",
+  "package_group_id": "SECONDARY_LITERATURE",
+  "source_family_id": "SRC_HUMAN_MOUSE_RIBO_SEQ_TE_ATLAS",
+  "dataset": "Human/mouse Ribo-seq TE atlas",
+  "task": "完整 transcript 区域→翻译效率 TE",
+  "input_modality": "RNA sequence-only possible; verify context",
+  "status": "HOLD_SOURCE",
+  "hold_reason": "Original source bytes and assay evidence unresolved; upstream entry may be unavailable. Independent tasks continue.",
+  "next_action": "Resolve original assay DOI/accession and data-specific rights, select capped public file, then bytes/hash/schema/identity/split/QC and human review.",
+  "canonical_assay_id": null,
+  "reported_n": "3,819",
+  "count_unit": "ribosome-profiling experimental datasets across >140 cell types",
+  "reported_n_status": "REPORTED_UNVERIFIED",
+  "actual_task_n": null,
+  "source_entry_urls": [
+    "https://doi.org/10.1038/s41587-025-02712-x"
+  ],
+  "benchmark_paper_url_not_original_assay": "https://doi.org/10.1038/s41587-025-02712-x",
+  "assets": [],
+  "task_download_completed": false,
+  "admitted": false,
+  "baseline_plan": {
+    "公平输入轨道": "RNA_SEQUENCE_ONLY_OR_CONDITIONED_SEPARATE",
+    "原登记Metric": "相关、误差",
+    "主指标(建议)": "Spearman 主；MAE、Pearson 辅",
+    "推荐Loss": "Huber/MSE（训练折标签标准化）",
+    "最低信息Baseline": "训练均值；长度+GC Ridge",
+    "经典算法Baseline": "k-mer+Ridge/ElasticNet；RNAfold MFE/明确的生物 motif+XGBoost",
+    "随机初始化Baseline": "小型 CNN/ResNet 或 CNN-BiLSTM（随机初始化）",
+    "泄露检查重点": "同序列跨折、同构件/基因/细胞泄漏、proxy 与直接测量混合",
+    "baseline运行状态": "NOT_RUN"
+  },
+  "plan_command": "python tools/task_download.py plan --task T0120",
+  "download_policy": "Source-entry links are not file bytes. Explicit package-only opt-in required before file candidates can be acquired for audit."
+}

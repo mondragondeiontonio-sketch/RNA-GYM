@@ -1,0 +1,36 @@
+{
+  "task_id": "T0111",
+  "package_group_id": "SECONDARY_LITERATURE",
+  "source_family_id": "SRC_MERGE_RNA_CHEMICAL_PROBING_EXPERIM",
+  "dataset": "MERGE-RNA chemical probing experiments",
+  "task": "反应性→结构群体与占比",
+  "input_modality": "RNA sequence-only possible; verify context",
+  "status": "HOLD_SOURCE",
+  "hold_reason": "Original source bytes and assay evidence unresolved; upstream entry may be unavailable. Independent tasks continue.",
+  "next_action": "Resolve original assay DOI/accession and data-specific rights, select capped public file, then bytes/hash/schema/identity/split/QC and human review.",
+  "canonical_assay_id": null,
+  "reported_n": "未核实",
+  "count_unit": "RNA × condition × replicate; 论文总体：Per-RNA, concentration and replicate counts not confirmed here",
+  "reported_n_status": "REPORTED_UNVERIFIED",
+  "actual_task_n": null,
+  "source_entry_urls": [
+    "https://doi.org/10.1093/nar/gkag917"
+  ],
+  "benchmark_paper_url_not_original_assay": "https://doi.org/10.1093/nar/gkag917",
+  "assets": [],
+  "task_download_completed": false,
+  "admitted": false,
+  "baseline_plan": {
+    "公平输入轨道": "RNA_SEQUENCE_ONLY_OR_CONDITIONED_SEPARATE",
+    "原登记Metric": "拟合与外部结构证据",
+    "主指标(建议)": "masked MAE / Pearson / Spearman，assay macro",
+    "推荐Loss": "masked Huber/MSE（不观测位点不参与）",
+    "最低信息Baseline": "train position-wise median；probe-specific position mean",
+    "经典算法Baseline": "ViennaRNA RNAplfold accessibility+Ridge（若任务允许）；k-mer window Ridge",
+    "随机初始化Baseline": "1D U-Net/CNN per-nt head 随机初始化",
+    "泄露检查重点": "探针批次、同序列双 probe、SN_filter、读深与误差权重",
+    "baseline运行状态": "NOT_RUN"
+  },
+  "plan_command": "python tools/task_download.py plan --task T0111",
+  "download_policy": "Source-entry links are not file bytes. Explicit package-only opt-in required before file candidates can be acquired for audit."
+}

@@ -1,0 +1,54 @@
+{
+  "task_id": "T0020",
+  "package_group_id": "MRNA_RNAHL_SALUKI_HUMAN",
+  "source_family_id": "SRC_HL",
+  "dataset": "HL",
+  "task": "HL：全转录本→2 项 half-life",
+  "input_modality": "RNA sequence-only possible; verify context",
+  "status": "HOLD_ASSAY_IDENTITY",
+  "hold_reason": "Public collection bytes or catalog available under an explicit collection-license claim; original assay/batch/cell/readout identity, original rights review, group splits/leakage and full QC remain unverified.",
+  "next_action": "Bind downloaded version/file to original assay DOI/accession, original observation and registered task; review rights and official group split before human admission. File N is not task N.",
+  "canonical_assay_id": null,
+  "reported_n": "26662",
+  "count_unit": "unique sequences; 2 subtasks sharing source",
+  "reported_n_status": "REPORTED_UNVERIFIED",
+  "actual_task_n": null,
+  "source_entry_urls": [
+    "https://huggingface.co/datasets/morrislab/rnahl-saluki-human",
+    "https://pmc.ncbi.nlm.nih.gov/articles/PMC12265608/",
+    "https://github.com/morrislab/mRNABench"
+  ],
+  "benchmark_paper_url_not_original_assay": "https://doi.org/10.1101/2025.07.05.662870",
+  "assets": [
+    {
+      "asset_id": "HF_447d974951a3e6016555",
+      "source_url": "https://huggingface.co/datasets/morrislab/rnahl-saluki-human/resolve/b2ed8742f21349b293759db554534bf170759251/rnahl-saluki-human.parquet",
+      "download_url": "https://hf-mirror.com/datasets/morrislab/rnahl-saluki-human/resolve/b2ed8742f21349b293759db554534bf170759251/rnahl-saluki-human.parquet",
+      "filename": "rnahl-saluki-human.parquet",
+      "link_type": "FILE_LINK_CANDIDATE",
+      "expected_sha256": null,
+      "identity_scope": "PACKAGE_ONLY_NOT_PROVEN_TASK_INPUT",
+      "downloaded_bytes_verified": true,
+      "observed_sha256": "0801a85464e57574cbd179e7ef1a84a7c09798bd8a673507f49713ba8856a0ed",
+      "actual_file_n": 12939,
+      "actual_file_n_scope": "ONE_FILE_NOT_ASSAY_OR_TASK_N",
+      "task_input_identity_verified": false,
+      "rights_scope": "Requires asset-specific acquisition decision, never blanket task approval"
+    }
+  ],
+  "task_download_completed": false,
+  "admitted": false,
+  "baseline_plan": {
+    "公平输入轨道": "RNA_SEQUENCE_ONLY_OR_CONDITIONED_SEPARATE",
+    "原登记Metric": "相关/回归指标",
+    "主指标(建议)": "Spearman 主；MAE、Pearson 辅",
+    "推荐Loss": "Huber/MSE（训练折标签标准化）",
+    "最低信息Baseline": "训练均值；长度+GC Ridge",
+    "经典算法Baseline": "k-mer+Ridge/ElasticNet；RNAfold MFE/明确的生物 motif+XGBoost",
+    "随机初始化Baseline": "小型 CNN/ResNet 或 CNN-BiLSTM（随机初始化）",
+    "泄露检查重点": "同序列跨折、同构件/基因/细胞泄漏、proxy 与直接测量混合",
+    "baseline运行状态": "NOT_RUN"
+  },
+  "plan_command": "python tools/task_download.py plan --task T0020",
+  "download_policy": "Source-entry links are not file bytes. Explicit package-only opt-in required before file candidates can be acquired for audit."
+}

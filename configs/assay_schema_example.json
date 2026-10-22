@@ -1,0 +1,11 @@
+{
+  "assay_id": "EXAMPLE_ONLY_NOT_ADMITTED",
+  "sequence_col": "sequence",
+  "label_col": "raw_label",
+  "split_col": "split",
+  "alphabet": "RNA",
+  "require_split_column": true,
+  "group_cols": ["construct_id"],
+  "measurement_unit": "DEFINE_FROM_SOURCE",
+  "label_transformation": "NONE_UNTIL_VERIFIED"
+}

@@ -1,0 +1,38 @@
+{
+  "task_id": "T0087",
+  "package_group_id": "NABENCH_DMS",
+  "source_family_id": "SRC_RNA_DMS_APTAMER",
+  "dataset": "RNA DMS aptamer",
+  "task": "RNA DMS aptamer fitness",
+  "input_modality": "RNA sequence-only possible; verify context",
+  "status": "HOLD_SOURCE",
+  "hold_reason": "Original source bytes and assay evidence unresolved; upstream entry may be unavailable. Independent tasks continue.",
+  "next_action": "Resolve original assay DOI/accession and data-specific rights, select capped public file, then bytes/hash/schema/identity/split/QC and human review.",
+  "canonical_assay_id": null,
+  "reported_n": "~40,000",
+  "count_unit": "variants over 7 assays; approximate rounded author table",
+  "reported_n_status": "REPORTED_UNVERIFIED",
+  "actual_task_n": null,
+  "source_entry_urls": [
+    "https://github.com/mrzzmrzz/NABench/tree/main/data",
+    "https://arxiv.org/abs/2511.02888",
+    "https://github.com/mrzzmrzz/NABench"
+  ],
+  "benchmark_paper_url_not_original_assay": "https://arxiv.org/abs/2511.02888",
+  "assets": [],
+  "task_download_completed": false,
+  "admitted": false,
+  "baseline_plan": {
+    "公平输入轨道": "RNA_SEQUENCE_ONLY_OR_CONDITIONED_SEPARATE",
+    "原登记Metric": "per assay Spearman",
+    "主指标(建议)": "每 assay Spearman；NDCG/成对准确率 辅",
+    "推荐Loss": "Huber/MSE；pairwise ranking 可用 margin loss",
+    "最低信息Baseline": "恒定适应度；编辑距离/突变数基线",
+    "经典算法Baseline": "WT/ALT k-mer差值+Ridge；位点、替换类型、邻域特征+XGBoost",
+    "随机初始化Baseline": "随机初始化 CNN pair-encoder；zero-shot ΔlogP 独立榜",
+    "泄露检查重点": "同 WT backbone / variant 邻域、测量方向、同名 DMS",
+    "baseline运行状态": "NOT_RUN"
+  },
+  "plan_command": "python tools/task_download.py plan --task T0087",
+  "download_policy": "Source-entry links are not file bytes. Explicit package-only opt-in required before file candidates can be acquired for audit."
+}

@@ -1,0 +1,37 @@
+{
+  "task_id": "T0140",
+  "package_group_id": "ROMET",
+  "source_family_id": "SRC_ROMET_RNA_4_NONREDUNDANT_TEST_SETS",
+  "dataset": "ROMET-RNA 4 nonredundant test sets",
+  "task": "11 predictors RNA 3D structures",
+  "input_modality": "structure-required (not sequence-only)",
+  "status": "HOLD_SOURCE",
+  "hold_reason": "Original source bytes and assay evidence unresolved; upstream entry may be unavailable. Independent tasks continue.",
+  "next_action": "Resolve original assay DOI/accession and data-specific rights, select capped public file, then bytes/hash/schema/identity/split/QC and human review.",
+  "canonical_assay_id": null,
+  "reported_n": "205",
+  "count_unit": "unique RNA targets across four nonredundant sets",
+  "reported_n_status": "REPORTED_UNVERIFIED",
+  "actual_task_n": null,
+  "source_entry_urls": [
+    "https://github.com/chenjief0628/ROMET-RNA",
+    "https://doi.org/10.1186/s13059-026-04308-3"
+  ],
+  "benchmark_paper_url_not_original_assay": "https://doi.org/10.1186/s13059-026-04308-3",
+  "assets": [],
+  "task_download_completed": false,
+  "admitted": false,
+  "baseline_plan": {
+    "公平输入轨道": "RNA_ONLY_3D_GEOMETRY_OR_3D_CONDITIONED_SPLIT",
+    "原登记Metric": "TM-scoreRNA, RMSD, INF",
+    "主指标(建议)": "lDDT / TM-score / RMSD / contact precision (视任务)",
+    "推荐Loss": "distance L1/MSE；contact BCE；几何损失",
+    "最低信息Baseline": "distance from sequence separation；trivial distance bin",
+    "经典算法Baseline": "RNAComposer/SimRNA/RhoFold 等明确许可与输入先验的工具",
+    "随机初始化Baseline": "轻量 distance-geometry 预测网络／随机初始化",
+    "泄露检查重点": "PDB chain/assembly、序列家族、相近三维同源、模板污染",
+    "baseline运行状态": "NOT_RUN"
+  },
+  "plan_command": "python tools/task_download.py plan --task T0140",
+  "download_policy": "Source-entry links are not file bytes. Explicit package-only opt-in required before file candidates can be acquired for audit."
+}

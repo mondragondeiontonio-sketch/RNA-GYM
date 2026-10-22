@@ -1,0 +1,37 @@
+{
+  "task_id": "T0028",
+  "package_group_id": "WANG_ZERO_SHOT",
+  "source_family_id": "SRC_RNA_PDB_TS",
+  "dataset": "RNA PDB TS",
+  "task": "2D secondary structure / independent TS",
+  "input_modality": "RNA sequence-only possible; verify context",
+  "status": "HOLD_LICENSE",
+  "hold_reason": "Entry HTTP probe only; data-specific rights, raw bytes, assay DOI/accession and identity remain unverified.",
+  "next_action": "Resolve original assay DOI/accession and data-specific rights, select capped public file, then bytes/hash/schema/identity/split/QC and human review.",
+  "canonical_assay_id": null,
+  "reported_n": "70",
+  "count_unit": "PDB structures",
+  "reported_n_status": "REPORTED_UNVERIFIED",
+  "actual_task_n": null,
+  "source_entry_urls": [
+    "https://zenodo.org/records/18218776",
+    "https://doi.org/10.1093/bib/bbag098"
+  ],
+  "benchmark_paper_url_not_original_assay": "https://doi.org/10.1093/bib/bbag098",
+  "assets": [],
+  "task_download_completed": false,
+  "admitted": false,
+  "baseline_plan": {
+    "公平输入轨道": "RNA_SEQUENCE_ONLY_OR_CONDITIONED_SEPARATE",
+    "原登记Metric": "median F1, median MCC",
+    "主指标(建议)": "pair F1/MCC；noncanonical edge macro-F1",
+    "推荐Loss": "BCE/CE + pairing constraints",
+    "最低信息Baseline": "所有不配对；互补配对几率先验",
+    "经典算法Baseline": "ViennaRNA RNAfold / RNAstructure/ CONTRAfold",
+    "随机初始化Baseline": "小型 bpp CNN / pairwise Transformer（相同输入）",
+    "泄露检查重点": "homology; RNA3DB/PDB family/泄漏；label pair state vs pair matrix",
+    "baseline运行状态": "NOT_RUN"
+  },
+  "plan_command": "python tools/task_download.py plan --task T0028",
+  "download_policy": "Source-entry links are not file bytes. Explicit package-only opt-in required before file candidates can be acquired for audit."
+}

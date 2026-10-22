@@ -1,0 +1,73 @@
+{
+  "selected_version": null,
+  "freeze_status": "HOLD_VERSION_DIFF",
+  "reason": "Sample/PDB-chain comparison required before adoption; old benchmark not replaced.",
+  "versions": [
+    {
+      "tag": "2026-01-05-full-release",
+      "release_url": "https://github.com/marcellszi/rna3db/releases/tag/2026-01-05-full-release",
+      "published_at": "2026-01-14T12:10:46Z",
+      "upstream_target_commitish": "main",
+      "assets": [
+        {
+          "filename": "rna3db-cmscans.tar.gz",
+          "size_bytes": 88160023,
+          "download_url": "https://github.com/marcellszi/rna3db/releases/download/2026-01-05-full-release/rna3db-cmscans.tar.gz",
+          "upstream_digest_claim": "sha256:53c323c61aef5b9bb72a88bc3980470a13d0f36d559e1bdaf5582173f0a3b751",
+          "actual_sha256": null,
+          "downloaded": false
+        },
+        {
+          "filename": "rna3db-jsons.tar.gz",
+          "size_bytes": 6851100,
+          "download_url": "https://github.com/marcellszi/rna3db/releases/download/2026-01-05-full-release/rna3db-jsons.tar.gz",
+          "upstream_digest_claim": "sha256:820ba611042ef3e4ec1de7d00e739eefcbf1f78df1452252cc002e369babae8b",
+          "actual_sha256": null,
+          "downloaded": false
+        },
+        {
+          "filename": "rna3db-mmcifs.tar.xz",
+          "size_bytes": 2146440832,
+          "download_url": "https://github.com/marcellszi/rna3db/releases/download/2026-01-05-full-release/rna3db-mmcifs.tar.xz",
+          "upstream_digest_claim": "sha256:4be4290ee40e1407e1356d804355ba5e4971da527baa5f381116bac327ec9067",
+          "actual_sha256": null,
+          "downloaded": false
+        }
+      ]
+    },
+    {
+      "tag": "2025-10-01-incremental-release",
+      "release_url": "https://github.com/marcellszi/rna3db/releases/tag/2025-10-01-incremental-release",
+      "published_at": "2025-10-10T13:36:26Z",
+      "upstream_target_commitish": "main",
+      "assets": [
+        {
+          "filename": "rna3db-cmscans.tar.gz",
+          "size_bytes": 83311104,
+          "download_url": "https://github.com/marcellszi/rna3db/releases/download/2025-10-01-incremental-release/rna3db-cmscans.tar.gz",
+          "upstream_digest_claim": "sha256:a5ebfab764e5b3d01136e54649d72796d69ca9e3f4d668fe1db8dadada9c2ca5",
+          "actual_sha256": null,
+          "downloaded": false
+        },
+        {
+          "filename": "rna3db-jsons.tar.gz",
+          "size_bytes": 6522877,
+          "download_url": "https://github.com/marcellszi/rna3db/releases/download/2025-10-01-incremental-release/rna3db-jsons.tar.gz",
+          "upstream_digest_claim": "sha256:d4996a5f78ffa0453f9b817d49cde85de4f8c038655d8699f6a1eadb10270a01",
+          "actual_sha256": null,
+          "downloaded": false
+        },
+        {
+          "filename": "rna3db-mmcifs.tar.xz",
+          "size_bytes": 2063786736,
+          "download_url": "https://github.com/marcellszi/rna3db/releases/download/2025-10-01-incremental-release/rna3db-mmcifs.tar.xz",
+          "upstream_digest_claim": "sha256:a45624a136fcaf1b3016dfd76a86d67cf896905241f23bb05f31cc27c12f27f3",
+          "actual_sha256": null,
+          "downloaded": false
+        }
+      ]
+    }
+  ],
+  "sample_id_diff": null,
+  "pdb_chain_diff": null
+}

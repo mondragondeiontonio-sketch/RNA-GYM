@@ -1,0 +1,54 @@
+{
+  "task_id": "XMRNA_translation_efficiency_mouse",
+  "package_group_id": "MRNA_TRANSLATION_EFFICIENCY_MOUSE",
+  "source_family_id": "SRC_TRANSLATION_EFFICIENCY_MOUSE",
+  "dataset": "translation-efficiency-mouse",
+  "task": "TE-mouse",
+  "input_modality": "full mature mRNA input; sequence-only UTR-only parity not assumed",
+  "status": "HOLD_SOURCE",
+  "hold_reason": "Original source bytes and assay evidence unresolved; upstream entry may be unavailable. Independent tasks continue.",
+  "next_action": "Resolve original assay DOI/accession and data-specific rights, select capped public file, then bytes/hash/schema/identity/split/QC and human review.",
+  "canonical_assay_id": null,
+  "reported_n": "",
+  "count_unit": "transcript/variants",
+  "reported_n_status": "REPORTED_UNVERIFIED",
+  "actual_task_n": null,
+  "source_entry_urls": [
+    "https://huggingface.co/datasets/morrislab/translation-efficiency-mouse",
+    "https://github.com/morrislab/mRNABench/blob/main/README.md",
+    "https://github.com/morrislab/mRNABench"
+  ],
+  "benchmark_paper_url_not_original_assay": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12265608/",
+  "assets": [
+    {
+      "asset_id": "HF_b0fd7efcbbc2af03c1e4",
+      "source_url": "https://huggingface.co/datasets/morrislab/translation-efficiency-mouse/resolve/06cba806cb2b46d3f4d14487bba730660195aea1/te_mouse.parquet",
+      "download_url": "https://hf-mirror.com/datasets/morrislab/translation-efficiency-mouse/resolve/06cba806cb2b46d3f4d14487bba730660195aea1/te_mouse.parquet",
+      "filename": "te_mouse.parquet",
+      "link_type": "FILE_LINK_CANDIDATE",
+      "expected_sha256": null,
+      "identity_scope": "PACKAGE_ONLY_NOT_PROVEN_TASK_INPUT",
+      "downloaded_bytes_verified": false,
+      "observed_sha256": null,
+      "actual_file_n": null,
+      "actual_file_n_scope": null,
+      "task_input_identity_verified": false,
+      "rights_scope": "Requires asset-specific acquisition decision, never blanket task approval"
+    }
+  ],
+  "task_download_completed": false,
+  "admitted": false,
+  "baseline_plan": {
+    "公平输入轨道": "RNA_SEQUENCE_ONLY_OR_CONDITIONED_SEPARATE",
+    "原登记Metric": "task-specific metric",
+    "主指标(建议)": "Spearman 主；MAE、Pearson 辅",
+    "推荐Loss": "Huber/MSE（训练折标签标准化）",
+    "最低信息Baseline": "训练均值；长度+GC Ridge",
+    "经典算法Baseline": "k-mer+Ridge/ElasticNet；RNAfold MFE/明确的生物 motif+XGBoost",
+    "随机初始化Baseline": "小型 CNN/ResNet 或 CNN-BiLSTM（随机初始化）",
+    "泄露检查重点": "同序列跨折、同构件/基因/细胞泄漏、proxy 与直接测量混合",
+    "baseline运行状态": "NOT_RUN"
+  },
+  "plan_command": "python tools/task_download.py plan --task XMRNA_translation_efficiency_mouse",
+  "download_policy": "Source-entry links are not file bytes. Explicit package-only opt-in required before file candidates can be acquired for audit."
+}

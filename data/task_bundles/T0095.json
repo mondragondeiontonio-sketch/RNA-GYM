@@ -1,0 +1,38 @@
+{
+  "task_id": "T0095",
+  "package_group_id": "NABENCH_DMS",
+  "source_family_id": "SRC_DNA_SELEX_PROMOTER",
+  "dataset": "DNA SELEX promoter",
+  "task": "DNA SELEX promoter fitness",
+  "input_modality": "DNA out-of-scope mainboard",
+  "status": "HOLD_SOURCE",
+  "hold_reason": "Original source bytes and assay evidence unresolved; upstream entry may be unavailable. Independent tasks continue.",
+  "next_action": "Resolve original assay DOI/accession and data-specific rights, select capped public file, then bytes/hash/schema/identity/split/QC and human review.",
+  "canonical_assay_id": null,
+  "reported_n": "~3,000",
+  "count_unit": "variants over 4 assays; approximate rounded author table",
+  "reported_n_status": "REPORTED_UNVERIFIED",
+  "actual_task_n": null,
+  "source_entry_urls": [
+    "https://github.com/mrzzmrzz/NABench/tree/main/data",
+    "https://arxiv.org/abs/2511.02888",
+    "https://github.com/mrzzmrzz/NABench"
+  ],
+  "benchmark_paper_url_not_original_assay": "https://arxiv.org/abs/2511.02888",
+  "assets": [],
+  "task_download_completed": false,
+  "admitted": false,
+  "baseline_plan": {
+    "公平输入轨道": "NOT_SCORED",
+    "原登记Metric": "per assay Spearman",
+    "主指标(建议)": "N/A",
+    "推荐Loss": "N/A",
+    "最低信息Baseline": "N/A",
+    "经典算法Baseline": "N/A",
+    "随机初始化Baseline": "N/A",
+    "泄露检查重点": "methodology-only/source reuse/DNA-only",
+    "baseline运行状态": "NOT_RUN"
+  },
+  "plan_command": "python tools/task_download.py plan --task T0095",
+  "download_policy": "Source-entry links are not file bytes. Explicit package-only opt-in required before file candidates can be acquired for audit."
+}

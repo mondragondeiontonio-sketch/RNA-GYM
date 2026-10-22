@@ -1,0 +1,69 @@
+{
+  "task_id": "T0019",
+  "package_group_id": "MRNA_ECLIP",
+  "source_family_id": "SRC_ECLIP_MULTI",
+  "dataset": "eCLIP",
+  "task": "eCLIP：成熟 mRNA→40 个 RBP 结合任务",
+  "input_modality": "RNA sequence-only possible; verify context",
+  "status": "HOLD_SOURCE",
+  "hold_reason": "Original source bytes and assay evidence unresolved; upstream entry may be unavailable. Independent tasks continue.",
+  "next_action": "Resolve original assay DOI/accession and data-specific rights, select capped public file, then bytes/hash/schema/identity/split/QC and human review.",
+  "canonical_assay_id": null,
+  "reported_n": "21559",
+  "count_unit": "unique sequences; 40 subtasks sharing source",
+  "reported_n_status": "REPORTED_UNVERIFIED",
+  "actual_task_n": null,
+  "source_entry_urls": [
+    "https://huggingface.co/datasets/morrislab/eclip",
+    "https://pmc.ncbi.nlm.nih.gov/articles/PMC12265608/",
+    "https://github.com/morrislab/mRNABench"
+  ],
+  "benchmark_paper_url_not_original_assay": "https://doi.org/10.1101/2025.07.05.662870",
+  "assets": [
+    {
+      "asset_id": "HF_a52e6df722db7199b3be",
+      "source_url": "https://huggingface.co/datasets/morrislab/eclip/resolve/21a0159694213443f20919e58ec7f0feca4dc75c/eclip-hepg2.parquet",
+      "download_url": "https://hf-mirror.com/datasets/morrislab/eclip/resolve/21a0159694213443f20919e58ec7f0feca4dc75c/eclip-hepg2.parquet",
+      "filename": "eclip-hepg2.parquet",
+      "link_type": "FILE_LINK_CANDIDATE",
+      "expected_sha256": null,
+      "identity_scope": "PACKAGE_ONLY_NOT_PROVEN_TASK_INPUT",
+      "downloaded_bytes_verified": false,
+      "observed_sha256": null,
+      "actual_file_n": null,
+      "actual_file_n_scope": null,
+      "task_input_identity_verified": false,
+      "rights_scope": "Requires asset-specific acquisition decision, never blanket task approval"
+    },
+    {
+      "asset_id": "HF_6c45581b3427a8820ee0",
+      "source_url": "https://huggingface.co/datasets/morrislab/eclip/resolve/21a0159694213443f20919e58ec7f0feca4dc75c/eclip-k562.parquet",
+      "download_url": "https://hf-mirror.com/datasets/morrislab/eclip/resolve/21a0159694213443f20919e58ec7f0feca4dc75c/eclip-k562.parquet",
+      "filename": "eclip-k562.parquet",
+      "link_type": "FILE_LINK_CANDIDATE",
+      "expected_sha256": null,
+      "identity_scope": "PACKAGE_ONLY_NOT_PROVEN_TASK_INPUT",
+      "downloaded_bytes_verified": false,
+      "observed_sha256": null,
+      "actual_file_n": null,
+      "actual_file_n_scope": null,
+      "task_input_identity_verified": false,
+      "rights_scope": "Requires asset-specific acquisition decision, never blanket task approval"
+    }
+  ],
+  "task_download_completed": false,
+  "admitted": false,
+  "baseline_plan": {
+    "公平输入轨道": "RNA_PLUS_RBP_IDENTITY",
+    "原登记Metric": "AUROC/分类指标",
+    "主指标(建议)": "AUPRC 主；AUROC/MCC/计数 correlation 辅",
+    "推荐Loss": "BCE/focal for peaks; Poisson/NB for read counts",
+    "最低信息Baseline": "RBP cell-specific prevalence 或 shuffled peak labels（负控）",
+    "经典算法Baseline": "motif/PWM+Logistic 或 DeepBind/RBNS motif",
+    "随机初始化Baseline": "CNN binding-head 从头训练",
+    "泄露检查重点": "ENCODE accessions、生物复制、细胞、靶基因、负例生成",
+    "baseline运行状态": "NOT_RUN"
+  },
+  "plan_command": "python tools/task_download.py plan --task T0019",
+  "download_policy": "Source-entry links are not file bytes. Explicit package-only opt-in required before file candidates can be acquired for audit."
+}

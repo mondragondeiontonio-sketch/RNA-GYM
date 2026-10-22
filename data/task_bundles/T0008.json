@@ -1,0 +1,38 @@
+{
+  "task_id": "T0008",
+  "package_group_id": "BEACON_ALL",
+  "source_family_id": "SRC_MULTIRM",
+  "dataset": "MultiRM (Song et al.)",
+  "task": "Modification：序列→修饰位点/类型",
+  "input_modality": "RNA sequence-only possible; verify context",
+  "status": "HOLD_SOURCE",
+  "hold_reason": "Original source bytes and assay evidence unresolved; upstream entry may be unavailable. Independent tasks continue.",
+  "next_action": "Resolve original assay DOI/accession and data-specific rights, select capped public file, then bytes/hash/schema/identity/split/QC and human review.",
+  "canonical_assay_id": null,
+  "reported_n": "309460",
+  "count_unit": "task records",
+  "reported_n_status": "REPORTED_UNVERIFIED",
+  "actual_task_n": null,
+  "source_entry_urls": [
+    "https://drive.google.com/drive/folders/19ddrwI8ycvIxkgSV3gDo_VunLofYd4-6?usp=sharing",
+    "https://github.com/terry-r123/RNABenchmark/blob/main/downstream/train_modification.py",
+    "https://github.com/terry-r123/RNABenchmark"
+  ],
+  "benchmark_paper_url_not_original_assay": "https://doi.org/10.52202/079017-2949",
+  "assets": [],
+  "task_download_completed": false,
+  "admitted": false,
+  "baseline_plan": {
+    "公平输入轨道": "RNA_SEQUENCE_ONLY_OR_CONDITIONED_SEPARATE",
+    "原登记Metric": "AUROC",
+    "主指标(建议)": "binary AUROC+AUPRC+MCC；multiclass macro-F1；multilabel mAP",
+    "推荐Loss": "BCEWithLogits / CE；类别加权限 train",
+    "最低信息Baseline": "majority / prevalence / stratified random",
+    "经典算法Baseline": "GC/length/k-mer + LogisticRegression",
+    "随机初始化Baseline": "1D CNN/ResNet 随机初始化",
+    "泄露检查重点": "label imbalance, gene/homology, splice genomic-context 信息不等价",
+    "baseline运行状态": "NOT_RUN"
+  },
+  "plan_command": "python tools/task_download.py plan --task T0008",
+  "download_policy": "Source-entry links are not file bytes. Explicit package-only opt-in required before file candidates can be acquired for audit."
+}

@@ -1,0 +1,69 @@
+{
+  "task_id": "T0018",
+  "package_group_id": "MRNA_VEP_TRAITGYM_MRNA",
+  "source_family_id": "SRC_VEP",
+  "dataset": "VEP",
+  "task": "VEP：转录本→2 项变异效应标签",
+  "input_modality": "RNA sequence-only possible; verify context",
+  "status": "HOLD_ASSAY_IDENTITY",
+  "hold_reason": "Public collection bytes or catalog available under an explicit collection-license claim; original assay/batch/cell/readout identity, original rights review, group splits/leakage and full QC remain unverified.",
+  "next_action": "Bind downloaded version/file to original assay DOI/accession, original observation and registered task; review rights and official group split before human admission. File N is not task N.",
+  "canonical_assay_id": null,
+  "reported_n": "4264",
+  "count_unit": "unique sequences; 2 subtasks sharing source",
+  "reported_n_status": "REPORTED_UNVERIFIED",
+  "actual_task_n": null,
+  "source_entry_urls": [
+    "https://huggingface.co/datasets/morrislab/vep-traitgym-mrna",
+    "https://pmc.ncbi.nlm.nih.gov/articles/PMC12265608/",
+    "https://github.com/morrislab/mRNABench"
+  ],
+  "benchmark_paper_url_not_original_assay": "https://doi.org/10.1101/2025.07.05.662870",
+  "assets": [
+    {
+      "asset_id": "HF_3c84bb0847c9961fc6d4",
+      "source_url": "https://huggingface.co/datasets/morrislab/vep-traitgym-mrna/resolve/a085525d5f6cadb50122c3b6b5b8e5e63c2a868a/vep-traitgym-complex.parquet",
+      "download_url": "https://hf-mirror.com/datasets/morrislab/vep-traitgym-mrna/resolve/a085525d5f6cadb50122c3b6b5b8e5e63c2a868a/vep-traitgym-complex.parquet",
+      "filename": "vep-traitgym-complex.parquet",
+      "link_type": "FILE_LINK_CANDIDATE",
+      "expected_sha256": null,
+      "identity_scope": "PACKAGE_ONLY_NOT_PROVEN_TASK_INPUT",
+      "downloaded_bytes_verified": true,
+      "observed_sha256": "ca856385dc2766827929ecb616abea9a2fadac38be984d29d0858bc53e122b01",
+      "actual_file_n": 1707,
+      "actual_file_n_scope": "ONE_FILE_NOT_ASSAY_OR_TASK_N",
+      "task_input_identity_verified": false,
+      "rights_scope": "Requires asset-specific acquisition decision, never blanket task approval"
+    },
+    {
+      "asset_id": "HF_27d2efecdb75b4a7307f",
+      "source_url": "https://huggingface.co/datasets/morrislab/vep-traitgym-mrna/resolve/a085525d5f6cadb50122c3b6b5b8e5e63c2a868a/vep-traitgym-mendelian.parquet",
+      "download_url": "https://hf-mirror.com/datasets/morrislab/vep-traitgym-mrna/resolve/a085525d5f6cadb50122c3b6b5b8e5e63c2a868a/vep-traitgym-mendelian.parquet",
+      "filename": "vep-traitgym-mendelian.parquet",
+      "link_type": "FILE_LINK_CANDIDATE",
+      "expected_sha256": null,
+      "identity_scope": "PACKAGE_ONLY_NOT_PROVEN_TASK_INPUT",
+      "downloaded_bytes_verified": true,
+      "observed_sha256": "ff39c6b209b52ff175e4992682d4c0d49baeac0897b102f1cb02f2a4989511d2",
+      "actual_file_n": 2616,
+      "actual_file_n_scope": "ONE_FILE_NOT_ASSAY_OR_TASK_N",
+      "task_input_identity_verified": false,
+      "rights_scope": "Requires asset-specific acquisition decision, never blanket task approval"
+    }
+  ],
+  "task_download_completed": false,
+  "admitted": false,
+  "baseline_plan": {
+    "公平输入轨道": "RNA_SEQUENCE_ONLY_OR_CONDITIONED_SEPARATE",
+    "原登记Metric": "AUROC/分类指标",
+    "主指标(建议)": "binary AUROC+AUPRC+MCC；multiclass macro-F1；multilabel mAP",
+    "推荐Loss": "BCEWithLogits / CE；类别加权限 train",
+    "最低信息Baseline": "majority / prevalence / stratified random",
+    "经典算法Baseline": "GC/length/k-mer + LogisticRegression",
+    "随机初始化Baseline": "1D CNN/ResNet 随机初始化",
+    "泄露检查重点": "label imbalance, gene/homology, splice genomic-context 信息不等价",
+    "baseline运行状态": "NOT_RUN"
+  },
+  "plan_command": "python tools/task_download.py plan --task T0018",
+  "download_policy": "Source-entry links are not file bytes. Explicit package-only opt-in required before file candidates can be acquired for audit."
+}

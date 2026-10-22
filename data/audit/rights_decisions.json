@@ -1,0 +1,181 @@
+{
+  "P0_MIR_KLIMENTOVA_ZENODO": {
+    "decision": "ALLOW_PUBLIC_QUARANTINE_POC",
+    "license": "CC-BY-4.0",
+    "evidence_url": "https://zenodo.org/records/20540907",
+    "evidence_sha256": "98ac7487018bb18157d6fbb11c3af62cffb709dff608df5354f4b56bc61591e5",
+    "scope": "Acquisition into local quarantine only. Not human assay admission or blanket redistribution approval.",
+    "evidence_transport": "OFFICIAL_ZENODO",
+    "attribution": "miRBench authors; upstream experiment authors remain to be individually verified.",
+    "human_reviewer": null
+  },
+  "P0_MIR_HEJRET_TEST_ZENODO": {
+    "decision": "ALLOW_PUBLIC_QUARANTINE_POC",
+    "license": "CC-BY-4.0",
+    "evidence_url": "https://zenodo.org/records/20540907",
+    "evidence_sha256": "98ac7487018bb18157d6fbb11c3af62cffb709dff608df5354f4b56bc61591e5",
+    "scope": "Acquisition into local quarantine only. Not human assay admission or blanket redistribution approval.",
+    "evidence_transport": "OFFICIAL_ZENODO",
+    "attribution": "miRBench authors; upstream experiment authors remain to be individually verified.",
+    "human_reviewer": null
+  },
+  "P0_MIR_HEJRET_TRAIN_ZENODO": {
+    "decision": "ALLOW_PUBLIC_QUARANTINE_POC",
+    "license": "CC-BY-4.0",
+    "evidence_url": "https://zenodo.org/records/20540907",
+    "evidence_sha256": "98ac7487018bb18157d6fbb11c3af62cffb709dff608df5354f4b56bc61591e5",
+    "scope": "Acquisition into local quarantine only. Not human assay admission or blanket redistribution approval.",
+    "evidence_transport": "OFFICIAL_ZENODO",
+    "attribution": "miRBench authors; upstream experiment authors remain to be individually verified.",
+    "human_reviewer": null
+  },
+  "P0_MIR_KLIMENTOVA_MIRROR": {
+    "decision": "ALLOW_PUBLIC_QUARANTINE_POC",
+    "license": "CC-BY-4.0",
+    "evidence_url": "https://huggingface.co/datasets/genomic-benchmarks/miRBench/blob/f3ef23e519a2c120bddb9e1a233f4636b751662a/README.md",
+    "evidence_sha256": "c8d88ecb64d695086df7abee385a4216f2d8e00f539ea9037b118ed734a059b4",
+    "scope": "Acquisition into local quarantine only. Not human assay admission or blanket redistribution approval.",
+    "evidence_transport": "USER_AUTHORIZED_HF_MIRROR",
+    "attribution": "miRBench authors; upstream experiment authors remain to be individually verified.",
+    "human_reviewer": null
+  },
+  "P0_RNAGYM_PROCESSED": {
+    "decision": "ALLOW_PUBLIC_QUARANTINE_POC",
+    "license": "CC-BY-4.0 collection data card",
+    "evidence_url": "https://huggingface.co/datasets/Marks-lab/RNAgym/blob/bc6ccf4c5bf445ca25991f2a74448ae7e153b9f6/README.md",
+    "evidence_sha256": "4df9018d8debf03ef5acc7e38a0bc57792315086e736e51d96bfc74cf8d580d0",
+    "evidence_transport": "USER_AUTHORIZED_HF_MIRROR",
+    "official_readme_url": "https://github.com/MarksLab-DasLab/RNAGym",
+    "scope": "Only public collection acquisition into quarantine. Original per-assay licenses and redistribution pending.",
+    "human_reviewer": null
+  },
+  "P0_MIR_MANAKOV_LEFTOUT_ZENODO": {
+    "decision": "ALLOW_PUBLIC_QUARANTINE_POC",
+    "license": "CC-BY-4.0",
+    "evidence_url": "https://zenodo.org/records/20540907",
+    "evidence_sha256": "98ac7487018bb18157d6fbb11c3af62cffb709dff608df5354f4b56bc61591e5",
+    "scope": "Acquisition into local quarantine only. Not human assay admission or blanket redistribution approval.",
+    "evidence_transport": "OFFICIAL_ZENODO",
+    "attribution": "miRBench authors; upstream experiment authors remain to be individually verified.",
+    "human_reviewer": null
+  },
+  "P0_MIR_MANAKOV_TEST_ZENODO": {
+    "decision": "ALLOW_PUBLIC_QUARANTINE_POC",
+    "license": "CC-BY-4.0",
+    "evidence_url": "https://zenodo.org/records/20540907",
+    "evidence_sha256": "98ac7487018bb18157d6fbb11c3af62cffb709dff608df5354f4b56bc61591e5",
+    "scope": "Acquisition into local quarantine only. Not human assay admission or blanket redistribution approval.",
+    "evidence_transport": "OFFICIAL_ZENODO",
+    "attribution": "miRBench authors; upstream experiment authors remain to be individually verified.",
+    "human_reviewer": null
+  },
+  "P0_MIR_MANAKOV_TRAIN_ZENODO": {
+    "decision": "ALLOW_PUBLIC_QUARANTINE_POC",
+    "license": "CC-BY-4.0",
+    "evidence_url": "https://zenodo.org/records/20540907",
+    "evidence_sha256": "98ac7487018bb18157d6fbb11c3af62cffb709dff608df5354f4b56bc61591e5",
+    "scope": "Acquisition into local quarantine only. Not human assay admission or blanket redistribution approval.",
+    "evidence_transport": "OFFICIAL_ZENODO",
+    "attribution": "miRBench authors; upstream experiment authors remain to be individually verified.",
+    "human_reviewer": null
+  },
+  "HF_e4aab5fbe6c20f5f3ba0": {
+    "decision": "ALLOW_PUBLIC_QUARANTINE_POC",
+    "license": "cc-by-4.0 data-collection card claim",
+    "evidence_url": "https://huggingface.co/datasets/morrislab/go-mf/blob/8c2127cdeab6a7cd22087e9595581b771fb66ae0/README.md",
+    "evidence_sha256": "ea48127cdd143ff2edfa6da56c59388a7656868df14157c5e76e813f6fe719b8",
+    "evidence_transport": "USER_AUTHORIZED_HF_MIRROR_METADATA",
+    "scope": "Only local quarantine acquisition. Original assay rights, label semantics, identity and human admission unresolved.",
+    "human_reviewer": null
+  },
+  "HF_65af1afc977fef855c33": {
+    "decision": "ALLOW_PUBLIC_QUARANTINE_POC",
+    "license": "cc-by-4.0 data-collection card claim",
+    "evidence_url": "https://huggingface.co/datasets/morrislab/mirna-target/blob/9fd768e7073d0c8a4f503009c8eb7fda7c12aaa1/README.md",
+    "evidence_sha256": "ea48127cdd143ff2edfa6da56c59388a7656868df14157c5e76e813f6fe719b8",
+    "evidence_transport": "USER_AUTHORIZED_HF_MIRROR_METADATA",
+    "scope": "Only local quarantine acquisition. Original assay rights, label semantics, identity and human admission unresolved.",
+    "human_reviewer": null
+  },
+  "HF_34f6495ae6d93242ca39": {
+    "decision": "ALLOW_PUBLIC_QUARANTINE_POC",
+    "license": "cc-by-4.0 data-collection card claim",
+    "evidence_url": "https://huggingface.co/datasets/morrislab/mrl-hl-lbkwk/blob/144d6d835fc59a6953a9c8f31b1ffc16a47dd04d/README.md",
+    "evidence_sha256": "ea48127cdd143ff2edfa6da56c59388a7656868df14157c5e76e813f6fe719b8",
+    "evidence_transport": "USER_AUTHORIZED_HF_MIRROR_METADATA",
+    "scope": "Only local quarantine acquisition. Original assay rights, label semantics, identity and human admission unresolved.",
+    "human_reviewer": null
+  },
+  "HF_214a7f32ac346e79b8b1": {
+    "decision": "ALLOW_PUBLIC_QUARANTINE_POC",
+    "license": "cc-by-4.0 data-collection card claim",
+    "evidence_url": "https://huggingface.co/datasets/morrislab/mrl-sugimoto/blob/4d7404895e8ca1143d769e7f445972bf7ef4b51d/README.md",
+    "evidence_sha256": "ea48127cdd143ff2edfa6da56c59388a7656868df14157c5e76e813f6fe719b8",
+    "evidence_transport": "USER_AUTHORIZED_HF_MIRROR_METADATA",
+    "scope": "Only local quarantine acquisition. Original assay rights, label semantics, identity and human admission unresolved.",
+    "human_reviewer": null
+  },
+  "HF_c0c519d5b8ddc1e04a15": {
+    "decision": "ALLOW_PUBLIC_QUARANTINE_POC",
+    "license": "cc-by-sa-4.0 data-collection card claim",
+    "evidence_url": "https://huggingface.co/datasets/morrislab/protein-localization/blob/04d82a6d681c6fa54bec85504e3db09135a852a2/README.md",
+    "evidence_sha256": "ea48127cdd143ff2edfa6da56c59388a7656868df14157c5e76e813f6fe719b8",
+    "evidence_transport": "USER_AUTHORIZED_HF_MIRROR_METADATA",
+    "scope": "Only local quarantine acquisition. Original assay rights, label semantics, identity and human admission unresolved.",
+    "human_reviewer": null
+  },
+  "HF_447d974951a3e6016555": {
+    "decision": "ALLOW_PUBLIC_QUARANTINE_POC",
+    "license": "cc-by-4.0 data-collection card claim",
+    "evidence_url": "https://huggingface.co/datasets/morrislab/rnahl-saluki-human/blob/b2ed8742f21349b293759db554534bf170759251/README.md",
+    "evidence_sha256": "ea48127cdd143ff2edfa6da56c59388a7656868df14157c5e76e813f6fe719b8",
+    "evidence_transport": "USER_AUTHORIZED_HF_MIRROR_METADATA",
+    "scope": "Only local quarantine acquisition. Original assay rights, label semantics, identity and human admission unresolved.",
+    "human_reviewer": null
+  },
+  "HF_99fb91290cca6ab46059": {
+    "decision": "ALLOW_PUBLIC_QUARANTINE_POC",
+    "license": "cc-by-4.0 data-collection card claim",
+    "evidence_url": "https://huggingface.co/datasets/morrislab/rnahl-saluki-mouse/blob/032d07a948794118bdacf282a1d9e075c530f40f/README.md",
+    "evidence_sha256": "ea48127cdd143ff2edfa6da56c59388a7656868df14157c5e76e813f6fe719b8",
+    "evidence_transport": "USER_AUTHORIZED_HF_MIRROR_METADATA",
+    "scope": "Only local quarantine acquisition. Original assay rights, label semantics, identity and human admission unresolved.",
+    "human_reviewer": null
+  },
+  "HF_db1de4a6948422fb33cb": {
+    "decision": "ALLOW_PUBLIC_QUARANTINE_POC",
+    "license": "cc-by-4.0 data-collection card claim",
+    "evidence_url": "https://huggingface.co/datasets/morrislab/utr-variants-bohn/blob/d6c15d0fd22980e5c4d568cf8b0899fc92cf5b5f/README.md",
+    "evidence_sha256": "ea48127cdd143ff2edfa6da56c59388a7656868df14157c5e76e813f6fe719b8",
+    "evidence_transport": "USER_AUTHORIZED_HF_MIRROR_METADATA",
+    "scope": "Only local quarantine acquisition. Original assay rights, label semantics, identity and human admission unresolved.",
+    "human_reviewer": null
+  },
+  "HF_b539a051ae8e1493083e": {
+    "decision": "ALLOW_PUBLIC_QUARANTINE_POC",
+    "license": "cc-by-4.0 data-collection card claim",
+    "evidence_url": "https://huggingface.co/datasets/morrislab/utr-variants-bohn/blob/d6c15d0fd22980e5c4d568cf8b0899fc92cf5b5f/README.md",
+    "evidence_sha256": "ea48127cdd143ff2edfa6da56c59388a7656868df14157c5e76e813f6fe719b8",
+    "evidence_transport": "USER_AUTHORIZED_HF_MIRROR_METADATA",
+    "scope": "Only local quarantine acquisition. Original assay rights, label semantics, identity and human admission unresolved.",
+    "human_reviewer": null
+  },
+  "HF_3c84bb0847c9961fc6d4": {
+    "decision": "ALLOW_PUBLIC_QUARANTINE_POC",
+    "license": "mit data-collection card claim",
+    "evidence_url": "https://huggingface.co/datasets/morrislab/vep-traitgym-mrna/blob/a085525d5f6cadb50122c3b6b5b8e5e63c2a868a/README.md",
+    "evidence_sha256": "ea48127cdd143ff2edfa6da56c59388a7656868df14157c5e76e813f6fe719b8",
+    "evidence_transport": "USER_AUTHORIZED_HF_MIRROR_METADATA",
+    "scope": "Only local quarantine acquisition. Original assay rights, label semantics, identity and human admission unresolved.",
+    "human_reviewer": null
+  },
+  "HF_27d2efecdb75b4a7307f": {
+    "decision": "ALLOW_PUBLIC_QUARANTINE_POC",
+    "license": "mit data-collection card claim",
+    "evidence_url": "https://huggingface.co/datasets/morrislab/vep-traitgym-mrna/blob/a085525d5f6cadb50122c3b6b5b8e5e63c2a868a/README.md",
+    "evidence_sha256": "ea48127cdd143ff2edfa6da56c59388a7656868df14157c5e76e813f6fe719b8",
+    "evidence_transport": "USER_AUTHORIZED_HF_MIRROR_METADATA",
+    "scope": "Only local quarantine acquisition. Original assay rights, label semantics, identity and human admission unresolved.",
+    "human_reviewer": null
+  }
+}

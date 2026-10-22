@@ -1,0 +1,55 @@
+{
+  "task_id": "T0023",
+  "package_group_id": "MRNA_GO_MF",
+  "source_family_id": "SRC_GO",
+  "dataset": "GO",
+  "task": "GO：3 个功能注释子任务",
+  "input_modality": "RNA sequence-only possible; verify context",
+  "status": "HOLD_ASSAY_IDENTITY",
+  "hold_reason": "Public collection bytes or catalog available under an explicit collection-license claim; original assay/batch/cell/readout identity, original rights review, group splits/leakage and full QC remain unverified.",
+  "next_action": "Bind downloaded version/file to original assay DOI/accession, original observation and registered task; review rights and official group split before human admission. File N is not task N.",
+  "canonical_assay_id": null,
+  "reported_n": "11145",
+  "count_unit": "unique sequences; 3 subtasks sharing source",
+  "reported_n_status": "REPORTED_UNVERIFIED",
+  "actual_task_n": null,
+  "source_entry_urls": [
+    "https://huggingface.co/datasets/morrislab/go-mf",
+    "https://huggingface.co/collections/morrislab/mrnabench",
+    "https://pmc.ncbi.nlm.nih.gov/articles/PMC12265608/",
+    "https://github.com/morrislab/mRNABench"
+  ],
+  "benchmark_paper_url_not_original_assay": "https://doi.org/10.1101/2025.07.05.662870",
+  "assets": [
+    {
+      "asset_id": "HF_e4aab5fbe6c20f5f3ba0",
+      "source_url": "https://huggingface.co/datasets/morrislab/go-mf/resolve/8c2127cdeab6a7cd22087e9595581b771fb66ae0/go_dna_dataset_mf.parquet",
+      "download_url": "https://hf-mirror.com/datasets/morrislab/go-mf/resolve/8c2127cdeab6a7cd22087e9595581b771fb66ae0/go_dna_dataset_mf.parquet",
+      "filename": "go_dna_dataset_mf.parquet",
+      "link_type": "FILE_LINK_CANDIDATE",
+      "expected_sha256": null,
+      "identity_scope": "PACKAGE_ONLY_NOT_PROVEN_TASK_INPUT",
+      "downloaded_bytes_verified": true,
+      "observed_sha256": "014a247c55a69b4beaccddd6e722109337eae9153816ce9c8b7bba2cf3864fb6",
+      "actual_file_n": 5737,
+      "actual_file_n_scope": "ONE_FILE_NOT_ASSAY_OR_TASK_N",
+      "task_input_identity_verified": false,
+      "rights_scope": "Requires asset-specific acquisition decision, never blanket task approval"
+    }
+  ],
+  "task_download_completed": false,
+  "admitted": false,
+  "baseline_plan": {
+    "公平输入轨道": "RNA_SEQUENCE_ONLY_OR_CONDITIONED_SEPARATE",
+    "原登记Metric": "micro 聚合分类指标",
+    "主指标(建议)": "binary AUROC+AUPRC+MCC；multiclass macro-F1；multilabel mAP",
+    "推荐Loss": "BCEWithLogits / CE；类别加权限 train",
+    "最低信息Baseline": "majority / prevalence / stratified random",
+    "经典算法Baseline": "GC/length/k-mer + LogisticRegression",
+    "随机初始化Baseline": "1D CNN/ResNet 随机初始化",
+    "泄露检查重点": "label imbalance, gene/homology, splice genomic-context 信息不等价",
+    "baseline运行状态": "NOT_RUN"
+  },
+  "plan_command": "python tools/task_download.py plan --task T0023",
+  "download_policy": "Source-entry links are not file bytes. Explicit package-only opt-in required before file candidates can be acquired for audit."
+}

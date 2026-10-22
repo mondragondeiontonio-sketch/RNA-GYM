@@ -1,0 +1,37 @@
+{
+  "task_id": "T0030",
+  "package_group_id": "WANG_ZERO_SHOT",
+  "source_family_id": "SRC_RFAM",
+  "dataset": "RfamSample (Rfam 14.0)",
+  "task": "RNA family homology / sequence-pair similarity",
+  "input_modality": "RNA sequence-only possible; verify context",
+  "status": "HOLD_LICENSE",
+  "hold_reason": "Entry HTTP probe only; data-specific rights, raw bytes, assay DOI/accession and identity remain unverified.",
+  "next_action": "Resolve original assay DOI/accession and data-specific rights, select capped public file, then bytes/hash/schema/identity/split/QC and human review.",
+  "canonical_assay_id": null,
+  "reported_n": "5610",
+  "count_unit": "RNA sequences from 561 families",
+  "reported_n_status": "REPORTED_UNVERIFIED",
+  "actual_task_n": null,
+  "source_entry_urls": [
+    "https://zenodo.org/records/18218776",
+    "https://doi.org/10.1093/bib/bbag098"
+  ],
+  "benchmark_paper_url_not_original_assay": "https://doi.org/10.1093/bib/bbag098",
+  "assets": [],
+  "task_download_completed": false,
+  "admitted": false,
+  "baseline_plan": {
+    "公平输入轨道": "RNA_SEQUENCE_ONLY_OR_CONDITIONED_SEPARATE",
+    "原登记Metric": "1-OR, MCC, AUROC, F1",
+    "主指标(建议)": "binary AUROC+AUPRC+MCC；multiclass macro-F1；multilabel mAP",
+    "推荐Loss": "BCEWithLogits / CE；类别加权限 train",
+    "最低信息Baseline": "majority / prevalence / stratified random",
+    "经典算法Baseline": "GC/length/k-mer + LogisticRegression",
+    "随机初始化Baseline": "1D CNN/ResNet 随机初始化",
+    "泄露检查重点": "label imbalance, gene/homology, splice genomic-context 信息不等价",
+    "baseline运行状态": "NOT_RUN"
+  },
+  "plan_command": "python tools/task_download.py plan --task T0030",
+  "download_policy": "Source-entry links are not file bytes. Explicit package-only opt-in required before file candidates can be acquired for audit."
+}

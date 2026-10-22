@@ -1,0 +1,38 @@
+{
+  "task_id": "T0057",
+  "package_group_id": "RNAMIGOS2",
+  "source_family_id": "SRC_RNA_LIGAND_DOCKING_AUGMENTATION",
+  "dataset": "RNA–ligand docking augmentation",
+  "task": "RNA pocket + ligand→docking 分箱归一分数",
+  "input_modality": "structure-required (not sequence-only)",
+  "status": "HOLD_LICENSE",
+  "hold_reason": "Entry HTTP probe only; data-specific rights, raw bytes, assay DOI/accession and identity remain unverified.",
+  "next_action": "Resolve original assay DOI/accession and data-specific rights, select capped public file, then bytes/hash/schema/identity/split/QC and human review.",
+  "canonical_assay_id": null,
+  "reported_n": "~1,300,000",
+  "count_unit": "synthetic docking scores",
+  "reported_n_status": "REPORTED_UNVERIFIED",
+  "actual_task_n": null,
+  "source_entry_urls": [
+    "https://doi.org/10.5281/zenodo.14803961",
+    "https://doi.org/10.1038/s41467-025-57852-0",
+    "https://github.com/cgoliver/rnamigos2"
+  ],
+  "benchmark_paper_url_not_original_assay": "https://doi.org/10.1038/s41467-025-57852-0",
+  "assets": [],
+  "task_download_completed": false,
+  "admitted": false,
+  "baseline_plan": {
+    "公平输入轨道": "PAIRED_LIGAND_2D_OR_3D",
+    "原登记Metric": "ranking、enrichment",
+    "主指标(建议)": "AUROC+AUPRC / EF@1% / Spearman / RMSE",
+    "推荐Loss": "BCE / Huber / ranking loss",
+    "最低信息Baseline": "ligand-only/structure-only 与 random decoy",
+    "经典算法Baseline": "RDKit ECFP+RNA pocket features + XGBoost；dock score",
+    "随机初始化Baseline": "dual-tower ligand graph/RNA-encoder 随机初始化",
+    "泄露检查重点": "配体 scaffold、同口袋结构簇、decoy shortcut、assay conditions",
+    "baseline运行状态": "NOT_RUN"
+  },
+  "plan_command": "python tools/task_download.py plan --task T0057",
+  "download_policy": "Source-entry links are not file bytes. Explicit package-only opt-in required before file candidates can be acquired for audit."
+}

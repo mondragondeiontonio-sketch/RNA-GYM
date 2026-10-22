@@ -1,0 +1,38 @@
+{
+  "task_id": "T0004",
+  "package_group_id": "BEACON_ALL",
+  "source_family_id": "SRC_STRUCTUREIMPUTE_ICSHAPE_HEK293",
+  "dataset": "StructureImpute / icSHAPE HEK293",
+  "task": "SSI：片段序列→icSHAPE 反应性缺失补全",
+  "input_modality": "RNA sequence-only possible; verify context",
+  "status": "HOLD_SOURCE",
+  "hold_reason": "Original source bytes and assay evidence unresolved; upstream entry may be unavailable. Independent tasks continue.",
+  "next_action": "Resolve original assay DOI/accession and data-specific rights, select capped public file, then bytes/hash/schema/identity/split/QC and human review.",
+  "canonical_assay_id": null,
+  "reported_n": "18900",
+  "count_unit": "task records",
+  "reported_n_status": "REPORTED_UNVERIFIED",
+  "actual_task_n": null,
+  "source_entry_urls": [
+    "https://drive.google.com/drive/folders/19ddrwI8ycvIxkgSV3gDo_VunLofYd4-6?usp=sharing",
+    "https://github.com/terry-r123/RNABenchmark/blob/main/downstream/train_structural_score_imputation.py",
+    "https://github.com/terry-r123/RNABenchmark"
+  ],
+  "benchmark_paper_url_not_original_assay": "https://doi.org/10.52202/079017-2949",
+  "assets": [],
+  "task_download_completed": false,
+  "admitted": false,
+  "baseline_plan": {
+    "公平输入轨道": "RNA_SEQUENCE_ONLY_OR_CONDITIONED_SEPARATE",
+    "原登记Metric": "R²",
+    "主指标(建议)": "masked MAE / Pearson / Spearman，assay macro",
+    "推荐Loss": "masked Huber/MSE（不观测位点不参与）",
+    "最低信息Baseline": "train position-wise median；probe-specific position mean",
+    "经典算法Baseline": "ViennaRNA RNAplfold accessibility+Ridge（若任务允许）；k-mer window Ridge",
+    "随机初始化Baseline": "1D U-Net/CNN per-nt head 随机初始化",
+    "泄露检查重点": "探针批次、同序列双 probe、SN_filter、读深与误差权重",
+    "baseline运行状态": "NOT_RUN"
+  },
+  "plan_command": "python tools/task_download.py plan --task T0004",
+  "download_policy": "Source-entry links are not file bytes. Explicit package-only opt-in required before file candidates can be acquired for audit."
+}

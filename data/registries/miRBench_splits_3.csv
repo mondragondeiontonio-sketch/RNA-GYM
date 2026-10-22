@@ -1,0 +1,4 @@
+﻿dataset,train,test,leftout,source,status
+AGO2_eCLIP_Manakov2022,2495535,324171,20054,https://huggingface.co/datasets/genomic-benchmarks/miRBench,independent source label; within-study train/test/leftout
+AGO2_CLASH_Hejret2023,8140,1018,,https://huggingface.co/datasets/genomic-benchmarks/miRBench,distinct original publication
+AGO2_eCLIP_Klimentova2022,,954,,https://huggingface.co/datasets/genomic-benchmarks/miRBench,external test source

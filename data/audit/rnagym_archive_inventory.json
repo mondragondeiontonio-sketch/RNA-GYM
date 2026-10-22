@@ -1,0 +1,22 @@
+{
+  "archive_file_count": 70,
+  "archive_expanded_bytes": 488553295,
+  "rna_reference_match_files": 70,
+  "rna_reference_match_bytes": 488553295,
+  "other_files_not_rna_admitted": 0,
+  "reference_count": 70,
+  "missing_reference_ids": [],
+  "admitted": false,
+  "issue": "Reference has 37 mRNA-coding DNA-letter representations of protein/genomic variant fitness; hold as potential SECONDARY_PROXY, not direct RNA-readout core. 33 remaining files are RNA-readout candidates, NOT admitted.",
+  "noncoding_or_splicing_candidate_files": 33,
+  "noncoding_or_splicing_candidate_bytes": 129518968,
+  "mrna_coding_fitness_proxy_candidates": 37,
+  "ncRNA_candidate_files": 31,
+  "mrna_splicing_candidate_files": 2,
+  "mrna_coding_proxy_candidate_files": 37,
+  "rna_candidate_files_safely_extracted": 33,
+  "rna_candidate_file_records": 862377,
+  "record_count_scope": "Sum of rows across processed candidate files; not deduplicated independent observations and not task sample N.",
+  "failed_extractions_preserved": 2,
+  "successful_extraction_subdir": "rna_candidates_v2"
+}

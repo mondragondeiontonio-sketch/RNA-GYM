@@ -1,0 +1,39 @@
+{
+  "algorithm": "exact ordered pair SHA-256; no T/U/case/whitespace canonicalization",
+  "comparisons": [
+    {
+      "left_asset": "P0_MIR_KLIMENTOVA_ZENODO",
+      "right_asset": "P0_MIR_KLIMENTOVA_MIRROR",
+      "n_shared_exact_pairs": 954,
+      "n_shared_pair_label_disagreements": 0,
+      "same_experiment_verified": false,
+      "dedup_action": "none; preserve versions, prohibit double weighting until assay identity review"
+    },
+    {
+      "left_asset": "P0_MIR_HEJRET_TRAIN_ZENODO",
+      "right_asset": "P0_MIR_HEJRET_TEST_ZENODO",
+      "n_shared_exact_pairs": 0,
+      "n_shared_pair_label_disagreements": 0,
+      "same_experiment_verified": false,
+      "dedup_action": "none; preserve versions, prohibit double weighting until assay identity review"
+    },
+    {
+      "left_asset": "P0_MIR_KLIMENTOVA_ZENODO",
+      "right_asset": "P0_MIR_HEJRET_TEST_ZENODO",
+      "n_shared_exact_pairs": 0,
+      "n_shared_pair_label_disagreements": 0,
+      "same_experiment_verified": false,
+      "dedup_action": "none; preserve versions, prohibit double weighting until assay identity review"
+    },
+    {
+      "left_asset": "P0_MIR_KLIMENTOVA_ZENODO",
+      "right_asset": "P0_MIR_HEJRET_TRAIN_ZENODO",
+      "n_shared_exact_pairs": 2,
+      "n_shared_pair_label_disagreements": 0,
+      "same_experiment_verified": false,
+      "dedup_action": "none; preserve versions, prohibit double weighting until assay identity review"
+    }
+  ],
+  "admission_gate_pass": false,
+  "homology_leakage_checked": false
+}

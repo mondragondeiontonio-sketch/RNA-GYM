@@ -1,0 +1,37 @@
+{
+  "task_id": "T0038",
+  "package_group_id": "RIBONANZA_ORIGINAL",
+  "source_family_id": "SRC_STANFORD_RIBONANZA_RNA_MAPPING_DAT",
+  "dataset": "Stanford Ribonanza / RNA Mapping Database",
+  "task": "迁移：RNA→二级结构",
+  "input_modality": "RNA sequence-only possible; verify context",
+  "status": "HOLD_AUTH",
+  "hold_reason": "Competition access/terms and publicly available label scope require approval; hidden labels are unavailable.",
+  "next_action": "Resolve original assay DOI/accession and data-specific rights, select capped public file, then bytes/hash/schema/identity/split/QC and human review.",
+  "canonical_assay_id": null,
+  "reported_n": "未核实",
+  "count_unit": "sequences / profiles; 论文总体：2,150,401 designed sequences; 67,000 external RMDB profiles",
+  "reported_n_status": "REPORTED_UNVERIFIED",
+  "actual_task_n": null,
+  "source_entry_urls": [
+    "https://www.kaggle.com/competitions/stanford-ribonanza-rna-folding/data",
+    "https://pmc.ncbi.nlm.nih.gov/articles/PMC10925082/"
+  ],
+  "benchmark_paper_url_not_original_assay": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10925082/",
+  "assets": [],
+  "task_download_completed": false,
+  "admitted": false,
+  "baseline_plan": {
+    "公平输入轨道": "RNA_SEQUENCE_ONLY_OR_CONDITIONED_SEPARATE",
+    "原登记Metric": "pair F1",
+    "主指标(建议)": "pair F1/MCC；noncanonical edge macro-F1",
+    "推荐Loss": "BCE/CE + pairing constraints",
+    "最低信息Baseline": "所有不配对；互补配对几率先验",
+    "经典算法Baseline": "ViennaRNA RNAfold / RNAstructure/ CONTRAfold",
+    "随机初始化Baseline": "小型 bpp CNN / pairwise Transformer（相同输入）",
+    "泄露检查重点": "homology; RNA3DB/PDB family/泄漏；label pair state vs pair matrix",
+    "baseline运行状态": "NOT_RUN"
+  },
+  "plan_command": "python tools/task_download.py plan --task T0038",
+  "download_policy": "Source-entry links are not file bytes. Explicit package-only opt-in required before file candidates can be acquired for audit."
+}

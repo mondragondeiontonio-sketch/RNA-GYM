@@ -1,0 +1,111 @@
+{
+  "as_of": "2026-10-22",
+  "data_sha256": {
+    "provenance.json": "d45ca6a993f13d94fde0c4dc624656ad70f8a554227fe1015b85ff8f770a6e12",
+    "tasks.json": "165f063b1d5d47365107bac6771ebd44404c62ad30b8ce154143b38b7f9a6211"
+  },
+  "download_packages": 47,
+  "excluded_task_rows": 9,
+  "family_counts": {
+    "Nanopore 原始信号": 4,
+    "RNA 2D": 13,
+    "RNA 3D": 16,
+    "RNA 逆折叠与生成设计": 34,
+    "RNA–RNA 相互作用": 6,
+    "RNA–小分子结合": 15,
+    "RNA–蛋白结合": 31,
+    "二/多/多标签分类": 14,
+    "排除/仅方法学": 23,
+    "标量回归": 23,
+    "突变效应与排序": 9,
+    "逐核苷酸回归": 10
+  },
+  "final_admitted_tasks": 0,
+  "held_task_rows": 189,
+  "inputs": [
+    {
+      "path": "data/registries/task_baselines_and_admission_198.csv",
+      "present": true,
+      "sha256": "c8f0ea233ea0a84826c077d9621a172e69ddbe78f8003588787d1c80aedfbd71"
+    },
+    {
+      "path": "data/registries/source_family_crosswalk_123.csv",
+      "present": true,
+      "sha256": "f71b1025d5b86dd4ee9bfc00a163c29a2401e2855abcf76a57768f7c97ba19a6"
+    },
+    {
+      "path": "data/registries/download_packages_47.csv",
+      "present": true,
+      "sha256": "4f5d8917d693356acd205fb9ecb2c098f5a78378b58f796b45ba838b387a30f8"
+    },
+    {
+      "path": "data/assets/download_assets.csv",
+      "present": true,
+      "sha256": "c631a37ad74e080cb0fb9984b3ba2344f0fa16971c8ed50dcfe9a40b284f2006"
+    },
+    {
+      "path": "data/audit/task_status.tsv",
+      "present": true,
+      "sha256": "c503ade308d4c5baa9e8950b389d6f0ed34411d94bda57b42ae87c991f57d734"
+    },
+    {
+      "path": "data/audit/asset_evidence.json",
+      "present": true,
+      "sha256": "65663debf036559aa624ddf056918fea1a4131f7780c2de431bde0b0f4c958c2"
+    },
+    {
+      "path": "data/audit/rnagym_archive_inventory.json",
+      "present": true,
+      "sha256": "e07423eb91a7cbbac61c2ea252b37c7b648c574602b011e2eec5f605f7700251"
+    },
+    {
+      "path": "data/audit/poc_summary.json",
+      "present": true,
+      "sha256": "aab1be32c2cb22ce49e45f43c3fcae2b44017f493d1e1e7aa49bb3e1fd30390e"
+    }
+  ],
+  "note": "Search-level registry, not independent assays or admitted datasets. Review-ready is not admitted. No scores.",
+  "poc_audit": {
+    "admitted": 0,
+    "all_p0_dod_met": false,
+    "compressed_bytes_downloaded": 774074831,
+    "files_downloaded_and_sha256_verified": 19,
+    "independent_assays_verified": 0,
+    "paired_count_scope": "EXACT_UNIQUE_ORDERED_INPUT_PAIRS_NOT_INDEPENDENT_ASSAYS",
+    "paired_files_exact_qc_pass": 4,
+    "review_ready": 0,
+    "scope": "DOWNLOADED_POC_FILES_ONLY_NOT_TASK_N",
+    "source": "data/audit/poc_summary.json",
+    "unique_paired_input_scope": "FOUR_SMALL_POC_FILE_VERSIONS_ONLY_LARGE_FILES_NOT_EXACT_DEDUPED",
+    "unique_paired_inputs_across_downloaded_mirbench": 10110
+  },
+  "project": "RNA-Gym",
+  "raw_files_sha256_verified": 19,
+  "registered_task_rows": 198,
+  "review_ready_tasks": 0,
+  "rnagym_reference_classification": {
+    "mrna_coding_fitness_proxy_candidates": 37,
+    "mrna_coding_proxy_candidate_files": 37,
+    "mrna_splicing_candidate_files": 2,
+    "ncRNA_candidate_files": 31,
+    "noncoding_or_splicing_candidate_files": 33,
+    "record_count_scope": "PROCESSED_FILE_ROWS_NOT_DEDUPLICATED_NOT_TASK_N",
+    "reference_count": 70,
+    "rna_candidate_file_records": 862377,
+    "rna_candidate_files_safely_extracted": 33,
+    "scope": "REFERENCE_FILES_NOT_VERIFIED_ASSAYS",
+    "source": "data/audit/rnagym_archive_inventory.json",
+    "status": "ALL_HOLD_NOT_ADMITTED"
+  },
+  "schema_version": 1,
+  "source_families": 123,
+  "status_counts": {
+    "EXCLUDED_NON_ASSAY": 9,
+    "HOLD_ASSAY_IDENTITY": 13,
+    "HOLD_AUTH": 5,
+    "HOLD_LICENSE": 69,
+    "HOLD_RELEASE": 4,
+    "HOLD_SOURCE": 98
+  },
+  "tasks_with_reported_sample_n": 58
+}

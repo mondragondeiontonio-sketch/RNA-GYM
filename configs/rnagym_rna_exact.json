@@ -1,0 +1,7 @@
+{
+  "sequence_col": "sequence",
+  "label_col": "DMS_score",
+  "require_split_column": false,
+  "alphabet": "RNA",
+  "group_cols": []
+}

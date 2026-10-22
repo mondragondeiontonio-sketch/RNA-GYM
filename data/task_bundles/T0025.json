@@ -1,0 +1,54 @@
+{
+  "task_id": "T0025",
+  "package_group_id": "MRNA_RNA_LOC_FAZAL",
+  "source_family_id": "SRC_RNA_LOC_SR",
+  "dataset": "RNA-Loc-SR",
+  "task": "RNA-Loc-SR：RNA 定位",
+  "input_modality": "RNA sequence-only possible; verify context",
+  "status": "HOLD_SOURCE",
+  "hold_reason": "Original source bytes and assay evidence unresolved; upstream entry may be unavailable. Independent tasks continue.",
+  "next_action": "Resolve original assay DOI/accession and data-specific rights, select capped public file, then bytes/hash/schema/identity/split/QC and human review.",
+  "canonical_assay_id": null,
+  "reported_n": "3335",
+  "count_unit": "unique sequences; 1 subtasks sharing source",
+  "reported_n_status": "REPORTED_UNVERIFIED",
+  "actual_task_n": null,
+  "source_entry_urls": [
+    "https://huggingface.co/datasets/morrislab/rna-loc-fazal",
+    "https://pmc.ncbi.nlm.nih.gov/articles/PMC12265608/",
+    "https://github.com/morrislab/mRNABench"
+  ],
+  "benchmark_paper_url_not_original_assay": "https://doi.org/10.1101/2025.07.05.662870",
+  "assets": [
+    {
+      "asset_id": "HF_b3bef58b0389d2bfecef",
+      "source_url": "https://huggingface.co/datasets/morrislab/rna-loc-fazal/resolve/ca71f0794ef011a7029a04a168e8974366b6c509/rna-loc-fazal.parquet",
+      "download_url": "https://hf-mirror.com/datasets/morrislab/rna-loc-fazal/resolve/ca71f0794ef011a7029a04a168e8974366b6c509/rna-loc-fazal.parquet",
+      "filename": "rna-loc-fazal.parquet",
+      "link_type": "FILE_LINK_CANDIDATE",
+      "expected_sha256": null,
+      "identity_scope": "PACKAGE_ONLY_NOT_PROVEN_TASK_INPUT",
+      "downloaded_bytes_verified": false,
+      "observed_sha256": null,
+      "actual_file_n": null,
+      "actual_file_n_scope": null,
+      "task_input_identity_verified": false,
+      "rights_scope": "Requires asset-specific acquisition decision, never blanket task approval"
+    }
+  ],
+  "task_download_completed": false,
+  "admitted": false,
+  "baseline_plan": {
+    "公平输入轨道": "RNA_SEQUENCE_ONLY_OR_CONDITIONED_SEPARATE",
+    "原登记Metric": "micro 分类指标",
+    "主指标(建议)": "binary AUROC+AUPRC+MCC；multiclass macro-F1；multilabel mAP",
+    "推荐Loss": "BCEWithLogits / CE；类别加权限 train",
+    "最低信息Baseline": "majority / prevalence / stratified random",
+    "经典算法Baseline": "GC/length/k-mer + LogisticRegression",
+    "随机初始化Baseline": "1D CNN/ResNet 随机初始化",
+    "泄露检查重点": "label imbalance, gene/homology, splice genomic-context 信息不等价",
+    "baseline运行状态": "NOT_RUN"
+  },
+  "plan_command": "python tools/task_download.py plan --task T0025",
+  "download_policy": "Source-entry links are not file bytes. Explicit package-only opt-in required before file candidates can be acquired for audit."
+}

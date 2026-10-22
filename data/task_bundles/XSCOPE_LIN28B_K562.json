@@ -1,0 +1,39 @@
+{
+  "task_id": "XSCOPE_LIN28B_K562",
+  "package_group_id": "ENCODE_ECLIP",
+  "source_family_id": "SRC_ECLIP_MULTI",
+  "dataset": "RNA-Scope eCLIP: LIN28B_K562",
+  "task": "RBP binding: LIN28B_K562",
+  "input_modality": "RNA sequence-only possible",
+  "status": "HOLD_LICENSE",
+  "hold_reason": "Entry HTTP probe only; data-specific rights, raw bytes, assay DOI/accession and identity remain unverified.",
+  "next_action": "Resolve original assay DOI/accession and data-specific rights, select capped public file, then bytes/hash/schema/identity/split/QC and human review.",
+  "canonical_assay_id": null,
+  "reported_n": "",
+  "count_unit": "RNA sequences; 22 RBP datasets overall",
+  "reported_n_status": "REPORTED_UNVERIFIED",
+  "actual_task_n": null,
+  "source_entry_urls": [
+    "https://www.encodeproject.org/eclip/",
+    "https://www.kaggle.com/datasets/b0aeeed2f6b3dfd43c1ab33b58467a466308d056b6868d861ad00e1074ce384d",
+    "https://rnascope-board.github.io/",
+    "https://anonymous.4open.science/r/RNAscope"
+  ],
+  "benchmark_paper_url_not_original_assay": "https://rnascope-board.github.io/",
+  "assets": [],
+  "task_download_completed": false,
+  "admitted": false,
+  "baseline_plan": {
+    "公平输入轨道": "RNA_PLUS_RBP_IDENTITY",
+    "原登记Metric": "F1",
+    "主指标(建议)": "AUPRC 主；AUROC/MCC/计数 correlation 辅",
+    "推荐Loss": "BCE/focal for peaks; Poisson/NB for read counts",
+    "最低信息Baseline": "RBP cell-specific prevalence 或 shuffled peak labels（负控）",
+    "经典算法Baseline": "motif/PWM+Logistic 或 DeepBind/RBNS motif",
+    "随机初始化Baseline": "CNN binding-head 从头训练",
+    "泄露检查重点": "ENCODE accessions、生物复制、细胞、靶基因、负例生成",
+    "baseline运行状态": "NOT_RUN"
+  },
+  "plan_command": "python tools/task_download.py plan --task XSCOPE_LIN28B_K562",
+  "download_policy": "Source-entry links are not file bytes. Explicit package-only opt-in required before file candidates can be acquired for audit."
+}

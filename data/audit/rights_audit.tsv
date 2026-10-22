@@ -1,0 +1,48 @@
+package_group_id	source_url	rights_decision	data_license	next_action
+APTAMER_DB	https://aptamer.ribocentre.org/	HOLD_REVIEW		Resolve original data terms; code license does not approve underlying assays.
+BEACON_ALL	https://drive.google.com/drive/folders/19ddrwI8ycvIxkgSV3gDo_VunLofYd4-6?usp=sharing	HOLD_REVIEW		Resolve original data terms; code license does not approve underlying assays.
+CASP	https://predictioncenter.org/casp16/	HOLD_REVIEW		Resolve original data terms; code license does not approve underlying assays.
+DORADO_MOD		HOLD_REVIEW		Resolve original data terms; code license does not approve underlying assays.
+ENCODE_ECLIP	https://www.encodeproject.org/eclip/	HOLD_REVIEW		Resolve original data terms; code license does not approve underlying assays.
+EUKAUTR	https://github.com/meilanglang/EukaUTR	HOLD_REVIEW		Resolve original data terms; code license does not approve underlying assays.
+GRNADE	https://github.com/chaitjo/geometric-rna-design	HOLD_REVIEW		Resolve original data terms; code license does not approve underlying assays.
+METHODOLOGY_ONLY		HOLD_REVIEW		Resolve original data terms; code license does not approve underlying assays.
+MIR_BENCH	https://huggingface.co/datasets/genomic-benchmarks/miRBench	ALLOW_PUBLIC_QUARANTINE_COLLECTION_CLAIM_ONLY	cc-by-4.0	Original-assay terms and human rights approval still unresolved; acquisition only, not redistribution or admission approval.
+MRNA_ECLIP	https://huggingface.co/datasets/morrislab/eclip	HOLD_REVIEW		Resolve original data terms; code license does not approve underlying assays.
+MRNA_GO_MF	https://huggingface.co/datasets/morrislab/go-mf	ALLOW_PUBLIC_QUARANTINE_COLLECTION_CLAIM_ONLY	cc-by-4.0	Original-assay terms and human rights approval still unresolved; acquisition only, not redistribution or admission approval.
+MRNA_MIRNA_TARGET	https://huggingface.co/datasets/morrislab/mirna-target	ALLOW_PUBLIC_QUARANTINE_COLLECTION_CLAIM_ONLY	cc-by-4.0	Original-assay terms and human rights approval still unresolved; acquisition only, not redistribution or admission approval.
+MRNA_MRL_HL_LBKWK	https://huggingface.co/datasets/morrislab/mrl-hl-lbkwk	ALLOW_PUBLIC_QUARANTINE_COLLECTION_CLAIM_ONLY	cc-by-4.0	Original-assay terms and human rights approval still unresolved; acquisition only, not redistribution or admission approval.
+MRNA_MRL_SAMPLE	https://huggingface.co/datasets/morrislab/mrl-sample	HOLD_REVIEW		Resolve original data terms; code license does not approve underlying assays.
+MRNA_MRL_SUGIMOTO	https://huggingface.co/datasets/morrislab/mrl-sugimoto	ALLOW_PUBLIC_QUARANTINE_COLLECTION_CLAIM_ONLY	cc-by-4.0	Original-assay terms and human rights approval still unresolved; acquisition only, not redistribution or admission approval.
+MRNA_PROTEIN_LOCALIZATION	https://huggingface.co/datasets/morrislab/protein-localization	ALLOW_PUBLIC_QUARANTINE_COLLECTION_CLAIM_ONLY	cc-by-sa-4.0	Original-assay terms and human rights approval still unresolved; acquisition only, not redistribution or admission approval.
+MRNA_RNAHL_SALUKI_HUMAN	https://huggingface.co/datasets/morrislab/rnahl-saluki-human	ALLOW_PUBLIC_QUARANTINE_COLLECTION_CLAIM_ONLY	cc-by-4.0	Original-assay terms and human rights approval still unresolved; acquisition only, not redistribution or admission approval.
+MRNA_RNAHL_SALUKI_MOUSE	https://huggingface.co/datasets/morrislab/rnahl-saluki-mouse	ALLOW_PUBLIC_QUARANTINE_COLLECTION_CLAIM_ONLY	cc-by-4.0	Original-assay terms and human rights approval still unresolved; acquisition only, not redistribution or admission approval.
+MRNA_RNA_LIFECYCLE_IETSWAART	https://huggingface.co/datasets/morrislab/rna-lifecycle-ietswaart	HOLD_REVIEW		Resolve original data terms; code license does not approve underlying assays.
+MRNA_RNA_LOC_FAZAL	https://huggingface.co/datasets/morrislab/rna-loc-fazal	HOLD_REVIEW		Resolve original data terms; code license does not approve underlying assays.
+MRNA_TRANSLATION_EFFICIENCY_HUMAN	https://huggingface.co/datasets/morrislab/translation-efficiency-human	HOLD_REVIEW		Resolve original data terms; code license does not approve underlying assays.
+MRNA_TRANSLATION_EFFICIENCY_MOUSE	https://huggingface.co/datasets/morrislab/translation-efficiency-mouse	HOLD_REVIEW		Resolve original data terms; code license does not approve underlying assays.
+MRNA_UNRESOLVED_RNA_LOC_LR	https://github.com/morrislab/mRNABench	HOLD_REVIEW		Resolve original data terms; code license does not approve underlying assays.
+MRNA_UTR_VARIANTS_BOHN	https://huggingface.co/datasets/morrislab/utr-variants-bohn	ALLOW_PUBLIC_QUARANTINE_COLLECTION_CLAIM_ONLY	cc-by-4.0	Original-assay terms and human rights approval still unresolved; acquisition only, not redistribution or admission approval.
+MRNA_VEP_TRAITGYM_MRNA	https://huggingface.co/datasets/morrislab/vep-traitgym-mrna	ALLOW_PUBLIC_QUARANTINE_COLLECTION_CLAIM_ONLY	mit	Original-assay terms and human rights approval still unresolved; acquisition only, not redistribution or admission approval.
+NABENCH_DMS	https://github.com/mrzzmrzz/NABench/tree/main/data	HOLD_REVIEW		Resolve original data terms; code license does not approve underlying assays.
+NABENCH_SELEX	https://github.com/mrzzmrzz/NABench	HOLD_REVIEW		Resolve original data terms; code license does not approve underlying assays.
+NANOLYMPICS	https://github.com/mfurla/NanOlympicsMod	HOLD_REVIEW		Resolve original data terms; code license does not approve underlying assays.
+NC_BENCH	https://github.com/heqin-zhu/NCBench/tree/master/data	HOLD_REVIEW		Resolve original data terms; code license does not approve underlying assays.
+OPENVACCINE	https://www.kaggle.com/competitions/stanford-covid-vaccine/data	HOLD_REVIEW		Resolve original data terms; code license does not approve underlying assays.
+PARNET	https://www.encodeproject.org/eclip/	HOLD_REVIEW		Resolve original data terms; code license does not approve underlying assays.
+RDESIGN	https://github.com/A4Bio/RDesign	HOLD_REVIEW		Resolve original data terms; code license does not approve underlying assays.
+RIBONANZA_ORIGINAL	https://www.kaggle.com/competitions/stanford-ribonanza-rna-folding/data	HOLD_REVIEW		Resolve original data terms; code license does not approve underlying assays.
+RNA3DB	https://github.com/marcellszi/rna3db/releases	HOLD_REVIEW		Resolve original data terms; code license does not approve underlying assays.
+RNABENCH_SOFTWARE	https://github.com/automl/RnaBench	HOLD_REVIEW		Resolve original data terms; code license does not approve underlying assays.
+RNAGYM_3D	https://huggingface.co/datasets/Marks-lab/RNAgym/tree/main/tertiary_structure_prediction	ALLOW_PUBLIC_QUARANTINE_COLLECTION_CLAIM_ONLY	cc-by-4.0	Original-assay terms and human rights approval still unresolved; acquisition only, not redistribution or admission approval.
+RNAGYM_DMS	https://marks.hms.harvard.edu/rnagym/fitness_prediction/fitness_processed_assays.zip	ALLOW_PUBLIC_QUARANTINE_COLLECTION_CLAIM_ONLY	cc-by-4.0	Original-assay terms and human rights approval still unresolved; acquisition only, not redistribution or admission approval.
+RNAGYM_RMDB	https://huggingface.co/datasets/Marks-lab/RNAgym/tree/main/secondary_structure_prediction	ALLOW_PUBLIC_QUARANTINE_COLLECTION_CLAIM_ONLY	cc-by-4.0	Original-assay terms and human rights approval still unresolved; acquisition only, not redistribution or admission approval.
+RNAMIGOS2	https://doi.org/10.5281/zenodo.14803961	HOLD_REVIEW		Resolve original data terms; code license does not approve underlying assays.
+RNA_INV_BENCH	https://github.com/COLA-Laboratory/RNAInvBench/tree/main/data	HOLD_REVIEW		Resolve original data terms; code license does not approve underlying assays.
+RNA_PUZZLE_TOOL		HOLD_REVIEW		Resolve original data terms; code license does not approve underlying assays.
+RNA_SCOPE	https://rnascope-board.github.io/	HOLD_REVIEW		Resolve original data terms; code license does not approve underlying assays.
+ROMET	https://github.com/chenjief0628/ROMET-RNA	HOLD_REVIEW		Resolve original data terms; code license does not approve underlying assays.
+R_BIND		HOLD_REVIEW		Resolve original data terms; code license does not approve underlying assays.
+SECONDARY_LITERATURE		HOLD_REVIEW		Resolve original data terms; code license does not approve underlying assays.
+SMRTNET	https://github.com/Yuhan-Fei/SMRTnet/tree/main/data	HOLD_REVIEW		Resolve original data terms; code license does not approve underlying assays.
+WANG_ZERO_SHOT	https://zenodo.org/records/18218776	HOLD_REVIEW		Resolve original data terms; code license does not approve underlying assays.

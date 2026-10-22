@@ -1,0 +1,36 @@
+{
+  "task_id": "T0117",
+  "package_group_id": "SECONDARY_LITERATURE",
+  "source_family_id": "SRC_JOINT_RNA_SEQUENCE_STRUCTURE_CO_DE",
+  "dataset": "Joint RNA sequence/structure co-design data",
+  "task": "RNA 序列 token + 3D 轨迹→联合生成",
+  "input_modality": "generation/conditional (auxiliary)",
+  "status": "HOLD_SOURCE",
+  "hold_reason": "Original source bytes and assay evidence unresolved; upstream entry may be unavailable. Independent tasks continue.",
+  "next_action": "Resolve original assay DOI/accession and data-specific rights, select capped public file, then bytes/hash/schema/identity/split/QC and human review.",
+  "canonical_assay_id": null,
+  "reported_n": "未核实",
+  "count_unit": "RNA sequence–3D pairs; 论文总体：Per-split examples not independently verified",
+  "reported_n_status": "REPORTED_UNVERIFIED",
+  "actual_task_n": null,
+  "source_entry_urls": [
+    "https://openreview.net/pdf?id=cpc63YrVWN"
+  ],
+  "benchmark_paper_url_not_original_assay": "https://openreview.net/pdf?id=cpc63YrVWN",
+  "assets": [],
+  "task_download_completed": false,
+  "admitted": false,
+  "baseline_plan": {
+    "公平输入轨道": "GENERATIVE_ONLY_STRUCT_2D_OR_3D",
+    "原登记Metric": "scRMSD/scTM 等",
+    "主指标(建议)": "fold success、structure match、recovery、diversity、novelty",
+    "推荐Loss": "CE/NLL on teacher forcing; policy/reward only design",
+    "最低信息Baseline": "随机兼容序列；GC-matched shuffle",
+    "经典算法Baseline": "RNAinverse / antaRNA / ViennaRNA inverse（2D）；gRNAde/RDesign（3D）",
+    "随机初始化Baseline": "random-init autoregressive inverse folding",
+    "泄露检查重点": "Eterna100 版本重合、Rfam family、RNA 3D homologs；可设计性偏差",
+    "baseline运行状态": "NOT_RUN"
+  },
+  "plan_command": "python tools/task_download.py plan --task T0117",
+  "download_policy": "Source-entry links are not file bytes. Explicit package-only opt-in required before file candidates can be acquired for audit."
+}

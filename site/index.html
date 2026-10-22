@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="RNA-Gym 审计预览：检索级任务、原始实验血缘、模态基线和数据治理。未发布模型分数。">
+  <meta name="color-scheme" content="light">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'">
+  <title>RNA-Gym · Public audit preview</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#datasets">跳转到任务索引</a>
+<header class="topbar">
+  <a class="brand" href="#home" aria-label="RNA-Gym 首页"><span class="brand-symbol" aria-hidden="true">rG</span><span>RNA-Gym<small>Evidence before evaluation</small></span></a>
+  <details class="navigation" open>
+    <summary>导航 / Menu</summary>
+    <nav aria-label="主导航"><a href="#datasets">Dataset explorer</a><a href="#provenance">Assay cards</a><a href="#method">Methods</a><a href="#baselines">Baselines</a><a href="#leaderboard">Leaderboard</a><a href="#governance">Governance</a><a href="#contribute">Contribute</a></nav>
+  </details>
+  <span class="topbadge">PUBLIC AUDIT PREVIEW · v0.1</span>
+</header>
+<main>
+  <section id="home" class="hero">
+    <div>
+      <p class="eyebrow">RNA FOUNDATION MODEL BENCHMARK · 审计预览</p>
+      <h1>Trace the assay.<br><em>Then trust the score.</em></h1>
+      <p class="lede">从 RNA 序列、结构到功能与设计，每一项评测都先回答同一个问题：这条观测，究竟来自哪个实验？</p>
+      <div class="hero-links"><a class="primary" href="#datasets">探索任务索引 ↗</a><a class="secondary" href="#provenance">查看证据卡 ↓</a></div>
+      <p class="notice"><strong>审计预览 ≠ 正式准入。</strong> 注册记录不是独立 assay，来源链接不是已下载文件；review-ready 不是 admitted。本站没有模型成绩，不提供原始标签或受限文件。</p>
+    </div>
+    <aside class="evidence-thread" aria-label="任务与证据的关系">
+      <p class="utility">THE PROVENANCE THREAD</p>
+      <ol><li><span class="thread-node">task_id</span><strong>任务注册</strong><small>readout · modality · baseline</small></li><li><span class="thread-node">source_family / package</span><strong>追溯来源，而不是重复计数</strong><small>来源族和管理包均不等于独立实验</small></li><li><span class="thread-node">canonical_assay_id</span><strong>实验身份待核对</strong><small>DOI / accession · construct · condition</small></li><li><span class="thread-node">sha256 → split</span><strong>真实字节，再到准入</strong><small>rights · QC · dedup · leakage · review</small></li></ol>
+      <p class="thread-caption">这是审计所需链路，不是完成进度。</p>
+    </aside>
+  </section>
+  <section class="metrics" aria-label="审计统计" aria-live="polite">
+    <div><strong id="nTasks">—</strong><span>Registered</span><small>检索级任务行</small></div>
+    <div><strong id="nFamilies">—</strong><span>Source families</span><small>来源族，不是 assay 数</small></div>
+    <div><strong id="nPackages">—</strong><span>Download groups</span><small>管理包，不是实验数</small></div>
+    <div><strong id="nReview">—</strong><span>Review-ready</span><small>待审，不代表已准入</small></div>
+    <div><strong id="nAdmitted">—</strong><span>Admitted</span><small>最终准入任务</small></div>
+  </section>
+  <p id="snapshot" class="snapshot">正在读取 registry 快照；未读取前不显示统计。</p>
+  <noscript><p class="notice">任务搜索需要 JavaScript。可直接读取公开的 <a href="data/tasks.json">任务 JSON</a>、<a href="data/provenance.json">来源卡片 JSON</a> 和 <a href="data/summary.json">审计汇总</a>；这些都不是原始实验数据。</p></noscript>
+
+  <section id="datasets" class="section">
+    <p class="section-kicker">DATASET EXPLORER / 任务索引</p>
+    <div class="section-heading"><div><h2>先看任务，再核实来源。</h2><p>任务标题、数据来源、Task ID 和中文关键词均可检索。筛选不改变原始登记状态。</p></div><a class="outline-badge" href="data/tasks.json" download>公开索引 JSON ↓</a></div>
+    <div class="atlas-toolbar">
+      <label for="search">搜索任务 / Search<input id="search" type="search" placeholder="T0001、eCLIP、Ribonanza、突变…" autocomplete="off"></label>
+      <label for="family">任务家族<select id="family"><option value="">全部家族</option></select></label>
+      <label for="package">来源管理包<select id="package"><option value="">全部管理包</option></select></label>
+      <label for="status">审计状态<select id="status"><option value="">全部状态</option></select></label>
+      <button id="reset" type="button" class="quiet">清除筛选</button>
+    </div>
+    <p class="data-note"><strong>Dataset N：</strong>仅引用 registry 原登记值，统一标记 reported/unverified；未核实、近似或非样本单位不会转换为精确样本 N。不能跨任务求和，来源可能复用。</p>
+    <div class="countline"><span id="filteredCount" role="status" aria-live="polite">加载中…</span><span>可点击 Task ID 打开来源与基线卡</span></div>
+    <div class="tablewrap" role="region" aria-label="可横向滚动的任务索引" tabindex="0"><table>
+      <caption class="sr-only">检索级任务索引；原登记 N 未经真实文件核验，不是准入样本量。</caption>
+      <thead><tr><th scope="col">Task / Dataset</th><th scope="col">Family / Readout</th><th scope="col">Dataset N</th><th scope="col">Audit status</th><th scope="col">Source</th></tr></thead>
+      <tbody id="taskbody"><tr><td colspan="5">读取公开索引中…</td></tr></tbody>
+    </table></div>
+    <div class="pagination" aria-label="索引分页"><label for="pageSize">每页<select id="pageSize"><option value="12">12</option><option value="24">24</option><option value="48">48</option></select></label><button id="prev" type="button" disabled>← 上一页</button><span id="pageLabel" aria-live="polite">—</span><button id="next" type="button" disabled>下一页 →</button></div>
+  </section>
+
+  <section id="provenance" class="section alt">
+    <p class="section-kicker">ASSAY PROVENANCE / 来源证据卡</p>
+    <div class="section-heading"><div><h2 id="cardHeading" tabindex="-1">实验身份，不从名称推断。</h2><p>每张卡对应一个注册任务，<strong>不代表一个已确认的独立 assay</strong>。未知 DOI、许可和 SHA 保持 unknown。</p></div><label for="cardSelect">选择任务<select id="cardSelect"><option value="">加载中…</option></select></label></div>
+    <div id="auditSummary" class="data-note" aria-live="polite">审计范围汇总尚未加载；不显示未经核验的样本总数。</div>
+    <article id="assayCard" class="assay-card" aria-live="polite"><p>正在加载来源证据；不会从 benchmark DOI 填充 assay DOI。</p></article>
+  </section>
+
+  <section id="method" class="section">
+    <p class="section-kicker">METHODS / MODALITY TRACKS</p><h2>公平输入，分轨评测。</h2>
+    <p class="intro">纯序列、paired RNA、RNA / 结构 / 配体条件以及生成设计独立建榜。RSS、MRL 和 TE 是不同 readout，不合并标签。</p>
+    <div class="methodgrid">
+      <article><span class="utility">IDENTITY</span><h3>观察不等于序列</h3><p>只有同一实验观测真正重复才合并；同一序列的不同 cell、probe、replicate、timepoint 和 readout 保留。U / T 转换须记录。</p></article>
+      <article><span class="utility">SPLIT</span><h3>先冻结，再评估</h3><p>优先原作者固定 test。WT / backbone、同源家族、PDB-chain、miRNA / RBP、配体 scaffold 和原始 read molecule 分组防泄露。</p></article>
+      <article><span class="utility">TRAIN-ONLY FITTING</span><h3>测试集不能调参</h3><p>scaler、阈值、HPO 只用训练 folds。held-out / test 不参与预训练或表征缓存微调；保留 overlap report 和 exclusion log。</p></article>
+      <article><span class="utility">AGGREGATION</span><h3>不直接相加异质指标</h3><p>fold → task → assay → source family → domain。预定义模态权重；报告 N/A、覆盖率、bootstrap 和权重敏感性，再讨论排名。</p></article>
+    </div>
+    <p class="data-note">2D、3D、ligand、Nanopore 各自需要专用 QC。exact tabular QC 通过不等于完整科学 QC，更不等于最终准入。</p>
+  </section>
+
+  <section id="baselines" class="section alt">
+    <p class="section-kicker">BASELINES / DECLARED, NOT EXECUTED</p><h2>先证明任务可评，再谈模型高低。</h2>
+    <p class="intro">每个任务卡保留 registry 的 input、loss、metric、低信息对照、经典模型和随机初始化 DL 声明。名称只是候选配置，<strong>不表示 baseline 已运行</strong>；模态与 label 不符先 HOLD。</p>
+    <div class="baselinegrid"><article><span class="utility">CONTROL</span><h3>低信息对照</h3><p>检验标签、类别频率、长度或构件等 shortcut；miRNA-only shortcut 不可代替真实 assay。</p></article><article><span class="utility">CLASSICAL</span><h3>经典特征 / 领域工具</h3><p>使用与任务模态一致的输入和合法工具。原始单位、标签方向和损失函数不可静默改写。</p></article><article><span class="utility">SCRATCH</span><h3>随机初始化 DL</h3><p>独立于 FM 预训练收益，仅先设计 prepare / run / evaluate 接口与 toy smoke。本轮不调度训练。</p></article></div>
+    <h3>FM 独立跑道</h3><div class="tracks"><span>Zero-shot likelihood</span><span>Frozen + Ridge</span><span>Frozen + MLP</span><span>LoRA</span><span>Full FT</span><span>Random init</span></div>
+    <p class="footnote">无实测基线分数、无 FM 推理结果，也没有启动 GPU / 预训练作业。<a href="#provenance">在任务卡中查看逐任务 baseline 声明 ↑</a></p>
+  </section>
+
+  <section id="leaderboard" class="section">
+    <p class="section-kicker">LEADERBOARD / NOT OPEN FOR SCORING</p><div class="section-heading"><h2>没有证据，就不填分数。</h2><span class="warning-badge">No published scores</span></div>
+    <div class="placeholder"><span class="placeholder-icon" aria-hidden="true">∅</span><div><h3>Awaiting admission and evaluation review</h3><p>只有真实文件、使用权、实验身份、QC、去重、split 和人工审查通过，才接受带 CI、任务覆盖率、缺失任务报告的 model-run manifest。站点部署成功不是 benchmark 完成。</p></div></div>
+  </section>
+
+  <section id="governance" class="section alt">
+    <p class="section-kicker">DATA GOVERNANCE / PUBLIC BY DESIGN</p><h2>公开边界，也是方法的一部分。</h2>
+    <div class="governance"><article><h3>只公开可公开的索引</h3><p>本站只含来源链接、任务声明和汇总证据；不含内部 UTR 数据、原始测量、10-fold splits、私有权重、用户身份、原审计 Markdown 或 XLS。</p></article><article><h3>权限不明就 HOLD</h3><p>公开仓库不等于数据可重分发。HOLD_AUTH / HOLD_LICENSE / HOLD_RELEASE / HOLD_SOURCE 仅阻断具体资产，不绕过登录、不获取隐藏标签。</p></article><article><h3>从快照到可追溯变更</h3><p>上游变更新建版本，不用同名文件覆盖旧字节。保留 immutable provenance、raw SHA256、alias 和 split manifest；自动化不代签人工批准。</p></article></div>
+    <p class="data-note">网页展示的 release / index verification、候选链接与 HASHED / REVIEW_READY 分开标记。包级文件不能证明该包内所有任务的 assay 身份或样本 N。</p>
+  </section>
+
+  <section id="contribute" class="section">
+    <p class="section-kicker">CONTRIBUTE / CITATION & REPRODUCIBILITY</p><h2>补一条证据，而不是补一个分数。</h2>
+    <div class="contribution-grid"><article><h3>提交来源修正</h3><p>以 task_id 和来源族为入口，提供公开的原论文 / accession、版本、权利证据与实际文件 SHA256。请勿提交标签、受限原始文件、token 或权重。</p><p>先核实 assay alias 和实验条件；未知项保留 unknown。后续发布应通过受审查 PR，不会从本地预览自动上传。</p></article><article><h3>引用这个预览</h3><p>RNA-Gym, public audit preview v0.1, registry snapshot <span id="citationDate">unknown</span>。尚无经核实的项目论文 DOI；不要将 benchmark 引文当成原始 assay 引文。</p><p>机器可读：<a href="data/tasks.json">tasks.json</a> · <a href="data/provenance.json">provenance.json</a> · <a href="data/summary.json">summary.json / input hashes</a></p><p class="utility">重建：python tools/generate_site.py<br>只读校验：python tools/generate_site.py --verify</p></article></div>
+    <details class="changelog"><summary>News / Changelog</summary><p>v0.1 · 审计预览：索引与来源卡由 registry 确定性构建；不含模型分数。快照日期及输入 SHA256 以 summary.json 为准；没有声称线上部署成功。</p><p>版本待核：RNA3DB 的 2026-01-05-full-release 晚于 2025-10-01-incremental-release。冻结采用版本前需对比 sample ID / PDB-chain，不静默更新已冻结榜单。</p></details>
+  </section>
+</main>
+<footer><span>RNA-Gym · Evidence before evaluation</span><span>Local audit preview · No admission implied</span></footer>
+</body>
+</html>

@@ -1,0 +1,38 @@
+{
+  "task_id": "T0132",
+  "package_group_id": "RNA_INV_BENCH",
+  "source_family_id": "SRC_ETERNA100",
+  "dataset": "Eterna100-V2",
+  "task": "dot-bracket→folding engine 下的可设计 RNA",
+  "input_modality": "generation/conditional (auxiliary)",
+  "status": "HOLD_SOURCE",
+  "hold_reason": "Original source bytes and assay evidence unresolved; upstream entry may be unavailable. Independent tasks continue.",
+  "next_action": "Resolve original assay DOI/accession and data-specific rights, select capped public file, then bytes/hash/schema/identity/split/QC and human review.",
+  "canonical_assay_id": null,
+  "reported_n": "100",
+  "count_unit": "target structures; 19 altered targets",
+  "reported_n_status": "REPORTED_UNVERIFIED",
+  "actual_task_n": null,
+  "source_entry_urls": [
+    "https://github.com/COLA-Laboratory/RNAInvBench/tree/main/data",
+    "https://github.com/COLA-Laboratory/RNAInvBench",
+    "https://doi.org/10.1101/2021.08.26.457839"
+  ],
+  "benchmark_paper_url_not_original_assay": "https://doi.org/10.1101/2021.08.26.457839",
+  "assets": [],
+  "task_download_completed": false,
+  "admitted": false,
+  "baseline_plan": {
+    "公平输入轨道": "GENERATIVE_ONLY_STRUCT_2D_OR_3D",
+    "原登记Metric": "solved@timeout",
+    "主指标(建议)": "fold success、structure match、recovery、diversity、novelty",
+    "推荐Loss": "CE/NLL on teacher forcing; policy/reward only design",
+    "最低信息Baseline": "随机兼容序列；GC-matched shuffle",
+    "经典算法Baseline": "RNAinverse / antaRNA / ViennaRNA inverse（2D）；gRNAde/RDesign（3D）",
+    "随机初始化Baseline": "random-init autoregressive inverse folding",
+    "泄露检查重点": "Eterna100 版本重合、Rfam family、RNA 3D homologs；可设计性偏差",
+    "baseline运行状态": "NOT_RUN"
+  },
+  "plan_command": "python tools/task_download.py plan --task T0132",
+  "download_policy": "Source-entry links are not file bytes. Explicit package-only opt-in required before file candidates can be acquired for audit."
+}

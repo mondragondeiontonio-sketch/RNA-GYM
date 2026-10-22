@@ -1,0 +1,37 @@
+{
+  "task_id": "T0037",
+  "package_group_id": "RIBONANZA_ORIGINAL",
+  "source_family_id": "SRC_STANFORD_RIBONANZA_RNA_MAPPING_DAT",
+  "dataset": "Stanford Ribonanza / RNA Mapping Database",
+  "task": "迁移：RNA→水解降解",
+  "input_modality": "RNA sequence-only possible; verify context",
+  "status": "HOLD_AUTH",
+  "hold_reason": "Competition access/terms and publicly available label scope require approval; hidden labels are unavailable.",
+  "next_action": "Resolve original assay DOI/accession and data-specific rights, select capped public file, then bytes/hash/schema/identity/split/QC and human review.",
+  "canonical_assay_id": null,
+  "reported_n": "未核实",
+  "count_unit": "sequences / profiles; 论文总体：2,150,401 designed sequences; 67,000 external RMDB profiles",
+  "reported_n_status": "REPORTED_UNVERIFIED",
+  "actual_task_n": null,
+  "source_entry_urls": [
+    "https://www.kaggle.com/competitions/stanford-ribonanza-rna-folding/data",
+    "https://pmc.ncbi.nlm.nih.gov/articles/PMC10925082/"
+  ],
+  "benchmark_paper_url_not_original_assay": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10925082/",
+  "assets": [],
+  "task_download_completed": false,
+  "admitted": false,
+  "baseline_plan": {
+    "公平输入轨道": "RNA_SEQUENCE_ONLY_OR_CONDITIONED_SEPARATE",
+    "原登记Metric": "误差指标",
+    "主指标(建议)": "masked MAE / Pearson / Spearman，assay macro",
+    "推荐Loss": "masked Huber/MSE（不观测位点不参与）",
+    "最低信息Baseline": "train position-wise median；probe-specific position mean",
+    "经典算法Baseline": "ViennaRNA RNAplfold accessibility+Ridge（若任务允许）；k-mer window Ridge",
+    "随机初始化Baseline": "1D U-Net/CNN per-nt head 随机初始化",
+    "泄露检查重点": "探针批次、同序列双 probe、SN_filter、读深与误差权重",
+    "baseline运行状态": "NOT_RUN"
+  },
+  "plan_command": "python tools/task_download.py plan --task T0037",
+  "download_policy": "Source-entry links are not file bytes. Explicit package-only opt-in required before file candidates can be acquired for audit."
+}

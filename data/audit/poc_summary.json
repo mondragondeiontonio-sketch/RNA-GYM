@@ -1,0 +1,19 @@
+{
+  "files_downloaded_and_sha256_verified": 19,
+  "compressed_bytes_downloaded": 774074831,
+  "paired_files_exact_qc_pass": 4,
+  "unique_paired_inputs_across_downloaded_mirbench": 10110,
+  "unique_paired_input_scope": "FOUR_SMALL_POC_FILE_VERSIONS_ONLY_LARGE_FILES_NOT_EXACT_DEDUPED",
+  "pair_identity_scanned_asset_ids": [
+    "P0_MIR_HEJRET_TEST_ZENODO",
+    "P0_MIR_HEJRET_TRAIN_ZENODO",
+    "P0_MIR_KLIMENTOVA_MIRROR",
+    "P0_MIR_KLIMENTOVA_ZENODO"
+  ],
+  "independent_assays_verified": 0,
+  "review_ready": 0,
+  "admitted": 0,
+  "all_p0_dod_met": false,
+  "gpu_used": false,
+  "training_started": false
+}

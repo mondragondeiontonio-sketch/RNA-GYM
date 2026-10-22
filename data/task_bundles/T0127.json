@@ -1,0 +1,37 @@
+{
+  "task_id": "T0127",
+  "package_group_id": "APTAMER_DB",
+  "source_family_id": "SRC_POTENTIAL_QUANTITATIVE_AFFINITY_SU",
+  "dataset": "Potential quantitative-affinity subset",
+  "task": "拟议：序列+ligand+条件→Kd",
+  "input_modality": "RNA+ligand/other input (conditional)",
+  "status": "HOLD_LICENSE",
+  "hold_reason": "Entry HTTP probe only; data-specific rights, raw bytes, assay DOI/accession and identity remain unverified.",
+  "next_action": "Resolve original assay DOI/accession and data-specific rights, select capped public file, then bytes/hash/schema/identity/split/QC and human review.",
+  "canonical_assay_id": null,
+  "reported_n": "未核实",
+  "count_unit": "paired Kd observations require filter by condition",
+  "reported_n_status": "REPORTED_UNVERIFIED",
+  "actual_task_n": null,
+  "source_entry_urls": [
+    "https://aptamer.ribocentre.org/",
+    "https://doi.org/10.1093/nar/gkaf1016"
+  ],
+  "benchmark_paper_url_not_original_assay": "https://doi.org/10.1093/nar/gkaf1016",
+  "assets": [],
+  "task_download_completed": false,
+  "admitted": false,
+  "baseline_plan": {
+    "公平输入轨道": "PAIRED_LIGAND_2D_OR_3D",
+    "原登记Metric": "需另建 benchmark",
+    "主指标(建议)": "AUROC+AUPRC / EF@1% / Spearman / RMSE",
+    "推荐Loss": "BCE / Huber / ranking loss",
+    "最低信息Baseline": "ligand-only/structure-only 与 random decoy",
+    "经典算法Baseline": "RDKit ECFP+RNA pocket features + XGBoost；dock score",
+    "随机初始化Baseline": "dual-tower ligand graph/RNA-encoder 随机初始化",
+    "泄露检查重点": "配体 scaffold、同口袋结构簇、decoy shortcut、assay conditions",
+    "baseline运行状态": "NOT_RUN"
+  },
+  "plan_command": "python tools/task_download.py plan --task T0127",
+  "download_policy": "Source-entry links are not file bytes. Explicit package-only opt-in required before file candidates can be acquired for audit."
+}

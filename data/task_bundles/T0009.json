@@ -1,0 +1,38 @@
+{
+  "task_id": "T0009",
+  "package_group_id": "BEACON_ALL",
+  "source_family_id": "SRC_OPTIMUS_MRL",
+  "dataset": "Optimus / Reid et al. 5′UTR MPRA",
+  "task": "MRL：5′UTR→平均核糖体负载",
+  "input_modality": "RNA sequence-only possible; verify context",
+  "status": "HOLD_SOURCE",
+  "hold_reason": "Original source bytes and assay evidence unresolved; upstream entry may be unavailable. Independent tasks continue.",
+  "next_action": "Resolve original assay DOI/accession and data-specific rights, select capped public file, then bytes/hash/schema/identity/split/QC and human review.",
+  "canonical_assay_id": null,
+  "reported_n": "91519",
+  "count_unit": "task records",
+  "reported_n_status": "REPORTED_UNVERIFIED",
+  "actual_task_n": null,
+  "source_entry_urls": [
+    "https://drive.google.com/drive/folders/19ddrwI8ycvIxkgSV3gDo_VunLofYd4-6?usp=sharing",
+    "https://github.com/terry-r123/RNABenchmark/blob/main/downstream/train_mean_ribosome_loading.py",
+    "https://github.com/terry-r123/RNABenchmark"
+  ],
+  "benchmark_paper_url_not_original_assay": "https://doi.org/10.52202/079017-2949",
+  "assets": [],
+  "task_download_completed": false,
+  "admitted": false,
+  "baseline_plan": {
+    "公平输入轨道": "RNA_SEQUENCE_ONLY_OR_CONDITIONED_SEPARATE",
+    "原登记Metric": "R²/相关（依子任务）",
+    "主指标(建议)": "Spearman 主；MAE、Pearson 辅",
+    "推荐Loss": "Huber/MSE（训练折标签标准化）",
+    "最低信息Baseline": "训练均值；长度+GC Ridge",
+    "经典算法Baseline": "k-mer+Ridge/ElasticNet；RNAfold MFE/明确的生物 motif+XGBoost",
+    "随机初始化Baseline": "小型 CNN/ResNet 或 CNN-BiLSTM（随机初始化）",
+    "泄露检查重点": "同序列跨折、同构件/基因/细胞泄漏、proxy 与直接测量混合",
+    "baseline运行状态": "NOT_RUN"
+  },
+  "plan_command": "python tools/task_download.py plan --task T0009",
+  "download_policy": "Source-entry links are not file bytes. Explicit package-only opt-in required before file candidates can be acquired for audit."
+}

@@ -1,0 +1,38 @@
+{
+  "task_id": "T0060",
+  "package_group_id": "SMRTNET",
+  "source_family_id": "SRC_SMRTNET_BINDING_PAIRS",
+  "dataset": "SMRTnet binding pairs",
+  "task": "RNA 序列+2D+SMILES→是否结合",
+  "input_modality": "RNA+ligand/other input (conditional)",
+  "status": "HOLD_SOURCE",
+  "hold_reason": "Original source bytes and assay evidence unresolved; upstream entry may be unavailable. Independent tasks continue.",
+  "next_action": "Resolve original assay DOI/accession and data-specific rights, select capped public file, then bytes/hash/schema/identity/split/QC and human review.",
+  "canonical_assay_id": null,
+  "reported_n": "2,011",
+  "count_unit": "labeled pairs: 1665 positive / 346 negative",
+  "reported_n_status": "REPORTED_UNVERIFIED",
+  "actual_task_n": null,
+  "source_entry_urls": [
+    "https://github.com/Yuhan-Fei/SMRTnet/tree/main/data",
+    "https://doi.org/10.1038/s41587-025-02942-z",
+    "https://github.com/Yuhan-Fei/SMRTnet"
+  ],
+  "benchmark_paper_url_not_original_assay": "https://doi.org/10.1038/s41587-025-02942-z",
+  "assets": [],
+  "task_download_completed": false,
+  "admitted": false,
+  "baseline_plan": {
+    "公平输入轨道": "PAIRED_LIGAND_2D_OR_3D",
+    "原登记Metric": "AUROC、AUPRC",
+    "主指标(建议)": "AUROC+AUPRC / EF@1% / Spearman / RMSE",
+    "推荐Loss": "BCE / Huber / ranking loss",
+    "最低信息Baseline": "ligand-only/structure-only 与 random decoy",
+    "经典算法Baseline": "RDKit ECFP+RNA pocket features + XGBoost；dock score",
+    "随机初始化Baseline": "dual-tower ligand graph/RNA-encoder 随机初始化",
+    "泄露检查重点": "配体 scaffold、同口袋结构簇、decoy shortcut、assay conditions",
+    "baseline运行状态": "NOT_RUN"
+  },
+  "plan_command": "python tools/task_download.py plan --task T0060",
+  "download_policy": "Source-entry links are not file bytes. Explicit package-only opt-in required before file candidates can be acquired for audit."
+}

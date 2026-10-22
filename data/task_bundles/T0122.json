@@ -1,0 +1,37 @@
+{
+  "task_id": "T0122",
+  "package_group_id": "SECONDARY_LITERATURE",
+  "source_family_id": "SRC_RNA_RNA_COMPLEX_STRUCTURES_IN_PDB",
+  "dataset": "RNA–RNA complex structures in PDB",
+  "task": "RNA chain A+B→链间碱基对",
+  "input_modality": "paired RNA sequence",
+  "status": "HOLD_SOURCE",
+  "hold_reason": "Original source bytes and assay evidence unresolved; upstream entry may be unavailable. Independent tasks continue.",
+  "next_action": "Resolve original assay DOI/accession and data-specific rights, select capped public file, then bytes/hash/schema/identity/split/QC and human review.",
+  "canonical_assay_id": null,
+  "reported_n": "未核实",
+  "count_unit": "RNA–RNA complexes; 论文总体：Individual complex N not independently verified",
+  "reported_n_status": "REPORTED_UNVERIFIED",
+  "actual_task_n": null,
+  "source_entry_urls": [
+    "https://github.com/meilanglang/RNA-RNA-Interaction",
+    "https://doi.org/10.1093/bioinformatics/btaf289"
+  ],
+  "benchmark_paper_url_not_original_assay": "https://doi.org/10.1093/bioinformatics/btaf289",
+  "assets": [],
+  "task_download_completed": false,
+  "admitted": false,
+  "baseline_plan": {
+    "公平输入轨道": "PAIRED_RNA",
+    "原登记Metric": "Precision、recall、F1",
+    "主指标(建议)": "AUPRC 主；AUROC、cross-source generalization",
+    "推荐Loss": "BCE/contrastive or regression loss",
+    "最低信息Baseline": "miRNA-only 和 target-only shortcut controls；pair random",
+    "经典算法Baseline": "RNAcofold 最低自由能；seed match / TargetScan features",
+    "随机初始化Baseline": "paired Siamese CNN 或双塔模型随机初始化",
+    "泄露检查重点": "miRNA 家族、靶基因和同 pair 重复、负例采样差异",
+    "baseline运行状态": "NOT_RUN"
+  },
+  "plan_command": "python tools/task_download.py plan --task T0122",
+  "download_policy": "Source-entry links are not file bytes. Explicit package-only opt-in required before file candidates can be acquired for audit."
+}

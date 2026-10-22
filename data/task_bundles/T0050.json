@@ -1,0 +1,36 @@
+{
+  "task_id": "T0050",
+  "package_group_id": "RNABENCH_SOFTWARE",
+  "source_family_id": "SRC_RNABENCH_INTEGRATED_ALGORITHM_RNA_",
+  "dataset": "RnaBench integrated algorithm / RNA dataset suites",
+  "task": "目标 2D→满足折叠约束的 RNA sequence",
+  "input_modality": "RNA sequence-only possible; verify context",
+  "status": "EXCLUDED_NON_ASSAY",
+  "hold_reason": "Software/method resource is not an independent experimental assay.",
+  "next_action": "Retain as auxiliary software/method reference; no assay weight.",
+  "canonical_assay_id": null,
+  "reported_n": "未核实",
+  "count_unit": "datasets / algorithms; 论文总体：Per-suite size not confirmed; software library, not a new sample cohort",
+  "reported_n_status": "REPORTED_UNVERIFIED",
+  "actual_task_n": null,
+  "source_entry_urls": [
+    "https://github.com/automl/RnaBench"
+  ],
+  "benchmark_paper_url_not_original_assay": "https://github.com/automl/RnaBench",
+  "assets": [],
+  "task_download_completed": false,
+  "admitted": false,
+  "baseline_plan": {
+    "公平输入轨道": "NOT_SCORED",
+    "原登记Metric": "solve rate/time",
+    "主指标(建议)": "N/A",
+    "推荐Loss": "N/A",
+    "最低信息Baseline": "N/A",
+    "经典算法Baseline": "N/A",
+    "随机初始化Baseline": "N/A",
+    "泄露检查重点": "methodology-only/source reuse/DNA-only",
+    "baseline运行状态": "NOT_RUN"
+  },
+  "plan_command": "python tools/task_download.py plan --task T0050",
+  "download_policy": "Source-entry links are not file bytes. Explicit package-only opt-in required before file candidates can be acquired for audit."
+}

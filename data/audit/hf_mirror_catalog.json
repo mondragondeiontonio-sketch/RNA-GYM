@@ -1,0 +1,1367 @@
+[
+  {
+    "package_group_id": "MIR_BENCH",
+    "hf_repository": "genomic-benchmarks/miRBench",
+    "official_source_url": "https://huggingface.co/datasets/genomic-benchmarks/miRBench",
+    "metadata_transport": "https://hf-mirror.com",
+    "checked_at_utc": "2026-10-22T19:49:49.935795+00:00",
+    "license_scope": "COLLECTION_CLAIM_ONLY_NOT_ORIGINAL_ASSAY_APPROVAL",
+    "upstream_commit": "f3ef23e519a2c120bddb9e1a233f4636b751662a",
+    "gated": false,
+    "data_license_claim": "cc-by-4.0",
+    "state": "CATALOGED_NOT_DOWNLOADED",
+    "tree_metadata_complete": true,
+    "files": [
+      {
+        "relative_path": "v1/AGO2_CLASH_Hejret2023/AGO2_CLASH_Hejret2023_test.csv.gz",
+        "size_bytes": 223789,
+        "official_download_url": "https://huggingface.co/datasets/genomic-benchmarks/miRBench/resolve/f3ef23e519a2c120bddb9e1a233f4636b751662a/v1/AGO2_CLASH_Hejret2023/AGO2_CLASH_Hejret2023_test.csv.gz",
+        "mirror_download_url": "https://hf-mirror.com/datasets/genomic-benchmarks/miRBench/resolve/f3ef23e519a2c120bddb9e1a233f4636b751662a/v1/AGO2_CLASH_Hejret2023/AGO2_CLASH_Hejret2023_test.csv.gz",
+        "git_blob_object_id_not_sha256": "231e8c1c3c268202cde98aa0735e5091afd69c34",
+        "lfs_sha256_claim_not_observed": "4a7ad7f38de5a405c08efde0cbb4dd160fda3bf82bdbf331882c6becf2d07fbe",
+        "actual_sha256": null,
+        "downloaded": false
+      },
+      {
+        "relative_path": "v1/AGO2_CLASH_Hejret2023/AGO2_CLASH_Hejret2023_train.csv.gz",
+        "size_bytes": 1816075,
+        "official_download_url": "https://huggingface.co/datasets/genomic-benchmarks/miRBench/resolve/f3ef23e519a2c120bddb9e1a233f4636b751662a/v1/AGO2_CLASH_Hejret2023/AGO2_CLASH_Hejret2023_train.csv.gz",
+        "mirror_download_url": "https://hf-mirror.com/datasets/genomic-benchmarks/miRBench/resolve/f3ef23e519a2c120bddb9e1a233f4636b751662a/v1/AGO2_CLASH_Hejret2023/AGO2_CLASH_Hejret2023_train.csv.gz",
+        "git_blob_object_id_not_sha256": "be2f7cb9c1907ea3856343899bbd28195425f151",
+        "lfs_sha256_claim_not_observed": "712436826349bae36f720bd16de717db6b18b8bcaadf2eb549425ba9f062e0b6",
+        "actual_sha256": null,
+        "downloaded": false
+      },
+      {
+        "relative_path": "v1/AGO2_eCLIP_Klimentova2022/AGO2_eCLIP_Klimentova2022_test.csv.gz",
+        "size_bytes": 202940,
+        "official_download_url": "https://huggingface.co/datasets/genomic-benchmarks/miRBench/resolve/f3ef23e519a2c120bddb9e1a233f4636b751662a/v1/AGO2_eCLIP_Klimentova2022/AGO2_eCLIP_Klimentova2022_test.csv.gz",
+        "mirror_download_url": "https://hf-mirror.com/datasets/genomic-benchmarks/miRBench/resolve/f3ef23e519a2c120bddb9e1a233f4636b751662a/v1/AGO2_eCLIP_Klimentova2022/AGO2_eCLIP_Klimentova2022_test.csv.gz",
+        "git_blob_object_id_not_sha256": "a437d5f2505385fc127927d737ff1aec3f510628",
+        "lfs_sha256_claim_not_observed": "a5b4bb74075f1082038861d22acc5e32ec0a575c4f4c22c21d32a254e36fdf73",
+        "actual_sha256": null,
+        "downloaded": false
+      },
+      {
+        "relative_path": "v1/AGO2_eCLIP_Manakov2022/AGO2_eCLIP_Manakov2022_test.csv.gz",
+        "size_bytes": 72124632,
+        "official_download_url": "https://huggingface.co/datasets/genomic-benchmarks/miRBench/resolve/f3ef23e519a2c120bddb9e1a233f4636b751662a/v1/AGO2_eCLIP_Manakov2022/AGO2_eCLIP_Manakov2022_test.csv.gz",
+        "mirror_download_url": "https://hf-mirror.com/datasets/genomic-benchmarks/miRBench/resolve/f3ef23e519a2c120bddb9e1a233f4636b751662a/v1/AGO2_eCLIP_Manakov2022/AGO2_eCLIP_Manakov2022_test.csv.gz",
+        "git_blob_object_id_not_sha256": "f109fb319b1e63056337560f112aab9e82446740",
+        "lfs_sha256_claim_not_observed": "31336b024bd76b58c3449fa8fe8228fda80eb7d10dfc17fbd8fe46bffbbe94b9",
+        "actual_sha256": null,
+        "downloaded": false
+      },
+      {
+        "relative_path": "v1/AGO2_eCLIP_Manakov2022/AGO2_eCLIP_Manakov2022_test_leftout.csv.gz",
+        "size_bytes": 4459569,
+        "official_download_url": "https://huggingface.co/datasets/genomic-benchmarks/miRBench/resolve/f3ef23e519a2c120bddb9e1a233f4636b751662a/v1/AGO2_eCLIP_Manakov2022/AGO2_eCLIP_Manakov2022_test_leftout.csv.gz",
+        "mirror_download_url": "https://hf-mirror.com/datasets/genomic-benchmarks/miRBench/resolve/f3ef23e519a2c120bddb9e1a233f4636b751662a/v1/AGO2_eCLIP_Manakov2022/AGO2_eCLIP_Manakov2022_test_leftout.csv.gz",
+        "git_blob_object_id_not_sha256": "8e97789a8e6740fe654586dc85c569c9684f537e",
+        "lfs_sha256_claim_not_observed": "a829cd97cfc7e6705dc24386cb07c9e997966142188f3d7212198bf248c4590d",
+        "actual_sha256": null,
+        "downloaded": false
+      },
+      {
+        "relative_path": "v1/AGO2_eCLIP_Manakov2022/AGO2_eCLIP_Manakov2022_train.csv.gz",
+        "size_bytes": 558395444,
+        "official_download_url": "https://huggingface.co/datasets/genomic-benchmarks/miRBench/resolve/f3ef23e519a2c120bddb9e1a233f4636b751662a/v1/AGO2_eCLIP_Manakov2022/AGO2_eCLIP_Manakov2022_train.csv.gz",
+        "mirror_download_url": "https://hf-mirror.com/datasets/genomic-benchmarks/miRBench/resolve/f3ef23e519a2c120bddb9e1a233f4636b751662a/v1/AGO2_eCLIP_Manakov2022/AGO2_eCLIP_Manakov2022_train.csv.gz",
+        "git_blob_object_id_not_sha256": "91dc0d741ace6758966358ee9b3e2e9bcd9b0c07",
+        "lfs_sha256_claim_not_observed": "775aaf9c1a6864753824d01ac24ee729a5e99d9ce4bd19d6d5593e4516c88675",
+        "actual_sha256": null,
+        "downloaded": false
+      }
+    ]
+  },
+  {
+    "package_group_id": "MRNA_ECLIP",
+    "hf_repository": "morrislab/eclip",
+    "official_source_url": "https://huggingface.co/datasets/morrislab/eclip",
+    "metadata_transport": "https://hf-mirror.com",
+    "checked_at_utc": "2026-10-22T19:49:49.938735+00:00",
+    "license_scope": "COLLECTION_CLAIM_ONLY_NOT_ORIGINAL_ASSAY_APPROVAL",
+    "upstream_commit": "21a0159694213443f20919e58ec7f0feca4dc75c",
+    "gated": false,
+    "data_license_claim": "unknown",
+    "state": "CATALOGED_NOT_DOWNLOADED",
+    "tree_metadata_complete": true,
+    "files": [
+      {
+        "relative_path": "eclip-hepg2.parquet",
+        "size_bytes": 21425779,
+        "official_download_url": "https://huggingface.co/datasets/morrislab/eclip/resolve/21a0159694213443f20919e58ec7f0feca4dc75c/eclip-hepg2.parquet",
+        "mirror_download_url": "https://hf-mirror.com/datasets/morrislab/eclip/resolve/21a0159694213443f20919e58ec7f0feca4dc75c/eclip-hepg2.parquet",
+        "git_blob_object_id_not_sha256": "bd5d4e527d9b770565ddcb8afa4499768a2e496e",
+        "lfs_sha256_claim_not_observed": "b7d251cd88e6e4404a9f61f25a791dc0f84926e9bcb415ffcb9b01ba52ba2ace",
+        "actual_sha256": null,
+        "downloaded": false
+      },
+      {
+        "relative_path": "eclip-k562.parquet",
+        "size_bytes": 22521461,
+        "official_download_url": "https://huggingface.co/datasets/morrislab/eclip/resolve/21a0159694213443f20919e58ec7f0feca4dc75c/eclip-k562.parquet",
+        "mirror_download_url": "https://hf-mirror.com/datasets/morrislab/eclip/resolve/21a0159694213443f20919e58ec7f0feca4dc75c/eclip-k562.parquet",
+        "git_blob_object_id_not_sha256": "8e21e788df019660c0019db2d6eda5c6a2aa054f",
+        "lfs_sha256_claim_not_observed": "0f2ba1a36dbf6009820de715b4e3a6b03e5b207867b46a4931957308e41bcde2",
+        "actual_sha256": null,
+        "downloaded": false
+      }
+    ]
+  },
+  {
+    "package_group_id": "MRNA_GO_MF",
+    "hf_repository": "morrislab/go-mf",
+    "official_source_url": "https://huggingface.co/datasets/morrislab/go-mf",
+    "metadata_transport": "https://hf-mirror.com",
+    "checked_at_utc": "2026-10-22T19:49:49.939416+00:00",
+    "license_scope": "COLLECTION_CLAIM_ONLY_NOT_ORIGINAL_ASSAY_APPROVAL",
+    "upstream_commit": "8c2127cdeab6a7cd22087e9595581b771fb66ae0",
+    "gated": false,
+    "data_license_claim": "cc-by-4.0",
+    "state": "CATALOGED_NOT_DOWNLOADED",
+    "tree_metadata_complete": true,
+    "files": [
+      {
+        "relative_path": "go_dna_dataset_mf.parquet",
+        "size_bytes": 10017932,
+        "official_download_url": "https://huggingface.co/datasets/morrislab/go-mf/resolve/8c2127cdeab6a7cd22087e9595581b771fb66ae0/go_dna_dataset_mf.parquet",
+        "mirror_download_url": "https://hf-mirror.com/datasets/morrislab/go-mf/resolve/8c2127cdeab6a7cd22087e9595581b771fb66ae0/go_dna_dataset_mf.parquet",
+        "git_blob_object_id_not_sha256": "6094d12c6d1b356ec49d0140454f1c0a746aba05",
+        "lfs_sha256_claim_not_observed": "014a247c55a69b4beaccddd6e722109337eae9153816ce9c8b7bba2cf3864fb6",
+        "actual_sha256": null,
+        "downloaded": false
+      }
+    ]
+  },
+  {
+    "package_group_id": "MRNA_MIRNA_TARGET",
+    "hf_repository": "morrislab/mirna-target",
+    "official_source_url": "https://huggingface.co/datasets/morrislab/mirna-target",
+    "metadata_transport": "https://hf-mirror.com",
+    "checked_at_utc": "2026-10-22T19:49:50.866685+00:00",
+    "license_scope": "COLLECTION_CLAIM_ONLY_NOT_ORIGINAL_ASSAY_APPROVAL",
+    "upstream_commit": "9fd768e7073d0c8a4f503009c8eb7fda7c12aaa1",
+    "gated": false,
+    "data_license_claim": "cc-by-4.0",
+    "state": "CATALOGED_NOT_DOWNLOADED",
+    "tree_metadata_complete": true,
+    "files": [
+      {
+        "relative_path": "mirna_preprocessed.parquet",
+        "size_bytes": 26115983,
+        "official_download_url": "https://huggingface.co/datasets/morrislab/mirna-target/resolve/9fd768e7073d0c8a4f503009c8eb7fda7c12aaa1/mirna_preprocessed.parquet",
+        "mirror_download_url": "https://hf-mirror.com/datasets/morrislab/mirna-target/resolve/9fd768e7073d0c8a4f503009c8eb7fda7c12aaa1/mirna_preprocessed.parquet",
+        "git_blob_object_id_not_sha256": "7c5f085f1174ac6dda0cf1a78869319607274e31",
+        "lfs_sha256_claim_not_observed": "7f70db03a17fd7b2ebe0cf51f728390873aaec883f33cec91031531984cc7372",
+        "actual_sha256": null,
+        "downloaded": false
+      }
+    ]
+  },
+  {
+    "package_group_id": "MRNA_MRL_HL_LBKWK",
+    "hf_repository": "morrislab/mrl-hl-lbkwk",
+    "official_source_url": "https://huggingface.co/datasets/morrislab/mrl-hl-lbkwk",
+    "metadata_transport": "https://hf-mirror.com",
+    "checked_at_utc": "2026-10-22T19:49:50.998562+00:00",
+    "license_scope": "COLLECTION_CLAIM_ONLY_NOT_ORIGINAL_ASSAY_APPROVAL",
+    "upstream_commit": "144d6d835fc59a6953a9c8f31b1ffc16a47dd04d",
+    "gated": false,
+    "data_license_claim": "cc-by-4.0",
+    "state": "CATALOGED_NOT_DOWNLOADED",
+    "tree_metadata_complete": true,
+    "files": [
+      {
+        "relative_path": "mrl-hl-lbkwk.parquet",
+        "size_bytes": 64463,
+        "official_download_url": "https://huggingface.co/datasets/morrislab/mrl-hl-lbkwk/resolve/144d6d835fc59a6953a9c8f31b1ffc16a47dd04d/mrl-hl-lbkwk.parquet",
+        "mirror_download_url": "https://hf-mirror.com/datasets/morrislab/mrl-hl-lbkwk/resolve/144d6d835fc59a6953a9c8f31b1ffc16a47dd04d/mrl-hl-lbkwk.parquet",
+        "git_blob_object_id_not_sha256": "7a65f1b9b6cbb0f4a90c556b4735979d8403cf2a",
+        "lfs_sha256_claim_not_observed": "770254c1d84e9479aee1ef43780dd0cb4036358f855505d1822211d3d72e2982",
+        "actual_sha256": null,
+        "downloaded": false
+      }
+    ]
+  },
+  {
+    "package_group_id": "MRNA_MRL_SAMPLE",
+    "hf_repository": "morrislab/mrl-sample",
+    "official_source_url": "https://huggingface.co/datasets/morrislab/mrl-sample",
+    "metadata_transport": "https://hf-mirror.com",
+    "checked_at_utc": "2026-10-22T19:49:51.008388+00:00",
+    "license_scope": "COLLECTION_CLAIM_ONLY_NOT_ORIGINAL_ASSAY_APPROVAL",
+    "upstream_commit": "ef67f7cf8a999bb1c412ad6551aa7d9f901cbb95",
+    "gated": false,
+    "data_license_claim": "unknown",
+    "state": "CATALOGED_NOT_DOWNLOADED",
+    "tree_metadata_complete": true,
+    "files": [
+      {
+        "relative_path": "mrl-sample-designed.parquet",
+        "size_bytes": 9778091,
+        "official_download_url": "https://huggingface.co/datasets/morrislab/mrl-sample/resolve/ef67f7cf8a999bb1c412ad6551aa7d9f901cbb95/mrl-sample-designed.parquet",
+        "mirror_download_url": "https://hf-mirror.com/datasets/morrislab/mrl-sample/resolve/ef67f7cf8a999bb1c412ad6551aa7d9f901cbb95/mrl-sample-designed.parquet",
+        "git_blob_object_id_not_sha256": "ccc6b42b44c39ffd18c258bc9565a5c3711c430e",
+        "lfs_sha256_claim_not_observed": "8b8c57581d472e89a21f8b468b3b0599f6c235c01423264561e6c302d78927d4",
+        "actual_sha256": null,
+        "downloaded": false
+      },
+      {
+        "relative_path": "mrl-sample-egfp.parquet",
+        "size_bytes": 37117316,
+        "official_download_url": "https://huggingface.co/datasets/morrislab/mrl-sample/resolve/ef67f7cf8a999bb1c412ad6551aa7d9f901cbb95/mrl-sample-egfp.parquet",
+        "mirror_download_url": "https://hf-mirror.com/datasets/morrislab/mrl-sample/resolve/ef67f7cf8a999bb1c412ad6551aa7d9f901cbb95/mrl-sample-egfp.parquet",
+        "git_blob_object_id_not_sha256": "27a924d1c7c038b2ed9111b025c378589fd65648",
+        "lfs_sha256_claim_not_observed": "c007cf66cfcea0807e90baf92ac24b6078102729ad050100bde00f7f0ab4c9b3",
+        "actual_sha256": null,
+        "downloaded": false
+      },
+      {
+        "relative_path": "mrl-sample-mcherry.parquet",
+        "size_bytes": 19105239,
+        "official_download_url": "https://huggingface.co/datasets/morrislab/mrl-sample/resolve/ef67f7cf8a999bb1c412ad6551aa7d9f901cbb95/mrl-sample-mcherry.parquet",
+        "mirror_download_url": "https://hf-mirror.com/datasets/morrislab/mrl-sample/resolve/ef67f7cf8a999bb1c412ad6551aa7d9f901cbb95/mrl-sample-mcherry.parquet",
+        "git_blob_object_id_not_sha256": "e59dbdad61871c216ae70488ff8d2fc3b15b8514",
+        "lfs_sha256_claim_not_observed": "33effdbea1df3b5ed10164632a4fb644eb58ec8b1acec9d6054dfeaf83ea4219",
+        "actual_sha256": null,
+        "downloaded": false
+      },
+      {
+        "relative_path": "mrl-sample-varying.parquet",
+        "size_bytes": 11582354,
+        "official_download_url": "https://huggingface.co/datasets/morrislab/mrl-sample/resolve/ef67f7cf8a999bb1c412ad6551aa7d9f901cbb95/mrl-sample-varying.parquet",
+        "mirror_download_url": "https://hf-mirror.com/datasets/morrislab/mrl-sample/resolve/ef67f7cf8a999bb1c412ad6551aa7d9f901cbb95/mrl-sample-varying.parquet",
+        "git_blob_object_id_not_sha256": "f3e45406d74821297de417c71c72e48073a2a9fa",
+        "lfs_sha256_claim_not_observed": "b057dc51689a8a6482f7e58458116cc970078888307de95942c0716ec50eda50",
+        "actual_sha256": null,
+        "downloaded": false
+      }
+    ]
+  },
+  {
+    "package_group_id": "MRNA_MRL_SUGIMOTO",
+    "hf_repository": "morrislab/mrl-sugimoto",
+    "official_source_url": "https://huggingface.co/datasets/morrislab/mrl-sugimoto",
+    "metadata_transport": "https://hf-mirror.com",
+    "checked_at_utc": "2026-10-22T19:49:51.918936+00:00",
+    "license_scope": "COLLECTION_CLAIM_ONLY_NOT_ORIGINAL_ASSAY_APPROVAL",
+    "upstream_commit": "4d7404895e8ca1143d769e7f445972bf7ef4b51d",
+    "gated": false,
+    "data_license_claim": "cc-by-4.0",
+    "state": "CATALOGED_NOT_DOWNLOADED",
+    "tree_metadata_complete": true,
+    "files": [
+      {
+        "relative_path": "mrl-sugimoto.parquet",
+        "size_bytes": 12354228,
+        "official_download_url": "https://huggingface.co/datasets/morrislab/mrl-sugimoto/resolve/4d7404895e8ca1143d769e7f445972bf7ef4b51d/mrl-sugimoto.parquet",
+        "mirror_download_url": "https://hf-mirror.com/datasets/morrislab/mrl-sugimoto/resolve/4d7404895e8ca1143d769e7f445972bf7ef4b51d/mrl-sugimoto.parquet",
+        "git_blob_object_id_not_sha256": "6966968e432fe99900f96e650aa5608499714dcd",
+        "lfs_sha256_claim_not_observed": "20cbcdb5104bd950e84973a69f003e28a1bf67dc43f36687621d7263b533e1ec",
+        "actual_sha256": null,
+        "downloaded": false
+      }
+    ]
+  },
+  {
+    "package_group_id": "MRNA_PROTEIN_LOCALIZATION",
+    "hf_repository": "morrislab/protein-localization",
+    "official_source_url": "https://huggingface.co/datasets/morrislab/protein-localization",
+    "metadata_transport": "https://hf-mirror.com",
+    "checked_at_utc": "2026-10-22T19:49:52.382567+00:00",
+    "license_scope": "COLLECTION_CLAIM_ONLY_NOT_ORIGINAL_ASSAY_APPROVAL",
+    "upstream_commit": "04d82a6d681c6fa54bec85504e3db09135a852a2",
+    "gated": false,
+    "data_license_claim": "cc-by-sa-4.0",
+    "state": "CATALOGED_NOT_DOWNLOADED",
+    "tree_metadata_complete": true,
+    "files": [
+      {
+        "relative_path": "prot-loc.parquet",
+        "size_bytes": 17022109,
+        "official_download_url": "https://huggingface.co/datasets/morrislab/protein-localization/resolve/04d82a6d681c6fa54bec85504e3db09135a852a2/prot-loc.parquet",
+        "mirror_download_url": "https://hf-mirror.com/datasets/morrislab/protein-localization/resolve/04d82a6d681c6fa54bec85504e3db09135a852a2/prot-loc.parquet",
+        "git_blob_object_id_not_sha256": "17a1272a0a2f8ca9d6f7ef6fc48d3fb35cdc00be",
+        "lfs_sha256_claim_not_observed": "41bb0d2f33401a57735c4b40c42a025441cc341fa18b4cf3fe85740dcd21b0de",
+        "actual_sha256": null,
+        "downloaded": false
+      }
+    ]
+  },
+  {
+    "package_group_id": "MRNA_RNAHL_SALUKI_HUMAN",
+    "hf_repository": "morrislab/rnahl-saluki-human",
+    "official_source_url": "https://huggingface.co/datasets/morrislab/rnahl-saluki-human",
+    "metadata_transport": "https://hf-mirror.com",
+    "checked_at_utc": "2026-10-22T19:49:52.397626+00:00",
+    "license_scope": "COLLECTION_CLAIM_ONLY_NOT_ORIGINAL_ASSAY_APPROVAL",
+    "upstream_commit": "b2ed8742f21349b293759db554534bf170759251",
+    "gated": false,
+    "data_license_claim": "cc-by-4.0",
+    "state": "CATALOGED_NOT_DOWNLOADED",
+    "tree_metadata_complete": true,
+    "files": [
+      {
+        "relative_path": "rnahl-saluki-human.parquet",
+        "size_bytes": 23599081,
+        "official_download_url": "https://huggingface.co/datasets/morrislab/rnahl-saluki-human/resolve/b2ed8742f21349b293759db554534bf170759251/rnahl-saluki-human.parquet",
+        "mirror_download_url": "https://hf-mirror.com/datasets/morrislab/rnahl-saluki-human/resolve/b2ed8742f21349b293759db554534bf170759251/rnahl-saluki-human.parquet",
+        "git_blob_object_id_not_sha256": "0297577d144a865a028184d361c269352a7d9015",
+        "lfs_sha256_claim_not_observed": "0801a85464e57574cbd179e7ef1a84a7c09798bd8a673507f49713ba8856a0ed",
+        "actual_sha256": null,
+        "downloaded": false
+      }
+    ]
+  },
+  {
+    "package_group_id": "MRNA_RNAHL_SALUKI_MOUSE",
+    "hf_repository": "morrislab/rnahl-saluki-mouse",
+    "official_source_url": "https://huggingface.co/datasets/morrislab/rnahl-saluki-mouse",
+    "metadata_transport": "https://hf-mirror.com",
+    "checked_at_utc": "2026-10-22T19:49:52.843020+00:00",
+    "license_scope": "COLLECTION_CLAIM_ONLY_NOT_ORIGINAL_ASSAY_APPROVAL",
+    "upstream_commit": "032d07a948794118bdacf282a1d9e075c530f40f",
+    "gated": false,
+    "data_license_claim": "cc-by-4.0",
+    "state": "CATALOGED_NOT_DOWNLOADED",
+    "tree_metadata_complete": true,
+    "files": [
+      {
+        "relative_path": "rnahl-saluki-mouse.parquet",
+        "size_bytes": 22482206,
+        "official_download_url": "https://huggingface.co/datasets/morrislab/rnahl-saluki-mouse/resolve/032d07a948794118bdacf282a1d9e075c530f40f/rnahl-saluki-mouse.parquet",
+        "mirror_download_url": "https://hf-mirror.com/datasets/morrislab/rnahl-saluki-mouse/resolve/032d07a948794118bdacf282a1d9e075c530f40f/rnahl-saluki-mouse.parquet",
+        "git_blob_object_id_not_sha256": "41018bf9e5b203ff2eb0c7726e728b0fec9ad2bd",
+        "lfs_sha256_claim_not_observed": "0b91c1d94eb1636c42884f3e893cff657e22ed836ba79a5e423a09746660c100",
+        "actual_sha256": null,
+        "downloaded": false
+      }
+    ]
+  },
+  {
+    "package_group_id": "MRNA_RNA_LIFECYCLE_IETSWAART",
+    "hf_repository": "morrislab/rna-lifecycle-ietswaart",
+    "official_source_url": "https://huggingface.co/datasets/morrislab/rna-lifecycle-ietswaart",
+    "metadata_transport": "https://hf-mirror.com",
+    "checked_at_utc": "2026-10-22T19:49:53.316228+00:00",
+    "license_scope": "COLLECTION_CLAIM_ONLY_NOT_ORIGINAL_ASSAY_APPROVAL",
+    "upstream_commit": "1c1e15f85b05cb1e8b2d044f33f8467eaa3c1e8a",
+    "gated": false,
+    "data_license_claim": "unknown",
+    "state": "CATALOGED_NOT_DOWNLOADED",
+    "tree_metadata_complete": true,
+    "files": [
+      {
+        "relative_path": "ietswaart_processed.parquet",
+        "size_bytes": 9989752,
+        "official_download_url": "https://huggingface.co/datasets/morrislab/rna-lifecycle-ietswaart/resolve/1c1e15f85b05cb1e8b2d044f33f8467eaa3c1e8a/ietswaart_processed.parquet",
+        "mirror_download_url": "https://hf-mirror.com/datasets/morrislab/rna-lifecycle-ietswaart/resolve/1c1e15f85b05cb1e8b2d044f33f8467eaa3c1e8a/ietswaart_processed.parquet",
+        "git_blob_object_id_not_sha256": "269ec5f8a008d37b240d9714823f65efaa405855",
+        "lfs_sha256_claim_not_observed": "ceb32d160ba32a040dc4bd6d189fd9b8a57174eb6d60c12fba6a1956a87365ad",
+        "actual_sha256": null,
+        "downloaded": false
+      }
+    ]
+  },
+  {
+    "package_group_id": "MRNA_RNA_LOC_FAZAL",
+    "hf_repository": "morrislab/rna-loc-fazal",
+    "official_source_url": "https://huggingface.co/datasets/morrislab/rna-loc-fazal",
+    "metadata_transport": "https://hf-mirror.com",
+    "checked_at_utc": "2026-10-22T19:49:54.010002+00:00",
+    "license_scope": "COLLECTION_CLAIM_ONLY_NOT_ORIGINAL_ASSAY_APPROVAL",
+    "upstream_commit": "ca71f0794ef011a7029a04a168e8974366b6c509",
+    "gated": false,
+    "data_license_claim": "unknown",
+    "state": "CATALOGED_NOT_DOWNLOADED",
+    "tree_metadata_complete": true,
+    "files": [
+      {
+        "relative_path": "rna-loc-fazal.parquet",
+        "size_bytes": 7694486,
+        "official_download_url": "https://huggingface.co/datasets/morrislab/rna-loc-fazal/resolve/ca71f0794ef011a7029a04a168e8974366b6c509/rna-loc-fazal.parquet",
+        "mirror_download_url": "https://hf-mirror.com/datasets/morrislab/rna-loc-fazal/resolve/ca71f0794ef011a7029a04a168e8974366b6c509/rna-loc-fazal.parquet",
+        "git_blob_object_id_not_sha256": "cdba5bd30e071ec1d67f0186af31c2b22bc4d50c",
+        "lfs_sha256_claim_not_observed": "34f1af8ab0f1d0d6fb8e99ab9d85bd60159a7804ef7996dfb6311dc0191743c3",
+        "actual_sha256": null,
+        "downloaded": false
+      }
+    ]
+  },
+  {
+    "package_group_id": "MRNA_TRANSLATION_EFFICIENCY_HUMAN",
+    "hf_repository": "morrislab/translation-efficiency-human",
+    "official_source_url": "https://huggingface.co/datasets/morrislab/translation-efficiency-human",
+    "metadata_transport": "https://hf-mirror.com",
+    "checked_at_utc": "2026-10-22T19:49:54.677157+00:00",
+    "license_scope": "COLLECTION_CLAIM_ONLY_NOT_ORIGINAL_ASSAY_APPROVAL",
+    "upstream_commit": "55a142a823b140393506b8d50e33b4cc02f2b23c",
+    "gated": false,
+    "data_license_claim": "unknown",
+    "state": "CATALOGED_NOT_DOWNLOADED",
+    "tree_metadata_complete": true,
+    "files": [
+      {
+        "relative_path": "te_human.parquet",
+        "size_bytes": 19566129,
+        "official_download_url": "https://huggingface.co/datasets/morrislab/translation-efficiency-human/resolve/55a142a823b140393506b8d50e33b4cc02f2b23c/te_human.parquet",
+        "mirror_download_url": "https://hf-mirror.com/datasets/morrislab/translation-efficiency-human/resolve/55a142a823b140393506b8d50e33b4cc02f2b23c/te_human.parquet",
+        "git_blob_object_id_not_sha256": "9ede608a678774349278f12094645d6f3d0b748b",
+        "lfs_sha256_claim_not_observed": "8e4a91e2a44db4d2c0a4a8dfe66fc135b551413c68e0e6a3812efaacdcb26f03",
+        "actual_sha256": null,
+        "downloaded": false
+      }
+    ]
+  },
+  {
+    "package_group_id": "MRNA_TRANSLATION_EFFICIENCY_MOUSE",
+    "hf_repository": "morrislab/translation-efficiency-mouse",
+    "official_source_url": "https://huggingface.co/datasets/morrislab/translation-efficiency-mouse",
+    "metadata_transport": "https://hf-mirror.com",
+    "checked_at_utc": "2026-10-22T19:49:54.706215+00:00",
+    "license_scope": "COLLECTION_CLAIM_ONLY_NOT_ORIGINAL_ASSAY_APPROVAL",
+    "upstream_commit": "06cba806cb2b46d3f4d14487bba730660195aea1",
+    "gated": false,
+    "data_license_claim": "unknown",
+    "state": "CATALOGED_NOT_DOWNLOADED",
+    "tree_metadata_complete": true,
+    "files": [
+      {
+        "relative_path": "te_mouse.parquet",
+        "size_bytes": 18970147,
+        "official_download_url": "https://huggingface.co/datasets/morrislab/translation-efficiency-mouse/resolve/06cba806cb2b46d3f4d14487bba730660195aea1/te_mouse.parquet",
+        "mirror_download_url": "https://hf-mirror.com/datasets/morrislab/translation-efficiency-mouse/resolve/06cba806cb2b46d3f4d14487bba730660195aea1/te_mouse.parquet",
+        "git_blob_object_id_not_sha256": "fd59cb2fbc9ef6be8560cc22c20a9787d259d1e4",
+        "lfs_sha256_claim_not_observed": "2e27a4b3ec289edf15a0aaa046aeda4b63df09ea44bf7c18c47c1449db1b3f59",
+        "actual_sha256": null,
+        "downloaded": false
+      }
+    ]
+  },
+  {
+    "package_group_id": "MRNA_UTR_VARIANTS_BOHN",
+    "hf_repository": "morrislab/utr-variants-bohn",
+    "official_source_url": "https://huggingface.co/datasets/morrislab/utr-variants-bohn",
+    "metadata_transport": "https://hf-mirror.com",
+    "checked_at_utc": "2026-10-22T19:49:55.728668+00:00",
+    "license_scope": "COLLECTION_CLAIM_ONLY_NOT_ORIGINAL_ASSAY_APPROVAL",
+    "upstream_commit": "d6c15d0fd22980e5c4d568cf8b0899fc92cf5b5f",
+    "gated": false,
+    "data_license_claim": "cc-by-4.0",
+    "state": "CATALOGED_NOT_DOWNLOADED",
+    "tree_metadata_complete": true,
+    "files": [
+      {
+        "relative_path": "utr-variants-bohn-utr3.parquet",
+        "size_bytes": 97688,
+        "official_download_url": "https://huggingface.co/datasets/morrislab/utr-variants-bohn/resolve/d6c15d0fd22980e5c4d568cf8b0899fc92cf5b5f/utr-variants-bohn-utr3.parquet",
+        "mirror_download_url": "https://hf-mirror.com/datasets/morrislab/utr-variants-bohn/resolve/d6c15d0fd22980e5c4d568cf8b0899fc92cf5b5f/utr-variants-bohn-utr3.parquet",
+        "git_blob_object_id_not_sha256": "3450e706a04e9576085b3653db8621d4785c627e",
+        "lfs_sha256_claim_not_observed": "7625ae3ee627628da709bf7dc9b370b92371d74308859133ff7bda74d96aff52",
+        "actual_sha256": null,
+        "downloaded": false
+      },
+      {
+        "relative_path": "utr-variants-bohn-utr5.parquet",
+        "size_bytes": 166504,
+        "official_download_url": "https://huggingface.co/datasets/morrislab/utr-variants-bohn/resolve/d6c15d0fd22980e5c4d568cf8b0899fc92cf5b5f/utr-variants-bohn-utr5.parquet",
+        "mirror_download_url": "https://hf-mirror.com/datasets/morrislab/utr-variants-bohn/resolve/d6c15d0fd22980e5c4d568cf8b0899fc92cf5b5f/utr-variants-bohn-utr5.parquet",
+        "git_blob_object_id_not_sha256": "a877fcb781aabbcbf81e7665a4507ed9be51114b",
+        "lfs_sha256_claim_not_observed": "79b4844d5a4a150fc405263badc1b1f175124a374a2650afd809c48a65e696b0",
+        "actual_sha256": null,
+        "downloaded": false
+      }
+    ]
+  },
+  {
+    "package_group_id": "MRNA_VEP_TRAITGYM_MRNA",
+    "hf_repository": "morrislab/vep-traitgym-mrna",
+    "official_source_url": "https://huggingface.co/datasets/morrislab/vep-traitgym-mrna",
+    "metadata_transport": "https://hf-mirror.com",
+    "checked_at_utc": "2026-10-22T19:49:56.107007+00:00",
+    "license_scope": "COLLECTION_CLAIM_ONLY_NOT_ORIGINAL_ASSAY_APPROVAL",
+    "upstream_commit": "a085525d5f6cadb50122c3b6b5b8e5e63c2a868a",
+    "gated": false,
+    "data_license_claim": "mit",
+    "state": "CATALOGED_NOT_DOWNLOADED",
+    "tree_metadata_complete": true,
+    "files": [
+      {
+        "relative_path": "vep-traitgym-complex.parquet",
+        "size_bytes": 3082734,
+        "official_download_url": "https://huggingface.co/datasets/morrislab/vep-traitgym-mrna/resolve/a085525d5f6cadb50122c3b6b5b8e5e63c2a868a/vep-traitgym-complex.parquet",
+        "mirror_download_url": "https://hf-mirror.com/datasets/morrislab/vep-traitgym-mrna/resolve/a085525d5f6cadb50122c3b6b5b8e5e63c2a868a/vep-traitgym-complex.parquet",
+        "git_blob_object_id_not_sha256": "3f730df711831934156d5448fa5ea461482b72d0",
+        "lfs_sha256_claim_not_observed": "ca856385dc2766827929ecb616abea9a2fadac38be984d29d0858bc53e122b01",
+        "actual_sha256": null,
+        "downloaded": false
+      },
+      {
+        "relative_path": "vep-traitgym-mendelian.parquet",
+        "size_bytes": 3933465,
+        "official_download_url": "https://huggingface.co/datasets/morrislab/vep-traitgym-mrna/resolve/a085525d5f6cadb50122c3b6b5b8e5e63c2a868a/vep-traitgym-mendelian.parquet",
+        "mirror_download_url": "https://hf-mirror.com/datasets/morrislab/vep-traitgym-mrna/resolve/a085525d5f6cadb50122c3b6b5b8e5e63c2a868a/vep-traitgym-mendelian.parquet",
+        "git_blob_object_id_not_sha256": "cc0acde26cda08ca3f53857c93286aa14f3746c9",
+        "lfs_sha256_claim_not_observed": "ff39c6b209b52ff175e4992682d4c0d49baeac0897b102f1cb02f2a4989511d2",
+        "actual_sha256": null,
+        "downloaded": false
+      }
+    ]
+  },
+  {
+    "package_group_id": "RNAGYM_3D",
+    "hf_repository": "Marks-lab/RNAgym",
+    "official_source_url": "https://huggingface.co/datasets/Marks-lab/RNAgym",
+    "metadata_transport": "https://hf-mirror.com",
+    "checked_at_utc": "2026-10-22T19:49:56.666144+00:00",
+    "license_scope": "COLLECTION_CLAIM_ONLY_NOT_ORIGINAL_ASSAY_APPROVAL",
+    "upstream_commit": "bc6ccf4c5bf445ca25991f2a74448ae7e153b9f6",
+    "gated": false,
+    "data_license_claim": "cc-by-4.0",
+    "state": "CATALOGED_NOT_DOWNLOADED",
+    "tree_metadata_complete": true,
+    "files": [
+      {
+        "relative_path": "tertiary_structure_prediction/monomer.parquet",
+        "size_bytes": 17701,
+        "official_download_url": "https://huggingface.co/datasets/Marks-lab/RNAgym/resolve/bc6ccf4c5bf445ca25991f2a74448ae7e153b9f6/tertiary_structure_prediction/monomer.parquet",
+        "mirror_download_url": "https://hf-mirror.com/datasets/Marks-lab/RNAgym/resolve/bc6ccf4c5bf445ca25991f2a74448ae7e153b9f6/tertiary_structure_prediction/monomer.parquet",
+        "git_blob_object_id_not_sha256": "cc1027ee7dd28436f8e2c5e34374061338d90d7a",
+        "lfs_sha256_claim_not_observed": "3773f1a7148c2dbdbd5dcfbca9d587bca56e548885ee9e2526018e244fd793bb",
+        "actual_sha256": null,
+        "downloaded": false
+      },
+      {
+        "relative_path": "tertiary_structure_prediction/multimer.parquet",
+        "size_bytes": 6866,
+        "official_download_url": "https://huggingface.co/datasets/Marks-lab/RNAgym/resolve/bc6ccf4c5bf445ca25991f2a74448ae7e153b9f6/tertiary_structure_prediction/multimer.parquet",
+        "mirror_download_url": "https://hf-mirror.com/datasets/Marks-lab/RNAgym/resolve/bc6ccf4c5bf445ca25991f2a74448ae7e153b9f6/tertiary_structure_prediction/multimer.parquet",
+        "git_blob_object_id_not_sha256": "c6a53557a973b227da7b09adfdae280f7bf50e82",
+        "lfs_sha256_claim_not_observed": "014cf6b240072af8f3e81c3b446195506db2206934eabab93a0e62518a15c9d7",
+        "actual_sha256": null,
+        "downloaded": false
+      }
+    ]
+  },
+  {
+    "package_group_id": "RNAGYM_RMDB",
+    "hf_repository": "Marks-lab/RNAgym",
+    "official_source_url": "https://huggingface.co/datasets/Marks-lab/RNAgym",
+    "metadata_transport": "https://hf-mirror.com",
+    "checked_at_utc": "2026-10-22T19:49:56.837771+00:00",
+    "license_scope": "COLLECTION_CLAIM_ONLY_NOT_ORIGINAL_ASSAY_APPROVAL",
+    "upstream_commit": "bc6ccf4c5bf445ca25991f2a74448ae7e153b9f6",
+    "gated": false,
+    "data_license_claim": "cc-by-4.0",
+    "state": "CATALOGED_NOT_DOWNLOADED",
+    "tree_metadata_complete": true,
+    "files": [
+      {
+        "relative_path": "secondary_structure_prediction/RMDB_PDB.fasta",
+        "size_bytes": 85355698,
+        "official_download_url": "https://huggingface.co/datasets/Marks-lab/RNAgym/resolve/bc6ccf4c5bf445ca25991f2a74448ae7e153b9f6/secondary_structure_prediction/RMDB_PDB.fasta",
+        "mirror_download_url": "https://hf-mirror.com/datasets/Marks-lab/RNAgym/resolve/bc6ccf4c5bf445ca25991f2a74448ae7e153b9f6/secondary_structure_prediction/RMDB_PDB.fasta",
+        "git_blob_object_id_not_sha256": "f77a701450cab1d3d8ccb5fd7aed237778105a34",
+        "lfs_sha256_claim_not_observed": "239d697bf45a083a3cadae126e9f8b6d3a76bd6659f7fb45107ef2b7340af325",
+        "actual_sha256": null,
+        "downloaded": false
+      },
+      {
+        "relative_path": "secondary_structure_prediction/RMDB_s40_test.fasta",
+        "size_bytes": 103678585,
+        "official_download_url": "https://huggingface.co/datasets/Marks-lab/RNAgym/resolve/bc6ccf4c5bf445ca25991f2a74448ae7e153b9f6/secondary_structure_prediction/RMDB_s40_test.fasta",
+        "mirror_download_url": "https://hf-mirror.com/datasets/Marks-lab/RNAgym/resolve/bc6ccf4c5bf445ca25991f2a74448ae7e153b9f6/secondary_structure_prediction/RMDB_s40_test.fasta",
+        "git_blob_object_id_not_sha256": "6f91c6f767454ab5b4d9f58654d5c0a8ab7ac14c",
+        "lfs_sha256_claim_not_observed": "1e152d215a096dd5f5ace349fa65acbe631d6a582bbdabf2732c632b40176e60",
+        "actual_sha256": null,
+        "downloaded": false
+      },
+      {
+        "relative_path": "secondary_structure_prediction/RMDB_s40_test.parquet",
+        "size_bytes": 450511608,
+        "official_download_url": "https://huggingface.co/datasets/Marks-lab/RNAgym/resolve/bc6ccf4c5bf445ca25991f2a74448ae7e153b9f6/secondary_structure_prediction/RMDB_s40_test.parquet",
+        "mirror_download_url": "https://hf-mirror.com/datasets/Marks-lab/RNAgym/resolve/bc6ccf4c5bf445ca25991f2a74448ae7e153b9f6/secondary_structure_prediction/RMDB_s40_test.parquet",
+        "git_blob_object_id_not_sha256": "635d54fd2a9ac42fae9afdccc72ec4c1f1c29e6b",
+        "lfs_sha256_claim_not_observed": "1f19b04187597743cd1adba3137517f32fb3ce48d17da38807ac2d15ffedc008",
+        "actual_sha256": null,
+        "downloaded": false
+      },
+      {
+        "relative_path": "secondary_structure_prediction/RMDB_s40_train.fasta",
+        "size_bytes": 17427258,
+        "official_download_url": "https://huggingface.co/datasets/Marks-lab/RNAgym/resolve/bc6ccf4c5bf445ca25991f2a74448ae7e153b9f6/secondary_structure_prediction/RMDB_s40_train.fasta",
+        "mirror_download_url": "https://hf-mirror.com/datasets/Marks-lab/RNAgym/resolve/bc6ccf4c5bf445ca25991f2a74448ae7e153b9f6/secondary_structure_prediction/RMDB_s40_train.fasta",
+        "git_blob_object_id_not_sha256": "816855e0b7870b9fdfb259daf09564a8311bdf17",
+        "lfs_sha256_claim_not_observed": "c443231302dc61905d34836b819ddfcb7f27fbd62e774057fb1069a989de33a6",
+        "actual_sha256": null,
+        "downloaded": false
+      },
+      {
+        "relative_path": "secondary_structure_prediction/RMDB_s40_train.parquet",
+        "size_bytes": 114044130,
+        "official_download_url": "https://huggingface.co/datasets/Marks-lab/RNAgym/resolve/bc6ccf4c5bf445ca25991f2a74448ae7e153b9f6/secondary_structure_prediction/RMDB_s40_train.parquet",
+        "mirror_download_url": "https://hf-mirror.com/datasets/Marks-lab/RNAgym/resolve/bc6ccf4c5bf445ca25991f2a74448ae7e153b9f6/secondary_structure_prediction/RMDB_s40_train.parquet",
+        "git_blob_object_id_not_sha256": "47dde89383cee77d36a1d3ffa9848e1b71960cb5",
+        "lfs_sha256_claim_not_observed": "b531054dbce8757e0c6978fe6d997e51a2925f5298824478f606f2f7d89f6ccd",
+        "actual_sha256": null,
+        "downloaded": false
+      },
+      {
+        "relative_path": "secondary_structure_prediction/cluster_40.parquet",
+        "size_bytes": 9799544,
+        "official_download_url": "https://huggingface.co/datasets/Marks-lab/RNAgym/resolve/bc6ccf4c5bf445ca25991f2a74448ae7e153b9f6/secondary_structure_prediction/cluster_40.parquet",
+        "mirror_download_url": "https://hf-mirror.com/datasets/Marks-lab/RNAgym/resolve/bc6ccf4c5bf445ca25991f2a74448ae7e153b9f6/secondary_structure_prediction/cluster_40.parquet",
+        "git_blob_object_id_not_sha256": "4d10bb058a0508bf055cf78ddbb95633a77587cb",
+        "lfs_sha256_claim_not_observed": "518d325831824c888e65c34a5a96f831ee06bf73b84e5edd4e926979e227451c",
+        "actual_sha256": null,
+        "downloaded": false
+      },
+      {
+        "relative_path": "secondary_structure_prediction/compiled_RMDB.tar.gz",
+        "size_bytes": 1231434991,
+        "official_download_url": "https://huggingface.co/datasets/Marks-lab/RNAgym/resolve/bc6ccf4c5bf445ca25991f2a74448ae7e153b9f6/secondary_structure_prediction/compiled_RMDB.tar.gz",
+        "mirror_download_url": "https://hf-mirror.com/datasets/Marks-lab/RNAgym/resolve/bc6ccf4c5bf445ca25991f2a74448ae7e153b9f6/secondary_structure_prediction/compiled_RMDB.tar.gz",
+        "git_blob_object_id_not_sha256": "c777c1cb78d755c7a3f258b44dc1718a8f49e880",
+        "lfs_sha256_claim_not_observed": "d80989794d901d9a256e3c14e90483f70cd2370bc1396a3acaf9953ffdcfa58f",
+        "actual_sha256": null,
+        "downloaded": false
+      },
+      {
+        "relative_path": "secondary_structure_prediction/ribonanza_test_set.fasta",
+        "size_bytes": 282123791,
+        "official_download_url": "https://huggingface.co/datasets/Marks-lab/RNAgym/resolve/bc6ccf4c5bf445ca25991f2a74448ae7e153b9f6/secondary_structure_prediction/ribonanza_test_set.fasta",
+        "mirror_download_url": "https://hf-mirror.com/datasets/Marks-lab/RNAgym/resolve/bc6ccf4c5bf445ca25991f2a74448ae7e153b9f6/secondary_structure_prediction/ribonanza_test_set.fasta",
+        "git_blob_object_id_not_sha256": "e8b9c88f9fc6c4ac96ee3d8cc15f96099076d109",
+        "lfs_sha256_claim_not_observed": "a7e926c97d15d6a08703693ca7d05db015a1d7b946d162fdb54c94aa688bc727",
+        "actual_sha256": null,
+        "downloaded": false
+      }
+    ]
+  },
+  {
+    "package_group_id": "RNAGYM_DMS",
+    "hf_repository": "Marks-lab/RNAgym",
+    "official_source_url": "https://huggingface.co/datasets/Marks-lab/RNAgym",
+    "metadata_transport": "https://hf-mirror.com",
+    "checked_at_utc": "2026-10-22T19:49:57.027738+00:00",
+    "license_scope": "COLLECTION_CLAIM_ONLY_NOT_ORIGINAL_ASSAY_APPROVAL",
+    "upstream_commit": "bc6ccf4c5bf445ca25991f2a74448ae7e153b9f6",
+    "gated": false,
+    "data_license_claim": "cc-by-4.0",
+    "state": "CATALOGED_NOT_DOWNLOADED",
+    "tree_metadata_complete": true,
+    "files": [
+      {
+        "relative_path": "fitness_prediction/assays/A0A2Z5U3Z0_9INFA_Doud_2016.parquet",
+        "size_bytes": 1428788,
+        "official_download_url": "https://huggingface.co/datasets/Marks-lab/RNAgym/resolve/bc6ccf4c5bf445ca25991f2a74448ae7e153b9f6/fitness_prediction/assays/A0A2Z5U3Z0_9INFA_Doud_2016.parquet",
+        "mirror_download_url": "https://hf-mirror.com/datasets/Marks-lab/RNAgym/resolve/bc6ccf4c5bf445ca25991f2a74448ae7e153b9f6/fitness_prediction/assays/A0A2Z5U3Z0_9INFA_Doud_2016.parquet",
+        "git_blob_object_id_not_sha256": "7a0e8e885395116c78ea3885dec8d1cf7449f564",
+        "lfs_sha256_claim_not_observed": "a9a58227a1e2fa6acc0c07703ffbfd6783d08df9b1e79dfad1d8b2c6be25a913",
+        "actual_sha256": null,
+        "downloaded": false
+      },
+      {
+        "relative_path": "fitness_prediction/assays/Andreasson_2020_ribozyme.parquet",
+        "size_bytes": 213684,
+        "official_download_url": "https://huggingface.co/datasets/Marks-lab/RNAgym/resolve/bc6ccf4c5bf445ca25991f2a74448ae7e153b9f6/fitness_prediction/assays/Andreasson_2020_ribozyme.parquet",
+        "mirror_download_url": "https://hf-mirror.com/datasets/Marks-lab/RNAgym/resolve/bc6ccf4c5bf445ca25991f2a74448ae7e153b9f6/fitness_prediction/assays/Andreasson_2020_ribozyme.parquet",
+        "git_blob_object_id_not_sha256": "7282c30b4f1f6e22a7f96aa5a271649f1df45162",
+        "lfs_sha256_claim_not_observed": "acfba460743a68844fb0c74b872468a1686b37c4307ddfff253bca580dbdf65a",
+        "actual_sha256": null,
+        "downloaded": false
+      },
+      {
+        "relative_path": "fitness_prediction/assays/BCHB_CHLTE_Tsuboyama_2023_2KRU.parquet",
+        "size_bytes": 147305,
+        "official_download_url": "https://huggingface.co/datasets/Marks-lab/RNAgym/resolve/bc6ccf4c5bf445ca25991f2a74448ae7e153b9f6/fitness_prediction/assays/BCHB_CHLTE_Tsuboyama_2023_2KRU.parquet",
+        "mirror_download_url": "https://hf-mirror.com/datasets/Marks-lab/RNAgym/resolve/bc6ccf4c5bf445ca25991f2a74448ae7e153b9f6/fitness_prediction/assays/BCHB_CHLTE_Tsuboyama_2023_2KRU.parquet",
+        "git_blob_object_id_not_sha256": "69889a1e87e64fdd373e171471cee986d0efc82b",
+        "lfs_sha256_claim_not_observed": "e60e5f805c6bb12088c76f5f975a63736c02904e25c4d0438dbf594a1b2efd19",
+        "actual_sha256": null,
+        "downloaded": false
+      },
+      {
+        "relative_path": "fitness_prediction/assays/BLAT_ECOLX_Firnberg_2014.parquet",
+        "size_bytes": 319473,
+        "official_download_url": "https://huggingface.co/datasets/Marks-lab/RNAgym/resolve/bc6ccf4c5bf445ca25991f2a74448ae7e153b9f6/fitness_prediction/assays/BLAT_ECOLX_Firnberg_2014.parquet",
+        "mirror_download_url": "https://hf-mirror.com/datasets/Marks-lab/RNAgym/resolve/bc6ccf4c5bf445ca25991f2a74448ae7e153b9f6/fitness_prediction/assays/BLAT_ECOLX_Firnberg_2014.parquet",
+        "git_blob_object_id_not_sha256": "5f96994c01b0baf4c24687c16db07189a62cf709",
+        "lfs_sha256_claim_not_observed": "fbbad6b72dc1154c4a879649dc4034be6c284422165e2843bcb3ae778dad8b92",
+        "actual_sha256": null,
+        "downloaded": false
+      },
+      {
+        "relative_path": "fitness_prediction/assays/BLAT_ECOLX_Jacquier_2013.parquet",
+        "size_bytes": 67690,
+        "official_download_url": "https://huggingface.co/datasets/Marks-lab/RNAgym/resolve/bc6ccf4c5bf445ca25991f2a74448ae7e153b9f6/fitness_prediction/assays/BLAT_ECOLX_Jacquier_2013.parquet",
+        "mirror_download_url": "https://hf-mirror.com/datasets/Marks-lab/RNAgym/resolve/bc6ccf4c5bf445ca25991f2a74448ae7e153b9f6/fitness_prediction/assays/BLAT_ECOLX_Jacquier_2013.parquet",
+        "git_blob_object_id_not_sha256": "5d986695dc203aef8fe35bb6ef5e5f7b42094905",
+        "lfs_sha256_claim_not_observed": "585636dd064b056ec4189b199fb5634c5009a6c1ee7b841ffa6864e44bff6821",
+        "actual_sha256": null,
+        "downloaded": false
+      },
+      {
+        "relative_path": "fitness_prediction/assays/BRCA1_HUMAN_Findlay_2018.parquet",
+        "size_bytes": 511369,
+        "official_download_url": "https://huggingface.co/datasets/Marks-lab/RNAgym/resolve/bc6ccf4c5bf445ca25991f2a74448ae7e153b9f6/fitness_prediction/assays/BRCA1_HUMAN_Findlay_2018.parquet",
+        "mirror_download_url": "https://hf-mirror.com/datasets/Marks-lab/RNAgym/resolve/bc6ccf4c5bf445ca25991f2a74448ae7e153b9f6/fitness_prediction/assays/BRCA1_HUMAN_Findlay_2018.parquet",
+        "git_blob_object_id_not_sha256": "4ee3b7a8eb95ca2141a2cb496a8127dfdd1100a0",
+        "lfs_sha256_claim_not_observed": "0607e8a3da1b3a99e0acf5cabef6d9ffa83ac9b3f6978467ae6cd59bd943e1ed",
+        "actual_sha256": null,
+        "downloaded": false
+      },
+      {
+        "relative_path": "fitness_prediction/assays/Beck_2022_ribozyme.parquet",
+        "size_bytes": 654549,
+        "official_download_url": "https://huggingface.co/datasets/Marks-lab/RNAgym/resolve/bc6ccf4c5bf445ca25991f2a74448ae7e153b9f6/fitness_prediction/assays/Beck_2022_ribozyme.parquet",
+        "mirror_download_url": "https://hf-mirror.com/datasets/Marks-lab/RNAgym/resolve/bc6ccf4c5bf445ca25991f2a74448ae7e153b9f6/fitness_prediction/assays/Beck_2022_ribozyme.parquet",
+        "git_blob_object_id_not_sha256": "cbb0ea34171866d8a1e20c17e646f796e6ed3a73",
+        "lfs_sha256_claim_not_observed": "2e7d525ae246cff3f54a7bba89a173fb21f19507e904971042e798c4616ccc13",
+        "actual_sha256": null,
+        "downloaded": false
+      },
+      {
+        "relative_path": "fitness_prediction/assays/C6KNH7_9INFA_Lee_2018.parquet",
+        "size_bytes": 1493228,
+        "official_download_url": "https://huggingface.co/datasets/Marks-lab/RNAgym/resolve/bc6ccf4c5bf445ca25991f2a74448ae7e153b9f6/fitness_prediction/assays/C6KNH7_9INFA_Lee_2018.parquet",
+        "mirror_download_url": "https://hf-mirror.com/datasets/Marks-lab/RNAgym/resolve/bc6ccf4c5bf445ca25991f2a74448ae7e153b9f6/fitness_prediction/assays/C6KNH7_9INFA_Lee_2018.parquet",
+        "git_blob_object_id_not_sha256": "94a241f45cc9919f0674949a1755e0e661594118",
+        "lfs_sha256_claim_not_observed": "e2ce20521584b23eed6deeec4eb70b7a0f2e9b69f80376d560e41afb5174aba1",
+        "actual_sha256": null,
+        "downloaded": false
+      },
+      {
+        "relative_path": "fitness_prediction/assays/CALM1_HUMAN_Weile_2017.parquet",
+        "size_bytes": 91170,
+        "official_download_url": "https://huggingface.co/datasets/Marks-lab/RNAgym/resolve/bc6ccf4c5bf445ca25991f2a74448ae7e153b9f6/fitness_prediction/assays/CALM1_HUMAN_Weile_2017.parquet",
+        "mirror_download_url": "https://hf-mirror.com/datasets/Marks-lab/RNAgym/resolve/bc6ccf4c5bf445ca25991f2a74448ae7e153b9f6/fitness_prediction/assays/CALM1_HUMAN_Weile_2017.parquet",
+        "git_blob_object_id_not_sha256": "22e705caf2b856a377e8e86019d4682cc3e054bf",
+        "lfs_sha256_claim_not_observed": "3fb426daf9bd2a3e7d1213ae2a381177b95795ee89af4062185cab8d7ddf561c",
+        "actual_sha256": null,
+        "downloaded": false
+      },
+      {
+        "relative_path": "fitness_prediction/assays/CAPSD_AAV2S_Sinai_2021.parquet",
+        "size_bytes": 8303378,
+        "official_download_url": "https://huggingface.co/datasets/Marks-lab/RNAgym/resolve/bc6ccf4c5bf445ca25991f2a74448ae7e153b9f6/fitness_prediction/assays/CAPSD_AAV2S_Sinai_2021.parquet",
+        "mirror_download_url": "https://hf-mirror.com/datasets/Marks-lab/RNAgym/resolve/bc6ccf4c5bf445ca25991f2a74448ae7e153b9f6/fitness_prediction/assays/CAPSD_AAV2S_Sinai_2021.parquet",
+        "git_blob_object_id_not_sha256": "9e3bf5c25b8259be7e2ef9af0e6ea6bcffe0cc8e",
+        "lfs_sha256_claim_not_observed": "dc7b49dfc0c7ae63aadfaf4d21bc79021798bdb2fa5f4d1f1934cae4c93d42bb",
+        "actual_sha256": null,
+        "downloaded": false
+      },
+      {
+        "relative_path": "fitness_prediction/assays/CBS_HUMAN_Sun_2020.parquet",
+        "size_bytes": 952323,
+        "official_download_url": "https://huggingface.co/datasets/Marks-lab/RNAgym/resolve/bc6ccf4c5bf445ca25991f2a74448ae7e153b9f6/fitness_prediction/assays/CBS_HUMAN_Sun_2020.parquet",
+        "mirror_download_url": "https://hf-mirror.com/datasets/Marks-lab/RNAgym/resolve/bc6ccf4c5bf445ca25991f2a74448ae7e153b9f6/fitness_prediction/assays/CBS_HUMAN_Sun_2020.parquet",
+        "git_blob_object_id_not_sha256": "6438d1159eb6963716a6edad2bb2b6356548d0e4",
+        "lfs_sha256_claim_not_observed": "c2b91093a4adf7bb83200db837e17de6e2c544f86337dc3d7d1e10aaee2eb729",
+        "actual_sha256": null,
+        "downloaded": false
+      },
+      {
+        "relative_path": "fitness_prediction/assays/CCDB_ECOLI_Adkar_2012.parquet",
+        "size_bytes": 36654,
+        "official_download_url": "https://huggingface.co/datasets/Marks-lab/RNAgym/resolve/bc6ccf4c5bf445ca25991f2a74448ae7e153b9f6/fitness_prediction/assays/CCDB_ECOLI_Adkar_2012.parquet",
+        "mirror_download_url": "https://hf-mirror.com/datasets/Marks-lab/RNAgym/resolve/bc6ccf4c5bf445ca25991f2a74448ae7e153b9f6/fitness_prediction/assays/CCDB_ECOLI_Adkar_2012.parquet",
+        "git_blob_object_id_not_sha256": "a1dba34a41076ae87d0eed346044d905bfeafd4c",
+        "lfs_sha256_claim_not_observed": "66b827a77dcf3f1b08d206bba7c16b3968a59c80abbe3764fbe773b746d7645f",
+        "actual_sha256": null,
+        "downloaded": false
+      },
+      {
+        "relative_path": "fitness_prediction/assays/DLG4_RAT_McLaughlin_2012.parquet",
+        "size_bytes": 271240,
+        "official_download_url": "https://huggingface.co/datasets/Marks-lab/RNAgym/resolve/bc6ccf4c5bf445ca25991f2a74448ae7e153b9f6/fitness_prediction/assays/DLG4_RAT_McLaughlin_2012.parquet",
+        "mirror_download_url": "https://hf-mirror.com/datasets/Marks-lab/RNAgym/resolve/bc6ccf4c5bf445ca25991f2a74448ae7e153b9f6/fitness_prediction/assays/DLG4_RAT_McLaughlin_2012.parquet",
+        "git_blob_object_id_not_sha256": "77331cfbf6f1cb74a52b03144aaf2046f4f8885e",
+        "lfs_sha256_claim_not_observed": "35b1699ed1a3e1fc436bc9c148068a7189ba60d79c0da04c1f59613a311a3a09",
+        "actual_sha256": null,
+        "downloaded": false
+      },
+      {
+        "relative_path": "fitness_prediction/assays/DOCK1_MOUSE_Tsuboyama_2023_2M0Y.parquet",
+        "size_bytes": 222787,
+        "official_download_url": "https://huggingface.co/datasets/Marks-lab/RNAgym/resolve/bc6ccf4c5bf445ca25991f2a74448ae7e153b9f6/fitness_prediction/assays/DOCK1_MOUSE_Tsuboyama_2023_2M0Y.parquet",
+        "mirror_download_url": "https://hf-mirror.com/datasets/Marks-lab/RNAgym/resolve/bc6ccf4c5bf445ca25991f2a74448ae7e153b9f6/fitness_prediction/assays/DOCK1_MOUSE_Tsuboyama_2023_2M0Y.parquet",
+        "git_blob_object_id_not_sha256": "3c957b576bcc466b3cba657aa4c308b484a7306a",
+        "lfs_sha256_claim_not_observed": "dd8b5bded0933a2584a32882a69d9986a7562e018859f4c2a009f3338ef31f74",
+        "actual_sha256": null,
+        "downloaded": false
+      },
+      {
+        "relative_path": "fitness_prediction/assays/Domingo_2018_tRNA.parquet",
+        "size_bytes": 115746,
+        "official_download_url": "https://huggingface.co/datasets/Marks-lab/RNAgym/resolve/bc6ccf4c5bf445ca25991f2a74448ae7e153b9f6/fitness_prediction/assays/Domingo_2018_tRNA.parquet",
+        "mirror_download_url": "https://hf-mirror.com/datasets/Marks-lab/RNAgym/resolve/bc6ccf4c5bf445ca25991f2a74448ae7e153b9f6/fitness_prediction/assays/Domingo_2018_tRNA.parquet",
+        "git_blob_object_id_not_sha256": "8d44e61e1a50663d038e2a529b26ed36d9aa6305",
+        "lfs_sha256_claim_not_observed": "f84dd3b186812e190edacecad85dceff307227d90b30812e9e707bed5b8ff2f2",
+        "actual_sha256": null,
+        "downloaded": false
+      },
+      {
+        "relative_path": "fitness_prediction/assays/ESTA_BACSU_Nutschel_2020.parquet",
+        "size_bytes": 114810,
+        "official_download_url": "https://huggingface.co/datasets/Marks-lab/RNAgym/resolve/bc6ccf4c5bf445ca25991f2a74448ae7e153b9f6/fitness_prediction/assays/ESTA_BACSU_Nutschel_2020.parquet",
+        "mirror_download_url": "https://hf-mirror.com/datasets/Marks-lab/RNAgym/resolve/bc6ccf4c5bf445ca25991f2a74448ae7e153b9f6/fitness_prediction/assays/ESTA_BACSU_Nutschel_2020.parquet",
+        "git_blob_object_id_not_sha256": "1e2f27bc485b8be9a140ef5e45fe455632826dd0",
+        "lfs_sha256_claim_not_observed": "6602f568f1533619a131aed0e3a2bf8f95ccfd02062a98575b9cf899bf6125a8",
+        "actual_sha256": null,
+        "downloaded": false
+      },
+      {
+        "relative_path": "fitness_prediction/assays/F7YBW8_MESOW_Ding_2023.parquet",
+        "size_bytes": 482889,
+        "official_download_url": "https://huggingface.co/datasets/Marks-lab/RNAgym/resolve/bc6ccf4c5bf445ca25991f2a74448ae7e153b9f6/fitness_prediction/assays/F7YBW8_MESOW_Ding_2023.parquet",
+        "mirror_download_url": "https://hf-mirror.com/datasets/Marks-lab/RNAgym/resolve/bc6ccf4c5bf445ca25991f2a74448ae7e153b9f6/fitness_prediction/assays/F7YBW8_MESOW_Ding_2023.parquet",
+        "git_blob_object_id_not_sha256": "a3f20a8306a967f42e491f663a320543be33d5b7",
+        "lfs_sha256_claim_not_observed": "1e054e9bb56bf0b3ec340be46c0e87efd5235c1ba3cb9fe8bd9bde997301a83f",
+        "actual_sha256": null,
+        "downloaded": false
+      },
+      {
+        "relative_path": "fitness_prediction/assays/GFP_AEQVI_Sarkisyan_2016.parquet",
+        "size_bytes": 6126065,
+        "official_download_url": "https://huggingface.co/datasets/Marks-lab/RNAgym/resolve/bc6ccf4c5bf445ca25991f2a74448ae7e153b9f6/fitness_prediction/assays/GFP_AEQVI_Sarkisyan_2016.parquet",
+        "mirror_download_url": "https://hf-mirror.com/datasets/Marks-lab/RNAgym/resolve/bc6ccf4c5bf445ca25991f2a74448ae7e153b9f6/fitness_prediction/assays/GFP_AEQVI_Sarkisyan_2016.parquet",
+        "git_blob_object_id_not_sha256": "75947602c2a21170c1141bbdefd8829382882b58",
+        "lfs_sha256_claim_not_observed": "c3efb83f6b50fae61e641c1182ea9c836ed0d400188fd4cddec8b542204a3fc8",
+        "actual_sha256": null,
+        "downloaded": false
+      },
+      {
+        "relative_path": "fitness_prediction/assays/Guy_2014_tRNA.parquet",
+        "size_bytes": 711711,
+        "official_download_url": "https://huggingface.co/datasets/Marks-lab/RNAgym/resolve/bc6ccf4c5bf445ca25991f2a74448ae7e153b9f6/fitness_prediction/assays/Guy_2014_tRNA.parquet",
+        "mirror_download_url": "https://hf-mirror.com/datasets/Marks-lab/RNAgym/resolve/bc6ccf4c5bf445ca25991f2a74448ae7e153b9f6/fitness_prediction/assays/Guy_2014_tRNA.parquet",
+        "git_blob_object_id_not_sha256": "aa719e916ae52da4cc6ca3adfa2617be5d4900a5",
+        "lfs_sha256_claim_not_observed": "6b616b800e26039d6918fda8ad93e7bdfcd0bddb74a4fda0a8edfec9d08c40ed",
+        "actual_sha256": null,
+        "downloaded": false
+      },
+      {
+        "relative_path": "fitness_prediction/assays/HECD1_HUMAN_Tsuboyama_2023_3DKM.parquet",
+        "size_bytes": 517884,
+        "official_download_url": "https://huggingface.co/datasets/Marks-lab/RNAgym/resolve/bc6ccf4c5bf445ca25991f2a74448ae7e153b9f6/fitness_prediction/assays/HECD1_HUMAN_Tsuboyama_2023_3DKM.parquet",
+        "mirror_download_url": "https://hf-mirror.com/datasets/Marks-lab/RNAgym/resolve/bc6ccf4c5bf445ca25991f2a74448ae7e153b9f6/fitness_prediction/assays/HECD1_HUMAN_Tsuboyama_2023_3DKM.parquet",
+        "git_blob_object_id_not_sha256": "e88cdad82f9a6aa5a31703a908605d543b658800",
+        "lfs_sha256_claim_not_observed": "db265b7f3867888f430ac7bf67f071e67561311b27daede162d24dc27e28133d",
+        "actual_sha256": null,
+        "downloaded": false
+      },
+      {
+        "relative_path": "fitness_prediction/assays/IF1_ECOLI_Kelsic_2016.parquet",
+        "size_bytes": 41983,
+        "official_download_url": "https://huggingface.co/datasets/Marks-lab/RNAgym/resolve/bc6ccf4c5bf445ca25991f2a74448ae7e153b9f6/fitness_prediction/assays/IF1_ECOLI_Kelsic_2016.parquet",
+        "mirror_download_url": "https://hf-mirror.com/datasets/Marks-lab/RNAgym/resolve/bc6ccf4c5bf445ca25991f2a74448ae7e153b9f6/fitness_prediction/assays/IF1_ECOLI_Kelsic_2016.parquet",
+        "git_blob_object_id_not_sha256": "9c5325abf580f71a79f3a9fc4e6d94ef1aa2fc70",
+        "lfs_sha256_claim_not_observed": "c5b7d38548efb20789cd3f2f9804ea18ddd8550e188c0a0701fb27a0b2082787",
+        "actual_sha256": null,
+        "downloaded": false
+      },
+      {
+        "relative_path": "fitness_prediction/assays/Janzen_2022_fam1a1_ribozyme.parquet",
+        "size_bytes": 53772,
+        "official_download_url": "https://huggingface.co/datasets/Marks-lab/RNAgym/resolve/bc6ccf4c5bf445ca25991f2a74448ae7e153b9f6/fitness_prediction/assays/Janzen_2022_fam1a1_ribozyme.parquet",
+        "mirror_download_url": "https://hf-mirror.com/datasets/Marks-lab/RNAgym/resolve/bc6ccf4c5bf445ca25991f2a74448ae7e153b9f6/fitness_prediction/assays/Janzen_2022_fam1a1_ribozyme.parquet",
+        "git_blob_object_id_not_sha256": "fd8c0a32f9528fabfb552f287ad32513f13480bc",
+        "lfs_sha256_claim_not_observed": "81df6459ab160994fac4c7bb31276b1ff85e4a5d1547be6986f10bac035e14c0",
+        "actual_sha256": null,
+        "downloaded": false
+      },
+      {
+        "relative_path": "fitness_prediction/assays/Janzen_2022_fam1b1_ribozyme.parquet",
+        "size_bytes": 52842,
+        "official_download_url": "https://huggingface.co/datasets/Marks-lab/RNAgym/resolve/bc6ccf4c5bf445ca25991f2a74448ae7e153b9f6/fitness_prediction/assays/Janzen_2022_fam1b1_ribozyme.parquet",
+        "mirror_download_url": "https://hf-mirror.com/datasets/Marks-lab/RNAgym/resolve/bc6ccf4c5bf445ca25991f2a74448ae7e153b9f6/fitness_prediction/assays/Janzen_2022_fam1b1_ribozyme.parquet",
+        "git_blob_object_id_not_sha256": "5f22871feb4e57e072a6c1549a83d71922c80e85",
+        "lfs_sha256_claim_not_observed": "edefb8d590e3de0ec2160c94dec151d6c0c9f8d3f9a34a96f1720e6b8f63d322",
+        "actual_sha256": null,
+        "downloaded": false
+      },
+      {
+        "relative_path": "fitness_prediction/assays/Janzen_2022_fam21_ribozyme.parquet",
+        "size_bytes": 53958,
+        "official_download_url": "https://huggingface.co/datasets/Marks-lab/RNAgym/resolve/bc6ccf4c5bf445ca25991f2a74448ae7e153b9f6/fitness_prediction/assays/Janzen_2022_fam21_ribozyme.parquet",
+        "mirror_download_url": "https://hf-mirror.com/datasets/Marks-lab/RNAgym/resolve/bc6ccf4c5bf445ca25991f2a74448ae7e153b9f6/fitness_prediction/assays/Janzen_2022_fam21_ribozyme.parquet",
+        "git_blob_object_id_not_sha256": "fc831a455b496626466bd23dc71f69498e5da9d5",
+        "lfs_sha256_claim_not_observed": "c769eece9c34450d7dde834c4d15646e5798d332694455f639e966a5569771a4",
+        "actual_sha256": null,
+        "downloaded": false
+      },
+      {
+        "relative_path": "fitness_prediction/assays/Janzen_2022_fam22_ribozyme.parquet",
+        "size_bytes": 53957,
+        "official_download_url": "https://huggingface.co/datasets/Marks-lab/RNAgym/resolve/bc6ccf4c5bf445ca25991f2a74448ae7e153b9f6/fitness_prediction/assays/Janzen_2022_fam22_ribozyme.parquet",
+        "mirror_download_url": "https://hf-mirror.com/datasets/Marks-lab/RNAgym/resolve/bc6ccf4c5bf445ca25991f2a74448ae7e153b9f6/fitness_prediction/assays/Janzen_2022_fam22_ribozyme.parquet",
+        "git_blob_object_id_not_sha256": "f0af1dbb1a31ef979ecca3c146e315f4aeee19e0",
+        "lfs_sha256_claim_not_observed": "38cea9bbc3cd93af17beb6fc5f588ba39bb8a028c0541fb9b04e1ba9dcae011f",
+        "actual_sha256": null,
+        "downloaded": false
+      },
+      {
+        "relative_path": "fitness_prediction/assays/Janzen_2022_fam31_ribozyme.parquet",
+        "size_bytes": 53032,
+        "official_download_url": "https://huggingface.co/datasets/Marks-lab/RNAgym/resolve/bc6ccf4c5bf445ca25991f2a74448ae7e153b9f6/fitness_prediction/assays/Janzen_2022_fam31_ribozyme.parquet",
+        "mirror_download_url": "https://hf-mirror.com/datasets/Marks-lab/RNAgym/resolve/bc6ccf4c5bf445ca25991f2a74448ae7e153b9f6/fitness_prediction/assays/Janzen_2022_fam31_ribozyme.parquet",
+        "git_blob_object_id_not_sha256": "80955e76865e20a2343c08b78f3f3baa2c317b41",
+        "lfs_sha256_claim_not_observed": "270a2fc8683382137185a25486e0ec22dce5569be71083d4cb0a8771c8fbadf8",
+        "actual_sha256": null,
+        "downloaded": false
+      },
+      {
+        "relative_path": "fitness_prediction/assays/Julien_2016_mRNA.parquet",
+        "size_bytes": 5095,
+        "official_download_url": "https://huggingface.co/datasets/Marks-lab/RNAgym/resolve/bc6ccf4c5bf445ca25991f2a74448ae7e153b9f6/fitness_prediction/assays/Julien_2016_mRNA.parquet",
+        "mirror_download_url": "https://hf-mirror.com/datasets/Marks-lab/RNAgym/resolve/bc6ccf4c5bf445ca25991f2a74448ae7e153b9f6/fitness_prediction/assays/Julien_2016_mRNA.parquet",
+        "git_blob_object_id_not_sha256": "6a1ebd84dbee70b31df3706a1f32f5143b50ff97",
+        "lfs_sha256_claim_not_observed": "3b55725c346ef07b443d3c4f129479fe5c7138a8f14ca24b2147470f1537ab47",
+        "actual_sha256": null,
+        "downloaded": false
+      },
+      {
+        "relative_path": "fitness_prediction/assays/Ke_2017_mRNA.parquet",
+        "size_bytes": 139908,
+        "official_download_url": "https://huggingface.co/datasets/Marks-lab/RNAgym/resolve/bc6ccf4c5bf445ca25991f2a74448ae7e153b9f6/fitness_prediction/assays/Ke_2017_mRNA.parquet",
+        "mirror_download_url": "https://hf-mirror.com/datasets/Marks-lab/RNAgym/resolve/bc6ccf4c5bf445ca25991f2a74448ae7e153b9f6/fitness_prediction/assays/Ke_2017_mRNA.parquet",
+        "git_blob_object_id_not_sha256": "ac410747a604d6b26d5fffe09352edda130bc8c1",
+        "lfs_sha256_claim_not_observed": "10cef72a406e93972d6bf3ad881c5c4ad09fc11b577b2cd2578b491238d86f0c",
+        "actual_sha256": null,
+        "downloaded": false
+      },
+      {
+        "relative_path": "fitness_prediction/assays/Kobori_2015_ribozyme_j12.parquet",
+        "size_bytes": 9904,
+        "official_download_url": "https://huggingface.co/datasets/Marks-lab/RNAgym/resolve/bc6ccf4c5bf445ca25991f2a74448ae7e153b9f6/fitness_prediction/assays/Kobori_2015_ribozyme_j12.parquet",
+        "mirror_download_url": "https://hf-mirror.com/datasets/Marks-lab/RNAgym/resolve/bc6ccf4c5bf445ca25991f2a74448ae7e153b9f6/fitness_prediction/assays/Kobori_2015_ribozyme_j12.parquet",
+        "git_blob_object_id_not_sha256": "e9009e0d031c548acee70ecedd4a5a858eb8fedf",
+        "lfs_sha256_claim_not_observed": "f4e7a0a5807e9d2885ae1561b8fdfdd679a55bf2fd260e60200e282e4b8c48d4",
+        "actual_sha256": null,
+        "downloaded": false
+      },
+      {
+        "relative_path": "fitness_prediction/assays/Kobori_2015_ribozyme_p4.parquet",
+        "size_bytes": 9364,
+        "official_download_url": "https://huggingface.co/datasets/Marks-lab/RNAgym/resolve/bc6ccf4c5bf445ca25991f2a74448ae7e153b9f6/fitness_prediction/assays/Kobori_2015_ribozyme_p4.parquet",
+        "mirror_download_url": "https://hf-mirror.com/datasets/Marks-lab/RNAgym/resolve/bc6ccf4c5bf445ca25991f2a74448ae7e153b9f6/fitness_prediction/assays/Kobori_2015_ribozyme_p4.parquet",
+        "git_blob_object_id_not_sha256": "32f81208c83976317cf78b26a261f9e608bbb28d",
+        "lfs_sha256_claim_not_observed": "1dfc5d08f6a0e51111b67ddcbffd009a94bc86a4d7b42e0547a128b87c0ef69b",
+        "actual_sha256": null,
+        "downloaded": false
+      },
+      {
+        "relative_path": "fitness_prediction/assays/Kobori_2015_ribozyme_tw.parquet",
+        "size_bytes": 23292,
+        "official_download_url": "https://huggingface.co/datasets/Marks-lab/RNAgym/resolve/bc6ccf4c5bf445ca25991f2a74448ae7e153b9f6/fitness_prediction/assays/Kobori_2015_ribozyme_tw.parquet",
+        "mirror_download_url": "https://hf-mirror.com/datasets/Marks-lab/RNAgym/resolve/bc6ccf4c5bf445ca25991f2a74448ae7e153b9f6/fitness_prediction/assays/Kobori_2015_ribozyme_tw.parquet",
+        "git_blob_object_id_not_sha256": "9f0872b6aefe7ddb10fc15a20b440a2dc0f1e2ce",
+        "lfs_sha256_claim_not_observed": "fb4331e63f1d0480cc52a281c100d44484a0ec7f1801f02874d5eb243d61496b",
+        "actual_sha256": null,
+        "downloaded": false
+      },
+      {
+        "relative_path": "fitness_prediction/assays/Kobori_2016_osa_ribozyme.parquet",
+        "size_bytes": 152075,
+        "official_download_url": "https://huggingface.co/datasets/Marks-lab/RNAgym/resolve/bc6ccf4c5bf445ca25991f2a74448ae7e153b9f6/fitness_prediction/assays/Kobori_2016_osa_ribozyme.parquet",
+        "mirror_download_url": "https://hf-mirror.com/datasets/Marks-lab/RNAgym/resolve/bc6ccf4c5bf445ca25991f2a74448ae7e153b9f6/fitness_prediction/assays/Kobori_2016_osa_ribozyme.parquet",
+        "git_blob_object_id_not_sha256": "1df729f13629cf1e5f5f404e6a870dc8349a619d",
+        "lfs_sha256_claim_not_observed": "d8066d0ac8f28acb324e95c7debbe3aef12ee914b10bd3cf37fafe18ed7e281c",
+        "actual_sha256": null,
+        "downloaded": false
+      },
+      {
+        "relative_path": "fitness_prediction/assays/Kobori_2018_ribozyme.parquet",
+        "size_bytes": 574284,
+        "official_download_url": "https://huggingface.co/datasets/Marks-lab/RNAgym/resolve/bc6ccf4c5bf445ca25991f2a74448ae7e153b9f6/fitness_prediction/assays/Kobori_2018_ribozyme.parquet",
+        "mirror_download_url": "https://hf-mirror.com/datasets/Marks-lab/RNAgym/resolve/bc6ccf4c5bf445ca25991f2a74448ae7e153b9f6/fitness_prediction/assays/Kobori_2018_ribozyme.parquet",
+        "git_blob_object_id_not_sha256": "7608db38ace5cd5cf0208ae0156d96f37e367304",
+        "lfs_sha256_claim_not_observed": "c412f99385314609aab84c2e19cc1cd3a1870489a229d3f2f1fe1e40b4186ef2",
+        "actual_sha256": null,
+        "downloaded": false
+      },
+      {
+        "relative_path": "fitness_prediction/assays/Li_2016_tRNA.parquet",
+        "size_bytes": 1900979,
+        "official_download_url": "https://huggingface.co/datasets/Marks-lab/RNAgym/resolve/bc6ccf4c5bf445ca25991f2a74448ae7e153b9f6/fitness_prediction/assays/Li_2016_tRNA.parquet",
+        "mirror_download_url": "https://hf-mirror.com/datasets/Marks-lab/RNAgym/resolve/bc6ccf4c5bf445ca25991f2a74448ae7e153b9f6/fitness_prediction/assays/Li_2016_tRNA.parquet",
+        "git_blob_object_id_not_sha256": "62e7e15f9be4460b0dbc38a4e3b3dffacabd2921",
+        "lfs_sha256_claim_not_observed": "3b259eb246714c149fe2dfeac472619b9f6fb9caab843c7b1d371fbfa11123a9",
+        "actual_sha256": null,
+        "downloaded": false
+      },
+      {
+        "relative_path": "fitness_prediction/assays/MLAC_ECOLI_MacRae_2023.parquet",
+        "size_bytes": 239027,
+        "official_download_url": "https://huggingface.co/datasets/Marks-lab/RNAgym/resolve/bc6ccf4c5bf445ca25991f2a74448ae7e153b9f6/fitness_prediction/assays/MLAC_ECOLI_MacRae_2023.parquet",
+        "mirror_download_url": "https://hf-mirror.com/datasets/Marks-lab/RNAgym/resolve/bc6ccf4c5bf445ca25991f2a74448ae7e153b9f6/fitness_prediction/assays/MLAC_ECOLI_MacRae_2023.parquet",
+        "git_blob_object_id_not_sha256": "2570d2ae2022426a7742a1edff24f64dd5de9105",
+        "lfs_sha256_claim_not_observed": "aad5444b3c040cb5023f4eba1997eabc4928069cfb97f183b24928d52fa7bd8e",
+        "actual_sha256": null,
+        "downloaded": false
+      },
+      {
+        "relative_path": "fitness_prediction/assays/MTHR_HUMAN_Weile_2021.parquet",
+        "size_bytes": 1837703,
+        "official_download_url": "https://huggingface.co/datasets/Marks-lab/RNAgym/resolve/bc6ccf4c5bf445ca25991f2a74448ae7e153b9f6/fitness_prediction/assays/MTHR_HUMAN_Weile_2021.parquet",
+        "mirror_download_url": "https://hf-mirror.com/datasets/Marks-lab/RNAgym/resolve/bc6ccf4c5bf445ca25991f2a74448ae7e153b9f6/fitness_prediction/assays/MTHR_HUMAN_Weile_2021.parquet",
+        "git_blob_object_id_not_sha256": "7f112678c4b5fca2f078f5b453424d6829239da3",
+        "lfs_sha256_claim_not_observed": "56cd63b8d7bef015e4da3620fe77c52f408c9dcb37d40272ae523761d8447d96",
+        "actual_sha256": null,
+        "downloaded": false
+      },
+      {
+        "relative_path": "fitness_prediction/assays/McRae_2024_5tu_ribozyme.parquet",
+        "size_bytes": 4421752,
+        "official_download_url": "https://huggingface.co/datasets/Marks-lab/RNAgym/resolve/bc6ccf4c5bf445ca25991f2a74448ae7e153b9f6/fitness_prediction/assays/McRae_2024_5tu_ribozyme.parquet",
+        "mirror_download_url": "https://hf-mirror.com/datasets/Marks-lab/RNAgym/resolve/bc6ccf4c5bf445ca25991f2a74448ae7e153b9f6/fitness_prediction/assays/McRae_2024_5tu_ribozyme.parquet",
+        "git_blob_object_id_not_sha256": "47195957a235a2233a9a2b1bcefd2e324101c3e8",
+        "lfs_sha256_claim_not_observed": "23912bce9287a54765d6810d4cabfccb8524a75103af3474d7df4467272a6294",
+        "actual_sha256": null,
+        "downloaded": false
+      },
+      {
+        "relative_path": "fitness_prediction/assays/McRae_2024_t1_ribozyme.parquet",
+        "size_bytes": 2404482,
+        "official_download_url": "https://huggingface.co/datasets/Marks-lab/RNAgym/resolve/bc6ccf4c5bf445ca25991f2a74448ae7e153b9f6/fitness_prediction/assays/McRae_2024_t1_ribozyme.parquet",
+        "mirror_download_url": "https://hf-mirror.com/datasets/Marks-lab/RNAgym/resolve/bc6ccf4c5bf445ca25991f2a74448ae7e153b9f6/fitness_prediction/assays/McRae_2024_t1_ribozyme.parquet",
+        "git_blob_object_id_not_sha256": "47f05188ec87e514d02835df0a19f527722dddd6",
+        "lfs_sha256_claim_not_observed": "8fa830e7dd7312b9db05981b9d8f15c89d7f97131c2dc552417a634a09bae60e",
+        "actual_sha256": null,
+        "downloaded": false
+      },
+      {
+        "relative_path": "fitness_prediction/assays/OBSCN_HUMAN_Tsuboyama_2023_1V1C.parquet",
+        "size_bytes": 272518,
+        "official_download_url": "https://huggingface.co/datasets/Marks-lab/RNAgym/resolve/bc6ccf4c5bf445ca25991f2a74448ae7e153b9f6/fitness_prediction/assays/OBSCN_HUMAN_Tsuboyama_2023_1V1C.parquet",
+        "mirror_download_url": "https://hf-mirror.com/datasets/Marks-lab/RNAgym/resolve/bc6ccf4c5bf445ca25991f2a74448ae7e153b9f6/fitness_prediction/assays/OBSCN_HUMAN_Tsuboyama_2023_1V1C.parquet",
+        "git_blob_object_id_not_sha256": "a235b212773ab026643ae77d1043e509ec9438cb",
+        "lfs_sha256_claim_not_observed": "525fc179049c0071d37fd9341e10ac72426607ecf74dfa90f5de0f54b973301d",
+        "actual_sha256": null,
+        "downloaded": false
+      },
+      {
+        "relative_path": "fitness_prediction/assays/OXDA_RHOTO_Vanella_2023_activity.parquet",
+        "size_bytes": 608479,
+        "official_download_url": "https://huggingface.co/datasets/Marks-lab/RNAgym/resolve/bc6ccf4c5bf445ca25991f2a74448ae7e153b9f6/fitness_prediction/assays/OXDA_RHOTO_Vanella_2023_activity.parquet",
+        "mirror_download_url": "https://hf-mirror.com/datasets/Marks-lab/RNAgym/resolve/bc6ccf4c5bf445ca25991f2a74448ae7e153b9f6/fitness_prediction/assays/OXDA_RHOTO_Vanella_2023_activity.parquet",
+        "git_blob_object_id_not_sha256": "554c3a8967cafe44038f71296f97fcaa590433cd",
+        "lfs_sha256_claim_not_observed": "a5cfdb43dfd9050b0ee4134e3b2b3df99320910c6040aec5e110cc5dda5c923b",
+        "actual_sha256": null,
+        "downloaded": false
+      },
+      {
+        "relative_path": "fitness_prediction/assays/P53_HUMAN_Kotler_2018.parquet",
+        "size_bytes": 109909,
+        "official_download_url": "https://huggingface.co/datasets/Marks-lab/RNAgym/resolve/bc6ccf4c5bf445ca25991f2a74448ae7e153b9f6/fitness_prediction/assays/P53_HUMAN_Kotler_2018.parquet",
+        "mirror_download_url": "https://hf-mirror.com/datasets/Marks-lab/RNAgym/resolve/bc6ccf4c5bf445ca25991f2a74448ae7e153b9f6/fitness_prediction/assays/P53_HUMAN_Kotler_2018.parquet",
+        "git_blob_object_id_not_sha256": "f7be2ee4b070b48f29ed93c7799c0ad39345e48d",
+        "lfs_sha256_claim_not_observed": "8e4fd4ede539c016ee27df547e8ca9ac8bd27c941267123f8a8edf597ea59afe",
+        "actual_sha256": null,
+        "downloaded": false
+      },
+      {
+        "relative_path": "fitness_prediction/assays/PKN1_HUMAN_Tsuboyama_2023_1URF.parquet",
+        "size_bytes": 99107,
+        "official_download_url": "https://huggingface.co/datasets/Marks-lab/RNAgym/resolve/bc6ccf4c5bf445ca25991f2a74448ae7e153b9f6/fitness_prediction/assays/PKN1_HUMAN_Tsuboyama_2023_1URF.parquet",
+        "mirror_download_url": "https://hf-mirror.com/datasets/Marks-lab/RNAgym/resolve/bc6ccf4c5bf445ca25991f2a74448ae7e153b9f6/fitness_prediction/assays/PKN1_HUMAN_Tsuboyama_2023_1URF.parquet",
+        "git_blob_object_id_not_sha256": "2337c390748d7beb391476d3660d0b525d673e11",
+        "lfs_sha256_claim_not_observed": "d2f7a3613f3c9bac4a40399dd00c79a0aba2cea8b46b2d6d617fb2dd07812e9c",
+        "actual_sha256": null,
+        "downloaded": false
+      },
+      {
+        "relative_path": "fitness_prediction/assays/POLG_DEN26_Suphatrakul_2023.parquet",
+        "size_bytes": 3824799,
+        "official_download_url": "https://huggingface.co/datasets/Marks-lab/RNAgym/resolve/bc6ccf4c5bf445ca25991f2a74448ae7e153b9f6/fitness_prediction/assays/POLG_DEN26_Suphatrakul_2023.parquet",
+        "mirror_download_url": "https://hf-mirror.com/datasets/Marks-lab/RNAgym/resolve/bc6ccf4c5bf445ca25991f2a74448ae7e153b9f6/fitness_prediction/assays/POLG_DEN26_Suphatrakul_2023.parquet",
+        "git_blob_object_id_not_sha256": "89e04fc70eea5c2e610a907a7c089eba80d46c48",
+        "lfs_sha256_claim_not_observed": "7fb7b28d432eb0be720211a637682adc45dff0a16044d48368b68dc47804f723",
+        "actual_sha256": null,
+        "downloaded": false
+      },
+      {
+        "relative_path": "fitness_prediction/assays/POLG_PESV_Tsuboyama_2023_2MXD.parquet",
+        "size_bytes": 511196,
+        "official_download_url": "https://huggingface.co/datasets/Marks-lab/RNAgym/resolve/bc6ccf4c5bf445ca25991f2a74448ae7e153b9f6/fitness_prediction/assays/POLG_PESV_Tsuboyama_2023_2MXD.parquet",
+        "mirror_download_url": "https://hf-mirror.com/datasets/Marks-lab/RNAgym/resolve/bc6ccf4c5bf445ca25991f2a74448ae7e153b9f6/fitness_prediction/assays/POLG_PESV_Tsuboyama_2023_2MXD.parquet",
+        "git_blob_object_id_not_sha256": "db6446844e854257b771bc201168886958dc1726",
+        "lfs_sha256_claim_not_observed": "aab3dfe819aa26975c2d2b19eb165b16de5ce41f3c5438726c3df2674134eb69",
+        "actual_sha256": null,
+        "downloaded": false
+      },
+      {
+        "relative_path": "fitness_prediction/assays/PSAE_PICP2_Tsuboyama_2023_1PSE.parquet",
+        "size_bytes": 151954,
+        "official_download_url": "https://huggingface.co/datasets/Marks-lab/RNAgym/resolve/bc6ccf4c5bf445ca25991f2a74448ae7e153b9f6/fitness_prediction/assays/PSAE_PICP2_Tsuboyama_2023_1PSE.parquet",
+        "mirror_download_url": "https://hf-mirror.com/datasets/Marks-lab/RNAgym/resolve/bc6ccf4c5bf445ca25991f2a74448ae7e153b9f6/fitness_prediction/assays/PSAE_PICP2_Tsuboyama_2023_1PSE.parquet",
+        "git_blob_object_id_not_sha256": "9ed5a7045da2f4fd2f8689f2e6616f748c4dbd35",
+        "lfs_sha256_claim_not_observed": "6ba8f6f874ad41565d21fc9b813a55a4007fe9caf24ee85b5f14209291b1a38c",
+        "actual_sha256": null,
+        "downloaded": false
+      },
+      {
+        "relative_path": "fitness_prediction/assays/PTEN_HUMAN_Mighell_2018.parquet",
+        "size_bytes": 699556,
+        "official_download_url": "https://huggingface.co/datasets/Marks-lab/RNAgym/resolve/bc6ccf4c5bf445ca25991f2a74448ae7e153b9f6/fitness_prediction/assays/PTEN_HUMAN_Mighell_2018.parquet",
+        "mirror_download_url": "https://hf-mirror.com/datasets/Marks-lab/RNAgym/resolve/bc6ccf4c5bf445ca25991f2a74448ae7e153b9f6/fitness_prediction/assays/PTEN_HUMAN_Mighell_2018.parquet",
+        "git_blob_object_id_not_sha256": "3b48e4ba0982e4e0c64d849905092082a5b34991",
+        "lfs_sha256_claim_not_observed": "93958af0b63c702ab6e25eb5810fe00c14ffcf620a25fae6c1b03fb0022eef92",
+        "actual_sha256": null,
+        "downloaded": false
+      },
+      {
+        "relative_path": "fitness_prediction/assays/Peri_2022_ribozyme.parquet",
+        "size_bytes": 519984,
+        "official_download_url": "https://huggingface.co/datasets/Marks-lab/RNAgym/resolve/bc6ccf4c5bf445ca25991f2a74448ae7e153b9f6/fitness_prediction/assays/Peri_2022_ribozyme.parquet",
+        "mirror_download_url": "https://hf-mirror.com/datasets/Marks-lab/RNAgym/resolve/bc6ccf4c5bf445ca25991f2a74448ae7e153b9f6/fitness_prediction/assays/Peri_2022_ribozyme.parquet",
+        "git_blob_object_id_not_sha256": "1fc15809ae80cded993e324a0c44b3dcc2b4c9a5",
+        "lfs_sha256_claim_not_observed": "8a07e0193f75f3ee880ad7370bd555572a8eec5cbfe29454c12ff314d3604e7a",
+        "actual_sha256": null,
+        "downloaded": false
+      },
+      {
+        "relative_path": "fitness_prediction/assays/Pitt_2010_ribozyme.parquet",
+        "size_bytes": 4907,
+        "official_download_url": "https://huggingface.co/datasets/Marks-lab/RNAgym/resolve/bc6ccf4c5bf445ca25991f2a74448ae7e153b9f6/fitness_prediction/assays/Pitt_2010_ribozyme.parquet",
+        "mirror_download_url": "https://hf-mirror.com/datasets/Marks-lab/RNAgym/resolve/bc6ccf4c5bf445ca25991f2a74448ae7e153b9f6/fitness_prediction/assays/Pitt_2010_ribozyme.parquet",
+        "git_blob_object_id_not_sha256": "8e084f854bb890da2d753c09074b72bd22c0e0b6",
+        "lfs_sha256_claim_not_observed": "71110a593c099fe5e5a846f17d3df5015699b3ba1793256deacec2e4fa9fe0e0",
+        "actual_sha256": null,
+        "downloaded": false
+      },
+      {
+        "relative_path": "fitness_prediction/assays/Q837P4_ENTFA_Meier_2023.parquet",
+        "size_bytes": 103890,
+        "official_download_url": "https://huggingface.co/datasets/Marks-lab/RNAgym/resolve/bc6ccf4c5bf445ca25991f2a74448ae7e153b9f6/fitness_prediction/assays/Q837P4_ENTFA_Meier_2023.parquet",
+        "mirror_download_url": "https://hf-mirror.com/datasets/Marks-lab/RNAgym/resolve/bc6ccf4c5bf445ca25991f2a74448ae7e153b9f6/fitness_prediction/assays/Q837P4_ENTFA_Meier_2023.parquet",
+        "git_blob_object_id_not_sha256": "f1ffc86444357a21b33ceedbde85d0eebe1e62a2",
+        "lfs_sha256_claim_not_observed": "42fecf449242823ebb9bb141666f3e7db933e876123ee4c10425a7248d893b51",
+        "actual_sha256": null,
+        "downloaded": false
+      },
+      {
+        "relative_path": "fitness_prediction/assays/R1AB_SARS2_Flynn_2022.parquet",
+        "size_bytes": 467460,
+        "official_download_url": "https://huggingface.co/datasets/Marks-lab/RNAgym/resolve/bc6ccf4c5bf445ca25991f2a74448ae7e153b9f6/fitness_prediction/assays/R1AB_SARS2_Flynn_2022.parquet",
+        "mirror_download_url": "https://hf-mirror.com/datasets/Marks-lab/RNAgym/resolve/bc6ccf4c5bf445ca25991f2a74448ae7e153b9f6/fitness_prediction/assays/R1AB_SARS2_Flynn_2022.parquet",
+        "git_blob_object_id_not_sha256": "d7ebaceb8992ad2d2f7958a0ec55e0d520ae0a91",
+        "lfs_sha256_claim_not_observed": "54a606f7f4bc171bfb01c270a69ab9911da688636c0daea488aab00abbab52dd",
+        "actual_sha256": null,
+        "downloaded": false
+      },
+      {
+        "relative_path": "fitness_prediction/assays/RCRO_LAMBD_Tsuboyama_2023_1ORC.parquet",
+        "size_bytes": 156899,
+        "official_download_url": "https://huggingface.co/datasets/Marks-lab/RNAgym/resolve/bc6ccf4c5bf445ca25991f2a74448ae7e153b9f6/fitness_prediction/assays/RCRO_LAMBD_Tsuboyama_2023_1ORC.parquet",
+        "mirror_download_url": "https://hf-mirror.com/datasets/Marks-lab/RNAgym/resolve/bc6ccf4c5bf445ca25991f2a74448ae7e153b9f6/fitness_prediction/assays/RCRO_LAMBD_Tsuboyama_2023_1ORC.parquet",
+        "git_blob_object_id_not_sha256": "c03f2aa0f27119260b2d79ed82194d98276be6c9",
+        "lfs_sha256_claim_not_observed": "a66bd6ba9d201b37a261c6e144b8e2ab6b5215201cdcc6c660ceec77aa2578c6",
+        "actual_sha256": null,
+        "downloaded": false
+      },
+      {
+        "relative_path": "fitness_prediction/assays/RDRP_I33A0_Li_2023.parquet",
+        "size_bytes": 2225028,
+        "official_download_url": "https://huggingface.co/datasets/Marks-lab/RNAgym/resolve/bc6ccf4c5bf445ca25991f2a74448ae7e153b9f6/fitness_prediction/assays/RDRP_I33A0_Li_2023.parquet",
+        "mirror_download_url": "https://hf-mirror.com/datasets/Marks-lab/RNAgym/resolve/bc6ccf4c5bf445ca25991f2a74448ae7e153b9f6/fitness_prediction/assays/RDRP_I33A0_Li_2023.parquet",
+        "git_blob_object_id_not_sha256": "322080fa144a84fa5318387a08a3edc345177de6",
+        "lfs_sha256_claim_not_observed": "6c749bb2ba8edcb23dc3e17cc46a0ca5037f65ad036107056e6a533a2b68affc",
+        "actual_sha256": null,
+        "downloaded": false
+      },
+      {
+        "relative_path": "fitness_prediction/assays/RNC_ECOLI_Weeks_2023.parquet",
+        "size_bytes": 267000,
+        "official_download_url": "https://huggingface.co/datasets/Marks-lab/RNAgym/resolve/bc6ccf4c5bf445ca25991f2a74448ae7e153b9f6/fitness_prediction/assays/RNC_ECOLI_Weeks_2023.parquet",
+        "mirror_download_url": "https://hf-mirror.com/datasets/Marks-lab/RNAgym/resolve/bc6ccf4c5bf445ca25991f2a74448ae7e153b9f6/fitness_prediction/assays/RNC_ECOLI_Weeks_2023.parquet",
+        "git_blob_object_id_not_sha256": "9975b3474b8d7525f6a8598dfc446550bc65926a",
+        "lfs_sha256_claim_not_observed": "0b7a35a9ab6c05bbb634a13a56bf13a0a3dc118740798e034aaab3ea871bf027",
+        "actual_sha256": null,
+        "downloaded": false
+      },
+      {
+        "relative_path": "fitness_prediction/assays/Roberts_2023_HDV_ribozyme.parquet",
+        "size_bytes": 950997,
+        "official_download_url": "https://huggingface.co/datasets/Marks-lab/RNAgym/resolve/bc6ccf4c5bf445ca25991f2a74448ae7e153b9f6/fitness_prediction/assays/Roberts_2023_HDV_ribozyme.parquet",
+        "mirror_download_url": "https://hf-mirror.com/datasets/Marks-lab/RNAgym/resolve/bc6ccf4c5bf445ca25991f2a74448ae7e153b9f6/fitness_prediction/assays/Roberts_2023_HDV_ribozyme.parquet",
+        "git_blob_object_id_not_sha256": "ac6486fccd16ce2a0ff556394f1dca64f51348e9",
+        "lfs_sha256_claim_not_observed": "6ebb409f5049776303f7210e85189f2cc728a879fa144285917fc22a78d5e9bc",
+        "actual_sha256": null,
+        "downloaded": false
+      },
+      {
+        "relative_path": "fitness_prediction/assays/Roberts_2023_cepeb3_ribozyme.parquet",
+        "size_bytes": 723500,
+        "official_download_url": "https://huggingface.co/datasets/Marks-lab/RNAgym/resolve/bc6ccf4c5bf445ca25991f2a74448ae7e153b9f6/fitness_prediction/assays/Roberts_2023_cepeb3_ribozyme.parquet",
+        "mirror_download_url": "https://hf-mirror.com/datasets/Marks-lab/RNAgym/resolve/bc6ccf4c5bf445ca25991f2a74448ae7e153b9f6/fitness_prediction/assays/Roberts_2023_cepeb3_ribozyme.parquet",
+        "git_blob_object_id_not_sha256": "6b89a400b63bd276c32c495167ec5ddea68f21dc",
+        "lfs_sha256_claim_not_observed": "d3b49145396e9639a46be6d3357ced97742179a0d197eff1e9924be1add4063d",
+        "actual_sha256": null,
+        "downloaded": false
+      },
+      {
+        "relative_path": "fitness_prediction/assays/Roberts_2023_hh_ribozyme.parquet",
+        "size_bytes": 282861,
+        "official_download_url": "https://huggingface.co/datasets/Marks-lab/RNAgym/resolve/bc6ccf4c5bf445ca25991f2a74448ae7e153b9f6/fitness_prediction/assays/Roberts_2023_hh_ribozyme.parquet",
+        "mirror_download_url": "https://hf-mirror.com/datasets/Marks-lab/RNAgym/resolve/bc6ccf4c5bf445ca25991f2a74448ae7e153b9f6/fitness_prediction/assays/Roberts_2023_hh_ribozyme.parquet",
+        "git_blob_object_id_not_sha256": "5c83b546d93ec6fb861749da2c147feb2a3ae0d9",
+        "lfs_sha256_claim_not_observed": "38ffb1cfba3e10398bcc41315ccffd2ce5202525c3c1b2ab8cf04e10356480d5",
+        "actual_sha256": null,
+        "downloaded": false
+      },
+      {
+        "relative_path": "fitness_prediction/assays/Roberts_2023_hp_ribozyme.parquet",
+        "size_bytes": 765365,
+        "official_download_url": "https://huggingface.co/datasets/Marks-lab/RNAgym/resolve/bc6ccf4c5bf445ca25991f2a74448ae7e153b9f6/fitness_prediction/assays/Roberts_2023_hp_ribozyme.parquet",
+        "mirror_download_url": "https://hf-mirror.com/datasets/Marks-lab/RNAgym/resolve/bc6ccf4c5bf445ca25991f2a74448ae7e153b9f6/fitness_prediction/assays/Roberts_2023_hp_ribozyme.parquet",
+        "git_blob_object_id_not_sha256": "ceb648d244c557af6b8dcecb325390fdd245772d",
+        "lfs_sha256_claim_not_observed": "6c2a23eafc3a22bb9c7c83361c8f314d9a1d593b1ee65fe6e928ef2f34c1bfb9",
+        "actual_sha256": null,
+        "downloaded": false
+      },
+      {
+        "relative_path": "fitness_prediction/assays/Roberts_2023_tw_ribozyme.parquet",
+        "size_bytes": 323701,
+        "official_download_url": "https://huggingface.co/datasets/Marks-lab/RNAgym/resolve/bc6ccf4c5bf445ca25991f2a74448ae7e153b9f6/fitness_prediction/assays/Roberts_2023_tw_ribozyme.parquet",
+        "mirror_download_url": "https://hf-mirror.com/datasets/Marks-lab/RNAgym/resolve/bc6ccf4c5bf445ca25991f2a74448ae7e153b9f6/fitness_prediction/assays/Roberts_2023_tw_ribozyme.parquet",
+        "git_blob_object_id_not_sha256": "fe4398baa6442aa2f57ef1c06f8f6de66fff4232",
+        "lfs_sha256_claim_not_observed": "869b9a439aa7e3cd800456925cfd2f669fa41a1a235ea2f029357587d073cc3d",
+        "actual_sha256": null,
+        "downloaded": false
+      },
+      {
+        "relative_path": "fitness_prediction/assays/SPIKE_SARS2_Starr_2020_binding.parquet",
+        "size_bytes": 1203736,
+        "official_download_url": "https://huggingface.co/datasets/Marks-lab/RNAgym/resolve/bc6ccf4c5bf445ca25991f2a74448ae7e153b9f6/fitness_prediction/assays/SPIKE_SARS2_Starr_2020_binding.parquet",
+        "mirror_download_url": "https://hf-mirror.com/datasets/Marks-lab/RNAgym/resolve/bc6ccf4c5bf445ca25991f2a74448ae7e153b9f6/fitness_prediction/assays/SPIKE_SARS2_Starr_2020_binding.parquet",
+        "git_blob_object_id_not_sha256": "928397d37656e4264739d67253453b0625ac80a1",
+        "lfs_sha256_claim_not_observed": "2cea3e47d990c0a91f36c1c8db5c104553c4750ce54f763ffe05bb6f009eb98e",
+        "actual_sha256": null,
+        "downloaded": false
+      },
+      {
+        "relative_path": "fitness_prediction/assays/SPTN1_CHICK_Tsuboyama_2023_1TUD.parquet",
+        "size_bytes": 293586,
+        "official_download_url": "https://huggingface.co/datasets/Marks-lab/RNAgym/resolve/bc6ccf4c5bf445ca25991f2a74448ae7e153b9f6/fitness_prediction/assays/SPTN1_CHICK_Tsuboyama_2023_1TUD.parquet",
+        "mirror_download_url": "https://hf-mirror.com/datasets/Marks-lab/RNAgym/resolve/bc6ccf4c5bf445ca25991f2a74448ae7e153b9f6/fitness_prediction/assays/SPTN1_CHICK_Tsuboyama_2023_1TUD.parquet",
+        "git_blob_object_id_not_sha256": "6010e5c2db8c294571caa5e21b5b057c15e68fdb",
+        "lfs_sha256_claim_not_observed": "1233e665782fede4471bb211477dd1d9f76441a525b5df67ef95e8ad460e7710",
+        "actual_sha256": null,
+        "downloaded": false
+      },
+      {
+        "relative_path": "fitness_prediction/assays/SR43C_ARATH_Tsuboyama_2023_2N88.parquet",
+        "size_bytes": 116992,
+        "official_download_url": "https://huggingface.co/datasets/Marks-lab/RNAgym/resolve/bc6ccf4c5bf445ca25991f2a74448ae7e153b9f6/fitness_prediction/assays/SR43C_ARATH_Tsuboyama_2023_2N88.parquet",
+        "mirror_download_url": "https://hf-mirror.com/datasets/Marks-lab/RNAgym/resolve/bc6ccf4c5bf445ca25991f2a74448ae7e153b9f6/fitness_prediction/assays/SR43C_ARATH_Tsuboyama_2023_2N88.parquet",
+        "git_blob_object_id_not_sha256": "b81b398a9175bfa4d4ed1e633041d9cfd30e83b3",
+        "lfs_sha256_claim_not_observed": "ae71d533b5f2f532e46d5c2da66bec5aa529119759829170c44fca8f77c52948",
+        "actual_sha256": null,
+        "downloaded": false
+      },
+      {
+        "relative_path": "fitness_prediction/assays/SUMO1_HUMAN_Weile_2017.parquet",
+        "size_bytes": 69762,
+        "official_download_url": "https://huggingface.co/datasets/Marks-lab/RNAgym/resolve/bc6ccf4c5bf445ca25991f2a74448ae7e153b9f6/fitness_prediction/assays/SUMO1_HUMAN_Weile_2017.parquet",
+        "mirror_download_url": "https://hf-mirror.com/datasets/Marks-lab/RNAgym/resolve/bc6ccf4c5bf445ca25991f2a74448ae7e153b9f6/fitness_prediction/assays/SUMO1_HUMAN_Weile_2017.parquet",
+        "git_blob_object_id_not_sha256": "0ed6a5e6566fea33cd068fe1b564e3cd64a5be83",
+        "lfs_sha256_claim_not_observed": "b32fe0287302939e5341ad604ce90b42307bc8a5c9c15b7b68b76e25ff26a6d4",
+        "actual_sha256": null,
+        "downloaded": false
+      },
+      {
+        "relative_path": "fitness_prediction/assays/Soo_2021_ribozyme.parquet",
+        "size_bytes": 2855802,
+        "official_download_url": "https://huggingface.co/datasets/Marks-lab/RNAgym/resolve/bc6ccf4c5bf445ca25991f2a74448ae7e153b9f6/fitness_prediction/assays/Soo_2021_ribozyme.parquet",
+        "mirror_download_url": "https://hf-mirror.com/datasets/Marks-lab/RNAgym/resolve/bc6ccf4c5bf445ca25991f2a74448ae7e153b9f6/fitness_prediction/assays/Soo_2021_ribozyme.parquet",
+        "git_blob_object_id_not_sha256": "81b93422c69468388435a1195a5087765fe243d7",
+        "lfs_sha256_claim_not_observed": "ff02a3c0d999f37867a85bca2ce80642f3e689965c700357999d750727ab1d90",
+        "actual_sha256": null,
+        "downloaded": false
+      },
+      {
+        "relative_path": "fitness_prediction/assays/TAT_HV1BR_Fernandes_2016.parquet",
+        "size_bytes": 66356,
+        "official_download_url": "https://huggingface.co/datasets/Marks-lab/RNAgym/resolve/bc6ccf4c5bf445ca25991f2a74448ae7e153b9f6/fitness_prediction/assays/TAT_HV1BR_Fernandes_2016.parquet",
+        "mirror_download_url": "https://hf-mirror.com/datasets/Marks-lab/RNAgym/resolve/bc6ccf4c5bf445ca25991f2a74448ae7e153b9f6/fitness_prediction/assays/TAT_HV1BR_Fernandes_2016.parquet",
+        "git_blob_object_id_not_sha256": "45622383090c4fe2b73cc0270febd65a8a7c7a03",
+        "lfs_sha256_claim_not_observed": "2244a44342f5312b0f9d374f33ce47b1d3b91ed39dd92416a9dcf4114c75db1c",
+        "actual_sha256": null,
+        "downloaded": false
+      },
+      {
+        "relative_path": "fitness_prediction/assays/Tome_2014_GFP_aptamer.parquet",
+        "size_bytes": 13440,
+        "official_download_url": "https://huggingface.co/datasets/Marks-lab/RNAgym/resolve/bc6ccf4c5bf445ca25991f2a74448ae7e153b9f6/fitness_prediction/assays/Tome_2014_GFP_aptamer.parquet",
+        "mirror_download_url": "https://hf-mirror.com/datasets/Marks-lab/RNAgym/resolve/bc6ccf4c5bf445ca25991f2a74448ae7e153b9f6/fitness_prediction/assays/Tome_2014_GFP_aptamer.parquet",
+        "git_blob_object_id_not_sha256": "9fe0e328e658621f5e1efb9c5e3c79ad67b3c7b1",
+        "lfs_sha256_claim_not_observed": "da4f773a4bd873421b7d7cad66d5d6be7e17d84e81910ab4bd9d90bab6cace29",
+        "actual_sha256": null,
+        "downloaded": false
+      },
+      {
+        "relative_path": "fitness_prediction/assays/Tome_2014_NELFE_aptamer.parquet",
+        "size_bytes": 82110,
+        "official_download_url": "https://huggingface.co/datasets/Marks-lab/RNAgym/resolve/bc6ccf4c5bf445ca25991f2a74448ae7e153b9f6/fitness_prediction/assays/Tome_2014_NELFE_aptamer.parquet",
+        "mirror_download_url": "https://hf-mirror.com/datasets/Marks-lab/RNAgym/resolve/bc6ccf4c5bf445ca25991f2a74448ae7e153b9f6/fitness_prediction/assays/Tome_2014_NELFE_aptamer.parquet",
+        "git_blob_object_id_not_sha256": "669e831c6ed567f0201df3a1a6ec31b600e79b77",
+        "lfs_sha256_claim_not_observed": "e7de1180b1c04764a6c9e4ce18d9b2085620f7568783fdddd591da4329f10e92",
+        "actual_sha256": null,
+        "downloaded": false
+      },
+      {
+        "relative_path": "fitness_prediction/assays/Zhang_2020_cpeb3_ribozyme.parquet",
+        "size_bytes": 3003540,
+        "official_download_url": "https://huggingface.co/datasets/Marks-lab/RNAgym/resolve/bc6ccf4c5bf445ca25991f2a74448ae7e153b9f6/fitness_prediction/assays/Zhang_2020_cpeb3_ribozyme.parquet",
+        "mirror_download_url": "https://hf-mirror.com/datasets/Marks-lab/RNAgym/resolve/bc6ccf4c5bf445ca25991f2a74448ae7e153b9f6/fitness_prediction/assays/Zhang_2020_cpeb3_ribozyme.parquet",
+        "git_blob_object_id_not_sha256": "3b7831e7db3dbd9661b005da0e7a60b284c8b525",
+        "lfs_sha256_claim_not_observed": "2bab3251e54bf3ab42bf2294e8c93a36c4c646a190e23241cef7e429e5218f73",
+        "actual_sha256": null,
+        "downloaded": false
+      },
+      {
+        "relative_path": "fitness_prediction/assays/Zhang_2024_OR4K15_ribozyme.parquet",
+        "size_bytes": 1931519,
+        "official_download_url": "https://huggingface.co/datasets/Marks-lab/RNAgym/resolve/bc6ccf4c5bf445ca25991f2a74448ae7e153b9f6/fitness_prediction/assays/Zhang_2024_OR4K15_ribozyme.parquet",
+        "mirror_download_url": "https://hf-mirror.com/datasets/Marks-lab/RNAgym/resolve/bc6ccf4c5bf445ca25991f2a74448ae7e153b9f6/fitness_prediction/assays/Zhang_2024_OR4K15_ribozyme.parquet",
+        "git_blob_object_id_not_sha256": "d3ddfdf2da60817bf7e7852b4edfa772b766d35d",
+        "lfs_sha256_claim_not_observed": "b6e56271422b3afd3bdd548a662e5d2c83328f3f63b211b399dd156a3714b94c",
+        "actual_sha256": null,
+        "downloaded": false
+      },
+      {
+        "relative_path": "fitness_prediction/assays/Zhang_2024_line1_full_ribozyme.parquet",
+        "size_bytes": 2165503,
+        "official_download_url": "https://huggingface.co/datasets/Marks-lab/RNAgym/resolve/bc6ccf4c5bf445ca25991f2a74448ae7e153b9f6/fitness_prediction/assays/Zhang_2024_line1_full_ribozyme.parquet",
+        "mirror_download_url": "https://hf-mirror.com/datasets/Marks-lab/RNAgym/resolve/bc6ccf4c5bf445ca25991f2a74448ae7e153b9f6/fitness_prediction/assays/Zhang_2024_line1_full_ribozyme.parquet",
+        "git_blob_object_id_not_sha256": "42d1c0986c4c0a78b89ed30844f592d4fa60c7dc",
+        "lfs_sha256_claim_not_observed": "688bb7cbf0e146738736ef8ee82c89a46bed52e2ef73d18e857d05558bab0466",
+        "actual_sha256": null,
+        "downloaded": false
+      },
+      {
+        "relative_path": "fitness_prediction/assays/Zhang_2024_line1_mini_ribozyme.parquet",
+        "size_bytes": 3356408,
+        "official_download_url": "https://huggingface.co/datasets/Marks-lab/RNAgym/resolve/bc6ccf4c5bf445ca25991f2a74448ae7e153b9f6/fitness_prediction/assays/Zhang_2024_line1_mini_ribozyme.parquet",
+        "mirror_download_url": "https://hf-mirror.com/datasets/Marks-lab/RNAgym/resolve/bc6ccf4c5bf445ca25991f2a74448ae7e153b9f6/fitness_prediction/assays/Zhang_2024_line1_mini_ribozyme.parquet",
+        "git_blob_object_id_not_sha256": "551234fdec3fddba3c89f677c3a35b84830d3808",
+        "lfs_sha256_claim_not_observed": "9f5738f122a48821893680e590777fbb724916ba2615f818b6d1f8489396a34c",
+        "actual_sha256": null,
+        "downloaded": false
+      },
+      {
+        "relative_path": "fitness_prediction/reference_sheet_final.parquet",
+        "size_bytes": 31692,
+        "official_download_url": "https://huggingface.co/datasets/Marks-lab/RNAgym/resolve/bc6ccf4c5bf445ca25991f2a74448ae7e153b9f6/fitness_prediction/reference_sheet_final.parquet",
+        "mirror_download_url": "https://hf-mirror.com/datasets/Marks-lab/RNAgym/resolve/bc6ccf4c5bf445ca25991f2a74448ae7e153b9f6/fitness_prediction/reference_sheet_final.parquet",
+        "git_blob_object_id_not_sha256": "1b83bebb04d70f4cbbd9b9f085525b8ba792ffb3",
+        "lfs_sha256_claim_not_observed": "2b581f5fde5734d8e503a40fdfd091793741347cac7e8c60a5b1ee003892a592",
+        "actual_sha256": null,
+        "downloaded": false
+      }
+    ]
+  }
+]

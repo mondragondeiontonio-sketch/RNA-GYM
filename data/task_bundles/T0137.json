@@ -1,0 +1,36 @@
+{
+  "task_id": "T0137",
+  "package_group_id": "METHODOLOGY_ONLY",
+  "source_family_id": "SRC_RNA_INVERSE_DESIGN_METHODS_REVIEW",
+  "dataset": "RNA inverse-design methods review",
+  "task": "positive/negative/multi-state design",
+  "input_modality": "generation/conditional (auxiliary)",
+  "status": "EXCLUDED_NON_ASSAY",
+  "hold_reason": "Software/method resource is not an independent experimental assay.",
+  "next_action": "Retain as auxiliary software/method reference; no assay weight.",
+  "canonical_assay_id": null,
+  "reported_n": "未核实",
+  "count_unit": "not applicable; 论文总体：No new unified dataset; published-source datasets differ",
+  "reported_n_status": "REPORTED_UNVERIFIED",
+  "actual_task_n": null,
+  "source_entry_urls": [
+    "https://doi.org/10.1093/bib/bbag327"
+  ],
+  "benchmark_paper_url_not_original_assay": "https://doi.org/10.1093/bib/bbag327",
+  "assets": [],
+  "task_download_completed": false,
+  "admitted": false,
+  "baseline_plan": {
+    "公平输入轨道": "NOT_SCORED",
+    "原登记Metric": "能量、结构满足度",
+    "主指标(建议)": "N/A",
+    "推荐Loss": "N/A",
+    "最低信息Baseline": "N/A",
+    "经典算法Baseline": "N/A",
+    "随机初始化Baseline": "N/A",
+    "泄露检查重点": "methodology-only/source reuse/DNA-only",
+    "baseline运行状态": "NOT_RUN"
+  },
+  "plan_command": "python tools/task_download.py plan --task T0137",
+  "download_policy": "Source-entry links are not file bytes. Explicit package-only opt-in required before file candidates can be acquired for audit."
+}

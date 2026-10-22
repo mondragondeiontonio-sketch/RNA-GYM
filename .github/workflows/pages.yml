@@ -1,0 +1,78 @@
+name: Verify and deploy RNA-Gym audit preview
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'site/**'
+      - 'tools/generate_site.py'
+      - 'tests/**'
+      - 'tools/**'
+      - 'data/task_bundles/**'
+      - 'data/registries/task_baselines_and_admission_198.csv'
+      - 'data/registries/source_family_crosswalk_123.csv'
+      - 'data/registries/download_packages_47.csv'
+      - 'data/assets/download_assets.csv'
+      - 'data/audit/task_status.tsv'
+      - 'data/audit/asset_evidence.json'
+      - 'data/audit/rnagym_archive_inventory.json'
+      - 'data/audit/poc_summary.json'
+      - '.github/workflows/pages.yml'
+  pull_request:
+    paths:
+      - 'site/**'
+      - 'tools/generate_site.py'
+      - 'tests/**'
+      - 'tools/**'
+      - 'data/task_bundles/**'
+      - 'data/registries/**'
+      - 'data/assets/download_assets.csv'
+      - 'data/audit/task_status.tsv'
+      - 'data/audit/asset_evidence.json'
+      - 'data/audit/rnagym_archive_inventory.json'
+      - 'data/audit/poc_summary.json'
+      - '.github/workflows/pages.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: rna-gym-pages-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Verify deterministic registry, statistics and provenance
+        run: python tools/generate_site.py --verify
+      - name: Test public-site invariants
+        run: python -m unittest discover -s tests -p test_site.py -v
+      - name: Test acquisition, gates, publication safety and all task bundles
+        run: |
+          python -m unittest discover -s tests -v
+          python tools/build_task_bundles.py --verify
+      - name: Upload only the public static site
+        if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+  deploy:
+    if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
+    needs: verify
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/configure-pages@v5
+      - id: deployment
+        uses: actions/deploy-pages@v4

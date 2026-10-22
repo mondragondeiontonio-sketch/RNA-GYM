@@ -1,0 +1,36 @@
+{
+  "task_id": "T0098",
+  "package_group_id": "SECONDARY_LITERATURE",
+  "source_family_id": "SRC_RNA_SECONDARY_STRUCTURE_MULTI_SUIT",
+  "dataset": "RNA secondary structure multi-suite evaluation",
+  "task": "homology-shift 测试",
+  "input_modality": "RNA sequence-only possible; verify context",
+  "status": "HOLD_SOURCE",
+  "hold_reason": "Original source bytes and assay evidence unresolved; upstream entry may be unavailable. Independent tasks continue.",
+  "next_action": "Resolve original assay DOI/accession and data-specific rights, select capped public file, then bytes/hash/schema/identity/split/QC and human review.",
+  "canonical_assay_id": null,
+  "reported_n": "未核实",
+  "count_unit": "RNAs / structures; 论文总体：Per-suite dataset Ns must be read from original supplementary tables",
+  "reported_n_status": "REPORTED_UNVERIFIED",
+  "actual_task_n": null,
+  "source_entry_urls": [
+    "https://doi.org/10.1093/bib/bbaf137"
+  ],
+  "benchmark_paper_url_not_original_assay": "https://doi.org/10.1093/bib/bbaf137",
+  "assets": [],
+  "task_download_completed": false,
+  "admitted": false,
+  "baseline_plan": {
+    "公平输入轨道": "RNA_SEQUENCE_ONLY_OR_CONDITIONED_SEPARATE",
+    "原登记Metric": "分组 F1/差值",
+    "主指标(建议)": "pair F1/MCC；noncanonical edge macro-F1",
+    "推荐Loss": "BCE/CE + pairing constraints",
+    "最低信息Baseline": "所有不配对；互补配对几率先验",
+    "经典算法Baseline": "ViennaRNA RNAfold / RNAstructure/ CONTRAfold",
+    "随机初始化Baseline": "小型 bpp CNN / pairwise Transformer（相同输入）",
+    "泄露检查重点": "homology; RNA3DB/PDB family/泄漏；label pair state vs pair matrix",
+    "baseline运行状态": "NOT_RUN"
+  },
+  "plan_command": "python tools/task_download.py plan --task T0098",
+  "download_policy": "Source-entry links are not file bytes. Explicit package-only opt-in required before file candidates can be acquired for audit."
+}

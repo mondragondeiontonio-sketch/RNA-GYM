@@ -1,0 +1,37 @@
+{
+  "task_id": "T0064",
+  "package_group_id": "NANOLYMPICS",
+  "source_family_id": "SRC_NANOLYMPICSMOD_SYNTHETIC_NATIVE_DR",
+  "dataset": "NanOlympicsMod synthetic/native dRNA",
+  "task": "Nanopore current/read→m6A 位点",
+  "input_modality": "signal-required (not sequence-only)",
+  "status": "HOLD_SOURCE",
+  "hold_reason": "Original source bytes and assay evidence unresolved; upstream entry may be unavailable. Independent tasks continue.",
+  "next_action": "Resolve original assay DOI/accession and data-specific rights, select capped public file, then bytes/hash/schema/identity/split/QC and human review.",
+  "canonical_assay_id": null,
+  "reported_n": "未核实",
+  "count_unit": "algorithms / reads; 论文总体：14 m6A calling tools; sequence/read N not confirmed in present audit",
+  "reported_n_status": "REPORTED_UNVERIFIED",
+  "actual_task_n": null,
+  "source_entry_urls": [
+    "https://github.com/mfurla/NanOlympicsMod",
+    "https://doi.org/10.1093/bib/bbae001"
+  ],
+  "benchmark_paper_url_not_original_assay": "https://doi.org/10.1093/bib/bbae001",
+  "assets": [],
+  "task_download_completed": false,
+  "admitted": false,
+  "baseline_plan": {
+    "公平输入轨道": "RAW_SIGNAL_ONLY",
+    "原登记Metric": "precision、recall、PR-AUC",
+    "主指标(建议)": "AUPRC/F1，read/site aggregation 分开",
+    "推荐Loss": "BCE/CE, per-read/site calibration",
+    "最低信息Baseline": "unmodified IVT control / read depth chance",
+    "经典算法Baseline": "signal features+XGBoost；pretrained basecaller comparator",
+    "随机初始化Baseline": "small 1D CNN on raw signal",
+    "泄露检查重点": "read-level train/test 同 molecule、flowcell、pore chemistry、basecaller",
+    "baseline运行状态": "NOT_RUN"
+  },
+  "plan_command": "python tools/task_download.py plan --task T0064",
+  "download_policy": "Source-entry links are not file bytes. Explicit package-only opt-in required before file candidates can be acquired for audit."
+}

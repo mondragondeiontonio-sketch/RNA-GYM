@@ -1,0 +1,18 @@
+{
+  "registered_tasks": 198,
+  "package_groups": 47,
+  "source_families": 123,
+  "task_status_counts": {
+    "EXCLUDED_NON_ASSAY": 9,
+    "HOLD_ASSAY_IDENTITY": 13,
+    "HOLD_AUTH": 5,
+    "HOLD_LICENSE": 69,
+    "HOLD_RELEASE": 4,
+    "HOLD_SOURCE": 98
+  },
+  "admitted": 0,
+  "review_ready": 0,
+  "actual_sample_counts_verified": 0,
+  "scope": "source-entry census, not full assay admission",
+  "all_47_original_assays_traced": false
+}

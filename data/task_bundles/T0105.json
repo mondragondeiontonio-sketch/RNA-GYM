@@ -1,0 +1,38 @@
+{
+  "task_id": "T0105",
+  "package_group_id": "EUKAUTR",
+  "source_family_id": "SRC_EUKAUTR_3_UTR_TASKS",
+  "dataset": "EukaUTR 3′UTR tasks",
+  "task": "跨物种迁移",
+  "input_modality": "RNA sequence-only possible; verify context",
+  "status": "HOLD_LICENSE",
+  "hold_reason": "Entry HTTP probe only; data-specific rights, raw bytes, assay DOI/accession and identity remain unverified.",
+  "next_action": "Resolve original assay DOI/accession and data-specific rights, select capped public file, then bytes/hash/schema/identity/split/QC and human review.",
+  "canonical_assay_id": null,
+  "reported_n": "未核实",
+  "count_unit": "downstream tasks; 论文总体：13 functional tasks; per-task unique N not confirmed in this audit",
+  "reported_n_status": "REPORTED_UNVERIFIED",
+  "actual_task_n": null,
+  "source_entry_urls": [
+    "https://zenodo.org/uploads/21790090",
+    "https://www.biorxiv.org/content/10.64898/2026.09.07.749809v1",
+    "https://github.com/meilanglang/EukaUTR"
+  ],
+  "benchmark_paper_url_not_original_assay": "https://www.biorxiv.org/content/10.64898/2026.09.07.749809v1",
+  "assets": [],
+  "task_download_completed": false,
+  "admitted": false,
+  "baseline_plan": {
+    "公平输入轨道": "NOT_SCORED",
+    "原登记Metric": "分任务泛化分数",
+    "主指标(建议)": "N/A",
+    "推荐Loss": "N/A",
+    "最低信息Baseline": "N/A",
+    "经典算法Baseline": "N/A",
+    "随机初始化Baseline": "N/A",
+    "泄露检查重点": "methodology-only/source reuse/DNA-only",
+    "baseline运行状态": "NOT_RUN"
+  },
+  "plan_command": "python tools/task_download.py plan --task T0105",
+  "download_policy": "Source-entry links are not file bytes. Explicit package-only opt-in required before file candidates can be acquired for audit."
+}
