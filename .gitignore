@@ -34,3 +34,9 @@ docs/*
 !docs/CURRENT_AUDIT_STATUS.md
 
 *.sqlite.*
+
+.venv-qc/
+
+# Public engineering documentation only; scientific audit narratives remain local.
+!docs/EVALUATION_PROTOCOL.md
+!docs/PHASE2_WEBSITE.md

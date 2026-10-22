@@ -9,42 +9,52 @@ acquisition tools and a static audit website. It does not publish experimental
 sequences, labels, internal UTR benchmark data, private folds or model weights.
 No GPU job, model inference or training is run by the acquisition workflow.
 
-## Current local evidence
+## Current Phase 2 evidence — 2026-10-23
 
-The 2026-10-22 run downloaded and SHA-256 verified **19 public files** totalling
-774,074,831 compressed bytes. A curated miRBench mirror and the official Zenodo
-release are preserved as separate byte versions, not independent samples.
+The completed technical snapshot covers **45 acquired artifacts**,
+**6,573,002,784 bytes** (44 network files plus one lossless reassembly).
+These are not 45 independent experiments. All 45 SHA256 values matched the
+previous full-byte audit; this round reused that evidence rather than rescanning
+unchanged large files.
 
-| File scope | Actual rows | Status |
-|---|---:|---|
-| Klimentova official test | 954 | Exact paired QC only |
-| Klimentova curated mirror test | 954 | Same 954 pairs/labels; do not count twice |
-| Hejret official test | 1,018 | Exact paired QC only |
-| Hejret official train | 8,140 | Exact paired QC only |
-| Manakov official train | 2,495,535 | Stream-parsed file count; full identity/QC pending |
-| Manakov official test | 324,171 | Stream-parsed file count; full identity/QC pending |
-| Manakov official leftout | 20,054 | Stream-parsed file count; full identity/QC pending |
-| 11 explicitly licensed mRNABench files | See file-count JSON | Parquet footer counts; full QC pending |
-| RNAGym processed collection | 70 CSV members | Archive hashed; assay review pending |
+- **198 task rows / 47 packages:** 189 HOLD, 9 excluded controls/non-assays.
+- **31 source-verified task rows:** 21 actual ENCODE experiment-accession links,
+  9 mRNABench paper/resource links, and 1 miRBench parent GEO-study link.
+  These evidence types are deliberately not treated as equivalent assay proof.
+- **0 admission candidates / 0 admitted:** original assay/condition, rights,
+  observation identity, splits and full scientific QC remain incomplete.
+- **mRNABench:** all 11 acquired files reviewed against original papers/resources
+  and author split code. Fixed row-level split manifests are not yet verified.
+  Saluki targets are half-life **PC1 scores, not hours**. MRL and half-life stay
+  separate. One miRNA-target license conflict explicitly blocks redistribution.
+- **miRBench:** compound identity audited for all 2,850,826 file-version rows;
+  the official files contain 2,849,872 rows after excluding the mirror version.
+  Mirror-collapsed overlap categories include 261 shared-input comparisons across
+  dataset scopes, 59 train/held-out comparisons and 15 label disagreements.
+  Categories overlap and do not prove same-assay duplicates. Labels were retained.
+- **RMDB:** 3 shared train/test sequences resolve to 9 observations and 8
+  cross-split observation pairs. Probe/condition/vector differences were reviewed;
+  missing condition metadata is not evidence of identical conditions.
+- **RNA3DB:** corrected 2026 split counts are 13,451 train / 1,990 test chains.
+  They share 401 PDB entries despite zero exact chain/sequence/component overlap.
+  Three bounded coordinate screens are not full stereochemical validation.
+- **Engineering:** 179/179 tests passed locally, including real desktop/mobile
+  Chrome checks. Ten tiny CPU **synthetic** baseline smokes completed; no real
+  task scores, model-weight downloads, foundation-model inference or GPU jobs.
 
-The RNAGym reference classifies 31 ncRNA, 2 mRNA-splicing and 37 mRNA-coding
-items. The coding items can involve protein/genomic fitness; they are **not**
-automatically direct RNA readout tasks. The 33 noncoding/splicing candidates
-were selectively extracted and have 862,377 total file rows, **not** 862,377
-verified independent experimental observations. Per-file counts are in
-`data/audit/rnagym_file_counts.tsv`. All other acquired file counts are
-in `data/audit/downloaded_file_counts.json` with explicit file-level scopes.
-
-Reported registry N remains `REPORTED_UNVERIFIED`; file-level measured counts
-never silently become task-wide N. The current task disposition is 189 HOLD
-rows and 9 excluded non-assay/control rows. See the machine-readable audit
-snapshots and [current audit status](docs/CURRENT_AUDIT_STATUS.md).
+See the [Phase 2 Dataset Atlas and QC dashboard](site/phase2.html),
+[evaluation protocol](docs/EVALUATION_PROTOCOL.md), and
+[public audit status](docs/CURRENT_AUDIT_STATUS.md).
+The old homepage's 19-file snapshot is retained and clearly labeled historical.
+The new aggregate snapshot contains no raw labels, sample identity maps,
+private evidence paths or reviewer records. All three leaderboards are empty.
 
 ## Local setup and smoke tests
 
 Python 3.10+ and the standard library suffice for acquisition, QC and the site.
-Optional Parquet export requires `pyarrow`; browser testing is optional and
-requires a local Playwright/Chrome installation.
+Full modality QC uses the optional pinned packages in `requirements-qc.txt`.
+The executable Ridge/logistic toy controls additionally require scikit-learn.
+Browser testing is optional and requires a local Chrome installation.
 
 ```bash
 python -m venv .venv

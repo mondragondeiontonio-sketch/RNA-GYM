@@ -1,0 +1,341 @@
+{
+  "schema_version": "rnagym.model_adapters.v1",
+  "status": "PROVISIONAL",
+  "format": "JSON-compatible YAML 1.2; stdlib json-readable",
+  "real_model_smokes_performed": 0,
+  "weights_downloaded": false,
+  "tracks": [
+    {
+      "track_id": "zero_shot_likelihood",
+      "status": "PROVISIONAL",
+      "execution_enabled": false,
+      "evaluation_independent": true,
+      "requirements": "Declare causal likelihood versus masked pseudo-likelihood, normalization, tokenization and WT/variant mapping; no label fitting"
+    },
+    {
+      "track_id": "frozen_ridge",
+      "status": "PROVISIONAL",
+      "execution_enabled": false,
+      "evaluation_independent": true,
+      "requirements": "Fixed eval-mode encoder with no gradients; train-only scaler and Ridge; immutable encoder checkpoint"
+    },
+    {
+      "track_id": "frozen_mlp",
+      "status": "PROVISIONAL",
+      "execution_enabled": false,
+      "evaluation_independent": true,
+      "requirements": "Fixed encoder; explicit small-training authorization; train/validation-only head fitting"
+    },
+    {
+      "track_id": "lora",
+      "status": "PROVISIONAL",
+      "execution_enabled": false,
+      "evaluation_independent": true,
+      "requirements": "Separate authorization and train-only adapter optimization; pin target modules and rank"
+    },
+    {
+      "track_id": "full_fine_tuning",
+      "status": "PROVISIONAL",
+      "execution_enabled": false,
+      "evaluation_independent": true,
+      "requirements": "Separate compute authorization; never fit encoder on validation/test"
+    },
+    {
+      "track_id": "random_initialization",
+      "status": "PROVISIONAL",
+      "execution_enabled": false,
+      "evaluation_independent": true,
+      "requirements": "Same architecture/input/budget as supervised track; initialization seed pinned"
+    }
+  ],
+  "separate_protocol_families": [
+    "RNA_FM",
+    "RNA_LLM",
+    "RNA_AGENT"
+  ],
+  "heldout_policy": {
+    "train_only": [
+      "vocabulary",
+      "scaler",
+      "target_transform_parameters",
+      "head_fit",
+      "threshold_optimization",
+      "HPO",
+      "encoder_adaptation"
+    ],
+    "frozen_heldout_inference": "ONLY_AFTER_PINNED_PREPROCESSING_NO_GRAD_NO_ADAPTATION",
+    "pretraining_overlap": "MUST_AUDIT_NOT_ESTABLISHED_BY_PROTOCOL_SMOKE"
+  },
+  "encoder_output_schema": {
+    "observation_id": "string",
+    "nucleotide_embeddings": "finite [raw nucleotide length, embedding dimension]; special tokens excluded explicitly",
+    "valid_position_mask": "boolean [raw nucleotide length]"
+  },
+  "llm_output_schema": {
+    "observation_id": "string",
+    "prediction": "finite scalar; task-specific structured/vector schemas not yet implemented"
+  },
+  "agent_trace_schema": {
+    "tool": "explicit allowlisted identifier",
+    "input_sha256": "SHA256 of tool input bytes",
+    "output_sha256": "SHA256 of tool output bytes",
+    "max_steps": 100
+  },
+  "models": [
+    {
+      "model_id": "RiNALMo",
+      "adapter_family": "RNA_FM",
+      "metadata_evidence_status": "VERIFIED",
+      "metadata_verification_scope": "Official README bytes only; NOT installed-model loadability or checkpoint approval",
+      "primary_source_url": "https://github.com/lbcb-sci/RiNALMo/blob/main/README.md",
+      "source_text_url": "https://raw.githubusercontent.com/lbcb-sci/RiNALMo/main/README.md",
+      "source_readme_sha256": "de3d60dd5aedc63c4f401a92876c2d1e053011e008773ce1be38511360463b63",
+      "source_checked_date_utc": "2026-10-23",
+      "upstream_commit": null,
+      "checkpoint_revision": null,
+      "checkpoint_sha256": null,
+      "tokenizer_revision": null,
+      "tokenizer_vocab_sha256": null,
+      "maximum_sequence_length": null,
+      "prompt_format": null,
+      "documented_api": {
+        "load": "rinalmo.pretrained.get_pretrained_model(model_name=\"giga-v1\")",
+        "tokenize": "alphabet.batch_tokenize(seqs)",
+        "representation": "outputs[\"representation\"]"
+      },
+      "python_modules": [
+        "rinalmo"
+      ],
+      "protocol_tracks": [
+        "zero_shot_likelihood",
+        "frozen_ridge",
+        "frozen_mlp",
+        "lora",
+        "full_fine_tuning",
+        "random_initialization"
+      ],
+      "runtime_loadability": "BLOCKED_LOADABILITY",
+      "weights_locally_verified": false,
+      "remote_code_execution": "FORBIDDEN_UNTIL_REVIEWED",
+      "unresolved_requirements": [
+        "pin upstream commit and checkpoint revision/hash",
+        "verify tokenizer and BOS/EOS nucleotide alignment",
+        "verify maximum supported input length; never silently truncate",
+        "review exact checkpoint terms",
+        "explicitly approve local checkpoint access and bounded execution",
+        "run real loadability/input-output smoke after authorization"
+      ],
+      "evidence": [
+        "tests/test_evaluation_protocol.py",
+        "docs/EVALUATION_PROTOCOL.md"
+      ]
+    },
+    {
+      "model_id": "RNA-FM",
+      "adapter_family": "RNA_FM",
+      "metadata_evidence_status": "VERIFIED",
+      "metadata_verification_scope": "Official README bytes only; NOT installed-model loadability or checkpoint approval",
+      "primary_source_url": "https://github.com/ml4bio/RNA-FM/blob/main/README.md",
+      "source_text_url": "https://raw.githubusercontent.com/ml4bio/RNA-FM/main/README.md",
+      "source_readme_sha256": "f9f1c1d62adc471661ca98b30c0250e9f3ce0cff7433830f149f5f48ea41c3da",
+      "source_checked_date_utc": "2026-10-23",
+      "upstream_commit": null,
+      "checkpoint_revision": null,
+      "checkpoint_sha256": null,
+      "tokenizer_revision": null,
+      "tokenizer_vocab_sha256": null,
+      "maximum_sequence_length": null,
+      "prompt_format": null,
+      "documented_api": {
+        "load": "fm.pretrained.rna_fm_t12()",
+        "tokenize": "alphabet.get_batch_converter()",
+        "representation": "results[\"representations\"][12]"
+      },
+      "python_modules": [
+        "fm"
+      ],
+      "protocol_tracks": [
+        "zero_shot_likelihood",
+        "frozen_ridge",
+        "frozen_mlp",
+        "lora",
+        "full_fine_tuning",
+        "random_initialization"
+      ],
+      "runtime_loadability": "BLOCKED_LOADABILITY",
+      "weights_locally_verified": false,
+      "remote_code_execution": "FORBIDDEN_UNTIL_REVIEWED",
+      "unresolved_requirements": [
+        "pin upstream commit and checkpoint revision/hash",
+        "verify tokenizer and BOS/EOS nucleotide alignment",
+        "verify maximum supported input length; never silently truncate",
+        "review exact checkpoint terms",
+        "explicitly approve local checkpoint access and bounded execution",
+        "run real loadability/input-output smoke after authorization"
+      ],
+      "evidence": [
+        "tests/test_evaluation_protocol.py",
+        "docs/EVALUATION_PROTOCOL.md"
+      ]
+    },
+    {
+      "model_id": "ERNIE-RNA",
+      "adapter_family": "RNA_FM",
+      "metadata_evidence_status": "VERIFIED",
+      "metadata_verification_scope": "Official README bytes only; NOT installed-model loadability or checkpoint approval",
+      "primary_source_url": "https://github.com/Bruce-ywj/ERNIE-RNA/blob/main/README.md",
+      "source_text_url": "https://raw.githubusercontent.com/Bruce-ywj/ERNIE-RNA/main/README.md",
+      "source_readme_sha256": "d2b2ca2f33c4d4d1dac63659cff494631732b7ec87ac07ad99a0826e55bfa603",
+      "source_checked_date_utc": "2026-10-23",
+      "upstream_commit": null,
+      "checkpoint_revision": null,
+      "checkpoint_sha256": null,
+      "tokenizer_revision": null,
+      "tokenizer_vocab_sha256": null,
+      "maximum_sequence_length": null,
+      "prompt_format": null,
+      "documented_api": {
+        "embedding_cli": "python extract_embedding.py --seqs_path=<fasta> --device=<authorized_device>"
+      },
+      "python_modules": [],
+      "protocol_tracks": [
+        "zero_shot_likelihood",
+        "frozen_ridge",
+        "frozen_mlp",
+        "lora",
+        "full_fine_tuning",
+        "random_initialization"
+      ],
+      "runtime_loadability": "BLOCKED_LOADABILITY",
+      "weights_locally_verified": false,
+      "remote_code_execution": "FORBIDDEN_UNTIL_REVIEWED",
+      "unresolved_requirements": [
+        "pin upstream commit and checkpoint revision/hash",
+        "verify tokenizer and BOS/EOS nucleotide alignment",
+        "verify maximum supported input length; never silently truncate",
+        "review exact checkpoint terms",
+        "explicitly approve local checkpoint access and bounded execution",
+        "run real loadability/input-output smoke after authorization"
+      ],
+      "evidence": [
+        "tests/test_evaluation_protocol.py",
+        "docs/EVALUATION_PROTOCOL.md"
+      ]
+    },
+    {
+      "model_id": "Qwen",
+      "adapter_family": "RNA_LLM",
+      "metadata_evidence_status": "VERIFIED",
+      "metadata_verification_scope": "Official README bytes only; NOT installed-model loadability or checkpoint approval",
+      "primary_source_url": "https://github.com/QwenLM/Qwen3/blob/main/README.md",
+      "source_text_url": "https://raw.githubusercontent.com/QwenLM/Qwen3/main/README.md",
+      "source_readme_sha256": "0b2c2bb11806f7a00c8465f2586e2e99f15de28622fd5c9b70b83ae1ab18c75d",
+      "source_checked_date_utc": "2026-10-23",
+      "upstream_commit": null,
+      "checkpoint_revision": null,
+      "checkpoint_sha256": null,
+      "tokenizer_revision": null,
+      "tokenizer_vocab_sha256": null,
+      "maximum_sequence_length": null,
+      "prompt_format": "BLOCKED: select exact checkpoint and pin its tokenizer chat_template before use",
+      "documented_api": {
+        "tokenize": "AutoTokenizer.from_pretrained; tokenizer.apply_chat_template",
+        "generate": "AutoModelForCausalLM.generate"
+      },
+      "python_modules": [
+        "transformers"
+      ],
+      "protocol_tracks": [
+        "rna_llm"
+      ],
+      "runtime_loadability": "BLOCKED_LOADABILITY",
+      "weights_locally_verified": false,
+      "remote_code_execution": "FORBIDDEN_UNTIL_REVIEWED",
+      "unresolved_requirements": [
+        "pin upstream commit and checkpoint revision/hash",
+        "verify tokenizer and BOS/EOS nucleotide alignment",
+        "verify maximum supported input length; never silently truncate",
+        "review exact checkpoint terms",
+        "explicitly approve local checkpoint access and bounded execution",
+        "run real loadability/input-output smoke after authorization",
+        "pin exact Qwen checkpoint; generic Qwen3 README is not a versioned checkpoint card"
+      ],
+      "evidence": [
+        "tests/test_evaluation_protocol.py",
+        "docs/EVALUATION_PROTOCOL.md"
+      ],
+      "rna_native_pretraining_claim": false
+    },
+    {
+      "model_id": "Carbon-X",
+      "adapter_family": "RNA_LLM",
+      "metadata_evidence_status": "BLOCKED",
+      "metadata_verification_scope": "Exact model identifier/card not verified; do NOT inherit Carbon-3B/Carbon-8B metadata",
+      "primary_source_url": null,
+      "candidate_model_card_url": "https://huggingface.co/HuggingFaceBio/Carbon-X",
+      "candidate_card_status": "BLOCKED_FETCH_TIMEOUT_NOT_VERIFIED_OFFICIAL_ID",
+      "related_primary_source_url": "https://github.com/huggingface/carbon/blob/main/README.md",
+      "related_source_readme_sha256": "0aee7b41ba8fba919a3d783872575612c78fd486f2a2cec8221379fcb2f76d42",
+      "related_source_scope": "Carbon family only, not evidence for Carbon-X tokenizer/prompt/length/version",
+      "source_checked_date_utc": "2026-10-23",
+      "checkpoint_revision": null,
+      "checkpoint_sha256": null,
+      "tokenizer": null,
+      "tokenizer_revision": null,
+      "maximum_sequence_length": null,
+      "prompt_format": null,
+      "rna_native_pretraining_claim": null,
+      "sequence_transform": {
+        "required_for_proposed_DNA_route": "RNA_U_TO_DNA_T",
+        "approved": false,
+        "implemented": false,
+        "record_original_and_transformed_input_sha256": true,
+        "rna_native_capability_equivalence": false,
+        "status": "BLOCKED_PENDING_EXACT_MODEL_AND_TRANSFORM_REVIEW"
+      },
+      "python_modules": [],
+      "protocol_tracks": [
+        "rna_llm"
+      ],
+      "runtime_loadability": "BLOCKED_LOADABILITY",
+      "weights_locally_verified": false,
+      "remote_code_execution": "FORBIDDEN_UNTIL_REVIEWED",
+      "unresolved_requirements": [
+        "identify exact official Carbon-X model card and version",
+        "verify tokenizer, sequence length, prompt and source/weight terms without guessing",
+        "review whether RNA U-to-T DNA route is appropriate and explicitly approve transform",
+        "obtain authorized pinned local checkpoint and execute separate RNA-LLM smoke"
+      ],
+      "evidence": [
+        "docs/EVALUATION_PROTOCOL.md"
+      ]
+    },
+    {
+      "model_id": "generic_llm_rna_tools",
+      "adapter_family": "RNA_AGENT",
+      "metadata_evidence_status": "PROVISIONAL",
+      "primary_source_url": null,
+      "protocol_tracks": [
+        "rna_agent"
+      ],
+      "python_modules": [],
+      "runtime_loadability": "BLOCKED_LOADABILITY",
+      "weights_locally_verified": false,
+      "unresolved_requirements": [
+        "pin underlying LLM separately",
+        "pin reviewed RNA tools, versions, input privileges and finite budgets",
+        "admitted task and leakage-safe prompt/tool policy",
+        "no arbitrary shell/network tool calls"
+      ],
+      "evidence": [
+        "tools/evaluation_protocol.py:RNAAgentAdapter",
+        "tools/evaluation_protocol.py:validate_agent_trace"
+      ]
+    }
+  ],
+  "evidence": [
+    "tools/evaluation_protocol.py",
+    "tests/test_evaluation_protocol.py",
+    "docs/EVALUATION_PROTOCOL.md"
+  ]
+}

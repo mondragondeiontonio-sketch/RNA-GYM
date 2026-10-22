@@ -180,6 +180,12 @@ class ManagerTests(unittest.TestCase):
                          'HASHED_UNPINNED_QUARANTINED')
         self.assertEqual(self.db.job(self.db.ensure(self.row))['stage'], 'HASHED')
         self.assertTrue((target.parent / 'sha256sum.txt').is_file())
+        self.db.transition(self.db.ensure(self.row), 'HOLD_QC', detail={'scope':'test scientific hold'})
+        self.assertEqual(d.verify(self.row,self.root,db=self.db)['state'],'HASHED_UNPINNED_QUARANTINED')
+        self.assertEqual(self.db.job(self.db.ensure(self.row))['stage'],'HOLD_QC')
+        self.db.transition(self.db.ensure(self.row),'FETCHING')
+        self.db.transition(self.db.ensure(self.row),'DOWNLOADED')
+        d.verify(self.row,self.root,db=self.db)
         with patch.object(d, 'open_https', side_effect=AssertionError('must reuse hash')):
             self.assertEqual(d.fetch(self.row, self.root, 100, True,
                                      db=self.db, decisions=rights), target)

@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="RNA-Gym Phase 2: source-traceable assay and task audit, QC dashboard, baseline protocols, and separate evaluation tracks. No unreviewed model scores.">
+  <meta name="referrer" content="no-referrer">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'">
+  <title>RNA-Gym · Assay evidence & evaluation</title>
+  <link rel="stylesheet" href="phase2.css">
+  <script src="phase2.js" defer></script>
+</head>
+<body data-snapshot="phase2-data/phase2-snapshot.json">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="masthead">
+    <a class="brand" href="index.html" aria-label="RNA-Gym original audit preview">RNA<span>—</span>Gym <small>PHASE 2</small></a>
+    <nav aria-label="Phase 2 sections">
+      <a href="#atlas">Dataset Atlas</a><a href="#qc">QC dashboard</a>
+      <a href="#baselines">Baselines</a><a href="#fm">RNA-FM</a>
+      <a href="#llm">RNA-LLM</a><a href="#agent">Agent arena</a><a href="#methods">Methods</a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="hero" aria-labelledby="page-title">
+      <div class="hero-copy">
+        <p class="eyebrow">ASSAY EVIDENCE / OPEN EVALUATION</p>
+        <h1 id="page-title">Trace the assay.<br>Then compare the model.</h1>
+        <p class="lede">RNA function depends on what was measured, where and how.
+          Explore the evidence before interpreting a benchmark result.</p>
+        <p class="hero-note">File integrity ≠ scientific admission.<br>Registered tasks ≠ independent experiments.</p>
+        <a class="button" href="#atlas">Explore the audit <span aria-hidden="true">↘</span></a>
+      </div>
+      <div class="lineage-panel">
+        <p class="eyebrow">THE TRACEABILITY CONTRACT</p>
+        <ol class="lineage" aria-label="Required provenance chain, not a claim that every link is verified">
+          <li><span>source</span><small>Original study & rights</small></li>
+          <li><span>release</span><small>Versioned upstream record</small></li>
+          <li><span>asset</span><small>Actual bytes & SHA256</small></li>
+          <li class="assay-node"><span>original assay</span><small>Conditions & measurement</small></li>
+          <li><span>observation</span><small>Input, replicate & readout</small></li>
+          <li><span>benchmark task</span><small>Label semantics & protocol</small></li>
+          <li><span>split</span><small>Identity & leakage review</small></li>
+        </ol>
+        <p class="microcopy">Required links are shown here. Verified coverage comes only from the audit below.</p>
+      </div>
+    </section>
+
+    <div class="snapshot-notice" role="status" aria-live="polite" id="snapshotStatus" data-state="unavailable">
+      No approved Phase 2 aggregate snapshot loaded. Counts are unavailable, not zero.
+    </div>
+    <noscript><p class="notice">Enable JavaScript to search the approved snapshot. Methods and empty evaluation sections remain readable below.</p></noscript>
+
+    <section id="atlas" class="section" aria-labelledby="atlas-title">
+      <div class="section-heading"><div><p class="eyebrow">DATASET ATLAS</p><h2 id="atlas-title">Tasks and assays, without conflation.</h2></div>
+        <p>A package groups downloads. It does not establish that two records belong to the same experiment.</p></div>
+      <div class="counts-grid" aria-label="Current scientific task inventory">
+        <div class="count-card"><span>Registered tasks</span><strong id="registeredCount">N/A</strong><small>Rows in this Phase 2 registry</small></div>
+        <div class="count-card"><span>Assay candidates / source records</span><strong id="assayCount">N/A</strong><small>Not a count of independent experiments</small></div>
+        <div class="count-card"><span>Admission candidates</span><strong id="candidateCount">N/A</strong><small>Not final approval</small></div>
+        <div class="count-card admitted-card"><span>Admitted tasks</span><strong id="admittedCount">N/A</strong><small>Declared verified audit status only</small></div>
+      </div>
+      <div class="panel task-panel">
+        <div class="panel-title"><h3>Task registry</h3><p>Scientific stage and final disposition are separate fields.</p></div>
+        <form id="taskFilters" class="filter-grid" role="search" aria-label="Filter registered tasks">
+          <label class="search-field">Search task or package<input id="taskSearch" type="search" placeholder="Task ID, package, blocker…" autocomplete="off"></label>
+          <label>Scientific stage<select id="stageFilter"><option value="">All stages</option></select></label>
+          <label>Disposition<select id="dispositionFilter"><option value="">All dispositions</option></select></label>
+          <label>Package<select id="packageFilter"><option value="">All packages</option></select></label>
+          <button id="resetFilters" class="button secondary" type="reset">Reset filters</button>
+        </form>
+        <p id="taskResultCount" class="result-count" role="status" aria-live="polite">Load an approved snapshot to inspect task rows.</p>
+        <div class="table-scroll" tabindex="0" role="region" aria-label="Task registry table, scroll horizontally on small screens">
+          <table><caption class="sr-only">Task stages, dispositions, blockers and source references</caption>
+            <thead><tr><th scope="col">Task / package</th><th scope="col">Scientific stage</th><th scope="col">Disposition</th><th scope="col">Evidence & blockers</th></tr></thead>
+            <tbody id="taskRows"><tr><td colspan="4">No approved snapshot loaded.</td></tr></tbody>
+          </table>
+        </div>
+        <div class="pagination" aria-label="Task pagination"><button id="previousPage" type="button" disabled>Previous</button><span id="pageStatus">Page —</span><button id="nextPage" type="button" disabled>Next</button></div>
+      </div>
+      <div class="panel assay-panel">
+        <div class="panel-title"><h3>Assay provenance cards</h3><p>Unresolved values remain unknown. A source DOI is not inferred from a benchmark citation.</p></div>
+        <div class="filter-grid assay-filters" role="search" aria-label="Filter assay cards">
+          <label class="search-field">Search assay, accession or readout<input id="assaySearch" type="search" placeholder="Assay ID, source, license…" autocomplete="off"></label>
+          <label>Evidence status<select id="assayVerificationFilter"><option value="">All evidence states</option></select></label>
+        </div>
+        <p class="result-count" id="assayResultCount" role="status" aria-live="polite">No approved assay records loaded.</p>
+        <div id="assayCards" class="assay-grid"></div>
+        <div class="pagination" aria-label="Assay pagination"><button id="previousAssayPage" type="button" disabled>Previous</button><span id="assayPageStatus">Page —</span><button id="nextAssayPage" type="button" disabled>Next</button></div>
+      </div>
+    </section>
+
+    <section id="qc" class="section" aria-labelledby="qc-title">
+      <div class="section-heading"><div><p class="eyebrow">QC DASHBOARD</p><h2 id="qc-title">An integrity check is a starting point.</h2></div><p>Exact stage counts are not cumulative coverage. A HOLD affects its own task, not the entire project.</p></div>
+      <div class="dashboard-grid">
+        <article class="panel"><h3>Current scientific stages</h3><div id="stageCounts" class="bar-list"><p>Unavailable until an approved snapshot is loaded.</p></div></article>
+        <article class="panel"><h3>Why tasks remain on HOLD</h3><p class="microcopy">Allowlisted reason categories only. One held task may have several blockers.</p><div id="holdCounts" class="bar-list"><p>No current audit loaded.</p></div></article>
+      </div>
+      <article class="panel previous-snapshot" id="previousSnapshot"><p class="eyebrow">PREVIOUS TECHNICAL SNAPSHOT · NOT CURRENT ADMISSION</p><h3>Historical file-QC evidence</h3><p id="previousSnapshotStatus">No historical technical snapshot supplied. This page does not assume the prior 19-file or 45-artifact state.</p><dl id="previousCounts" class="technical-counts"></dl></article>
+      <details class="panel evidence-panel"><summary>Reproducibility: aggregate input hashes</summary><p>These are hashes of audit metadata inputs, not raw dataset file hashes. Row references refer to data rows starting at line 2; quoted multiline TSV fields may span physical lines.</p><p id="snapshotId" class="utility">Snapshot ID unavailable.</p><ul id="sourceHashes" class="hash-list"></ul></details>
+    </section>
+
+    <section id="baselines" class="section" aria-labelledby="baseline-title">
+      <div class="section-heading"><div><p class="eyebrow">BASELINE EXPLORER</p><h2 id="baseline-title">Match the method to the measurement.</h2></div><p>Protocol catalogue only. Entries are not task-validated configurations, executed baselines or model results.</p></div>
+      <div class="baseline-controls"><label>Search methods<input id="baselineSearch" type="search" placeholder="Ridge, seed matching, RNAfold…" autocomplete="off"></label><label>Task family<select id="baselineFamily"><option value="">All task families</option></select></label></div>
+      <p id="baselineResultCount" class="result-count" role="status" aria-live="polite">Protocol catalogue loads with the approved snapshot.</p>
+      <div id="baselineCards" class="baseline-grid"></div>
+    </section>
+
+    <section id="fm" class="section evaluation-section" aria-labelledby="fm-title">
+      <div class="section-heading"><div><p class="eyebrow">RNA-FM LEADERBOARD</p><h2 id="fm-title">Separate adaptation from pretraining.</h2></div><p>Sequence, paired-RNA, structure-conditioned and generation tasks must not be collapsed into a single ranking.</p></div>
+      <ul class="track-list" aria-label="Six independent FM evaluation tracks"><li>Zero-shot likelihood</li><li>Frozen + Ridge</li><li>Frozen + MLP</li><li>LoRA</li><li>Full fine-tuning</li><li>Random initialization</li></ul>
+      <div class="empty-results" data-leaderboard="rna_fm"><span class="empty-symbol" aria-hidden="true">∅</span><div><h3>No reviewed RNA-FM results published.</h3><p>Populate only after an admitted task, fixed split and auditable evaluation have passed review. There are no placeholder scores.</p></div></div>
+    </section>
+
+    <section id="llm" class="section evaluation-section" aria-labelledby="llm-title">
+      <div class="section-heading"><div><p class="eyebrow">RNA-LLM LEADERBOARD</p><h2 id="llm-title">The interface is part of the experiment.</h2></div><p>Record model revision, tokenizer, prompt, context limit and any RNA U→T mapping. DNA pretraining is not automatically RNA-native ability.</p></div>
+      <div class="empty-results" data-leaderboard="rna_llm"><span class="empty-symbol" aria-hidden="true">∅</span><div><h3>No reviewed RNA-LLM results published.</h3><p>This is an independent evaluation interface, not a merged FM ranking. No loading or performance claim is made here.</p></div></div>
+    </section>
+
+    <section id="agent" class="section evaluation-section" aria-labelledby="agent-title">
+      <div class="section-heading"><div><p class="eyebrow">RNA-AGENT ARENA</p><h2 id="agent-title">Audit the tools, not just the answer.</h2></div><p>Agent evaluations must declare allowed tools, retrieval scope, tool versions, budgets and prevention of held-out label access.</p></div>
+      <div class="empty-results" data-leaderboard="rna_agent"><span class="empty-symbol" aria-hidden="true">∅</span><div><h3>No reviewed agent runs published.</h3><p>Future runs need reproducible tool traces and task-specific outcomes. No invented win rates, ranks or aggregate scores.</p></div></div>
+    </section>
+
+    <section id="methods" class="section" aria-labelledby="methods-title">
+      <div class="section-heading"><div><p class="eyebrow">METHODS & REPRODUCIBILITY</p><h2 id="methods-title">Evidence stays attached.</h2></div><p>This aggregate view is a reading aid. Original immutable provenance and scientific review remain authoritative.</p></div>
+      <div class="methods-grid">
+        <article><h3>Identity before deduplication</h3><p>File SHA, assay identity, observation identity, input identity and split group answer different questions. The same sequence under different conditions is not automatically a duplicate experiment.</p></article>
+        <article><h3>Splits before fitting</h3><p>Preserve official test splits where available. Label custom splits as RNA-Gym versions. Fit scalers, thresholds and hyperparameters on training data only; audit gene, family and structure-level leakage.</p></article>
+        <article><h3>Candidate is not admitted</h3><p>FILE_QC_PASS, SOURCE_VERIFIED, ASSAY_VERIFIED and SPLIT_QC_PASS are evidence stages. ADMISSION_CANDIDATE does not replace a real, auditable final approval.</p></article>
+        <article><h3>Public aggregates only</h3><p>Export requires explicit public-aggregate approval. Raw labels, hidden test labels, sample identity maps, private paths, credentials and reviewer records never belong in this website snapshot.</p></article>
+        <article><h3>Readout-specific evaluation</h3><p>Keep RSS, MRL, TE, half-life, splicing and eCLIP distinct. Do not add unlike Spearman, F1, AUROC or structure metrics into one score. Report task coverage and uncertainty.</p></article>
+        <article><h3>No implicit compute</h3><p>Website generation runs no training, inference, downloads or deployment. Cheap smoke tests precede experiments; GPU training needs separate authorization.</p></article>
+      </div>
+      <details class="panel"><summary>Local rebuild and publication boundary</summary><p>Use <code>tools/build_phase2_site.py</code> with <code>--audit</code>, a new <code>--output</code> directory and <code>--approve-public-aggregates</code>. Validate with <code>--dry-run</code> first. The builder refuses to replace a different snapshot; use a new versioned directory. A separate reviewed integration step copies approved aggregates into the served Phase 2 target.</p><p>This page expects <code>phase2-data/phase2-snapshot.json</code>. Until it is supplied, current counts remain N/A. No existing public data snapshot is overwritten.</p></details>
+    </section>
+  </main>
+  <footer><p><strong>RNA-Gym</strong> · Phase 2 scientific audit workspace</p><p>Public metadata ≠ permission to redistribute source data.</p><a href="index.html">Return to the existing audit preview</a></footer>
+</body>
+</html>

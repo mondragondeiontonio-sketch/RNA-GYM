@@ -401,7 +401,9 @@ class SiteTests(unittest.TestCase):
 
     def test_static_publication_allowlist_and_accessible_markup(self):
         allowed = {'.nojekyll', 'index.html', 'styles.css', 'app.js',
-                   'data/tasks.json', 'data/provenance.json', 'data/summary.json'}
+                   'data/tasks.json', 'data/provenance.json', 'data/summary.json',
+                   'phase2.html', 'phase2.js', 'phase2.css',
+                   'phase2-data/phase2-snapshot.json'}
         self.assertFalse(any(p.is_symlink() for p in (ROOT / 'site').rglob('*')), 'No symlinks into private files')
         actual = {p.relative_to(ROOT / 'site').as_posix() for p in (ROOT / 'site').rglob('*') if p.is_file()}
         self.assertEqual(actual, allowed, 'Only allowlisted static preview files may be published')
