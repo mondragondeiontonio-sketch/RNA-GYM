@@ -1,0 +1,23 @@
+{
+  "schema_version": "rnagym.orthus-source-plan.v1",
+  "task_id": "T0021",
+  "verification_status": "PROVISIONAL",
+  "source_record": "https://zenodo.org/records/14708163",
+  "source_doi": "10.1038/s41594-022-00819-2",
+  "direct_url": "https://zenodo.org/records/14708163/files/mrl_isoform_resolved.npz",
+  "asset_id": "ORTHRUS_MRL_ISOFORM_14708163",
+  "sha256_expected": "74663d0f260ccdccfd25bf56bc680d7e0b0e15034d2edb28702fa1aa82aa63fa",
+  "sha256_scope": "Observed file bytes; not publisher checksum",
+  "upstream_checksum": {
+    "algorithm": "MD5",
+    "value": "65fb24de489e947892b2a077f89f62ba"
+  },
+  "data_license_evidence": "Zenodo dataset metadata explicitly MIT; not inferred from code license",
+  "redistribution_permission": "NOT_APPROVED_BY_THIS_AUDIT",
+  "declared_size_bytes": 18593205,
+  "max_download_mb": 24,
+  "default_full_expansion_enabled": false,
+  "selective_numeric_member_max_bytes": 4194304,
+  "object_array_loading": false,
+  "assay_admission": false
+}

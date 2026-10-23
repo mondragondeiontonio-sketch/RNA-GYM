@@ -4,7 +4,7 @@
   "selection": "explicit metadata/code allowlist",
   "raw_and_experimental_observations_included": false,
   "original_audit_markdown_included": false,
-  "file_count": 307,
+  "file_count": 316,
   "files": [
     {
       "path": ".github/workflows/pages.yml",
@@ -23,8 +23,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 8048,
-      "sha256": "ecb01877e461d80a5eb619d2fb94816faf8cef463144ca1430598ddc90da0d86"
+      "bytes": 9815,
+      "sha256": "1c891603581700af9f5556d72446777737ff3f78f9ed58bf6a10dc522deb7fc0"
     },
     {
       "path": "configs/assay_schema_example.json",
@@ -45,6 +45,16 @@
       "path": "configs/model_adapter_registry.yaml",
       "bytes": 13647,
       "sha256": "a11b8fca53090e545e7a7c2b5c7ded6e9dfe29e10b71ec0cff385a0d9970f0ee"
+    },
+    {
+      "path": "configs/orthus_mrl_source_review.json",
+      "bytes": 984,
+      "sha256": "deffdc3c129ca52509fd02adc8a6f1b627e80b68ff1a4abd7b41d639e68ca1df"
+    },
+    {
+      "path": "configs/persist_source_review.json",
+      "bytes": 2672,
+      "sha256": "b6f585cbee9ab78612679aa2020e00bf8a3b42595ca6a8458e43c925f8d38eb9"
     },
     {
       "path": "configs/rnagym_rna_exact.json",
@@ -1188,8 +1198,8 @@
     },
     {
       "path": "docs/CURRENT_AUDIT_STATUS.md",
-      "bytes": 6930,
-      "sha256": "c9e6671a2c445027c8750c289852b82c6bc801cc907feaa72e408b647d10173f"
+      "bytes": 7689,
+      "sha256": "42cab74e862008cd14b0c63c8319523ede0a8f534ec17f6d338353ce39904dba"
     },
     {
       "path": "docs/EVALUATION_PROTOCOL.md",
@@ -1238,8 +1248,13 @@
     },
     {
       "path": "site/index.html",
-      "bytes": 14017,
-      "sha256": "3c53a7b892b0292e1fe896eaccabeb467269e3852adbff8b47d31a9d340d13d7"
+      "bytes": 14069,
+      "sha256": "005438c19deb95ca7e09af49eebadd95d430eddd53eed142fc70d13adf90a137"
+    },
+    {
+      "path": "site/persist-audit.html",
+      "bytes": 5051,
+      "sha256": "aa12babfca4fe7722111c44260daf7bda6e508fe2bad4ff7b12ec87d7a9d189c"
     },
     {
       "path": "site/phase2-data/phase2-snapshot.json",
@@ -1253,8 +1268,8 @@
     },
     {
       "path": "site/phase2.html",
-      "bytes": 14778,
-      "sha256": "50e1c915467250a1cff63328e3c2e166b3441845b3c715b2f11d6ef7ec86d1c3"
+      "bytes": 14830,
+      "sha256": "ac9b18ebabfc6c90cc9fe396bf3da84b33d848f114c86997b381100c7725f77b"
     },
     {
       "path": "site/phase2.js",
@@ -1307,9 +1322,24 @@
       "sha256": "0fbe92c6597214f9bbf9a6563281bc55e7de1ff8ac8cea45b65baca3aa2e3068"
     },
     {
+      "path": "tests/test_npz_source.py",
+      "bytes": 3113,
+      "sha256": "7099a1dbde8f10a08650e2faf1ad099f8365244abaff3b5d673d75f538a3c0b1"
+    },
+    {
       "path": "tests/test_paired_qc.py",
       "bytes": 1791,
       "sha256": "0a58bcb7f4e319ad11f7e1127f5e86ffbec2a54b248e25cbf8621fe7f2905d65"
+    },
+    {
+      "path": "tests/test_persist_audit.py",
+      "bytes": 6478,
+      "sha256": "f127629f27a22af1a41fba02bb310d82566666ac7b7609b2e9f686fcc6a689e0"
+    },
+    {
+      "path": "tests/test_persist_site.py",
+      "bytes": 4159,
+      "sha256": "e96cf83bd6b572cafbf5d5a3a843e742aa8d2f68a5ba7dc003621ba41b89dbd0"
     },
     {
       "path": "tests/test_phase2_pair_identity.py",
@@ -1353,8 +1383,8 @@
     },
     {
       "path": "tests/test_site.py",
-      "bytes": 34819,
-      "sha256": "818004caba27d65d8dba724c883d3fc3cced46a2d71c6546c9b83e2440229835"
+      "bytes": 34841,
+      "sha256": "5f7a2db574c8efafccfbb853e1fb7446b0be294be8166aaacdfb7a49335a6800"
     },
     {
       "path": "tests/test_supplemental_qc.py",
@@ -1377,9 +1407,19 @@
       "sha256": "b5af4971c9d3d95d7d89b2c516717b1b797e5bc152105d50bcb371fadeb84832"
     },
     {
+      "path": "tools/audit_persist.py",
+      "bytes": 25477,
+      "sha256": "777cd20a7b7dc403f96ae88cc80a30ceee44fb764b38adda496390d57b24af18"
+    },
+    {
       "path": "tools/audit_sources.py",
       "bytes": 8256,
       "sha256": "a89e0333c5ebed2fb1c392b8eaded3ab961e6297837560e700e1a3337e86a1f0"
+    },
+    {
+      "path": "tools/build_persist_site.py",
+      "bytes": 9530,
+      "sha256": "bfee7dc7cb1d25fb1b022d7a39b71e35d2bb7a4d38998a6606ad659a3d6d75c8"
     },
     {
       "path": "tools/build_phase2_site.py",
@@ -1420,6 +1460,11 @@
       "path": "tools/generate_site.py",
       "bytes": 23336,
       "sha256": "94f99bd6694bf83ca3f5d0c0067802717f1b55caea5312c86b034a1a93f0758f"
+    },
+    {
+      "path": "tools/inspect_npz_source.py",
+      "bytes": 6732,
+      "sha256": "b70e970a127e9c856c775e5bfae156c97deeb43d10c2388d1b03cca4443c4e3e"
     },
     {
       "path": "tools/inspect_sources.py",

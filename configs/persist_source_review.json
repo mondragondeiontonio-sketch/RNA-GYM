@@ -1,0 +1,56 @@
+{
+  "schema_version": "rnagym.persist-source-plan.v1",
+  "verification_status": "PROVISIONAL",
+  "task_id": "T0022",
+  "registered_task_added": false,
+  "source_doi": "10.1038/s41467-022-28776-w",
+  "parent_study_accession": "GSE173083",
+  "source_repository": "https://github.com/barnalab/persist",
+  "raw_data_included": false,
+  "automatic_download": false,
+  "automatic_admission": false,
+  "assets": [
+    {
+      "asset_id": "PERSIST_CONSTRUCTS",
+      "package_group_id": "MRNA_MRL_HL_LBKWK",
+      "task_id": "T0022",
+      "relative_filename": "constructs.tsv",
+      "direct_url": "https://raw.githubusercontent.com/barnalab/persist/8922dc115acf0c3c803b15fbc97e67edce805c36/analysis/constructs.tsv",
+      "sha256_expected": "7e0fc06593b2fc602d33a373b5fb1af9547991318b479351c7342eb4701049a4",
+      "checksum_scope": "Observed bytes SHA256, pinned by this audit; NOT a publisher-provided checksum",
+      "declared_size_bytes": 769465,
+      "upstream_commit": "8922dc115acf0c3c803b15fbc97e67edce805c36",
+      "rights_status": "USER_AUTHORIZATION_AND_DATA_RIGHTS_REVIEW_REQUIRED",
+      "redistribution_permission": "NOT_APPROVED",
+      "max_mb": 2
+    },
+    {
+      "asset_id": "PERSIST_COUNTS",
+      "package_group_id": "MRNA_MRL_HL_LBKWK",
+      "task_id": "T0022",
+      "relative_filename": "joined.txt",
+      "direct_url": "https://raw.githubusercontent.com/barnalab/persist/8922dc115acf0c3c803b15fbc97e67edce805c36/analysis/joined.txt",
+      "sha256_expected": "157bfb5b462674b8118111426febb5e7cf5727585f04305968b037636638c59d",
+      "checksum_scope": "Observed bytes SHA256, pinned by this audit; NOT a publisher-provided checksum",
+      "declared_size_bytes": 101103,
+      "upstream_commit": "8922dc115acf0c3c803b15fbc97e67edce805c36",
+      "rights_status": "USER_AUTHORIZATION_AND_DATA_RIGHTS_REVIEW_REQUIRED",
+      "redistribution_permission": "NOT_APPROVED",
+      "max_mb": 2
+    },
+    {
+      "asset_id": "PERSIST_SAMPLES",
+      "package_group_id": "MRNA_MRL_HL_LBKWK",
+      "task_id": "T0022",
+      "relative_filename": "samples.csv",
+      "direct_url": "https://raw.githubusercontent.com/barnalab/persist/8922dc115acf0c3c803b15fbc97e67edce805c36/analysis/samples.csv",
+      "sha256_expected": "6925391095e00acab7d860778b405dbb2b21b890bd61f03da03b9e31b3af59ba",
+      "checksum_scope": "Observed bytes SHA256, pinned by this audit; NOT a publisher-provided checksum",
+      "declared_size_bytes": 6327,
+      "upstream_commit": "8922dc115acf0c3c803b15fbc97e67edce805c36",
+      "rights_status": "USER_AUTHORIZATION_AND_DATA_RIGHTS_REVIEW_REQUIRED",
+      "redistribution_permission": "NOT_APPROVED",
+      "max_mb": 2
+    }
+  ]
+}
