@@ -1,0 +1,52 @@
+{
+  "schema_version": "rnagym.mrl-group-audit.v1",
+  "task_id": "T0021",
+  "verification_status": "PROVISIONAL",
+  "registered_task_added": false,
+  "automatic_download": false,
+  "automatic_model_execution": false,
+  "automatic_admission": false,
+  "asset": {
+    "asset_id": "HOMOLOGENE_13910050",
+    "package_group_id": "MRNA_MRL_SUGIMOTO",
+    "relative_filename": "homology_maps_homologene.zip",
+    "direct_url": "https://zenodo.org/records/13910050/files/homology_maps_homologene.zip",
+    "sha256_expected": "7f88f7ccea03ca144237caa00e0514da6ebc5ea1a7349373b894d8d6d745e521",
+    "sha256_scope": "Observed bytes, not publisher checksum",
+    "upstream_checksum": {
+      "algorithm": "MD5",
+      "value": "c6fe06cc0a4ae71358c6cdfefbcce3c6"
+    },
+    "source_release": "13910050 v1.0",
+    "source_dataset_license": "mit-license",
+    "redistribution_permission": "NOT_APPROVED_BY_THIS_AUDIT",
+    "max_download_mb": 2
+  },
+  "author_code_reference": "https://github.com/morrislab/mRNABench/blob/778d691ab91c51c03addeb9219229f2ec81d195c/mrna_bench/data_splitter/homology_split.py",
+  "custom_protocol": {
+    "protocol_id": "RNA_GYM_T0021_GROUPSAFE_AUDIT_V1",
+    "verification_status": "PROVISIONAL",
+    "registration_timing": "Before homology-map inspection and before any model run; after original task registration. NOT claimed as prior-to-task-selection preregistration.",
+    "task_id": "T0021",
+    "seed": 2541,
+    "origin": "RNA_GYM_CUSTOM_EXPLORATORY_VERSION_NOT_OFFICIAL",
+    "ratios": [
+      0.7,
+      0.15,
+      0.15
+    ],
+    "input_identity": "Reuse prior full-file QC exact raw-string SHA256 keys with source-file binding; no U/T conversion or case folding",
+    "group_policy": [
+      "Always union identical exact gene annotations, including genes missing from HomoloGene",
+      "Union every known HomoloGene group; multi-group gene annotation bridges conservatively rather than silently taking last row",
+      "Union identical exact whole-input hashes across gene groups"
+    ],
+    "assignment": "Sort connected components by descending size, then SHA256(seed + group row IDs). Assign each to split with largest unfilled target row deficit; fixed train/validation/test tiebreak. No label values used.",
+    "observations_deleted": false,
+    "labels_merged": false,
+    "source_labels_used_for_assignment": false,
+    "model_execution_allowed": false,
+    "homology_scope": "Known source groups only; no independent sequence-homology clearance claim",
+    "admission_approval": false
+  }
+}

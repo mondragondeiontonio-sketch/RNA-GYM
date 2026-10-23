@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="344" viewBox="0 0 1120 344" role="img" aria-labelledby="title description">
+  <title id="title">RNA-Gym — From RNA data to biological understanding</title>
+  <desc id="description">An RNA stem-loop connects source evidence to reproducible evaluation. RNA-Gym is an open research platform under active scientific audit.</desc>
+  <rect width="1120" height="344" rx="20" fill="#12364f"/>
+  <path d="M800 0H1100Q1120 0 1120 20V324Q1120 344 1100 344H800Z" fill="#19465e"/>
+  <g fill="#9ed9df" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="700" letter-spacing="2.1">
+    <text x="48" y="49">OPEN RNA RESEARCH INFRASTRUCTURE</text>
+  </g>
+  <text x="46" y="129" fill="#ffffff" font-family="Arial,Helvetica,sans-serif" font-size="72" font-weight="700" letter-spacing="-2">RNA-Gym</text>
+  <text x="49" y="174" fill="#e2f0f4" font-family="Arial,Helvetica,sans-serif" font-size="24">From RNA data to biological understanding.</text>
+  <text x="49" y="206" fill="#a9c7d4" font-family="Arial,Helvetica,sans-serif" font-size="16">Traceable assays. Reproducible evaluation. Better models.</text>
+  <g font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="700">
+    <rect x="49" y="252" width="139" height="34" rx="17" fill="#22566b"/>
+    <text x="69" y="274" fill="#d5f2f1">DATA + EVIDENCE</text>
+    <path d="M199 269H216M211 264L216 269 211 274" fill="none" stroke="#7baabf" stroke-width="2"/>
+    <rect x="228" y="252" width="146" height="34" rx="17" fill="#22566b"/>
+    <text x="248" y="274" fill="#d5f2f1">FAIR EVALUATION</text>
+    <path d="M385 269H402M397 264L402 269 397 274" fill="none" stroke="#7baabf" stroke-width="2"/>
+    <rect x="414" y="252" width="181" height="34" rx="17" fill="#22566b"/>
+    <text x="434" y="274" fill="#d5f2f1">BIOLOGICAL DISCOVERY</text>
+  </g>
+  <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M843 270C862 270 875 258 875 238V140C875 106 859 105 859 85C859 61 878 48 905 48C932 48 951 61 951 85C951 105 935 106 935 140V238C935 258 948 270 967 270" stroke="#78c9ce" stroke-width="4"/>
+    <path d="M875 150H935M875 176H935M875 202H935M875 228H935" stroke="#86b6ca" stroke-width="2"/>
+    <path d="M888 69Q905 58 923 69" stroke="#e2b56a" stroke-width="3"/>
+  </g>
+  <g fill="#d4f1ef" stroke="#19465e" stroke-width="3">
+    <circle cx="875" cy="150" r="7"/><circle cx="935" cy="150" r="7"/>
+    <circle cx="875" cy="176" r="7"/><circle cx="935" cy="176" r="7"/>
+    <circle cx="875" cy="202" r="7"/><circle cx="935" cy="202" r="7"/>
+    <circle cx="875" cy="228" r="7"/><circle cx="935" cy="228" r="7"/>
+    <circle cx="859" cy="85" r="7"/><circle cx="951" cy="85" r="7"/>
+    <circle cx="843" cy="270" r="7"/><circle cx="967" cy="270" r="7"/>
+  </g>
+  <g fill="#b9dce5" font-family="Arial,Helvetica,sans-serif" font-size="11" font-weight="700" text-anchor="middle" letter-spacing="1.5">
+    <text x="905" y="312">SEQUENCE · STRUCTURE · FUNCTION</text>
+  </g>
+</svg>

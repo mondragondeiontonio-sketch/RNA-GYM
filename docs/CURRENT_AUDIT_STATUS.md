@@ -24,6 +24,20 @@ No X-array expansion, object loading, label replacement or real training occurre
 The original 45-artifact snapshot remains historical; 49 local artifacts are
 not 49 experiments or 49 scientific-QC passes. Final admissions remain zero.
 
+## T0021 observed group-split constraints
+
+Using the exact author-specified HomoloGene file and pinned code, the local
+seed-2541 author-protocol reproduction shares 923 gene annotations / 382 exact
+input keys across its folds (train/test alone: 489 / 181). All shared gene keys
+are outside the source map coverage. This does not establish every paper run's
+actual fold membership; no official fixed manifest or scores were re-evaluated.
+
+A separate exploratory union grouping preserves all 11,693 observations and
+achieves zero observed same-gene / whole-input / known-map-group overlap. Its
+scope excludes unmapped-family RNA homology, pretraining exposure and original
+assay condition verification. These remain HOLD. One 708KB metadata ZIP was
+added; 50 local artifacts do not imply 50 original assays or QC admission.
+
 ## Scientific corrections and remaining blockers
 
 - Author mRNABench default/homology split protocols were located for all 11

@@ -4,6 +4,7 @@ on:
   push:
     branches: [main]
     paths:
+      - 'README.md'
       - 'site/**'
       - 'tools/generate_site.py'
       - 'tests/**'
@@ -20,6 +21,7 @@ on:
       - '.github/workflows/pages.yml'
   pull_request:
     paths:
+      - 'README.md'
       - 'site/**'
       - 'tools/generate_site.py'
       - 'tests/**'
