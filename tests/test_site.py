@@ -403,7 +403,7 @@ class SiteTests(unittest.TestCase):
         allowed = {'.nojekyll', 'index.html', 'styles.css', 'app.js',
                    'data/tasks.json', 'data/provenance.json', 'data/summary.json',
                    'phase2.html', 'phase2.js', 'phase2.css',
-                   'phase2-data/phase2-snapshot.json'}
+                   'phase2-data/phase2-snapshot.json', 'persist-audit.html'}
         self.assertFalse(any(p.is_symlink() for p in (ROOT / 'site').rglob('*')), 'No symlinks into private files')
         actual = {p.relative_to(ROOT / 'site').as_posix() for p in (ROOT / 'site').rglob('*') if p.is_file()}
         self.assertEqual(actual, allowed, 'Only allowlisted static preview files may be published')

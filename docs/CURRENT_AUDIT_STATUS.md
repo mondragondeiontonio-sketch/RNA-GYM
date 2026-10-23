@@ -12,6 +12,18 @@ The prior full technical audit covers 45 acquired artifacts and 6,573,002,784
 bytes. Full file SHA evidence was reused. This round did not indiscriminately
 download more measurements, change raw labels, rebuild splits or run models.
 
+## Incremental source review after the wide snapshot
+
+Four bounded source files were added locally: three PERSIST-seq tables and one
+18.6 MB Orthrus NPZ. T0022's 203 retained inputs bind to the original 233-row
+construct table with explicit representation changes, but half-life source
+versions do not match. The author-protocol split shares source components and
+is not group-disjoint. T0021's y and gene fields match all 11,693 rows through
+safe selected reads; original isoform/condition identity is still unresolved.
+No X-array expansion, object loading, label replacement or real training occurred.
+The original 45-artifact snapshot remains historical; 49 local artifacts are
+not 49 experiments or 49 scientific-QC passes. Final admissions remain zero.
+
 ## Scientific corrections and remaining blockers
 
 - Author mRNABench default/homology split protocols were located for all 11

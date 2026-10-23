@@ -49,6 +49,34 @@ The old homepage's 19-file snapshot is retained and clearly labeled historical.
 The new aggregate snapshot contains no raw labels, sample identity maps,
 private evidence paths or reviewer records. All three leaderboards are empty.
 
+## Incremental T0022 / T0021 source review
+
+The next bounded run acquired four source files (19,470,100 bytes), not another
+bulk benchmark collection. There are now 49 local acquired artifacts; the
+previous 45-file technical snapshot was not rescanned or promoted to admission.
+
+- T0022: all 203 IDs/input representations map to the author's 233-row source;
+  the 30 omitted constructs have missing half-life. Explicit GGG-prefix removal
+  and U→T representation are logged, with original RNA and input hashes separate.
+- Label-version HOLD: ribosome-load is exact float32 for 199/203, with four
+  adjacent-value differences. Half-life is exact for 5/203 and differs by up to
+  0.0321884155 in the acquired numeric scale. No label was corrected.
+- Author-code split reproduction is 142/30/31, not an official fixed manifest.
+  Source-component sharing remains; the largest conservative component has 179
+  records and cannot fit any fold of that exact 70/15/15 partition.
+- T0021: the intermediate NPZ's y and gene metadata match all 11,693 acquired
+  rows; 7,392 gene annotations are not original isoform/condition identities.
+  Full NPZ expansion would be 862 MB; only a <=0.6 MB bounded primitive-array
+  selection was read, without loading X or deserializing any pickle/object.
+- Both tasks remain HOLD, admission candidates/admitted/results remain **0**.
+
+The incremental regression suite passed **212/212 tests**, including desktop/mobile
+Chrome checks; the new source-review page also rendered with a fresh 375px profile.
+
+The [T0022 source-review page](site/persist-audit.html) contains only approved
+aggregates and source-file links/hashes. Local row/label comparisons are not
+published. Zero-download source plan: `python tools/audit_persist.py --plan`.
+
 ## Local setup and smoke tests
 
 Python 3.10+ and the standard library suffice for acquisition, QC and the site.
