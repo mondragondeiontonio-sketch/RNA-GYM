@@ -4,7 +4,7 @@
   "selection": "explicit metadata/code allowlist",
   "raw_and_experimental_observations_included": false,
   "original_audit_markdown_included": false,
-  "file_count": 324,
+  "file_count": 353,
   "files": [
     {
       "path": ".github/workflows/pages.yml",
@@ -13,8 +13,8 @@
     },
     {
       "path": ".gitignore",
-      "bytes": 648,
-      "sha256": "d8b9a318dfa1a789441beded9ec553488fc066f628217461d0b8a26cf91e6999"
+      "bytes": 892,
+      "sha256": "8c18f89b588241a48d1a1b0086839c1d7c01662675f203a98c926eb4dfb195d1"
     },
     {
       "path": "LICENSE_NOTICE.md",
@@ -23,8 +23,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 26131,
-      "sha256": "b489c89167acecf5c7954c8d4b6488ad983d73231f5faa7c5e682c6f6bd0af46"
+      "bytes": 27276,
+      "sha256": "2c329f84321005a3abd3874b251510bc205a91624176a3b9f37d1af898b702b0"
     },
     {
       "path": "configs/assay_schema_example.json",
@@ -42,14 +42,24 @@
       "sha256": "498b52bb3fc76d2df9ce43d8fc0c0c5c19d0100d1216ad99185948f8c773d85a"
     },
     {
+      "path": "configs/interactive_api.json",
+      "bytes": 707,
+      "sha256": "dca8024572733aa9a46161ee12b3aa80626d2116ab28457ae6a120d821a06e87"
+    },
+    {
       "path": "configs/model_adapter_registry.yaml",
-      "bytes": 13647,
-      "sha256": "a11b8fca53090e545e7a7c2b5c7ded6e9dfe29e10b71ec0cff385a0d9970f0ee"
+      "bytes": 15948,
+      "sha256": "33692ef18b90329b2942b9afe3ed466c4710b2b7e75b0617b6e7a052588bda3d"
     },
     {
       "path": "configs/mrl_group_split_audit.json",
       "bytes": 2530,
       "sha256": "21221f248d0acfc49d6c22dfb34cca56c9743ba0710bf9bf85cd550cda0d4e41"
+    },
+    {
+      "path": "configs/native_sdk.json",
+      "bytes": 1159,
+      "sha256": "6290889eaafc361da96e6e4f235abac02ca67c09506001532bbf68c1bd1f04cf"
     },
     {
       "path": "configs/orthus_mrl_source_review.json",
@@ -60,6 +70,11 @@
       "path": "configs/persist_source_review.json",
       "bytes": 2672,
       "sha256": "b6f585cbee9ab78612679aa2020e00bf8a3b42595ca6a8458e43c925f8d38eb9"
+    },
+    {
+      "path": "configs/rnafm_frozen_pilot.json",
+      "bytes": 1687,
+      "sha256": "6e1625ec80ef48fb2765bdad9723be268f291d7e11bd572a2ab2e09291f230ec"
     },
     {
       "path": "configs/rnagym_rna_exact.json",
@@ -185,6 +200,11 @@
       "path": "data/registries/RNAGym_NABench_DMS_ID_91.csv",
       "bytes": 41103,
       "sha256": "728134d7070401117bc099878bec4f508561eef70c379a64fd7ec2d7961cefb1"
+    },
+    {
+      "path": "data/registries/dataset_catalog.json",
+      "bytes": 648875,
+      "sha256": "a7856116688b3597282662231852c9a8e64ce5e342848e8cc833b8702e455ea1"
     },
     {
       "path": "data/registries/download_packages_47.csv",
@@ -1203,13 +1223,28 @@
     },
     {
       "path": "docs/CURRENT_AUDIT_STATUS.md",
-      "bytes": 8512,
-      "sha256": "8c1a905b31ba2f52a9ab376c767d5e0fe40ac7b84352dc9d2bf64890ab71bb6c"
+      "bytes": 9572,
+      "sha256": "392e0b383740ed1bcdbbd799ae2a42fe49ac56be0f96f248eeb9441c659c4c85"
+    },
+    {
+      "path": "docs/DATASET_TASK_LABEL_AUDIT.md",
+      "bytes": 7482,
+      "sha256": "55ff0b2a2e4117bdfb0e9c1b8b717efe0ad14c4126205af2d2655fa50c0edb65"
     },
     {
       "path": "docs/EVALUATION_PROTOCOL.md",
-      "bytes": 14193,
-      "sha256": "42f2aae524a1e2f55cf800c63ae2aeb15bcafd29ce4c5ddb2d3d0a249fa00c0e"
+      "bytes": 20435,
+      "sha256": "e41521de536f60b13c6d298fc70e000f59b64c276218f5e8d14c4b2d2763715f"
+    },
+    {
+      "path": "docs/INTERACTIVE_API.md",
+      "bytes": 7973,
+      "sha256": "276fc94c081a187d2d92fa68bc8a5d3bc3526008efff1ef4ef5c88c16cbe5561"
+    },
+    {
+      "path": "docs/NATIVE_SDK.md",
+      "bytes": 7341,
+      "sha256": "8c53e213dafaecaf7f3e868e872ac3286030df896a3de6b3f810907e94e7d77b"
     },
     {
       "path": "docs/PHASE2_WEBSITE.md",
@@ -1222,9 +1257,49 @@
       "sha256": "3c5c5a8b8703418155d6d9a35220d8a17c47c821fd49276af33c42fd36e060e5"
     },
     {
+      "path": "pyproject.toml",
+      "bytes": 411,
+      "sha256": "e4578bc591a06366fc5f48c80bfa9e06fe9e218c77cb306116cd47d959a6fb66"
+    },
+    {
       "path": "requirements-qc.txt",
       "bytes": 70,
       "sha256": "80468c15b59ad59ee5f8d8d002c978cfece13ed2231b8bf864056b5a534e6d0f"
+    },
+    {
+      "path": "rna_gym/__init__.py",
+      "bytes": 525,
+      "sha256": "4429052e9797c37bd0987e0d7ebe12d49e8c352d6b28e3da9aef871d90f0883a"
+    },
+    {
+      "path": "rna_gym/_paths.py",
+      "bytes": 435,
+      "sha256": "21d5a96be86c921767fc58d7fe8bdcdbcf638dda2380a5fd30513e56d050a0ac"
+    },
+    {
+      "path": "rna_gym/benchmarks.py",
+      "bytes": 12913,
+      "sha256": "66779f164ce30439bb03da4cee9683f45a32c690c32f8e3e9fa8425a4271290c"
+    },
+    {
+      "path": "rna_gym/datasets.py",
+      "bytes": 7548,
+      "sha256": "c66018f89859c1016c4b721739b0c890883d59f1662c2b7ddfb874845010b2d2"
+    },
+    {
+      "path": "rna_gym/models.py",
+      "bytes": 3461,
+      "sha256": "0f07732f3c5acd119418b7a5d7a3f945180ffdcaed01b31f0eb9299294cad7f6"
+    },
+    {
+      "path": "rna_gym/protocols.py",
+      "bytes": 5625,
+      "sha256": "e593668349e16b8f62ebba1778e28281aeab95431c1b902e907239985c4ce89a"
+    },
+    {
+      "path": "rna_gym/rankings.py",
+      "bytes": 12801,
+      "sha256": "7fd95e92588d738f47ee4eaf5fead941b8cb8e23a317bfd182df17e5da882c4e"
     },
     {
       "path": "site/.nojekyll",
@@ -1332,6 +1407,11 @@
       "sha256": "27956e99e690a56089b1bacd28bb641601ac6f78e987b6ade1d0796e0d27983b"
     },
     {
+      "path": "tests/test_interactive_api.py",
+      "bytes": 11067,
+      "sha256": "083c986fa4d080becc55fb91873c2e6ff1b8de132772b72b7880757136da5b8c"
+    },
+    {
       "path": "tests/test_mrl_group_splits.py",
       "bytes": 5124,
       "sha256": "3410f4e65476e3c4663d42238eab9b87957de14a9101abbe02d1287ea7bc5cc4"
@@ -1345,6 +1425,11 @@
       "path": "tests/test_multipart.py",
       "bytes": 495,
       "sha256": "0fbe92c6597214f9bbf9a6563281bc55e7de1ff8ac8cea45b65baca3aa2e3068"
+    },
+    {
+      "path": "tests/test_native_sdk.py",
+      "bytes": 10011,
+      "sha256": "31bf0cdf45cd992a17a8d24325f3542051183971d3836c38af39c85608fae13b"
     },
     {
       "path": "tests/test_npz_source.py",
@@ -1402,9 +1487,19 @@
       "sha256": "d9be66400d2397dd18ee6200eba9193c98cbf934d4ef18849ecd1e89562deccc"
     },
     {
+      "path": "tests/test_rnafm_adapter.py",
+      "bytes": 7782,
+      "sha256": "0e808b152dcd3543cff69a973ec679cb4ee4ac16054763f047ef3b343ac1de21"
+    },
+    {
       "path": "tests/test_scaffold.py",
       "bytes": 1674,
       "sha256": "3c14a4b481803d7c630a9281111d3bd47294b9081f9749afc50925e0ceb593b0"
+    },
+    {
+      "path": "tests/test_scalar_statistics.py",
+      "bytes": 4922,
+      "sha256": "c0df04317ecd03593e011264d7e56d3a7d962ab032a5b71146c19c454d2c425f"
     },
     {
       "path": "tests/test_scientific_audit.py",
@@ -1427,9 +1522,29 @@
       "sha256": "0c201a318fc78616ae9123a12234f4a64f2b31a3f6259128c78bd7550ff26196"
     },
     {
+      "path": "tools/__init__.py",
+      "bytes": 71,
+      "sha256": "01584dcbab244a7fc06d118ba4e84a927635e3f7298387fe410660ae21ea02c3"
+    },
+    {
       "path": "tools/admission_gate.py",
       "bytes": 4966,
       "sha256": "4bdc864818c8e5b68499e55a36afe7267d9067f8d036588c86dbb651125ec9b1"
+    },
+    {
+      "path": "tools/api_console/api-console.css",
+      "bytes": 4423,
+      "sha256": "e65725875e03f20471988709734ec9ee0dc32a34a861c8563b82765649f429de"
+    },
+    {
+      "path": "tools/api_console/api-console.html",
+      "bytes": 4061,
+      "sha256": "a5d0b920661219cbd6097f03ee57a6dc024d66b32fc512165cfd7961b7044ffc"
+    },
+    {
+      "path": "tools/api_console/api-console.js",
+      "bytes": 4895,
+      "sha256": "323d96e9618efe8a48d62d7f87a1d09d760724a0a4ca78de64871f2440700f6a"
     },
     {
       "path": "tools/assemble_multipart.py",
@@ -1450,6 +1565,11 @@
       "path": "tools/audit_sources.py",
       "bytes": 8256,
       "sha256": "a89e0333c5ebed2fb1c392b8eaded3ab961e6297837560e700e1a3337e86a1f0"
+    },
+    {
+      "path": "tools/build_dataset_catalog.py",
+      "bytes": 15222,
+      "sha256": "595866f6864d3ce4411aad4e34c25240c2094000624f10ef421f207183fa7daf"
     },
     {
       "path": "tools/build_mrl_split_site.py",
@@ -1493,8 +1613,13 @@
     },
     {
       "path": "tools/evaluation_protocol.py",
-      "bytes": 46132,
-      "sha256": "424439ef467aa765df1244dcc109760c3ce730ba50bbdefea2933a277a013e53"
+      "bytes": 47644,
+      "sha256": "3f09f3a1bbc45b256ade94b2d1d7d0fcc4b4c981658d7ec01d5f7f690b84727b"
+    },
+    {
+      "path": "tools/frozen_pilot.py",
+      "bytes": 14841,
+      "sha256": "90f007adf9ea0f68848adff1fffbcc8fae7b4709e806eaa11a69d50e3ff58cc3"
     },
     {
       "path": "tools/generate_site.py",
@@ -1510,6 +1635,21 @@
       "path": "tools/inspect_sources.py",
       "bytes": 4835,
       "sha256": "ff307b09759abbfb2f0bf156cc26b1d6bff6c120b47b696cf39b34fb88bfb964"
+    },
+    {
+      "path": "tools/interactive_api.py",
+      "bytes": 46394,
+      "sha256": "028b2e8d8bef0f81ab82cfa120a107978c2327b5a8ac7efacfc59b71c410dbdb"
+    },
+    {
+      "path": "tools/interactive_worker.py",
+      "bytes": 7558,
+      "sha256": "9e4b620f670f1c7c8f9717ba8bbdf16e8e2afba39ee625fea0b9ae1fa2dcf31a"
+    },
+    {
+      "path": "tools/paired_statistics.py",
+      "bytes": 3816,
+      "sha256": "8d2aba20813851729cc635463fc76893055db069bacf8df81c5bfd80f39bf17d"
     },
     {
       "path": "tools/phase2_pair_identity.py",
@@ -1538,8 +1678,8 @@
     },
     {
       "path": "tools/prepare_public.py",
-      "bytes": 4890,
-      "sha256": "1ec2abfb0de77b535157f1ccea1306272e906379962902718bc17f346667cd8e"
+      "bytes": 5264,
+      "sha256": "38a01a989cf416c986d7e3fd8730d99d07e1efdb63f7be49522fe9d6496b0b38"
     },
     {
       "path": "tools/publish_github.py",
@@ -1600,6 +1740,11 @@
       "path": "tools/qc_tabular.py",
       "bytes": 4149,
       "sha256": "62f4001917dc9ec7fd882ba89fc51189e816d0e4f273724bbdd901aa7e798e54"
+    },
+    {
+      "path": "tools/rnafm_adapter.py",
+      "bytes": 17010,
+      "sha256": "7b23b6382d3d78896555366dda63a4ffbf8bd51aea999bae43957a6ac702bb49"
     },
     {
       "path": "tools/rnagym.py",

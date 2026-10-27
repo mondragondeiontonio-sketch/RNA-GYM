@@ -458,3 +458,33 @@ mRNABench and other sources do not imply affiliation or endorsement.
 [model-registry]: configs/model_adapter_registry.yaml
 [public-protocol]: docs/PUBLIC_PROTOCOL.md
 [issues]: https://github.com/mondragondeiontonio-sketch/RNA-GYM/issues
+
+
+## Native Python SDK — 原生接口与数据标签对账（2026-10-27）
+
+The primary API is local Python, **not OpenAI and not an HTTP client**.
+See [native SDK](docs/NATIVE_SDK.md) and
+[task/label audit](docs/DATASET_TASK_LABEL_AUDIT.md).
+The initial registry's NO flags are historical: local data/target evidence exists,
+but scientific admission, supported input contracts and formal ranking eligibility
+remain separate. No real assay scores are invented.
+
+```python
+from rna_gym import RNAHub, DatasetHub, RNABenchmark
+
+model = RNAHub.load("RNA-FM", device="cuda:0")
+embeddings = model.encode(
+    sequences=["AUGCUACGUACG", "GGCAUUACGU"],
+    layer="last", pooling="masked_mean",
+)
+runner = RNABenchmark(
+    dataset="mrl_sugimoto", protocol="frozen_mlp",
+    split="official", seed=42,
+)
+results = runner.evaluate(model)
+```
+
+Current `evaluate` correctly reports scientific HOLD with available label evidence,
+not a fake score. Dataset and capability rankings require compatible frozen panels,
+real admitted predictions, source independence and separate review. The HTTP console
+is optional legacy transport, not required by this SDK.

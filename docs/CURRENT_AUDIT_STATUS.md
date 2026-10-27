@@ -1,4 +1,24 @@
-# Current scientific audit — 2026-10-23
+# Current local continuation — 2026-10-27
+
+The real RNA-FM checkpoint and matched random architecture completed GPU-only
+unlabeled engineering checks on one allocated V100. A batch/length resource profile
+also executed. These are not real assay performance, scientific admission or a
+formal multi-seed benchmark. Local command/hash/resource evidence is retained in
+ignored runs; no weights, labels, human signatures or results were published.
+
+AP/MCC and paired group bootstrap now have synthetic boundary/reference tests.
+The frozen pilot entry still calls the unchanged human-reviewed admission gate.
+The shipped candidate remains HOLD. No real assay is enabled or added to a main
+leaderboard. T0021/T0022 retain their existing HOLD states.
+
+The environment exposes one GPU, not the two authorized in the current request.
+No allocation bypass, network download or remote Git operation occurred.
+The local working project lacks Git metadata; its historical public-release
+snapshot remains untouched. See local HANDOFF.md for evidence and resumption.
+
+---
+
+## Current scientific audit — 2026-10-23
 
 ## Verified scope, not scientific admission
 

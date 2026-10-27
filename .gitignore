@@ -40,3 +40,13 @@ docs/*
 # Public engineering documentation only; scientific audit narratives remain local.
 !docs/EVALUATION_PROTOCOL.md
 !docs/PHASE2_WEBSITE.md
+
+# Authenticated local API documentation; runtime secrets/artifacts stay in runs/.
+!docs/INTERACTIVE_API.md
+
+# Native SDK documentation and local build by-products.
+!docs/NATIVE_SDK.md
+!docs/DATASET_TASK_LABEL_AUDIT.md
+build/
+dist/
+*.egg-info/

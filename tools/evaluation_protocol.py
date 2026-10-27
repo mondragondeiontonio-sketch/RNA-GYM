@@ -462,8 +462,27 @@ def scalar_metrics(labels, predictions, problem):
     tp = sum(y == 1 and p == 1 for y, p in zip(labels, predicted))
     fp = sum(y == 0 and p == 1 for y, p in zip(labels, predicted))
     fn = sum(y == 1 and p == 0 for y, p in zip(labels, predicted))
+    tn = sum(y == 0 and p == 0 for y, p in zip(labels, predicted))
     positives = sum(labels)
     negatives = n - positives
+    # Non-interpolated AP: equal scores enter together at a single threshold.
+    # This is not trapezoidal PR-AUC, and cannot depend on tie row ordering.
+    ap = None
+    if positives:
+        ranked = sorted(zip(predictions, labels), reverse=True)
+        seen, true, area, start = 0, 0, 0.0, 0
+        while start < n:
+            end = start + 1
+            while end < n and ranked[end][0] == ranked[start][0]:
+                end += 1
+            added = sum(y for _, y in ranked[start:end])
+            true += added
+            seen += end - start
+            area += (added / positives) * (true / seen)
+            start = end
+        ap = area
+    mcc_denominator = math.sqrt((tp + fp) * (tp + fn) * (tn + fp) * (tn + fn))
+    mcc = (tp * tn - fp * fn) / mcc_denominator if mcc_denominator else None
     auc = None
     if positives and negatives:
         ranks = _ranks(predictions)
@@ -472,7 +491,14 @@ def scalar_metrics(labels, predictions, problem):
     epsilon = 1e-15
     return {"n": n, "accuracy": sum(y == p for y, p in zip(labels, predicted)) / n,
             "f1": 2 * tp / (2 * tp + fp + fn) if 2 * tp + fp + fn else None,
-            "auroc": auc,
+            "auroc": auc, "average_precision": ap, "mcc": mcc,
+            "positive_class": 1,
+            "average_precision_definition": "NON_INTERPOLATED_SUM_DELTA_RECALL_TIMES_PRECISION_TIES_GROUPED",
+            "undefined_reasons": {
+                key: reason for key, value, reason in (
+                    ("auroc", auc, "SINGLE_OBSERVED_CLASS"),
+                    ("average_precision", ap, "NO_POSITIVE_LABELS"),
+                    ("mcc", mcc, "ZERO_CONFUSION_MARGIN")) if value is None},
             "brier": statistics.mean((y - p) ** 2 for y, p in zip(labels, predictions)),
             "log_loss": -statistics.mean(y * math.log(max(epsilon, min(1 - epsilon, p))) +
                 (1 - y) * math.log(1 - max(epsilon, min(1 - epsilon, p)))
@@ -753,6 +779,8 @@ def adapter_plan(model_id, track, registry_path=None):
             "package_discovery_only": {name: importlib.util.find_spec(name) is not None
                                        for name in model.get("python_modules", [])},
             "metadata_evidence_status": model["metadata_evidence_status"],
+            "plan_scope": "LEGACY_METADATA_ONLY_NO_CHECKPOINT_MANIFEST_ARGUMENT",
+            "bounded_local_adapter": model.get("bounded_local_adapter"),
             "unresolved_requirements": model["unresolved_requirements"]}
 
 

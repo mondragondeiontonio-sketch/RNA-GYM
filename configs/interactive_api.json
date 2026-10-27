@@ -1,0 +1,21 @@
+{
+  "schema_version": "rna_gym.interactive_api_config.v1",
+  "scope": "AUTHENTICATED_LOOPBACK_HTTP_NO_ADMISSION_OVERRIDE",
+  "cpu_python": ".venv-qc/bin/python",
+  "gpu_environment_record": "runs/20261027_gpu_continuation/environment_gpu.json",
+  "model_manifest": "runs/20261027_gpu_continuation/model_manifest.json",
+  "gpu_devices": ["cuda:0"],
+  "gpu_stage_wall_seconds_cap": 7200,
+  "new_output_bytes_cap": 5000000000,
+  "task_bindings": {
+    "T0017": {
+      "config": "configs/rnafm_frozen_pilot.json",
+      "input": null,
+      "splits": null
+    }
+  },
+  "default_assay_admission": "HOLD",
+  "downloads_allowed": false,
+  "remote_publication_allowed": false,
+  "fm_cpu_fallback_allowed": false
+}

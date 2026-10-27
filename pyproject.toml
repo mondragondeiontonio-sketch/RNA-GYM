@@ -1,0 +1,16 @@
+[build-system]
+requires = ["setuptools>=61", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "rna-gym-local-sdk"
+version = "0.1.0"
+description = "Native RNAHub/RNABenchmark interface over the RNA Gym research checkout"
+requires-python = ">=3.10"
+dependencies = []
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["rna_gym*", "tools"]
+exclude = ["tests*", "runs*"]
+namespaces = false
