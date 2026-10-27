@@ -4,12 +4,12 @@
   "selection": "explicit metadata/code allowlist",
   "raw_and_experimental_observations_included": false,
   "original_audit_markdown_included": false,
-  "file_count": 353,
+  "file_count": 354,
   "files": [
     {
       "path": ".github/workflows/pages.yml",
-      "bytes": 2447,
-      "sha256": "17378ff5a977bed97d7344d85b054b63fa859ddfa39c8f7c54c63fcce2098668"
+      "bytes": 2581,
+      "sha256": "9b4c2b5eb0cc150b307650cc30c4c15a9d4acc3012e842c9ad97eee31c19a6b3"
     },
     {
       "path": ".gitignore",
@@ -23,8 +23,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 27276,
-      "sha256": "2c329f84321005a3abd3874b251510bc205a91624176a3b9f37d1af898b702b0"
+      "bytes": 18994,
+      "sha256": "f58da38dcecaa7e2a0688b9575dd159027de44a860fdfc7de712af6a6710ba19"
     },
     {
       "path": "configs/assay_schema_example.json",
@@ -1243,8 +1243,8 @@
     },
     {
       "path": "docs/NATIVE_SDK.md",
-      "bytes": 7341,
-      "sha256": "8c53e213dafaecaf7f3e868e872ac3286030df896a3de6b3f810907e94e7d77b"
+      "bytes": 9830,
+      "sha256": "62530a1b5a0c39d6bd9857c836aafed157726d143d2475da00b6d4f9647bc271"
     },
     {
       "path": "docs/PHASE2_WEBSITE.md",
@@ -1278,8 +1278,8 @@
     },
     {
       "path": "rna_gym/benchmarks.py",
-      "bytes": 12913,
-      "sha256": "66779f164ce30439bb03da4cee9683f45a32c690c32f8e3e9fa8425a4271290c"
+      "bytes": 13277,
+      "sha256": "bb7a1b296a0ef8b2199f2ec0ad393a04fdb0fc96a4d19b91f2da4a47d65672fc"
     },
     {
       "path": "rna_gym/datasets.py",
@@ -1288,8 +1288,8 @@
     },
     {
       "path": "rna_gym/models.py",
-      "bytes": 3461,
-      "sha256": "0f07732f3c5acd119418b7a5d7a3f945180ffdcaed01b31f0eb9299294cad7f6"
+      "bytes": 3542,
+      "sha256": "50732128745ec6193bf7a20c4149e2e37d8d242034b51b4fbf2b78e91197ff9c"
     },
     {
       "path": "rna_gym/protocols.py",
@@ -1313,8 +1313,8 @@
     },
     {
       "path": "site/assets/rna-gym-overview.svg",
-      "bytes": 3024,
-      "sha256": "e394ba4de73505b3216979c99083eac81682cf16b7856062dc4ff1f81bd353a5"
+      "bytes": 4635,
+      "sha256": "93f49f7ee0350fc51fa8b621a5226e19cbc2d53c8f49e9e32089d819082edca1"
     },
     {
       "path": "site/data/provenance.json",
@@ -1505,6 +1505,11 @@
       "path": "tests/test_scientific_audit.py",
       "bytes": 4011,
       "sha256": "3099d18fff78c9e83844ead7184e4d37e4242a298719db83817d94168763eae7"
+    },
+    {
+      "path": "tests/test_sdk_usability.py",
+      "bytes": 6202,
+      "sha256": "7b1226cb1b1e0ac8791a9baba318e353395bb409086153d83ee8c271ff424caa"
     },
     {
       "path": "tests/test_site.py",

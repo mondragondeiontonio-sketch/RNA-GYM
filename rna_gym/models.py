@@ -55,7 +55,8 @@ class RNAHub:
         if not isinstance(device,str) or not device.startswith('cuda:'):
             raise ModelUnavailableError('ALL_FM_FORWARD_REQUIRES_GPU_NO_CPU_FALLBACK')
         config=read_json(root/'configs/native_sdk.json')
-        path=Path(manifest) if manifest is not None else root/config['model_manifest']
+        path=Path(manifest).expanduser() if manifest is not None else Path(config['model_manifest'])
+        path=(path if path.is_absolute() else root/path).resolve()
         if not path.is_file():raise ModelUnavailableError('PINNED_LOCAL_MODEL_MANIFEST_MISSING_NO_DOWNLOAD')
         try:
             from tools.rnafm_adapter import RNAFMAdapter

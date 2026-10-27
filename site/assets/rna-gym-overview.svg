@@ -1,38 +1,64 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="344" viewBox="0 0 1120 344" role="img" aria-labelledby="title description">
-  <title id="title">RNA-Gym — From RNA data to biological understanding</title>
-  <desc id="description">An RNA stem-loop connects source evidence to reproducible evaluation. RNA-Gym is an open research platform under active scientific audit.</desc>
-  <rect width="1120" height="344" rx="20" fill="#12364f"/>
-  <path d="M800 0H1100Q1120 0 1120 20V324Q1120 344 1100 344H800Z" fill="#19465e"/>
-  <g fill="#9ed9df" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="700" letter-spacing="2.1">
-    <text x="48" y="49">OPEN RNA RESEARCH INFRASTRUCTURE</text>
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="380" viewBox="0 0 1120 380" role="img" aria-labelledby="title description">
+  <title id="title">RNA-Gym — Traceable RNA data, reproducible model evaluation</title>
+  <desc id="description">A folded RNA strand becomes an embedding grid. The native Python interface connects datasets, GPU encoding and controlled evaluation. Research infrastructure; no admitted assay scores are claimed.</desc>
+  <defs>
+    <pattern id="grid" width="28" height="28" patternUnits="userSpaceOnUse">
+      <path d="M28 0H0V28" fill="none" stroke="#ffffff" stroke-opacity="0.045"/>
+    </pattern>
+  </defs>
+  <rect width="1120" height="380" rx="18" fill="#163e5c"/>
+  <rect x="714" width="406" height="380" fill="url(#grid)"/>
+  <path d="M714 28V352" stroke="#3c627c"/>
+  <rect x="52" y="46" width="26" height="4" rx="2" fill="#f6c375"/>
+  <text x="91" y="52" fill="#c7dce9" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="700" letter-spacing="2">RNA FOUNDATION MODEL EVALUATION</text>
+  <text x="48" y="163" fill="#f6fafe" font-family="Arial,Helvetica,sans-serif" font-size="90" font-weight="700" letter-spacing="-3">RNA-Gym</text>
+  <text x="53" y="212" fill="#f6fafe" font-family="Arial,Helvetica,sans-serif" font-size="24">From RNA to reproducible evaluation.</text>
+  <text x="53" y="247" fill="#b6cedd" font-family="Arial,Helvetica,sans-serif" font-size="16">Traceable datasets. Local GPU models. Comparable protocols.</text>
+  <path d="M53 280H652" stroke="#3c627c"/>
+  <g font-family="monospace" font-size="16">
+    <text x="53" y="320" fill="#6dd3dc">DatasetHub</text>
+    <text x="199" y="320" fill="#6e91a9">/</text>
+    <text x="226" y="320" fill="#f6fafe">model.encode</text>
+    <text x="399" y="320" fill="#6e91a9">/</text>
+    <text x="426" y="320" fill="#f6c375">RNABenchmark</text>
   </g>
-  <text x="46" y="129" fill="#ffffff" font-family="Arial,Helvetica,sans-serif" font-size="72" font-weight="700" letter-spacing="-2">RNA-Gym</text>
-  <text x="49" y="174" fill="#e2f0f4" font-family="Arial,Helvetica,sans-serif" font-size="24">From RNA data to biological understanding.</text>
-  <text x="49" y="206" fill="#a9c7d4" font-family="Arial,Helvetica,sans-serif" font-size="16">Traceable assays. Reproducible evaluation. Better models.</text>
-  <g font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="700">
-    <rect x="49" y="252" width="139" height="34" rx="17" fill="#22566b"/>
-    <text x="69" y="274" fill="#d5f2f1">DATA + EVIDENCE</text>
-    <path d="M199 269H216M211 264L216 269 211 274" fill="none" stroke="#7baabf" stroke-width="2"/>
-    <rect x="228" y="252" width="146" height="34" rx="17" fill="#22566b"/>
-    <text x="248" y="274" fill="#d5f2f1">FAIR EVALUATION</text>
-    <path d="M385 269H402M397 264L402 269 397 274" fill="none" stroke="#7baabf" stroke-width="2"/>
-    <rect x="414" y="252" width="181" height="34" rx="17" fill="#22566b"/>
-    <text x="434" y="274" fill="#d5f2f1">BIOLOGICAL DISCOVERY</text>
-  </g>
+  <text x="53" y="351" fill="#91b3c9" font-family="Arial,Helvetica,sans-serif" font-size="11" letter-spacing="1.5">DATA IDENTITY FIRST. SCORES ONLY WHEN EVIDENCE IS READY.</text>
   <g fill="none" stroke-linecap="round" stroke-linejoin="round">
-    <path d="M843 270C862 270 875 258 875 238V140C875 106 859 105 859 85C859 61 878 48 905 48C932 48 951 61 951 85C951 105 935 106 935 140V238C935 258 948 270 967 270" stroke="#78c9ce" stroke-width="4"/>
-    <path d="M875 150H935M875 176H935M875 202H935M875 228H935" stroke="#86b6ca" stroke-width="2"/>
-    <path d="M888 69Q905 58 923 69" stroke="#e2b56a" stroke-width="3"/>
+    <path d="M768 263C792 263 800 246 800 223V157C800 125 781 126 781 103C781 76 802 61 830 61C858 61 879 76 879 103C879 126 860 125 860 157V223C860 246 868 263 890 263" stroke="#6dd3dc" stroke-width="4"/>
+    <path d="M800 160H860M800 183H860M800 206H860M800 229H860" stroke="#638ca6" stroke-width="2"/>
+    <path d="M813 83Q830 73 847 83" stroke="#f6c375" stroke-width="3"/>
+    <path d="M896 168H929M922 161L929 168 922 175" stroke="#91b3c9" stroke-width="2"/>
   </g>
-  <g fill="#d4f1ef" stroke="#19465e" stroke-width="3">
-    <circle cx="875" cy="150" r="7"/><circle cx="935" cy="150" r="7"/>
-    <circle cx="875" cy="176" r="7"/><circle cx="935" cy="176" r="7"/>
-    <circle cx="875" cy="202" r="7"/><circle cx="935" cy="202" r="7"/>
-    <circle cx="875" cy="228" r="7"/><circle cx="935" cy="228" r="7"/>
-    <circle cx="859" cy="85" r="7"/><circle cx="951" cy="85" r="7"/>
-    <circle cx="843" cy="270" r="7"/><circle cx="967" cy="270" r="7"/>
+  <g stroke="#163e5c" stroke-width="3">
+    <g fill="#c8f1f1">
+      <circle cx="800" cy="160" r="6"/><circle cx="860" cy="160" r="6"/>
+      <circle cx="800" cy="183" r="6"/><circle cx="860" cy="183" r="6"/>
+      <circle cx="800" cy="206" r="6"/><circle cx="860" cy="206" r="6"/>
+      <circle cx="800" cy="229" r="6"/><circle cx="860" cy="229" r="6"/>
+    </g>
+    <g fill="#f6c375"><circle cx="781" cy="103" r="6"/><circle cx="879" cy="103" r="6"/></g>
   </g>
-  <g fill="#b9dce5" font-family="Arial,Helvetica,sans-serif" font-size="11" font-weight="700" text-anchor="middle" letter-spacing="1.5">
-    <text x="905" y="312">SEQUENCE · STRUCTURE · FUNCTION</text>
+  <g>
+    <rect x="950" y="111" width="19" height="19" rx="3" fill="#49758f"/>
+    <rect x="976" y="111" width="19" height="19" rx="3" fill="#6dd3dc"/>
+    <rect x="1002" y="111" width="19" height="19" rx="3" fill="#2e5a76"/>
+    <rect x="1028" y="111" width="19" height="19" rx="3" fill="#49758f"/>
+    <rect x="950" y="137" width="19" height="19" rx="3" fill="#a8e6e8"/>
+    <rect x="976" y="137" width="19" height="19" rx="3" fill="#2e5a76"/>
+    <rect x="1002" y="137" width="19" height="19" rx="3" fill="#49758f"/>
+    <rect x="1028" y="137" width="19" height="19" rx="3" fill="#6dd3dc"/>
+    <rect x="950" y="163" width="19" height="19" rx="3" fill="#2e5a76"/>
+    <rect x="976" y="163" width="19" height="19" rx="3" fill="#49758f"/>
+    <rect x="1002" y="163" width="19" height="19" rx="3" fill="#f6c375"/>
+    <rect x="1028" y="163" width="19" height="19" rx="3" fill="#49758f"/>
+    <rect x="950" y="189" width="19" height="19" rx="3" fill="#6dd3dc"/>
+    <rect x="976" y="189" width="19" height="19" rx="3" fill="#a8e6e8"/>
+    <rect x="1002" y="189" width="19" height="19" rx="3" fill="#49758f"/>
+    <rect x="1028" y="189" width="19" height="19" rx="3" fill="#2e5a76"/>
   </g>
+  <g fill="#b6cedd" font-family="Arial,Helvetica,sans-serif" font-size="11" font-weight="700" letter-spacing="1.5" text-anchor="middle">
+    <text x="830" y="305">RNA SEQUENCE</text>
+    <text x="998" y="250">EMBEDDINGS</text>
+  </g>
+  <text x="916" y="350" fill="#91b3c9" font-family="Arial,Helvetica,sans-serif" font-size="12" text-anchor="middle">ENCODE LOCALLY · EVALUATE FAIRLY</text>
 </svg>

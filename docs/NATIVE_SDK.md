@@ -8,7 +8,10 @@ HTTP 服务、网络请求或 API key**。先前 HTTP 控制台降为可选传�
 ```python
 from rna_gym import RNAHub, DatasetHub, RNABenchmark
 
-model = RNAHub.load("RNA-FM", device="cuda:0")
+# Supply this reviewed local manifest yourself; it is not shipped or downloaded.
+model = RNAHub.load(
+    "RNA-FM", manifest="runs/local/rnafm_manifest.json", device="cuda:0",
+)
 embeddings = model.encode(
     sequences=["AUGCUACGUACG", "GGCAUUACGU"],
     layer="last",
@@ -31,12 +34,36 @@ print(results.as_dict())
 
 ## 环境和本地资产
 
+### 公开克隆不是已经配置好的模型节点
+
+公开仓库只有代码和 registry，不含权重、上游模型源码、原始观察或本机 pinned manifest。
+从 checkout 可直接 `DatasetHub()` / `RNAHub.list()` 查看 metadata，不需 GPU、HTTP 或 key。
+只有已有的已审核模型节点才能使用默认 manifest；新机器请显式传 `manifest=`。
+相对 manifest 路径以 `root=` / `RNA_GYM_ROOT` / checkout 为基准，不随工作目录漂移；
+绝对路径保持不变。缺失时明确报 `PINNED_LOCAL_MODEL_MANIFEST_MISSING_NO_DOWNLOAD`。
+
+本地 manifest 的关键字段由 `tools/rnafm_adapter.py` 校验：
+
+| 字段 | 要求 |
+|---|---|
+| `model_id` / `dtype` | `RNA-FM` / `float32` |
+| `source_root` / `source_tree_sha256` | 已审阅的本地 `fm` 源码根与源码树 hash |
+| `checkpoint` / `checkpoint_sha256` | 具体本地 checkpoint 与字节 SHA256 |
+| `model_card` / `model_card_sha256` | 实际模型卡与字节 SHA256，保留上游许可声明 |
+| `rights_scope` | 必须来自真实本地研究授权；不是自动签署许可或再分发授权 |
+
+manifest 内的资产路径应使用本机绝对路径；不要复制发布者的私有路径、补猜 hash 或
+许可。具体 checkpoint、源码、模型卡、访问权利与 CUDA 环境全部匹配后才可加载。
+所有 FM forward 必须在 GPU；纯软件契约测试不代表 GPU 或真实 assay 证据。
+
+### 已验证节点与安装
+
 默认读取本节点既有 pinned model manifest；所有 FM forward 强制 CUDA，CPU 不作
 fallback。请选择已验证的 `mrna-core-cu124` 环境。当前通用 QC venv 的 Torch 2.13
 对本节点驱动出现 CUDA 兼容警告；它可做 CPU 软件测试，不是本轮模型推理环境。
 本轮真实 FM 使用既有 Torch 2.5.1/CUDA 12.4 环境，没有安装/下载或修改驱动。
 
-源码目录可直接 import。离线打包安装可使用：
+源码目录可直接 import。环境已具备 `setuptools>=61` 和 `wheel` 时，离线安装可使用：
 
 ```bash
 python -m pip install --no-deps --no-build-isolation -e .
@@ -102,6 +129,18 @@ non-interpolated AP；undefined 不补零。`seed=42` 原样记录，不替换�
 
 当前没有 admitted assay；head 和排名数学的合成契约测试不等于真实数据模型成绩。
 可用标签的数据仍需补齐原 assay/单位、使用权利、split/group 审查及真实人审。
+
+## 输出目录与状态语义
+
+`RNABenchmark(output="runs/pilots/mrl", ...)` 将路径解析为 checkout 下的目录；
+相对路径不依赖 shell 的 cwd，显式绝对路径也必须在该 checkout 的 `runs/` 内。
+`site/`、`data/`、外部路径、`..` 越界和 symlink 越界在执行前拒绝，避免逐样本预测被
+误写到公开目录。默认不指定 `output` 时仍使用 ignored `runs/native_sdk_evaluations/`。
+`BenchmarkResults.save(path)` 是调用者显式导出摘要的操作，不会自动公开任何文件。
+
+汇总状态不把工程失败冒充科学阻塞：全部执行为 `EXECUTED`；有成功和未完成项为
+`PARTIAL`；没有成功且存在失败为 `FAILED`；全部不适用为 `NOT_APPLICABLE`；其余
+未执行情况为 `BLOCKED`。逐任务 `runs` 始终保留各自状态和原因，不删除失败分母。
 
 ## 两类排名，不是异质任务总分
 

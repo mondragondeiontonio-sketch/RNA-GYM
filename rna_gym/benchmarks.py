@@ -14,7 +14,9 @@ class BenchmarkResults:
     def status(self):
         if self.runs and all(r['status']=='EXECUTED' for r in self.runs):return 'EXECUTED'
         if self.runs and all(r['status']=='NOT_APPLICABLE' for r in self.runs):return 'NOT_APPLICABLE'
-        return 'PARTIAL' if any(r['status']=='EXECUTED' for r in self.runs) else 'BLOCKED'
+        if any(r['status']=='EXECUTED' for r in self.runs):return 'PARTIAL'
+        if any(r['status']=='FAILED' for r in self.runs):return 'FAILED'
+        return 'BLOCKED'
     def as_dict(self):return {'schema_version':'rna_gym.native_benchmark_results.v1','status':self.status,'runs':self.runs,'formal_leaderboard_eligible':False}
     def save(self,path):
         from tools.evaluation_protocol import write_immutable
@@ -32,7 +34,13 @@ class RNABenchmark:
         self.dataset_ids=self.hub.resolve(dataset);self.dataset_name=dataset
         self.protocol,self.split,self.seed=protocol,split,seed
         self.target,self.label_budget,self.batch_size=target,label_budget,batch_size
-        self.output=Path(output) if output else None
+        self.output=None
+        if output is not None:
+            path=Path(output).expanduser()
+            path=(path if path.is_absolute() else self.root/path).resolve()
+            if not path.is_relative_to(self.root/'runs'):
+                raise ValueError('OUTPUT_MUST_BE_INSIDE_CHECKOUT_RUNS')
+            self.output=path
 
     def inspect(self):
         return {'dataset':self.dataset_name,'task_ids':list(self.dataset_ids),
