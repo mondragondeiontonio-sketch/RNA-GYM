@@ -50,3 +50,6 @@ docs/*
 build/
 dist/
 *.egg-info/
+
+# Public task allocation view; does not contain assay/sample audit records.
+!docs/TASK_WORKSTREAMS.md

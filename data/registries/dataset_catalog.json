@@ -1,6 +1,8 @@
 {
+  "artifact_identity": "asset_id+source_sha256-v1",
   "assets": [
     {
+      "artifact_uid": "EUKA_DOWNSTREAM_ASSEMBLED@sha256:ee30d1fa9ba04ecfec4fba120cd5d195afdda028d73bf0d4731a7ee6921a6339",
       "asset_id": "EUKA_DOWNSTREAM_ASSEMBLED",
       "count_scope": "PHYSICAL_FILE_VERSION_NOT_INDEPENDENT_ASSAY",
       "file_bytes": 499794774,
@@ -5198,12 +5200,14 @@
       "package_group_id": "EUKAUTR",
       "physical_file_present": true,
       "physical_file_size_matches_provenance": true,
+      "provenance_record_count": 1,
       "rights_decision": "ALLOW_PUBLIC_QUARANTINE_POC",
       "scientific_admission": false,
       "source_sha256": "ee30d1fa9ba04ecfec4fba120cd5d195afdda028d73bf0d4731a7ee6921a6339",
       "source_url": "https://zenodo.org/records/21790090"
     },
     {
+      "artifact_uid": "EUKA_DS_1f3569ef982b@sha256:d92db65cf4ce3b6d01a0378068f35dd5cf3816c4a1534590b4e321ffdcaea264",
       "asset_id": "EUKA_DS_1f3569ef982b",
       "count_scope": "PHYSICAL_FILE_VERSION_NOT_INDEPENDENT_ASSAY",
       "file_bytes": 104857600,
@@ -5213,12 +5217,14 @@
       "package_group_id": "EUKAUTR",
       "physical_file_present": true,
       "physical_file_size_matches_provenance": true,
+      "provenance_record_count": 1,
       "rights_decision": "ALLOW_PUBLIC_QUARANTINE_POC",
       "scientific_admission": false,
       "source_sha256": "d92db65cf4ce3b6d01a0378068f35dd5cf3816c4a1534590b4e321ffdcaea264",
       "source_url": "https://zenodo.org/records/21790090/files/downstream_data_20260813.tar.gz.part-00"
     },
     {
+      "artifact_uid": "EUKA_DS_3369d8645b6f@sha256:24d21a8c6427c2b878950e6e3cc120dfe691c0839f935bd869c9b180c10f4135",
       "asset_id": "EUKA_DS_3369d8645b6f",
       "count_scope": "PHYSICAL_FILE_VERSION_NOT_INDEPENDENT_ASSAY",
       "file_bytes": 98,
@@ -5228,12 +5234,14 @@
       "package_group_id": "EUKAUTR",
       "physical_file_present": true,
       "physical_file_size_matches_provenance": true,
+      "provenance_record_count": 1,
       "rights_decision": "ALLOW_PUBLIC_QUARANTINE_POC",
       "scientific_admission": false,
       "source_sha256": "24d21a8c6427c2b878950e6e3cc120dfe691c0839f935bd869c9b180c10f4135",
       "source_url": "https://zenodo.org/records/21790090/files/downstream_data_20260813.tar.gz.sha256"
     },
     {
+      "artifact_uid": "EUKA_DS_4ad49d0825bd@sha256:e2254e05eb84758af281aa5e800b470b16951633916df38a6031876f1ade36ef",
       "asset_id": "EUKA_DS_4ad49d0825bd",
       "count_scope": "PHYSICAL_FILE_VERSION_NOT_INDEPENDENT_ASSAY",
       "file_bytes": 104857600,
@@ -5243,12 +5251,14 @@
       "package_group_id": "EUKAUTR",
       "physical_file_present": true,
       "physical_file_size_matches_provenance": true,
+      "provenance_record_count": 1,
       "rights_decision": "ALLOW_PUBLIC_QUARANTINE_POC",
       "scientific_admission": false,
       "source_sha256": "e2254e05eb84758af281aa5e800b470b16951633916df38a6031876f1ade36ef",
       "source_url": "https://zenodo.org/records/21790090/files/downstream_data_20260813.tar.gz.part-03"
     },
     {
+      "artifact_uid": "EUKA_DS_4fa6b4edab94@sha256:8dd063f838f70579e2acc03b2378832793416e00e1bc63add42bdcc57fdd3f78",
       "asset_id": "EUKA_DS_4fa6b4edab94",
       "count_scope": "PHYSICAL_FILE_VERSION_NOT_INDEPENDENT_ASSAY",
       "file_bytes": 80364374,
@@ -5258,12 +5268,14 @@
       "package_group_id": "EUKAUTR",
       "physical_file_present": true,
       "physical_file_size_matches_provenance": true,
+      "provenance_record_count": 1,
       "rights_decision": "ALLOW_PUBLIC_QUARANTINE_POC",
       "scientific_admission": false,
       "source_sha256": "8dd063f838f70579e2acc03b2378832793416e00e1bc63add42bdcc57fdd3f78",
       "source_url": "https://zenodo.org/records/21790090/files/downstream_data_20260813.tar.gz.part-04"
     },
     {
+      "artifact_uid": "EUKA_DS_76bc8e21672d@sha256:d2b3cba8035705aa0d162724bbbe8c54f1c9f914bd34a83999b9819ecab8bead",
       "asset_id": "EUKA_DS_76bc8e21672d",
       "count_scope": "PHYSICAL_FILE_VERSION_NOT_INDEPENDENT_ASSAY",
       "file_bytes": 104857600,
@@ -5273,12 +5285,14 @@
       "package_group_id": "EUKAUTR",
       "physical_file_present": true,
       "physical_file_size_matches_provenance": true,
+      "provenance_record_count": 1,
       "rights_decision": "ALLOW_PUBLIC_QUARANTINE_POC",
       "scientific_admission": false,
       "source_sha256": "d2b3cba8035705aa0d162724bbbe8c54f1c9f914bd34a83999b9819ecab8bead",
       "source_url": "https://zenodo.org/records/21790090/files/downstream_data_20260813.tar.gz.part-02"
     },
     {
+      "artifact_uid": "EUKA_DS_b528cb53f982@sha256:bd26466dfd286373a9ff188aabda5afa2a4fa528c1355a350ff5b0b307f6ba3e",
       "asset_id": "EUKA_DS_b528cb53f982",
       "count_scope": "PHYSICAL_FILE_VERSION_NOT_INDEPENDENT_ASSAY",
       "file_bytes": 530,
@@ -5288,12 +5302,14 @@
       "package_group_id": "EUKAUTR",
       "physical_file_present": true,
       "physical_file_size_matches_provenance": true,
+      "provenance_record_count": 1,
       "rights_decision": "ALLOW_PUBLIC_QUARANTINE_POC",
       "scientific_admission": false,
       "source_sha256": "bd26466dfd286373a9ff188aabda5afa2a4fa528c1355a350ff5b0b307f6ba3e",
       "source_url": "https://zenodo.org/records/21790090/files/downstream_data_20260813_parts_SHA256SUMS.txt"
     },
     {
+      "artifact_uid": "EUKA_DS_de91cc8d69ad@sha256:e7c5ebe2133ad4dbaf1d4ac680bc5abccc5fa7b53f2ad28ff5767dcc54b74ec4",
       "asset_id": "EUKA_DS_de91cc8d69ad",
       "count_scope": "PHYSICAL_FILE_VERSION_NOT_INDEPENDENT_ASSAY",
       "file_bytes": 104857600,
@@ -5303,12 +5319,14 @@
       "package_group_id": "EUKAUTR",
       "physical_file_present": true,
       "physical_file_size_matches_provenance": true,
+      "provenance_record_count": 1,
       "rights_decision": "ALLOW_PUBLIC_QUARANTINE_POC",
       "scientific_admission": false,
       "source_sha256": "e7c5ebe2133ad4dbaf1d4ac680bc5abccc5fa7b53f2ad28ff5767dcc54b74ec4",
       "source_url": "https://zenodo.org/records/21790090/files/downstream_data_20260813.tar.gz.part-01"
     },
     {
+      "artifact_uid": "P0_MIR_HEJRET_TEST_ZENODO@sha256:42eb7e0644a097c7c0d3418242455780064df99d3da95fc43d6f53f972bd5b04",
       "asset_id": "P0_MIR_HEJRET_TEST_ZENODO",
       "count_scope": "PHYSICAL_FILE_VERSION_NOT_INDEPENDENT_ASSAY",
       "file_bytes": 221693,
@@ -5338,12 +5356,14 @@
       "package_group_id": "MIR_BENCH",
       "physical_file_present": true,
       "physical_file_size_matches_provenance": true,
+      "provenance_record_count": 1,
       "rights_decision": "ALLOW_PUBLIC_QUARANTINE_POC",
       "scientific_admission": false,
       "source_sha256": "42eb7e0644a097c7c0d3418242455780064df99d3da95fc43d6f53f972bd5b04",
       "source_url": "https://zenodo.org/records/20540907/files/AGO2_CLASH_Hejret2023_test.tsv.gz"
     },
     {
+      "artifact_uid": "P0_MIR_HEJRET_TRAIN_ZENODO@sha256:9125a81913383e360c1fd73e8096175f247de7c56ea3fc76f141a8b1880f1d91",
       "asset_id": "P0_MIR_HEJRET_TRAIN_ZENODO",
       "count_scope": "PHYSICAL_FILE_VERSION_NOT_INDEPENDENT_ASSAY",
       "file_bytes": 1793689,
@@ -5373,12 +5393,14 @@
       "package_group_id": "MIR_BENCH",
       "physical_file_present": true,
       "physical_file_size_matches_provenance": true,
+      "provenance_record_count": 1,
       "rights_decision": "ALLOW_PUBLIC_QUARANTINE_POC",
       "scientific_admission": false,
       "source_sha256": "9125a81913383e360c1fd73e8096175f247de7c56ea3fc76f141a8b1880f1d91",
       "source_url": "https://zenodo.org/records/20540907/files/AGO2_CLASH_Hejret2023_train.tsv.gz"
     },
     {
+      "artifact_uid": "P0_MIR_KLIMENTOVA_MIRROR@sha256:a5b4bb74075f1082038861d22acc5e32ec0a575c4f4c22c21d32a254e36fdf73",
       "asset_id": "P0_MIR_KLIMENTOVA_MIRROR",
       "count_scope": "PHYSICAL_FILE_VERSION_NOT_INDEPENDENT_ASSAY",
       "file_bytes": 202940,
@@ -5408,12 +5430,14 @@
       "package_group_id": "MIR_BENCH",
       "physical_file_present": true,
       "physical_file_size_matches_provenance": true,
+      "provenance_record_count": 1,
       "rights_decision": "ALLOW_PUBLIC_QUARANTINE_POC",
       "scientific_admission": false,
       "source_sha256": "a5b4bb74075f1082038861d22acc5e32ec0a575c4f4c22c21d32a254e36fdf73",
       "source_url": "https://huggingface.co/datasets/genomic-benchmarks/miRBench/resolve/f3ef23e519a2c120bddb9e1a233f4636b751662a/v1/AGO2_eCLIP_Klimentova2022/AGO2_eCLIP_Klimentova2022_test.csv.gz"
     },
     {
+      "artifact_uid": "P0_MIR_KLIMENTOVA_ZENODO@sha256:35ec1491fdc9b4fde2e34939d337dec98b213b02bb93cb712fa64dff9ef47383",
       "asset_id": "P0_MIR_KLIMENTOVA_ZENODO",
       "count_scope": "PHYSICAL_FILE_VERSION_NOT_INDEPENDENT_ASSAY",
       "file_bytes": 200803,
@@ -5443,12 +5467,14 @@
       "package_group_id": "MIR_BENCH",
       "physical_file_present": true,
       "physical_file_size_matches_provenance": true,
+      "provenance_record_count": 1,
       "rights_decision": "ALLOW_PUBLIC_QUARANTINE_POC",
       "scientific_admission": false,
       "source_sha256": "35ec1491fdc9b4fde2e34939d337dec98b213b02bb93cb712fa64dff9ef47383",
       "source_url": "https://zenodo.org/records/20540907/files/AGO2_eCLIP_Klimentova2022_test.tsv.gz"
     },
     {
+      "artifact_uid": "P0_MIR_MANAKOV_LEFTOUT_ZENODO@sha256:cdfa6ca2c03bda84d791fcde822d6c7d01300c9e8abb8dcc58650183bd099774",
       "asset_id": "P0_MIR_MANAKOV_LEFTOUT_ZENODO",
       "count_scope": "PHYSICAL_FILE_VERSION_NOT_INDEPENDENT_ASSAY",
       "file_bytes": 4413597,
@@ -5478,12 +5504,14 @@
       "package_group_id": "MIR_BENCH",
       "physical_file_present": true,
       "physical_file_size_matches_provenance": true,
+      "provenance_record_count": 1,
       "rights_decision": "ALLOW_PUBLIC_QUARANTINE_POC",
       "scientific_admission": false,
       "source_sha256": "cdfa6ca2c03bda84d791fcde822d6c7d01300c9e8abb8dcc58650183bd099774",
       "source_url": "https://zenodo.org/records/20540907/files/AGO2_eCLIP_Manakov2022_leftout.tsv.gz"
     },
     {
+      "artifact_uid": "P0_MIR_MANAKOV_TEST_ZENODO@sha256:266edb3b5f93063c25f8aa541b020d2f3f5242d48e12fb586e3f6875a52a36e7",
       "asset_id": "P0_MIR_MANAKOV_TEST_ZENODO",
       "count_scope": "PHYSICAL_FILE_VERSION_NOT_INDEPENDENT_ASSAY",
       "file_bytes": 71574492,
@@ -5513,12 +5541,14 @@
       "package_group_id": "MIR_BENCH",
       "physical_file_present": true,
       "physical_file_size_matches_provenance": true,
+      "provenance_record_count": 1,
       "rights_decision": "ALLOW_PUBLIC_QUARANTINE_POC",
       "scientific_admission": false,
       "source_sha256": "266edb3b5f93063c25f8aa541b020d2f3f5242d48e12fb586e3f6875a52a36e7",
       "source_url": "https://zenodo.org/records/20540907/files/AGO2_eCLIP_Manakov2022_test.tsv.gz"
     },
     {
+      "artifact_uid": "P0_MIR_MANAKOV_TRAIN_ZENODO@sha256:839b41122b8f7e9a5bef417c14fa8dda644c9af0767b63d4578acfdfbbd730ee",
       "asset_id": "P0_MIR_MANAKOV_TRAIN_ZENODO",
       "count_scope": "PHYSICAL_FILE_VERSION_NOT_INDEPENDENT_ASSAY",
       "file_bytes": 554240046,
@@ -5548,12 +5578,14 @@
       "package_group_id": "MIR_BENCH",
       "physical_file_present": true,
       "physical_file_size_matches_provenance": true,
+      "provenance_record_count": 1,
       "rights_decision": "ALLOW_PUBLIC_QUARANTINE_POC",
       "scientific_admission": false,
       "source_sha256": "839b41122b8f7e9a5bef417c14fa8dda644c9af0767b63d4578acfdfbbd730ee",
       "source_url": "https://zenodo.org/records/20540907/files/AGO2_eCLIP_Manakov2022_train.tsv.gz"
     },
     {
+      "artifact_uid": "HF_e4aab5fbe6c20f5f3ba0@sha256:014a247c55a69b4beaccddd6e722109337eae9153816ce9c8b7bba2cf3864fb6",
       "asset_id": "HF_e4aab5fbe6c20f5f3ba0",
       "count_scope": "PHYSICAL_FILE_VERSION_NOT_INDEPENDENT_ASSAY",
       "file_bytes": 10017932,
@@ -5601,12 +5633,14 @@
       "package_group_id": "MRNA_GO_MF",
       "physical_file_present": true,
       "physical_file_size_matches_provenance": true,
+      "provenance_record_count": 1,
       "rights_decision": "ALLOW_PUBLIC_QUARANTINE_POC",
       "scientific_admission": false,
       "source_sha256": "014a247c55a69b4beaccddd6e722109337eae9153816ce9c8b7bba2cf3864fb6",
       "source_url": "https://huggingface.co/datasets/morrislab/go-mf/resolve/8c2127cdeab6a7cd22087e9595581b771fb66ae0/go_dna_dataset_mf.parquet"
     },
     {
+      "artifact_uid": "HF_65af1afc977fef855c33@sha256:7f70db03a17fd7b2ebe0cf51f728390873aaec883f33cec91031531984cc7372",
       "asset_id": "HF_65af1afc977fef855c33",
       "count_scope": "PHYSICAL_FILE_VERSION_NOT_INDEPENDENT_ASSAY",
       "file_bytes": 26115983,
@@ -5764,12 +5798,14 @@
       "package_group_id": "MRNA_MIRNA_TARGET",
       "physical_file_present": true,
       "physical_file_size_matches_provenance": true,
+      "provenance_record_count": 1,
       "rights_decision": "ALLOW_PUBLIC_QUARANTINE_POC",
       "scientific_admission": false,
       "source_sha256": "7f70db03a17fd7b2ebe0cf51f728390873aaec883f33cec91031531984cc7372",
       "source_url": "https://huggingface.co/datasets/morrislab/mirna-target/resolve/9fd768e7073d0c8a4f503009c8eb7fda7c12aaa1/mirna_preprocessed.parquet"
     },
     {
+      "artifact_uid": "HF_34f6495ae6d93242ca39@sha256:770254c1d84e9479aee1ef43780dd0cb4036358f855505d1822211d3d72e2982",
       "asset_id": "HF_34f6495ae6d93242ca39",
       "count_scope": "PHYSICAL_FILE_VERSION_NOT_INDEPENDENT_ASSAY",
       "file_bytes": 64463,
@@ -5819,12 +5855,14 @@
       "package_group_id": "MRNA_MRL_HL_LBKWK",
       "physical_file_present": true,
       "physical_file_size_matches_provenance": true,
+      "provenance_record_count": 1,
       "rights_decision": "ALLOW_PUBLIC_QUARANTINE_POC",
       "scientific_admission": false,
       "source_sha256": "770254c1d84e9479aee1ef43780dd0cb4036358f855505d1822211d3d72e2982",
       "source_url": "https://huggingface.co/datasets/morrislab/mrl-hl-lbkwk/resolve/144d6d835fc59a6953a9c8f31b1ffc16a47dd04d/mrl-hl-lbkwk.parquet"
     },
     {
+      "artifact_uid": "PERSIST_CONSTRUCTS@sha256:7e0fc06593b2fc602d33a373b5fb1af9547991318b479351c7342eb4701049a4",
       "asset_id": "PERSIST_CONSTRUCTS",
       "count_scope": "PHYSICAL_FILE_VERSION_NOT_INDEPENDENT_ASSAY",
       "file_bytes": 769465,
@@ -5834,12 +5872,14 @@
       "package_group_id": "MRNA_MRL_HL_LBKWK",
       "physical_file_present": true,
       "physical_file_size_matches_provenance": true,
+      "provenance_record_count": 1,
       "rights_decision": "ALLOW_PUBLIC_QUARANTINE_POC",
       "scientific_admission": false,
       "source_sha256": "7e0fc06593b2fc602d33a373b5fb1af9547991318b479351c7342eb4701049a4",
       "source_url": "https://raw.githubusercontent.com/barnalab/persist/8922dc115acf0c3c803b15fbc97e67edce805c36/analysis/constructs.tsv"
     },
     {
+      "artifact_uid": "PERSIST_COUNTS@sha256:157bfb5b462674b8118111426febb5e7cf5727585f04305968b037636638c59d",
       "asset_id": "PERSIST_COUNTS",
       "count_scope": "PHYSICAL_FILE_VERSION_NOT_INDEPENDENT_ASSAY",
       "file_bytes": 101103,
@@ -5849,12 +5889,14 @@
       "package_group_id": "MRNA_MRL_HL_LBKWK",
       "physical_file_present": true,
       "physical_file_size_matches_provenance": true,
+      "provenance_record_count": 1,
       "rights_decision": "ALLOW_PUBLIC_QUARANTINE_POC",
       "scientific_admission": false,
       "source_sha256": "157bfb5b462674b8118111426febb5e7cf5727585f04305968b037636638c59d",
       "source_url": "https://raw.githubusercontent.com/barnalab/persist/8922dc115acf0c3c803b15fbc97e67edce805c36/analysis/joined.txt"
     },
     {
+      "artifact_uid": "PERSIST_SAMPLES@sha256:6925391095e00acab7d860778b405dbb2b21b890bd61f03da03b9e31b3af59ba",
       "asset_id": "PERSIST_SAMPLES",
       "count_scope": "PHYSICAL_FILE_VERSION_NOT_INDEPENDENT_ASSAY",
       "file_bytes": 6327,
@@ -5864,12 +5906,14 @@
       "package_group_id": "MRNA_MRL_HL_LBKWK",
       "physical_file_present": true,
       "physical_file_size_matches_provenance": true,
+      "provenance_record_count": 1,
       "rights_decision": "ALLOW_PUBLIC_QUARANTINE_POC",
       "scientific_admission": false,
       "source_sha256": "6925391095e00acab7d860778b405dbb2b21b890bd61f03da03b9e31b3af59ba",
       "source_url": "https://raw.githubusercontent.com/barnalab/persist/8922dc115acf0c3c803b15fbc97e67edce805c36/analysis/samples.csv"
     },
     {
+      "artifact_uid": "HF_214a7f32ac346e79b8b1@sha256:20cbcdb5104bd950e84973a69f003e28a1bf67dc43f36687621d7263b533e1ec",
       "asset_id": "HF_214a7f32ac346e79b8b1",
       "count_scope": "PHYSICAL_FILE_VERSION_NOT_INDEPENDENT_ASSAY",
       "file_bytes": 12354228,
@@ -5913,12 +5957,14 @@
       "package_group_id": "MRNA_MRL_SUGIMOTO",
       "physical_file_present": true,
       "physical_file_size_matches_provenance": true,
+      "provenance_record_count": 1,
       "rights_decision": "ALLOW_PUBLIC_QUARANTINE_POC",
       "scientific_admission": false,
       "source_sha256": "20cbcdb5104bd950e84973a69f003e28a1bf67dc43f36687621d7263b533e1ec",
       "source_url": "https://huggingface.co/datasets/morrislab/mrl-sugimoto/resolve/4d7404895e8ca1143d769e7f445972bf7ef4b51d/mrl-sugimoto.parquet"
     },
     {
+      "artifact_uid": "HOMOLOGENE_13910050@sha256:7f88f7ccea03ca144237caa00e0514da6ebc5ea1a7349373b894d8d6d745e521",
       "asset_id": "HOMOLOGENE_13910050",
       "count_scope": "PHYSICAL_FILE_VERSION_NOT_INDEPENDENT_ASSAY",
       "file_bytes": 708362,
@@ -5928,12 +5974,14 @@
       "package_group_id": "MRNA_MRL_SUGIMOTO",
       "physical_file_present": true,
       "physical_file_size_matches_provenance": true,
+      "provenance_record_count": 1,
       "rights_decision": "ALLOW_PUBLIC_QUARANTINE_POC",
       "scientific_admission": false,
       "source_sha256": "7f88f7ccea03ca144237caa00e0514da6ebc5ea1a7349373b894d8d6d745e521",
       "source_url": "https://zenodo.org/api/records/13910050/files/homology_maps_homologene.zip/content"
     },
     {
+      "artifact_uid": "ORTHRUS_MRL_ISOFORM_14708163@sha256:74663d0f260ccdccfd25bf56bc680d7e0b0e15034d2edb28702fa1aa82aa63fa",
       "asset_id": "ORTHRUS_MRL_ISOFORM_14708163",
       "count_scope": "PHYSICAL_FILE_VERSION_NOT_INDEPENDENT_ASSAY",
       "file_bytes": 18593205,
@@ -5961,12 +6009,14 @@
       "package_group_id": "MRNA_MRL_SUGIMOTO",
       "physical_file_present": true,
       "physical_file_size_matches_provenance": true,
+      "provenance_record_count": 1,
       "rights_decision": "ALLOW_PUBLIC_QUARANTINE_POC",
       "scientific_admission": false,
       "source_sha256": "74663d0f260ccdccfd25bf56bc680d7e0b0e15034d2edb28702fa1aa82aa63fa",
       "source_url": "https://zenodo.org/api/records/14708163/files/mrl_isoform_resolved.npz/content"
     },
     {
+      "artifact_uid": "HF_c0c519d5b8ddc1e04a15@sha256:41bb0d2f33401a57735c4b40c42a025441cc341fa18b4cf3fe85740dcd21b0de",
       "asset_id": "HF_c0c519d5b8ddc1e04a15",
       "count_scope": "PHYSICAL_FILE_VERSION_NOT_INDEPENDENT_ASSAY",
       "file_bytes": 17022109,
@@ -6014,12 +6064,14 @@
       "package_group_id": "MRNA_PROTEIN_LOCALIZATION",
       "physical_file_present": true,
       "physical_file_size_matches_provenance": true,
+      "provenance_record_count": 1,
       "rights_decision": "ALLOW_PUBLIC_QUARANTINE_POC",
       "scientific_admission": false,
       "source_sha256": "41bb0d2f33401a57735c4b40c42a025441cc341fa18b4cf3fe85740dcd21b0de",
       "source_url": "https://huggingface.co/datasets/morrislab/protein-localization/resolve/04d82a6d681c6fa54bec85504e3db09135a852a2/prot-loc.parquet"
     },
     {
+      "artifact_uid": "HF_447d974951a3e6016555@sha256:0801a85464e57574cbd179e7ef1a84a7c09798bd8a673507f49713ba8856a0ed",
       "asset_id": "HF_447d974951a3e6016555",
       "count_scope": "PHYSICAL_FILE_VERSION_NOT_INDEPENDENT_ASSAY",
       "file_bytes": 23599081,
@@ -6063,12 +6115,14 @@
       "package_group_id": "MRNA_RNAHL_SALUKI_HUMAN",
       "physical_file_present": true,
       "physical_file_size_matches_provenance": true,
+      "provenance_record_count": 1,
       "rights_decision": "ALLOW_PUBLIC_QUARANTINE_POC",
       "scientific_admission": false,
       "source_sha256": "0801a85464e57574cbd179e7ef1a84a7c09798bd8a673507f49713ba8856a0ed",
       "source_url": "https://huggingface.co/datasets/morrislab/rnahl-saluki-human/resolve/b2ed8742f21349b293759db554534bf170759251/rnahl-saluki-human.parquet"
     },
     {
+      "artifact_uid": "HF_99fb91290cca6ab46059@sha256:0b91c1d94eb1636c42884f3e893cff657e22ed836ba79a5e423a09746660c100",
       "asset_id": "HF_99fb91290cca6ab46059",
       "count_scope": "PHYSICAL_FILE_VERSION_NOT_INDEPENDENT_ASSAY",
       "file_bytes": 22482206,
@@ -6112,12 +6166,14 @@
       "package_group_id": "MRNA_RNAHL_SALUKI_MOUSE",
       "physical_file_present": true,
       "physical_file_size_matches_provenance": true,
+      "provenance_record_count": 1,
       "rights_decision": "ALLOW_PUBLIC_QUARANTINE_POC",
       "scientific_admission": false,
       "source_sha256": "0b91c1d94eb1636c42884f3e893cff657e22ed836ba79a5e423a09746660c100",
       "source_url": "https://huggingface.co/datasets/morrislab/rnahl-saluki-mouse/resolve/032d07a948794118bdacf282a1d9e075c530f40f/rnahl-saluki-mouse.parquet"
     },
     {
+      "artifact_uid": "HF_b539a051ae8e1493083e@sha256:79b4844d5a4a150fc405263badc1b1f175124a374a2650afd809c48a65e696b0",
       "asset_id": "HF_b539a051ae8e1493083e",
       "count_scope": "PHYSICAL_FILE_VERSION_NOT_INDEPENDENT_ASSAY",
       "file_bytes": 166504,
@@ -6161,12 +6217,14 @@
       "package_group_id": "MRNA_UTR_VARIANTS_BOHN",
       "physical_file_present": true,
       "physical_file_size_matches_provenance": true,
+      "provenance_record_count": 1,
       "rights_decision": "ALLOW_PUBLIC_QUARANTINE_POC",
       "scientific_admission": false,
       "source_sha256": "79b4844d5a4a150fc405263badc1b1f175124a374a2650afd809c48a65e696b0",
       "source_url": "https://huggingface.co/datasets/morrislab/utr-variants-bohn/resolve/d6c15d0fd22980e5c4d568cf8b0899fc92cf5b5f/utr-variants-bohn-utr5.parquet"
     },
     {
+      "artifact_uid": "HF_db1de4a6948422fb33cb@sha256:7625ae3ee627628da709bf7dc9b370b92371d74308859133ff7bda74d96aff52",
       "asset_id": "HF_db1de4a6948422fb33cb",
       "count_scope": "PHYSICAL_FILE_VERSION_NOT_INDEPENDENT_ASSAY",
       "file_bytes": 97688,
@@ -6210,12 +6268,14 @@
       "package_group_id": "MRNA_UTR_VARIANTS_BOHN",
       "physical_file_present": true,
       "physical_file_size_matches_provenance": true,
+      "provenance_record_count": 1,
       "rights_decision": "ALLOW_PUBLIC_QUARANTINE_POC",
       "scientific_admission": false,
       "source_sha256": "7625ae3ee627628da709bf7dc9b370b92371d74308859133ff7bda74d96aff52",
       "source_url": "https://huggingface.co/datasets/morrislab/utr-variants-bohn/resolve/d6c15d0fd22980e5c4d568cf8b0899fc92cf5b5f/utr-variants-bohn-utr3.parquet"
     },
     {
+      "artifact_uid": "HF_27d2efecdb75b4a7307f@sha256:ff39c6b209b52ff175e4992682d4c0d49baeac0897b102f1cb02f2a4989511d2",
       "asset_id": "HF_27d2efecdb75b4a7307f",
       "count_scope": "PHYSICAL_FILE_VERSION_NOT_INDEPENDENT_ASSAY",
       "file_bytes": 3933465,
@@ -6259,12 +6319,14 @@
       "package_group_id": "MRNA_VEP_TRAITGYM_MRNA",
       "physical_file_present": true,
       "physical_file_size_matches_provenance": true,
+      "provenance_record_count": 1,
       "rights_decision": "ALLOW_PUBLIC_QUARANTINE_POC",
       "scientific_admission": false,
       "source_sha256": "ff39c6b209b52ff175e4992682d4c0d49baeac0897b102f1cb02f2a4989511d2",
       "source_url": "https://huggingface.co/datasets/morrislab/vep-traitgym-mrna/resolve/a085525d5f6cadb50122c3b6b5b8e5e63c2a868a/vep-traitgym-mendelian.parquet"
     },
     {
+      "artifact_uid": "HF_3c84bb0847c9961fc6d4@sha256:ca856385dc2766827929ecb616abea9a2fadac38be984d29d0858bc53e122b01",
       "asset_id": "HF_3c84bb0847c9961fc6d4",
       "count_scope": "PHYSICAL_FILE_VERSION_NOT_INDEPENDENT_ASSAY",
       "file_bytes": 3082734,
@@ -6308,12 +6370,14 @@
       "package_group_id": "MRNA_VEP_TRAITGYM_MRNA",
       "physical_file_present": true,
       "physical_file_size_matches_provenance": true,
+      "provenance_record_count": 1,
       "rights_decision": "ALLOW_PUBLIC_QUARANTINE_POC",
       "scientific_admission": false,
       "source_sha256": "ca856385dc2766827929ecb616abea9a2fadac38be984d29d0858bc53e122b01",
       "source_url": "https://huggingface.co/datasets/morrislab/vep-traitgym-mrna/resolve/a085525d5f6cadb50122c3b6b5b8e5e63c2a868a/vep-traitgym-complex.parquet"
     },
     {
+      "artifact_uid": "RNA3DB_20251001_rna3db_jsons@sha256:d4996a5f78ffa0453f9b817d49cde85de4f8c038655d8699f6a1eadb10270a01",
       "asset_id": "RNA3DB_20251001_rna3db_jsons",
       "count_scope": "PHYSICAL_FILE_VERSION_NOT_INDEPENDENT_ASSAY",
       "file_bytes": 6522877,
@@ -6323,12 +6387,14 @@
       "package_group_id": "RNA3DB",
       "physical_file_present": true,
       "physical_file_size_matches_provenance": true,
+      "provenance_record_count": 1,
       "rights_decision": "ALLOW_PUBLIC_QUARANTINE_POC",
       "scientific_admission": false,
       "source_sha256": "d4996a5f78ffa0453f9b817d49cde85de4f8c038655d8699f6a1eadb10270a01",
       "source_url": "https://github.com/marcellszi/rna3db/releases/download/2025-10-01-incremental-release/rna3db-jsons.tar.gz"
     },
     {
+      "artifact_uid": "RNA3DB_20260105_rna3db_cmscans@sha256:53c323c61aef5b9bb72a88bc3980470a13d0f36d559e1bdaf5582173f0a3b751",
       "asset_id": "RNA3DB_20260105_rna3db_cmscans",
       "count_scope": "PHYSICAL_FILE_VERSION_NOT_INDEPENDENT_ASSAY",
       "file_bytes": 88160023,
@@ -6338,12 +6404,14 @@
       "package_group_id": "RNA3DB",
       "physical_file_present": true,
       "physical_file_size_matches_provenance": true,
+      "provenance_record_count": 1,
       "rights_decision": "ALLOW_PUBLIC_QUARANTINE_POC",
       "scientific_admission": false,
       "source_sha256": "53c323c61aef5b9bb72a88bc3980470a13d0f36d559e1bdaf5582173f0a3b751",
       "source_url": "https://github.com/marcellszi/rna3db/releases/download/2026-01-05-full-release/rna3db-cmscans.tar.gz"
     },
     {
+      "artifact_uid": "RNA3DB_20260105_rna3db_jsons@sha256:820ba611042ef3e4ec1de7d00e739eefcbf1f78df1452252cc002e369babae8b",
       "asset_id": "RNA3DB_20260105_rna3db_jsons",
       "count_scope": "PHYSICAL_FILE_VERSION_NOT_INDEPENDENT_ASSAY",
       "file_bytes": 6851100,
@@ -6353,12 +6421,14 @@
       "package_group_id": "RNA3DB",
       "physical_file_present": true,
       "physical_file_size_matches_provenance": true,
+      "provenance_record_count": 1,
       "rights_decision": "ALLOW_PUBLIC_QUARANTINE_POC",
       "scientific_admission": false,
       "source_sha256": "820ba611042ef3e4ec1de7d00e739eefcbf1f78df1452252cc002e369babae8b",
       "source_url": "https://github.com/marcellszi/rna3db/releases/download/2026-01-05-full-release/rna3db-jsons.tar.gz"
     },
     {
+      "artifact_uid": "RNA3DB_20260105_rna3db_mmcifs@sha256:4be4290ee40e1407e1356d804355ba5e4971da527baa5f381116bac327ec9067",
       "asset_id": "RNA3DB_20260105_rna3db_mmcifs",
       "count_scope": "PHYSICAL_FILE_VERSION_NOT_INDEPENDENT_ASSAY",
       "file_bytes": 2146440832,
@@ -6381,12 +6451,14 @@
       "package_group_id": "RNA3DB",
       "physical_file_present": true,
       "physical_file_size_matches_provenance": true,
+      "provenance_record_count": 1,
       "rights_decision": "ALLOW_PUBLIC_QUARANTINE_POC",
       "scientific_admission": false,
       "source_sha256": "4be4290ee40e1407e1356d804355ba5e4971da527baa5f381116bac327ec9067",
       "source_url": "https://github.com/marcellszi/rna3db/releases/download/2026-01-05-full-release/rna3db-mmcifs.tar.xz"
     },
     {
+      "artifact_uid": "A0012@sha256:48a6db96cb15d28b704f704dd5414bd3c5050e112527fed4bd33ca8482fb94be",
       "asset_id": "A0012",
       "count_scope": "PHYSICAL_FILE_VERSION_NOT_INDEPENDENT_ASSAY",
       "file_bytes": 7886128,
@@ -6396,12 +6468,14 @@
       "package_group_id": "RNAGYM_3D",
       "physical_file_present": true,
       "physical_file_size_matches_provenance": true,
+      "provenance_record_count": 1,
       "rights_decision": "ALLOW_PUBLIC_QUARANTINE_POC",
       "scientific_admission": false,
       "source_sha256": "48a6db96cb15d28b704f704dd5414bd3c5050e112527fed4bd33ca8482fb94be",
       "source_url": "https://marks.hms.harvard.edu/rnagym/tertiary_structure_prediction/3D_alignments.tar.xz"
     },
     {
+      "artifact_uid": "HF_287b2797cface258321d@sha256:3773f1a7148c2dbdbd5dcfbca9d587bca56e548885ee9e2526018e244fd793bb",
       "asset_id": "HF_287b2797cface258321d",
       "count_scope": "PHYSICAL_FILE_VERSION_NOT_INDEPENDENT_ASSAY",
       "file_bytes": 17701,
@@ -6411,12 +6485,14 @@
       "package_group_id": "RNAGYM_3D",
       "physical_file_present": true,
       "physical_file_size_matches_provenance": true,
+      "provenance_record_count": 1,
       "rights_decision": "ALLOW_PUBLIC_QUARANTINE_POC",
       "scientific_admission": false,
       "source_sha256": "3773f1a7148c2dbdbd5dcfbca9d587bca56e548885ee9e2526018e244fd793bb",
       "source_url": "https://huggingface.co/datasets/Marks-lab/RNAgym/resolve/bc6ccf4c5bf445ca25991f2a74448ae7e153b9f6/tertiary_structure_prediction/monomer.parquet"
     },
     {
+      "artifact_uid": "HF_51b53dab485ecb3d7409@sha256:014cf6b240072af8f3e81c3b446195506db2206934eabab93a0e62518a15c9d7",
       "asset_id": "HF_51b53dab485ecb3d7409",
       "count_scope": "PHYSICAL_FILE_VERSION_NOT_INDEPENDENT_ASSAY",
       "file_bytes": 6866,
@@ -6426,12 +6502,14 @@
       "package_group_id": "RNAGYM_3D",
       "physical_file_present": true,
       "physical_file_size_matches_provenance": true,
+      "provenance_record_count": 1,
       "rights_decision": "ALLOW_PUBLIC_QUARANTINE_POC",
       "scientific_admission": false,
       "source_sha256": "014cf6b240072af8f3e81c3b446195506db2206934eabab93a0e62518a15c9d7",
       "source_url": "https://huggingface.co/datasets/Marks-lab/RNAgym/resolve/bc6ccf4c5bf445ca25991f2a74448ae7e153b9f6/tertiary_structure_prediction/multimer.parquet"
     },
     {
+      "artifact_uid": "A0002@sha256:17705ef3534bce614d5d280eaeff17744929439fe9951d0924fe6710879ff5b8",
       "asset_id": "A0002",
       "count_scope": "PHYSICAL_FILE_VERSION_NOT_INDEPENDENT_ASSAY",
       "file_bytes": 13581795,
@@ -6441,12 +6519,14 @@
       "package_group_id": "RNAGYM_DMS",
       "physical_file_present": true,
       "physical_file_size_matches_provenance": true,
+      "provenance_record_count": 1,
       "rights_decision": "ALLOW_PUBLIC_QUARANTINE_POC",
       "scientific_admission": false,
       "source_sha256": "17705ef3534bce614d5d280eaeff17744929439fe9951d0924fe6710879ff5b8",
       "source_url": "https://marks.hms.harvard.edu/rnagym/fitness_prediction/fitness_raw_data.zip"
     },
     {
+      "artifact_uid": "A0003@sha256:342e36527e1a118069e1fb6b1ec07c0aba43b3a1950d6a5377a881000eff70a8",
       "asset_id": "A0003",
       "count_scope": "PHYSICAL_FILE_VERSION_NOT_INDEPENDENT_ASSAY",
       "file_bytes": 14532030,
@@ -7585,12 +7665,14 @@
       "package_group_id": "RNAGYM_DMS",
       "physical_file_present": true,
       "physical_file_size_matches_provenance": true,
+      "provenance_record_count": 1,
       "rights_decision": "ALLOW_PUBLIC_QUARANTINE_POC",
       "scientific_admission": false,
       "source_sha256": "342e36527e1a118069e1fb6b1ec07c0aba43b3a1950d6a5377a881000eff70a8",
       "source_url": "https://marks.hms.harvard.edu/rnagym/fitness_prediction/fitness_CV_splits.zip"
     },
     {
+      "artifact_uid": "A0004@sha256:9f2dd9b03db5bd7d1d1b48bc0b21e07c4d3a488530a871eab3615bf4e3618f7d",
       "asset_id": "A0004",
       "count_scope": "PHYSICAL_FILE_VERSION_NOT_INDEPENDENT_ASSAY",
       "file_bytes": 73475,
@@ -7600,12 +7682,14 @@
       "package_group_id": "RNAGYM_DMS",
       "physical_file_present": true,
       "physical_file_size_matches_provenance": true,
+      "provenance_record_count": 1,
       "rights_decision": "ALLOW_PUBLIC_QUARANTINE_POC",
       "scientific_admission": false,
       "source_sha256": "9f2dd9b03db5bd7d1d1b48bc0b21e07c4d3a488530a871eab3615bf4e3618f7d",
       "source_url": "https://marks.hms.harvard.edu/rnagym/fitness_prediction/fitness_MSAs.zip"
     },
     {
+      "artifact_uid": "P0_RNAGYM_PROCESSED@sha256:56a91b52bfd9537abb4b5e8f5f9bbb663fd712e95e404e26338e4aa3090e2279",
       "asset_id": "P0_RNAGYM_PROCESSED",
       "count_scope": "PHYSICAL_FILE_VERSION_NOT_INDEPENDENT_ASSAY",
       "file_bytes": 22491178,
@@ -8274,12 +8358,14 @@
       "package_group_id": "RNAGYM_DMS",
       "physical_file_present": true,
       "physical_file_size_matches_provenance": true,
+      "provenance_record_count": 1,
       "rights_decision": "ALLOW_PUBLIC_QUARANTINE_POC",
       "scientific_admission": false,
       "source_sha256": "56a91b52bfd9537abb4b5e8f5f9bbb663fd712e95e404e26338e4aa3090e2279",
       "source_url": "https://marks.hms.harvard.edu/rnagym/fitness_prediction/fitness_processed_assays.zip"
     },
     {
+      "artifact_uid": "A0005@sha256:aefc0fe8644bce490516a66939c1642f01ab255c05a15b0ec41427f347b33e53",
       "asset_id": "A0005",
       "count_scope": "PHYSICAL_FILE_VERSION_NOT_INDEPENDENT_ASSAY",
       "file_bytes": 357169142,
@@ -8289,12 +8375,14 @@
       "package_group_id": "RNAGYM_RMDB",
       "physical_file_present": true,
       "physical_file_size_matches_provenance": true,
+      "provenance_record_count": 1,
       "rights_decision": "ALLOW_PUBLIC_QUARANTINE_POC",
       "scientific_admission": false,
       "source_sha256": "aefc0fe8644bce490516a66939c1642f01ab255c05a15b0ec41427f347b33e53",
       "source_url": "https://marks.hms.harvard.edu/rnagym/structure_prediction/test_data.zip"
     },
     {
+      "artifact_uid": "A0006@sha256:f5b98f93eeb4c656fb512eae20b8e39511b6cfb2e638b283cf4b05e52a452577",
       "asset_id": "A0006",
       "count_scope": "PHYSICAL_FILE_VERSION_NOT_INDEPENDENT_ASSAY",
       "file_bytes": 1109863019,
@@ -8304,12 +8392,14 @@
       "package_group_id": "RNAGYM_RMDB",
       "physical_file_present": true,
       "physical_file_size_matches_provenance": true,
+      "provenance_record_count": 1,
       "rights_decision": "ALLOW_PUBLIC_QUARANTINE_POC",
       "scientific_admission": false,
       "source_sha256": "f5b98f93eeb4c656fb512eae20b8e39511b6cfb2e638b283cf4b05e52a452577",
       "source_url": "https://marks.hms.harvard.edu/rnagym/structure_prediction/raw_data.zip"
     },
     {
+      "artifact_uid": "A0007@sha256:36fd199b97322f6b4d6f7892911e33b776361de225379cfb54a92233feeb50fd",
       "asset_id": "A0007",
       "count_scope": "PHYSICAL_FILE_VERSION_NOT_INDEPENDENT_ASSAY",
       "file_bytes": 444805778,
@@ -8319,12 +8409,14 @@
       "package_group_id": "RNAGYM_RMDB",
       "physical_file_present": true,
       "physical_file_size_matches_provenance": true,
+      "provenance_record_count": 1,
       "rights_decision": "ALLOW_PUBLIC_QUARANTINE_POC",
       "scientific_admission": false,
       "source_sha256": "36fd199b97322f6b4d6f7892911e33b776361de225379cfb54a92233feeb50fd",
       "source_url": "https://marks.hms.harvard.edu/rnagym/structure_prediction/train_data.zip"
     },
     {
+      "artifact_uid": "A0008@sha256:10694a24229da89b5e0190317c43e8a465d198b0f3ccb368830b3660666ff0ed",
       "asset_id": "A0008",
       "count_scope": "PHYSICAL_FILE_VERSION_NOT_INDEPENDENT_ASSAY",
       "file_bytes": 5045241,
@@ -8334,12 +8426,14 @@
       "package_group_id": "RNAGYM_RMDB",
       "physical_file_present": true,
       "physical_file_size_matches_provenance": true,
+      "provenance_record_count": 1,
       "rights_decision": "ALLOW_PUBLIC_QUARANTINE_POC",
       "scientific_admission": false,
       "source_sha256": "10694a24229da89b5e0190317c43e8a465d198b0f3ccb368830b3660666ff0ed",
       "source_url": "https://marks.hms.harvard.edu/rnagym/structure_prediction/test_sequences_annotated.zip"
     },
     {
+      "artifact_uid": "HF_077f265b2add15269941@sha256:b531054dbce8757e0c6978fe6d997e51a2925f5298824478f606f2f7d89f6ccd",
       "asset_id": "HF_077f265b2add15269941",
       "count_scope": "PHYSICAL_FILE_VERSION_NOT_INDEPENDENT_ASSAY",
       "file_bytes": 114044130,
@@ -8365,12 +8459,14 @@
       "package_group_id": "RNAGYM_RMDB",
       "physical_file_present": true,
       "physical_file_size_matches_provenance": true,
+      "provenance_record_count": 1,
       "rights_decision": "ALLOW_PUBLIC_QUARANTINE_POC",
       "scientific_admission": false,
       "source_sha256": "b531054dbce8757e0c6978fe6d997e51a2925f5298824478f606f2f7d89f6ccd",
       "source_url": "https://huggingface.co/datasets/Marks-lab/RNAgym/resolve/bc6ccf4c5bf445ca25991f2a74448ae7e153b9f6/secondary_structure_prediction/RMDB_s40_train.parquet"
     },
     {
+      "artifact_uid": "HF_e567b1f79ef75075abec@sha256:1f19b04187597743cd1adba3137517f32fb3ce48d17da38807ac2d15ffedc008",
       "asset_id": "HF_e567b1f79ef75075abec",
       "count_scope": "PHYSICAL_FILE_VERSION_NOT_INDEPENDENT_ASSAY",
       "file_bytes": 450511608,
@@ -8396,12 +8492,14 @@
       "package_group_id": "RNAGYM_RMDB",
       "physical_file_present": true,
       "physical_file_size_matches_provenance": true,
+      "provenance_record_count": 1,
       "rights_decision": "ALLOW_PUBLIC_QUARANTINE_POC",
       "scientific_admission": false,
       "source_sha256": "1f19b04187597743cd1adba3137517f32fb3ce48d17da38807ac2d15ffedc008",
       "source_url": "https://huggingface.co/datasets/Marks-lab/RNAgym/resolve/bc6ccf4c5bf445ca25991f2a74448ae7e153b9f6/secondary_structure_prediction/RMDB_s40_test.parquet"
     },
     {
+      "artifact_uid": "HF_f8dd28395a17e62ed861@sha256:518d325831824c888e65c34a5a96f831ee06bf73b84e5edd4e926979e227451c",
       "asset_id": "HF_f8dd28395a17e62ed861",
       "count_scope": "PHYSICAL_FILE_VERSION_NOT_INDEPENDENT_ASSAY",
       "file_bytes": 9799544,
@@ -8411,12 +8509,14 @@
       "package_group_id": "RNAGYM_RMDB",
       "physical_file_present": true,
       "physical_file_size_matches_provenance": true,
+      "provenance_record_count": 1,
       "rights_decision": "ALLOW_PUBLIC_QUARANTINE_POC",
       "scientific_admission": false,
       "source_sha256": "518d325831824c888e65c34a5a96f831ee06bf73b84e5edd4e926979e227451c",
       "source_url": "https://huggingface.co/datasets/Marks-lab/RNAgym/resolve/bc6ccf4c5bf445ca25991f2a74448ae7e153b9f6/secondary_structure_prediction/cluster_40.parquet"
     },
     {
+      "artifact_uid": "WANG_ZERO_738bc3a1b453@sha256:a32498a63be558d418b8f76d8536019b18759939862ef1056baeabd55630c6ed",
       "asset_id": "WANG_ZERO_738bc3a1b453",
       "count_scope": "PHYSICAL_FILE_VERSION_NOT_INDEPENDENT_ASSAY",
       "file_bytes": 24026488,
@@ -9069,6 +9169,7 @@
       "package_group_id": "WANG_ZERO_SHOT",
       "physical_file_present": true,
       "physical_file_size_matches_provenance": true,
+      "provenance_record_count": 1,
       "rights_decision": "ALLOW_PUBLIC_QUARANTINE_POC",
       "scientific_admission": false,
       "source_sha256": "a32498a63be558d418b8f76d8536019b18759939862ef1056baeabd55630c6ed",
@@ -9160,7 +9261,8 @@
   "package_groups_with_local_files": 16,
   "physical_file_versions": 50,
   "physical_files_present": 50,
-  "schema_version": "rna_gym.dataset_catalog.v1",
+  "producer_sha256": "9fb99b27fcb649ab1a9cd1f9308a625b9bee744914d321388a586e2d03770a0e",
+  "schema_version": "rna_gym.dataset_catalog.v2",
   "scientifically_admitted_tasks": 0,
   "snapshot_scope": "RECONCILED_LOCAL_PROVENANCE_AND_PRIOR_FULL_QC",
   "stale_initial_download_no_flags": 41,
@@ -9182,6 +9284,7 @@
   "tasks": [
     {
       "admitted": false,
+      "artifact_uids": [],
       "asset_ids": [],
       "benchmark": "BEACON — Benchmark for Comprehensive RNA Tasks and Language Models",
       "capability": "rna_secondary_structure",
@@ -9210,6 +9313,7 @@
     },
     {
       "admitted": false,
+      "artifact_uids": [],
       "asset_ids": [],
       "benchmark": "BEACON — Benchmark for Comprehensive RNA Tasks and Language Models",
       "capability": "rna_tertiary_structure",
@@ -9238,6 +9342,7 @@
     },
     {
       "admitted": false,
+      "artifact_uids": [],
       "asset_ids": [],
       "benchmark": "BEACON — Benchmark for Comprehensive RNA Tasks and Language Models",
       "capability": "rna_tertiary_structure",
@@ -9266,6 +9371,7 @@
     },
     {
       "admitted": false,
+      "artifact_uids": [],
       "asset_ids": [],
       "benchmark": "BEACON — Benchmark for Comprehensive RNA Tasks and Language Models",
       "capability": "chemical_reactivity",
@@ -9294,6 +9400,7 @@
     },
     {
       "admitted": false,
+      "artifact_uids": [],
       "asset_ids": [],
       "benchmark": "BEACON — Benchmark for Comprehensive RNA Tasks and Language Models",
       "capability": "rna_annotation_or_classification",
@@ -9322,6 +9429,7 @@
     },
     {
       "admitted": false,
+      "artifact_uids": [],
       "asset_ids": [],
       "benchmark": "BEACON — Benchmark for Comprehensive RNA Tasks and Language Models",
       "capability": "rna_scalar_phenotype",
@@ -9350,6 +9458,7 @@
     },
     {
       "admitted": false,
+      "artifact_uids": [],
       "asset_ids": [],
       "benchmark": "BEACON — Benchmark for Comprehensive RNA Tasks and Language Models",
       "capability": "rna_annotation_or_classification",
@@ -9378,6 +9487,7 @@
     },
     {
       "admitted": false,
+      "artifact_uids": [],
       "asset_ids": [],
       "benchmark": "BEACON — Benchmark for Comprehensive RNA Tasks and Language Models",
       "capability": "rna_annotation_or_classification",
@@ -9406,6 +9516,7 @@
     },
     {
       "admitted": false,
+      "artifact_uids": [],
       "asset_ids": [],
       "benchmark": "BEACON — Benchmark for Comprehensive RNA Tasks and Language Models",
       "capability": "translation_mrl",
@@ -9434,6 +9545,7 @@
     },
     {
       "admitted": false,
+      "artifact_uids": [],
       "asset_ids": [],
       "benchmark": "BEACON — Benchmark for Comprehensive RNA Tasks and Language Models",
       "capability": "chemical_reactivity",
@@ -9462,6 +9574,7 @@
     },
     {
       "admitted": false,
+      "artifact_uids": [],
       "asset_ids": [],
       "benchmark": "BEACON — Benchmark for Comprehensive RNA Tasks and Language Models",
       "capability": "rna_scalar_phenotype",
@@ -9490,6 +9603,7 @@
     },
     {
       "admitted": false,
+      "artifact_uids": [],
       "asset_ids": [],
       "benchmark": "BEACON — Benchmark for Comprehensive RNA Tasks and Language Models",
       "capability": "rna_scalar_phenotype",
@@ -9518,6 +9632,7 @@
     },
     {
       "admitted": false,
+      "artifact_uids": [],
       "asset_ids": [],
       "benchmark": "BEACON — Benchmark for Comprehensive RNA Tasks and Language Models",
       "capability": "rna_scalar_phenotype",
@@ -9546,6 +9661,12 @@
     },
     {
       "admitted": false,
+      "artifact_uids": [
+        "A0002@sha256:17705ef3534bce614d5d280eaeff17744929439fe9951d0924fe6710879ff5b8",
+        "A0003@sha256:342e36527e1a118069e1fb6b1ec07c0aba43b3a1950d6a5377a881000eff70a8",
+        "A0004@sha256:9f2dd9b03db5bd7d1d1b48bc0b21e07c4d3a488530a871eab3615bf4e3618f7d",
+        "P0_RNAGYM_PROCESSED@sha256:56a91b52bfd9537abb4b5e8f5f9bbb663fd712e95e404e26338e4aa3090e2279"
+      ],
       "asset_ids": [
         "A0002",
         "A0003",
@@ -9579,6 +9700,15 @@
     },
     {
       "admitted": false,
+      "artifact_uids": [
+        "A0005@sha256:aefc0fe8644bce490516a66939c1642f01ab255c05a15b0ec41427f347b33e53",
+        "A0006@sha256:f5b98f93eeb4c656fb512eae20b8e39511b6cfb2e638b283cf4b05e52a452577",
+        "A0007@sha256:36fd199b97322f6b4d6f7892911e33b776361de225379cfb54a92233feeb50fd",
+        "A0008@sha256:10694a24229da89b5e0190317c43e8a465d198b0f3ccb368830b3660666ff0ed",
+        "HF_077f265b2add15269941@sha256:b531054dbce8757e0c6978fe6d997e51a2925f5298824478f606f2f7d89f6ccd",
+        "HF_e567b1f79ef75075abec@sha256:1f19b04187597743cd1adba3137517f32fb3ce48d17da38807ac2d15ffedc008",
+        "HF_f8dd28395a17e62ed861@sha256:518d325831824c888e65c34a5a96f831ee06bf73b84e5edd4e926979e227451c"
+      ],
       "asset_ids": [
         "A0005",
         "A0006",
@@ -9615,6 +9745,11 @@
     },
     {
       "admitted": false,
+      "artifact_uids": [
+        "A0012@sha256:48a6db96cb15d28b704f704dd5414bd3c5050e112527fed4bd33ca8482fb94be",
+        "HF_287b2797cface258321d@sha256:3773f1a7148c2dbdbd5dcfbca9d587bca56e548885ee9e2526018e244fd793bb",
+        "HF_51b53dab485ecb3d7409@sha256:014cf6b240072af8f3e81c3b446195506db2206934eabab93a0e62518a15c9d7"
+      ],
       "asset_ids": [
         "A0012",
         "HF_287b2797cface258321d",
@@ -9647,6 +9782,7 @@
     },
     {
       "admitted": false,
+      "artifact_uids": [],
       "asset_ids": [],
       "benchmark": "mRNABench — A curated benchmark for mature mRNA property and function prediction",
       "capability": "translation_mrl",
@@ -9675,6 +9811,10 @@
     },
     {
       "admitted": false,
+      "artifact_uids": [
+        "HF_27d2efecdb75b4a7307f@sha256:ff39c6b209b52ff175e4992682d4c0d49baeac0897b102f1cb02f2a4989511d2",
+        "HF_3c84bb0847c9961fc6d4@sha256:ca856385dc2766827929ecb616abea9a2fadac38be984d29d0858bc53e122b01"
+      ],
       "asset_ids": [
         "HF_27d2efecdb75b4a7307f",
         "HF_3c84bb0847c9961fc6d4"
@@ -9717,6 +9857,7 @@
     },
     {
       "admitted": false,
+      "artifact_uids": [],
       "asset_ids": [],
       "benchmark": "mRNABench — A curated benchmark for mature mRNA property and function prediction",
       "capability": "rna_protein_binding",
@@ -9745,6 +9886,9 @@
     },
     {
       "admitted": false,
+      "artifact_uids": [
+        "HF_447d974951a3e6016555@sha256:0801a85464e57574cbd179e7ef1a84a7c09798bd8a673507f49713ba8856a0ed"
+      ],
       "asset_ids": [
         "HF_447d974951a3e6016555"
       ],
@@ -9786,6 +9930,11 @@
     },
     {
       "admitted": false,
+      "artifact_uids": [
+        "HF_214a7f32ac346e79b8b1@sha256:20cbcdb5104bd950e84973a69f003e28a1bf67dc43f36687621d7263b533e1ec",
+        "HOMOLOGENE_13910050@sha256:7f88f7ccea03ca144237caa00e0514da6ebc5ea1a7349373b894d8d6d745e521",
+        "ORTHRUS_MRL_ISOFORM_14708163@sha256:74663d0f260ccdccfd25bf56bc680d7e0b0e15034d2edb28702fa1aa82aa63fa"
+      ],
       "asset_ids": [
         "HF_214a7f32ac346e79b8b1",
         "HOMOLOGENE_13910050",
@@ -9828,6 +9977,12 @@
     },
     {
       "admitted": false,
+      "artifact_uids": [
+        "HF_34f6495ae6d93242ca39@sha256:770254c1d84e9479aee1ef43780dd0cb4036358f855505d1822211d3d72e2982",
+        "PERSIST_CONSTRUCTS@sha256:7e0fc06593b2fc602d33a373b5fb1af9547991318b479351c7342eb4701049a4",
+        "PERSIST_COUNTS@sha256:157bfb5b462674b8118111426febb5e7cf5727585f04305968b037636638c59d",
+        "PERSIST_SAMPLES@sha256:6925391095e00acab7d860778b405dbb2b21b890bd61f03da03b9e31b3af59ba"
+      ],
       "asset_ids": [
         "HF_34f6495ae6d93242ca39",
         "PERSIST_CONSTRUCTS",
@@ -9872,6 +10027,9 @@
     },
     {
       "admitted": false,
+      "artifact_uids": [
+        "HF_e4aab5fbe6c20f5f3ba0@sha256:014a247c55a69b4beaccddd6e722109337eae9153816ce9c8b7bba2cf3864fb6"
+      ],
       "asset_ids": [
         "HF_e4aab5fbe6c20f5f3ba0"
       ],
@@ -9913,6 +10071,9 @@
     },
     {
       "admitted": false,
+      "artifact_uids": [
+        "HF_c0c519d5b8ddc1e04a15@sha256:41bb0d2f33401a57735c4b40c42a025441cc341fa18b4cf3fe85740dcd21b0de"
+      ],
       "asset_ids": [
         "HF_c0c519d5b8ddc1e04a15"
       ],
@@ -9954,6 +10115,7 @@
     },
     {
       "admitted": false,
+      "artifact_uids": [],
       "asset_ids": [],
       "benchmark": "mRNABench — A curated benchmark for mature mRNA property and function prediction",
       "capability": "rna_localization",
@@ -9982,6 +10144,7 @@
     },
     {
       "admitted": false,
+      "artifact_uids": [],
       "asset_ids": [],
       "benchmark": "mRNABench — A curated benchmark for mature mRNA property and function prediction",
       "capability": "rna_annotation_or_classification",
@@ -10010,6 +10173,9 @@
     },
     {
       "admitted": false,
+      "artifact_uids": [
+        "WANG_ZERO_738bc3a1b453@sha256:a32498a63be558d418b8f76d8536019b18759939862ef1056baeabd55630c6ed"
+      ],
       "asset_ids": [
         "WANG_ZERO_738bc3a1b453"
       ],
@@ -10040,6 +10206,9 @@
     },
     {
       "admitted": false,
+      "artifact_uids": [
+        "WANG_ZERO_738bc3a1b453@sha256:a32498a63be558d418b8f76d8536019b18759939862ef1056baeabd55630c6ed"
+      ],
       "asset_ids": [
         "WANG_ZERO_738bc3a1b453"
       ],
@@ -10070,6 +10239,9 @@
     },
     {
       "admitted": false,
+      "artifact_uids": [
+        "WANG_ZERO_738bc3a1b453@sha256:a32498a63be558d418b8f76d8536019b18759939862ef1056baeabd55630c6ed"
+      ],
       "asset_ids": [
         "WANG_ZERO_738bc3a1b453"
       ],
@@ -10100,6 +10272,9 @@
     },
     {
       "admitted": false,
+      "artifact_uids": [
+        "WANG_ZERO_738bc3a1b453@sha256:a32498a63be558d418b8f76d8536019b18759939862ef1056baeabd55630c6ed"
+      ],
       "asset_ids": [
         "WANG_ZERO_738bc3a1b453"
       ],
@@ -10130,6 +10305,9 @@
     },
     {
       "admitted": false,
+      "artifact_uids": [
+        "WANG_ZERO_738bc3a1b453@sha256:a32498a63be558d418b8f76d8536019b18759939862ef1056baeabd55630c6ed"
+      ],
       "asset_ids": [
         "WANG_ZERO_738bc3a1b453"
       ],
@@ -10160,6 +10338,12 @@
     },
     {
       "admitted": false,
+      "artifact_uids": [
+        "A0002@sha256:17705ef3534bce614d5d280eaeff17744929439fe9951d0924fe6710879ff5b8",
+        "A0003@sha256:342e36527e1a118069e1fb6b1ec07c0aba43b3a1950d6a5377a881000eff70a8",
+        "A0004@sha256:9f2dd9b03db5bd7d1d1b48bc0b21e07c4d3a488530a871eab3615bf4e3618f7d",
+        "P0_RNAGYM_PROCESSED@sha256:56a91b52bfd9537abb4b5e8f5f9bbb663fd712e95e404e26338e4aa3090e2279"
+      ],
       "asset_ids": [
         "A0002",
         "A0003",
@@ -10193,6 +10377,12 @@
     },
     {
       "admitted": false,
+      "artifact_uids": [
+        "RNA3DB_20251001_rna3db_jsons@sha256:d4996a5f78ffa0453f9b817d49cde85de4f8c038655d8699f6a1eadb10270a01",
+        "RNA3DB_20260105_rna3db_cmscans@sha256:53c323c61aef5b9bb72a88bc3980470a13d0f36d559e1bdaf5582173f0a3b751",
+        "RNA3DB_20260105_rna3db_jsons@sha256:820ba611042ef3e4ec1de7d00e739eefcbf1f78df1452252cc002e369babae8b",
+        "RNA3DB_20260105_rna3db_mmcifs@sha256:4be4290ee40e1407e1356d804355ba5e4971da527baa5f381116bac327ec9067"
+      ],
       "asset_ids": [
         "RNA3DB_20251001_rna3db_jsons",
         "RNA3DB_20260105_rna3db_cmscans",
@@ -10226,6 +10416,12 @@
     },
     {
       "admitted": false,
+      "artifact_uids": [
+        "RNA3DB_20251001_rna3db_jsons@sha256:d4996a5f78ffa0453f9b817d49cde85de4f8c038655d8699f6a1eadb10270a01",
+        "RNA3DB_20260105_rna3db_cmscans@sha256:53c323c61aef5b9bb72a88bc3980470a13d0f36d559e1bdaf5582173f0a3b751",
+        "RNA3DB_20260105_rna3db_jsons@sha256:820ba611042ef3e4ec1de7d00e739eefcbf1f78df1452252cc002e369babae8b",
+        "RNA3DB_20260105_rna3db_mmcifs@sha256:4be4290ee40e1407e1356d804355ba5e4971da527baa5f381116bac327ec9067"
+      ],
       "asset_ids": [
         "RNA3DB_20251001_rna3db_jsons",
         "RNA3DB_20260105_rna3db_cmscans",
@@ -10259,6 +10455,15 @@
     },
     {
       "admitted": false,
+      "artifact_uids": [
+        "A0005@sha256:aefc0fe8644bce490516a66939c1642f01ab255c05a15b0ec41427f347b33e53",
+        "A0006@sha256:f5b98f93eeb4c656fb512eae20b8e39511b6cfb2e638b283cf4b05e52a452577",
+        "A0007@sha256:36fd199b97322f6b4d6f7892911e33b776361de225379cfb54a92233feeb50fd",
+        "A0008@sha256:10694a24229da89b5e0190317c43e8a465d198b0f3ccb368830b3660666ff0ed",
+        "HF_077f265b2add15269941@sha256:b531054dbce8757e0c6978fe6d997e51a2925f5298824478f606f2f7d89f6ccd",
+        "HF_e567b1f79ef75075abec@sha256:1f19b04187597743cd1adba3137517f32fb3ce48d17da38807ac2d15ffedc008",
+        "HF_f8dd28395a17e62ed861@sha256:518d325831824c888e65c34a5a96f831ee06bf73b84e5edd4e926979e227451c"
+      ],
       "asset_ids": [
         "A0005",
         "A0006",
@@ -10295,6 +10500,15 @@
     },
     {
       "admitted": false,
+      "artifact_uids": [
+        "A0005@sha256:aefc0fe8644bce490516a66939c1642f01ab255c05a15b0ec41427f347b33e53",
+        "A0006@sha256:f5b98f93eeb4c656fb512eae20b8e39511b6cfb2e638b283cf4b05e52a452577",
+        "A0007@sha256:36fd199b97322f6b4d6f7892911e33b776361de225379cfb54a92233feeb50fd",
+        "A0008@sha256:10694a24229da89b5e0190317c43e8a465d198b0f3ccb368830b3660666ff0ed",
+        "HF_077f265b2add15269941@sha256:b531054dbce8757e0c6978fe6d997e51a2925f5298824478f606f2f7d89f6ccd",
+        "HF_e567b1f79ef75075abec@sha256:1f19b04187597743cd1adba3137517f32fb3ce48d17da38807ac2d15ffedc008",
+        "HF_f8dd28395a17e62ed861@sha256:518d325831824c888e65c34a5a96f831ee06bf73b84e5edd4e926979e227451c"
+      ],
       "asset_ids": [
         "A0005",
         "A0006",
@@ -10331,6 +10545,7 @@
     },
     {
       "admitted": false,
+      "artifact_uids": [],
       "asset_ids": [],
       "benchmark": "Ribonanza — Deep learning of RNA structure through dual crowdsourcing",
       "capability": "chemical_reactivity",
@@ -10359,6 +10574,7 @@
     },
     {
       "admitted": false,
+      "artifact_uids": [],
       "asset_ids": [],
       "benchmark": "Ribonanza — Deep learning of RNA structure through dual crowdsourcing",
       "capability": "rna_secondary_structure",
@@ -10387,6 +10603,7 @@
     },
     {
       "admitted": false,
+      "artifact_uids": [],
       "asset_ids": [],
       "benchmark": "NC-Bench / NCfold — RNA non-canonical base-pair prediction",
       "capability": "rna_secondary_structure",
@@ -10415,6 +10632,7 @@
     },
     {
       "admitted": false,
+      "artifact_uids": [],
       "asset_ids": [],
       "benchmark": "NC-Bench / NCfold — RNA non-canonical base-pair prediction",
       "capability": "rna_secondary_structure",
@@ -10443,6 +10661,7 @@
     },
     {
       "admitted": false,
+      "artifact_uids": [],
       "asset_ids": [],
       "benchmark": "CASP16 — Assessment of Nucleic Acid Structure Prediction",
       "capability": "rna_tertiary_structure",
@@ -10471,6 +10690,7 @@
     },
     {
       "admitted": false,
+      "artifact_uids": [],
       "asset_ids": [],
       "benchmark": "CASP16 — Assessment of Nucleic Acid Structure Prediction",
       "capability": "rna_tertiary_structure",
@@ -10499,6 +10719,7 @@
     },
     {
       "admitted": false,
+      "artifact_uids": [],
       "asset_ids": [],
       "benchmark": "Limits of deep-learning-based RNA prediction methods",
       "capability": "rna_tertiary_structure",
@@ -10527,6 +10748,7 @@
     },
     {
       "admitted": false,
+      "artifact_uids": [],
       "asset_ids": [],
       "benchmark": "Limits of deep-learning-based RNA prediction methods",
       "capability": "rna_tertiary_structure",
@@ -10555,6 +10777,7 @@
     },
     {
       "admitted": false,
+      "artifact_uids": [],
       "asset_ids": [],
       "benchmark": "RNArank — Quality assessment of RNA 3D structure models using deep learning and intermediate 2D maps",
       "capability": "rna_tertiary_structure",
@@ -10583,6 +10806,7 @@
     },
     {
       "admitted": false,
+      "artifact_uids": [],
       "asset_ids": [],
       "benchmark": "RNArank — Quality assessment of RNA 3D structure models using deep learning and intermediate 2D maps",
       "capability": "rna_tertiary_structure",
@@ -10611,6 +10835,7 @@
     },
     {
       "admitted": false,
+      "artifact_uids": [],
       "asset_ids": [],
       "benchmark": "RNArank — Quality assessment of RNA 3D structure models using deep learning and intermediate 2D maps",
       "capability": "rna_tertiary_structure",
@@ -10639,6 +10864,7 @@
     },
     {
       "admitted": false,
+      "artifact_uids": [],
       "asset_ids": [],
       "benchmark": "RNArank — Quality assessment of RNA 3D structure models using deep learning and intermediate 2D maps",
       "capability": "rna_tertiary_structure",
@@ -10667,6 +10893,7 @@
     },
     {
       "admitted": false,
+      "artifact_uids": [],
       "asset_ids": [],
       "benchmark": "RnaBench — A Comprehensive Library for In Silico RNA Modelling",
       "capability": "methodology_or_controls",
@@ -10695,6 +10922,7 @@
     },
     {
       "admitted": false,
+      "artifact_uids": [],
       "asset_ids": [],
       "benchmark": "RnaBench — A Comprehensive Library for In Silico RNA Modelling",
       "capability": "methodology_or_controls",
@@ -10723,6 +10951,7 @@
     },
     {
       "admitted": false,
+      "artifact_uids": [],
       "asset_ids": [],
       "benchmark": "RNAInvBench — Benchmark for the RNA Inverse Design Problem",
       "capability": "rna_inverse_folding_and_design",
@@ -10751,6 +10980,7 @@
     },
     {
       "admitted": false,
+      "artifact_uids": [],
       "asset_ids": [],
       "benchmark": "RNAInvBench — Benchmark for the RNA Inverse Design Problem",
       "capability": "rna_inverse_folding_and_design",
@@ -10779,6 +11009,7 @@
     },
     {
       "admitted": false,
+      "artifact_uids": [],
       "asset_ids": [],
       "benchmark": "RNAInvBench — Benchmark for the RNA Inverse Design Problem",
       "capability": "rna_inverse_folding_and_design",
@@ -10807,6 +11038,7 @@
     },
     {
       "admitted": false,
+      "artifact_uids": [],
       "asset_ids": [],
       "benchmark": "A systematic benchmark of machine learning methods for protein–RNA interaction prediction",
       "capability": "rna_protein_binding",
@@ -10835,6 +11067,7 @@
     },
     {
       "admitted": false,
+      "artifact_uids": [],
       "asset_ids": [],
       "benchmark": "A systematic benchmark of machine learning methods for protein–RNA interaction prediction",
       "capability": "rna_protein_binding",
@@ -10863,6 +11096,7 @@
     },
     {
       "admitted": false,
+      "artifact_uids": [],
       "asset_ids": [],
       "benchmark": "RNAmigos2 — Accelerated structure-based RNA virtual screening with deep graph learning",
       "capability": "rna_ligand_binding",
@@ -10891,6 +11125,7 @@
     },
     {
       "admitted": false,
+      "artifact_uids": [],
       "asset_ids": [],
       "benchmark": "RNAmigos2 — Accelerated structure-based RNA virtual screening with deep graph learning",
       "capability": "rna_ligand_binding",
@@ -10919,6 +11154,7 @@
     },
     {
       "admitted": false,
+      "artifact_uids": [],
       "asset_ids": [],
       "benchmark": "RNAmigos2 — Accelerated structure-based RNA virtual screening with deep graph learning",
       "capability": "rna_ligand_binding",
@@ -10947,6 +11183,7 @@
     },
     {
       "admitted": false,
+      "artifact_uids": [],
       "asset_ids": [],
       "benchmark": "RNAmigos2 — Accelerated structure-based RNA virtual screening with deep graph learning",
       "capability": "rna_ligand_binding",
@@ -10975,6 +11212,7 @@
     },
     {
       "admitted": false,
+      "artifact_uids": [],
       "asset_ids": [],
       "benchmark": "SMRTnet — Predicting small molecule–RNA interactions without RNA tertiary structures",
       "capability": "rna_ligand_binding",
@@ -11003,6 +11241,7 @@
     },
     {
       "admitted": false,
+      "artifact_uids": [],
       "asset_ids": [],
       "benchmark": "SMRTnet — Predicting small molecule–RNA interactions without RNA tertiary structures",
       "capability": "rna_ligand_binding",
@@ -11031,6 +11270,15 @@
     },
     {
       "admitted": false,
+      "artifact_uids": [
+        "P0_MIR_HEJRET_TEST_ZENODO@sha256:42eb7e0644a097c7c0d3418242455780064df99d3da95fc43d6f53f972bd5b04",
+        "P0_MIR_HEJRET_TRAIN_ZENODO@sha256:9125a81913383e360c1fd73e8096175f247de7c56ea3fc76f141a8b1880f1d91",
+        "P0_MIR_KLIMENTOVA_MIRROR@sha256:a5b4bb74075f1082038861d22acc5e32ec0a575c4f4c22c21d32a254e36fdf73",
+        "P0_MIR_KLIMENTOVA_ZENODO@sha256:35ec1491fdc9b4fde2e34939d337dec98b213b02bb93cb712fa64dff9ef47383",
+        "P0_MIR_MANAKOV_LEFTOUT_ZENODO@sha256:cdfa6ca2c03bda84d791fcde822d6c7d01300c9e8abb8dcc58650183bd099774",
+        "P0_MIR_MANAKOV_TEST_ZENODO@sha256:266edb3b5f93063c25f8aa541b020d2f3f5242d48e12fb586e3f6875a52a36e7",
+        "P0_MIR_MANAKOV_TRAIN_ZENODO@sha256:839b41122b8f7e9a5bef417c14fa8dda644c9af0767b63d4578acfdfbbd730ee"
+      ],
       "asset_ids": [
         "P0_MIR_HEJRET_TEST_ZENODO",
         "P0_MIR_HEJRET_TRAIN_ZENODO",
@@ -11067,6 +11315,15 @@
     },
     {
       "admitted": false,
+      "artifact_uids": [
+        "P0_MIR_HEJRET_TEST_ZENODO@sha256:42eb7e0644a097c7c0d3418242455780064df99d3da95fc43d6f53f972bd5b04",
+        "P0_MIR_HEJRET_TRAIN_ZENODO@sha256:9125a81913383e360c1fd73e8096175f247de7c56ea3fc76f141a8b1880f1d91",
+        "P0_MIR_KLIMENTOVA_MIRROR@sha256:a5b4bb74075f1082038861d22acc5e32ec0a575c4f4c22c21d32a254e36fdf73",
+        "P0_MIR_KLIMENTOVA_ZENODO@sha256:35ec1491fdc9b4fde2e34939d337dec98b213b02bb93cb712fa64dff9ef47383",
+        "P0_MIR_MANAKOV_LEFTOUT_ZENODO@sha256:cdfa6ca2c03bda84d791fcde822d6c7d01300c9e8abb8dcc58650183bd099774",
+        "P0_MIR_MANAKOV_TEST_ZENODO@sha256:266edb3b5f93063c25f8aa541b020d2f3f5242d48e12fb586e3f6875a52a36e7",
+        "P0_MIR_MANAKOV_TRAIN_ZENODO@sha256:839b41122b8f7e9a5bef417c14fa8dda644c9af0767b63d4578acfdfbbd730ee"
+      ],
       "asset_ids": [
         "P0_MIR_HEJRET_TEST_ZENODO",
         "P0_MIR_HEJRET_TRAIN_ZENODO",
@@ -11103,6 +11360,7 @@
     },
     {
       "admitted": false,
+      "artifact_uids": [],
       "asset_ids": [],
       "benchmark": "NanOlympicsMod — Benchmarking of computational methods for m6A profiling with Nanopore direct RNA sequencing",
       "capability": "rna_signal_decoding",
@@ -11131,6 +11389,7 @@
     },
     {
       "admitted": false,
+      "artifact_uids": [],
       "asset_ids": [],
       "benchmark": "NanOlympicsMod — Benchmarking of computational methods for m6A profiling with Nanopore direct RNA sequencing",
       "capability": "rna_signal_decoding",
@@ -11159,6 +11418,7 @@
     },
     {
       "admitted": false,
+      "artifact_uids": [],
       "asset_ids": [],
       "benchmark": "Systematic benchmarking of Dorado basecalling models for RNA modification detection",
       "capability": "rna_signal_decoding",
@@ -11187,6 +11447,7 @@
     },
     {
       "admitted": false,
+      "artifact_uids": [],
       "asset_ids": [],
       "benchmark": "Systematic benchmarking of Dorado basecalling models for RNA modification detection",
       "capability": "rna_signal_decoding",
@@ -11215,6 +11476,7 @@
     },
     {
       "admitted": false,
+      "artifact_uids": [],
       "asset_ids": [],
       "benchmark": "Stanford OpenVaccine — Deep learning models for predicting RNA degradation via dual crowdsourcing",
       "capability": "rna_scalar_phenotype",
@@ -11243,6 +11505,7 @@
     },
     {
       "admitted": false,
+      "artifact_uids": [],
       "asset_ids": [],
       "benchmark": "Stanford OpenVaccine — Deep learning models for predicting RNA degradation via dual crowdsourcing",
       "capability": "rna_scalar_phenotype",
@@ -11271,6 +11534,7 @@
     },
     {
       "admitted": false,
+      "artifact_uids": [],
       "asset_ids": [],
       "benchmark": "RNA-Scope — RNA 序列理解的分层综合评测",
       "capability": "rna_secondary_structure",
@@ -11299,6 +11563,7 @@
     },
     {
       "admitted": false,
+      "artifact_uids": [],
       "asset_ids": [],
       "benchmark": "RNA-Scope — RNA 序列理解的分层综合评测",
       "capability": "rna_secondary_structure",
@@ -11327,6 +11592,7 @@
     },
     {
       "admitted": false,
+      "artifact_uids": [],
       "asset_ids": [],
       "benchmark": "RNA-Scope — RNA 序列理解的分层综合评测",
       "capability": "rna_secondary_structure",
@@ -11355,6 +11621,7 @@
     },
     {
       "admitted": false,
+      "artifact_uids": [],
       "asset_ids": [],
       "benchmark": "RNA-Scope — RNA 序列理解的分层综合评测",
       "capability": "chemical_reactivity",
@@ -11383,6 +11650,12 @@
     },
     {
       "admitted": false,
+      "artifact_uids": [
+        "RNA3DB_20251001_rna3db_jsons@sha256:d4996a5f78ffa0453f9b817d49cde85de4f8c038655d8699f6a1eadb10270a01",
+        "RNA3DB_20260105_rna3db_cmscans@sha256:53c323c61aef5b9bb72a88bc3980470a13d0f36d559e1bdaf5582173f0a3b751",
+        "RNA3DB_20260105_rna3db_jsons@sha256:820ba611042ef3e4ec1de7d00e739eefcbf1f78df1452252cc002e369babae8b",
+        "RNA3DB_20260105_rna3db_mmcifs@sha256:4be4290ee40e1407e1356d804355ba5e4971da527baa5f381116bac327ec9067"
+      ],
       "asset_ids": [
         "RNA3DB_20251001_rna3db_jsons",
         "RNA3DB_20260105_rna3db_cmscans",
@@ -11416,6 +11689,7 @@
     },
     {
       "admitted": false,
+      "artifact_uids": [],
       "asset_ids": [],
       "benchmark": "RNA-Scope — RNA 序列理解的分层综合评测",
       "capability": "rna_protein_binding",
@@ -11444,6 +11718,7 @@
     },
     {
       "admitted": false,
+      "artifact_uids": [],
       "asset_ids": [],
       "benchmark": "RNA-Scope — RNA 序列理解的分层综合评测",
       "capability": "rna_ligand_binding",
@@ -11472,6 +11747,7 @@
     },
     {
       "admitted": false,
+      "artifact_uids": [],
       "asset_ids": [],
       "benchmark": "RNA-Scope — RNA 序列理解的分层综合评测",
       "capability": "rna_ligand_binding",
@@ -11500,6 +11776,7 @@
     },
     {
       "admitted": false,
+      "artifact_uids": [],
       "asset_ids": [],
       "benchmark": "RNA-Scope — RNA 序列理解的分层综合评测",
       "capability": "rna_ligand_binding",
@@ -11528,6 +11805,7 @@
     },
     {
       "admitted": false,
+      "artifact_uids": [],
       "asset_ids": [],
       "benchmark": "RNA-Scope — RNA 序列理解的分层综合评测",
       "capability": "rna_ligand_binding",
@@ -11556,6 +11834,7 @@
     },
     {
       "admitted": false,
+      "artifact_uids": [],
       "asset_ids": [],
       "benchmark": "RNA-Scope — RNA 序列理解的分层综合评测",
       "capability": "rna_ligand_binding",
@@ -11584,6 +11863,7 @@
     },
     {
       "admitted": false,
+      "artifact_uids": [],
       "asset_ids": [],
       "benchmark": "RNA-Scope — RNA 序列理解的分层综合评测",
       "capability": "methodology_or_controls",
@@ -11612,6 +11892,7 @@
     },
     {
       "admitted": false,
+      "artifact_uids": [],
       "asset_ids": [],
       "benchmark": "RNA-Scope — RNA 序列理解的分层综合评测",
       "capability": "methodology_or_controls",
@@ -11640,6 +11921,7 @@
     },
     {
       "admitted": false,
+      "artifact_uids": [],
       "asset_ids": [],
       "benchmark": "RNA-Scope — RNA 序列理解的分层综合评测",
       "capability": "methodology_or_controls",
@@ -11668,6 +11950,7 @@
     },
     {
       "admitted": false,
+      "artifact_uids": [],
       "asset_ids": [],
       "benchmark": "RNA-Scope — RNA 序列理解的分层综合评测",
       "capability": "methodology_or_controls",
@@ -11696,6 +11979,7 @@
     },
     {
       "admitted": false,
+      "artifact_uids": [],
       "asset_ids": [],
       "benchmark": "NABench — DNA/RNA 突变 Fitness 的跨范式基准",
       "capability": "rna_variant_effect",
@@ -11724,6 +12008,7 @@
     },
     {
       "admitted": false,
+      "artifact_uids": [],
       "asset_ids": [],
       "benchmark": "NABench — DNA/RNA 突变 Fitness 的跨范式基准",
       "capability": "rna_variant_effect",
@@ -11752,6 +12037,7 @@
     },
     {
       "admitted": false,
+      "artifact_uids": [],
       "asset_ids": [],
       "benchmark": "NABench — DNA/RNA 突变 Fitness 的跨范式基准",
       "capability": "rna_variant_effect",
@@ -11780,6 +12066,7 @@
     },
     {
       "admitted": false,
+      "artifact_uids": [],
       "asset_ids": [],
       "benchmark": "NABench — DNA/RNA 突变 Fitness 的跨范式基准",
       "capability": "rna_variant_effect",
@@ -11808,6 +12095,7 @@
     },
     {
       "admitted": false,
+      "artifact_uids": [],
       "asset_ids": [],
       "benchmark": "NABench — DNA/RNA 突变 Fitness 的跨范式基准",
       "capability": "rna_variant_effect",
@@ -11836,6 +12124,7 @@
     },
     {
       "admitted": false,
+      "artifact_uids": [],
       "asset_ids": [],
       "benchmark": "NABench — DNA/RNA 突变 Fitness 的跨范式基准",
       "capability": "rna_variant_effect",
@@ -11864,6 +12153,7 @@
     },
     {
       "admitted": false,
+      "artifact_uids": [],
       "asset_ids": [],
       "benchmark": "NABench — DNA/RNA 突变 Fitness 的跨范式基准",
       "capability": "methodology_or_controls",
@@ -11892,6 +12182,7 @@
     },
     {
       "admitted": false,
+      "artifact_uids": [],
       "asset_ids": [],
       "benchmark": "NABench — DNA/RNA 突变 Fitness 的跨范式基准",
       "capability": "methodology_or_controls",
@@ -11920,6 +12211,7 @@
     },
     {
       "admitted": false,
+      "artifact_uids": [],
       "asset_ids": [],
       "benchmark": "NABench — DNA/RNA 突变 Fitness 的跨范式基准",
       "capability": "methodology_or_controls",
@@ -11948,6 +12240,7 @@
     },
     {
       "admitted": false,
+      "artifact_uids": [],
       "asset_ids": [],
       "benchmark": "NABench — DNA/RNA 突变 Fitness 的跨范式基准",
       "capability": "methodology_or_controls",
@@ -11976,6 +12269,7 @@
     },
     {
       "admitted": false,
+      "artifact_uids": [],
       "asset_ids": [],
       "benchmark": "NABench — DNA/RNA 突变 Fitness 的跨范式基准",
       "capability": "methodology_or_controls",
@@ -12004,6 +12298,7 @@
     },
     {
       "admitted": false,
+      "artifact_uids": [],
       "asset_ids": [],
       "benchmark": "NABench — DNA/RNA 突变 Fitness 的跨范式基准",
       "capability": "methodology_or_controls",
@@ -12032,6 +12327,7 @@
     },
     {
       "admitted": false,
+      "artifact_uids": [],
       "asset_ids": [],
       "benchmark": "Comprehensive Benchmarking of RNA LMs for Secondary Structure Prediction",
       "capability": "rna_secondary_structure",
@@ -12060,6 +12356,7 @@
     },
     {
       "admitted": false,
+      "artifact_uids": [],
       "asset_ids": [],
       "benchmark": "Comprehensive Benchmarking of RNA LMs for Secondary Structure Prediction",
       "capability": "rna_secondary_structure",
@@ -12088,6 +12385,7 @@
     },
     {
       "admitted": false,
+      "artifact_uids": [],
       "asset_ids": [],
       "benchmark": "PARNET — 以 eCLIP 实验监督代替 MLM 预训练",
       "capability": "rna_protein_binding",
@@ -12116,6 +12414,7 @@
     },
     {
       "admitted": false,
+      "artifact_uids": [],
       "asset_ids": [],
       "benchmark": "PARNET — 以 eCLIP 实验监督代替 MLM 预训练",
       "capability": "rna_protein_binding",
@@ -12144,6 +12443,7 @@
     },
     {
       "admitted": false,
+      "artifact_uids": [],
       "asset_ids": [],
       "benchmark": "PARNET — 以 eCLIP 实验监督代替 MLM 预训练",
       "capability": "rna_protein_binding",
@@ -12172,6 +12472,7 @@
     },
     {
       "admitted": false,
+      "artifact_uids": [],
       "asset_ids": [],
       "benchmark": "PARNET — 以 eCLIP 实验监督代替 MLM 预训练",
       "capability": "rna_protein_binding",
@@ -12200,6 +12501,16 @@
     },
     {
       "admitted": false,
+      "artifact_uids": [
+        "EUKA_DOWNSTREAM_ASSEMBLED@sha256:ee30d1fa9ba04ecfec4fba120cd5d195afdda028d73bf0d4731a7ee6921a6339",
+        "EUKA_DS_1f3569ef982b@sha256:d92db65cf4ce3b6d01a0378068f35dd5cf3816c4a1534590b4e321ffdcaea264",
+        "EUKA_DS_3369d8645b6f@sha256:24d21a8c6427c2b878950e6e3cc120dfe691c0839f935bd869c9b180c10f4135",
+        "EUKA_DS_4ad49d0825bd@sha256:e2254e05eb84758af281aa5e800b470b16951633916df38a6031876f1ade36ef",
+        "EUKA_DS_4fa6b4edab94@sha256:8dd063f838f70579e2acc03b2378832793416e00e1bc63add42bdcc57fdd3f78",
+        "EUKA_DS_76bc8e21672d@sha256:d2b3cba8035705aa0d162724bbbe8c54f1c9f914bd34a83999b9819ecab8bead",
+        "EUKA_DS_b528cb53f982@sha256:bd26466dfd286373a9ff188aabda5afa2a4fa528c1355a350ff5b0b307f6ba3e",
+        "EUKA_DS_de91cc8d69ad@sha256:e7c5ebe2133ad4dbaf1d4ac680bc5abccc5fa7b53f2ad28ff5767dcc54b74ec4"
+      ],
       "asset_ids": [
         "EUKA_DOWNSTREAM_ASSEMBLED",
         "EUKA_DS_1f3569ef982b",
@@ -12237,6 +12548,16 @@
     },
     {
       "admitted": false,
+      "artifact_uids": [
+        "EUKA_DOWNSTREAM_ASSEMBLED@sha256:ee30d1fa9ba04ecfec4fba120cd5d195afdda028d73bf0d4731a7ee6921a6339",
+        "EUKA_DS_1f3569ef982b@sha256:d92db65cf4ce3b6d01a0378068f35dd5cf3816c4a1534590b4e321ffdcaea264",
+        "EUKA_DS_3369d8645b6f@sha256:24d21a8c6427c2b878950e6e3cc120dfe691c0839f935bd869c9b180c10f4135",
+        "EUKA_DS_4ad49d0825bd@sha256:e2254e05eb84758af281aa5e800b470b16951633916df38a6031876f1ade36ef",
+        "EUKA_DS_4fa6b4edab94@sha256:8dd063f838f70579e2acc03b2378832793416e00e1bc63add42bdcc57fdd3f78",
+        "EUKA_DS_76bc8e21672d@sha256:d2b3cba8035705aa0d162724bbbe8c54f1c9f914bd34a83999b9819ecab8bead",
+        "EUKA_DS_b528cb53f982@sha256:bd26466dfd286373a9ff188aabda5afa2a4fa528c1355a350ff5b0b307f6ba3e",
+        "EUKA_DS_de91cc8d69ad@sha256:e7c5ebe2133ad4dbaf1d4ac680bc5abccc5fa7b53f2ad28ff5767dcc54b74ec4"
+      ],
       "asset_ids": [
         "EUKA_DOWNSTREAM_ASSEMBLED",
         "EUKA_DS_1f3569ef982b",
@@ -12274,6 +12595,16 @@
     },
     {
       "admitted": false,
+      "artifact_uids": [
+        "EUKA_DOWNSTREAM_ASSEMBLED@sha256:ee30d1fa9ba04ecfec4fba120cd5d195afdda028d73bf0d4731a7ee6921a6339",
+        "EUKA_DS_1f3569ef982b@sha256:d92db65cf4ce3b6d01a0378068f35dd5cf3816c4a1534590b4e321ffdcaea264",
+        "EUKA_DS_3369d8645b6f@sha256:24d21a8c6427c2b878950e6e3cc120dfe691c0839f935bd869c9b180c10f4135",
+        "EUKA_DS_4ad49d0825bd@sha256:e2254e05eb84758af281aa5e800b470b16951633916df38a6031876f1ade36ef",
+        "EUKA_DS_4fa6b4edab94@sha256:8dd063f838f70579e2acc03b2378832793416e00e1bc63add42bdcc57fdd3f78",
+        "EUKA_DS_76bc8e21672d@sha256:d2b3cba8035705aa0d162724bbbe8c54f1c9f914bd34a83999b9819ecab8bead",
+        "EUKA_DS_b528cb53f982@sha256:bd26466dfd286373a9ff188aabda5afa2a4fa528c1355a350ff5b0b307f6ba3e",
+        "EUKA_DS_de91cc8d69ad@sha256:e7c5ebe2133ad4dbaf1d4ac680bc5abccc5fa7b53f2ad28ff5767dcc54b74ec4"
+      ],
       "asset_ids": [
         "EUKA_DOWNSTREAM_ASSEMBLED",
         "EUKA_DS_1f3569ef982b",
@@ -12311,6 +12642,15 @@
     },
     {
       "admitted": false,
+      "artifact_uids": [
+        "A0005@sha256:aefc0fe8644bce490516a66939c1642f01ab255c05a15b0ec41427f347b33e53",
+        "A0006@sha256:f5b98f93eeb4c656fb512eae20b8e39511b6cfb2e638b283cf4b05e52a452577",
+        "A0007@sha256:36fd199b97322f6b4d6f7892911e33b776361de225379cfb54a92233feeb50fd",
+        "A0008@sha256:10694a24229da89b5e0190317c43e8a465d198b0f3ccb368830b3660666ff0ed",
+        "HF_077f265b2add15269941@sha256:b531054dbce8757e0c6978fe6d997e51a2925f5298824478f606f2f7d89f6ccd",
+        "HF_e567b1f79ef75075abec@sha256:1f19b04187597743cd1adba3137517f32fb3ce48d17da38807ac2d15ffedc008",
+        "HF_f8dd28395a17e62ed861@sha256:518d325831824c888e65c34a5a96f831ee06bf73b84e5edd4e926979e227451c"
+      ],
       "asset_ids": [
         "A0005",
         "A0006",
@@ -12347,6 +12687,15 @@
     },
     {
       "admitted": false,
+      "artifact_uids": [
+        "A0005@sha256:aefc0fe8644bce490516a66939c1642f01ab255c05a15b0ec41427f347b33e53",
+        "A0006@sha256:f5b98f93eeb4c656fb512eae20b8e39511b6cfb2e638b283cf4b05e52a452577",
+        "A0007@sha256:36fd199b97322f6b4d6f7892911e33b776361de225379cfb54a92233feeb50fd",
+        "A0008@sha256:10694a24229da89b5e0190317c43e8a465d198b0f3ccb368830b3660666ff0ed",
+        "HF_077f265b2add15269941@sha256:b531054dbce8757e0c6978fe6d997e51a2925f5298824478f606f2f7d89f6ccd",
+        "HF_e567b1f79ef75075abec@sha256:1f19b04187597743cd1adba3137517f32fb3ce48d17da38807ac2d15ffedc008",
+        "HF_f8dd28395a17e62ed861@sha256:518d325831824c888e65c34a5a96f831ee06bf73b84e5edd4e926979e227451c"
+      ],
       "asset_ids": [
         "A0005",
         "A0006",
@@ -12383,6 +12732,12 @@
     },
     {
       "admitted": false,
+      "artifact_uids": [
+        "A0002@sha256:17705ef3534bce614d5d280eaeff17744929439fe9951d0924fe6710879ff5b8",
+        "A0003@sha256:342e36527e1a118069e1fb6b1ec07c0aba43b3a1950d6a5377a881000eff70a8",
+        "A0004@sha256:9f2dd9b03db5bd7d1d1b48bc0b21e07c4d3a488530a871eab3615bf4e3618f7d",
+        "P0_RNAGYM_PROCESSED@sha256:56a91b52bfd9537abb4b5e8f5f9bbb663fd712e95e404e26338e4aa3090e2279"
+      ],
       "asset_ids": [
         "A0002",
         "A0003",
@@ -12416,6 +12771,15 @@
     },
     {
       "admitted": false,
+      "artifact_uids": [
+        "A0005@sha256:aefc0fe8644bce490516a66939c1642f01ab255c05a15b0ec41427f347b33e53",
+        "A0006@sha256:f5b98f93eeb4c656fb512eae20b8e39511b6cfb2e638b283cf4b05e52a452577",
+        "A0007@sha256:36fd199b97322f6b4d6f7892911e33b776361de225379cfb54a92233feeb50fd",
+        "A0008@sha256:10694a24229da89b5e0190317c43e8a465d198b0f3ccb368830b3660666ff0ed",
+        "HF_077f265b2add15269941@sha256:b531054dbce8757e0c6978fe6d997e51a2925f5298824478f606f2f7d89f6ccd",
+        "HF_e567b1f79ef75075abec@sha256:1f19b04187597743cd1adba3137517f32fb3ce48d17da38807ac2d15ffedc008",
+        "HF_f8dd28395a17e62ed861@sha256:518d325831824c888e65c34a5a96f831ee06bf73b84e5edd4e926979e227451c"
+      ],
       "asset_ids": [
         "A0005",
         "A0006",
@@ -12452,6 +12816,7 @@
     },
     {
       "admitted": false,
+      "artifact_uids": [],
       "asset_ids": [],
       "benchmark": "MERGE-RNA — 化学探针对 RNA 构象集合的物理统计建模",
       "capability": "chemical_reactivity",
@@ -12480,6 +12845,7 @@
     },
     {
       "admitted": false,
+      "artifact_uids": [],
       "asset_ids": [],
       "benchmark": "MERGE-RNA — 化学探针对 RNA 构象集合的物理统计建模",
       "capability": "chemical_reactivity",
@@ -12508,6 +12874,7 @@
     },
     {
       "admitted": false,
+      "artifact_uids": [],
       "asset_ids": [],
       "benchmark": "gRNAde — 多构象 3D Backbone 条件 RNA 逆设计",
       "capability": "rna_inverse_folding_and_design",
@@ -12536,6 +12903,7 @@
     },
     {
       "admitted": false,
+      "artifact_uids": [],
       "asset_ids": [],
       "benchmark": "gRNAde — 多构象 3D Backbone 条件 RNA 逆设计",
       "capability": "rna_inverse_folding_and_design",
@@ -12564,6 +12932,7 @@
     },
     {
       "admitted": false,
+      "artifact_uids": [],
       "asset_ids": [],
       "benchmark": "gRNAde — 多构象 3D Backbone 条件 RNA 逆设计",
       "capability": "rna_inverse_folding_and_design",
@@ -12592,6 +12961,7 @@
     },
     {
       "admitted": false,
+      "artifact_uids": [],
       "asset_ids": [],
       "benchmark": "RDesign — RNA 三级结构逆设计的数据效率与对比学习",
       "capability": "rna_inverse_folding_and_design",
@@ -12620,6 +12990,7 @@
     },
     {
       "admitted": false,
+      "artifact_uids": [],
       "asset_ids": [],
       "benchmark": "RDesign — RNA 三级结构逆设计的数据效率与对比学习",
       "capability": "rna_inverse_folding_and_design",
@@ -12648,6 +13019,7 @@
     },
     {
       "admitted": false,
+      "artifact_uids": [],
       "asset_ids": [],
       "benchmark": "Joint Diffusion RNA Co-Design — 同时生成序列与 3D 构象",
       "capability": "rna_inverse_folding_and_design",
@@ -12676,6 +13048,7 @@
     },
     {
       "admitted": false,
+      "artifact_uids": [],
       "asset_ids": [],
       "benchmark": "Joint Diffusion RNA Co-Design — 同时生成序列与 3D 构象",
       "capability": "rna_inverse_folding_and_design",
@@ -12704,6 +13077,7 @@
     },
     {
       "admitted": false,
+      "artifact_uids": [],
       "asset_ids": [],
       "benchmark": "Joint Diffusion RNA Co-Design — 同时生成序列与 3D 构象",
       "capability": "rna_inverse_folding_and_design",
@@ -12732,6 +13106,7 @@
     },
     {
       "admitted": false,
+      "artifact_uids": [],
       "asset_ids": [],
       "benchmark": "RiboNN — 翻译效率预测中多区域输入与手工特征对照",
       "capability": "rna_scalar_phenotype",
@@ -12760,6 +13135,7 @@
     },
     {
       "admitted": false,
+      "artifact_uids": [],
       "asset_ids": [],
       "benchmark": "RiboNN — 翻译效率预测中多区域输入与手工特征对照",
       "capability": "methodology_or_controls",
@@ -12788,6 +13164,7 @@
     },
     {
       "admitted": false,
+      "artifact_uids": [],
       "asset_ids": [],
       "benchmark": "Benchmarking Base Pairs in RNA–RNA Interactions — 实验复合物几何金标准",
       "capability": "rna_rna_interaction",
@@ -12816,6 +13193,7 @@
     },
     {
       "admitted": false,
+      "artifact_uids": [],
       "asset_ids": [],
       "benchmark": "Benchmarking Base Pairs in RNA–RNA Interactions — 实验复合物几何金标准",
       "capability": "rna_rna_interaction",
@@ -12844,6 +13222,7 @@
     },
     {
       "admitted": false,
+      "artifact_uids": [],
       "asset_ids": [],
       "benchmark": "RIME — 低复杂度重复在 RNA–RNA Duplex 预测中的作用",
       "capability": "rna_rna_interaction",
@@ -12872,6 +13251,7 @@
     },
     {
       "admitted": false,
+      "artifact_uids": [],
       "asset_ids": [],
       "benchmark": "RIME — 低复杂度重复在 RNA–RNA Duplex 预测中的作用",
       "capability": "rna_rna_interaction",
@@ -12900,6 +13280,7 @@
     },
     {
       "admitted": false,
+      "artifact_uids": [],
       "asset_ids": [],
       "benchmark": "Ribocentre-aptamer — 结构、配体与亲和力的实验数据整合资源",
       "capability": "rna_ligand_binding",
@@ -12928,6 +13309,7 @@
     },
     {
       "admitted": false,
+      "artifact_uids": [],
       "asset_ids": [],
       "benchmark": "Ribocentre-aptamer — 结构、配体与亲和力的实验数据整合资源",
       "capability": "rna_ligand_binding",
@@ -12956,6 +13338,7 @@
     },
     {
       "admitted": false,
+      "artifact_uids": [],
       "asset_ids": [],
       "benchmark": "R-BIND 2.0 — 生物活性 RNA 小分子及 RNA Motif 资源",
       "capability": "rna_ligand_binding",
@@ -12984,6 +13367,7 @@
     },
     {
       "admitted": false,
+      "artifact_uids": [],
       "asset_ids": [],
       "benchmark": "R-BIND 2.0 — 生物活性 RNA 小分子及 RNA Motif 资源",
       "capability": "rna_ligand_binding",
@@ -13012,6 +13396,7 @@
     },
     {
       "admitted": false,
+      "artifact_uids": [],
       "asset_ids": [],
       "benchmark": "RNA-Puzzles Toolkit — RNA 3D 评测标准化先行工作",
       "capability": "methodology_or_controls",
@@ -13040,6 +13425,7 @@
     },
     {
       "admitted": false,
+      "artifact_uids": [],
       "asset_ids": [],
       "benchmark": "RNA-Puzzles Toolkit — RNA 3D 评测标准化先行工作",
       "capability": "methodology_or_controls",
@@ -13068,6 +13454,7 @@
     },
     {
       "admitted": false,
+      "artifact_uids": [],
       "asset_ids": [],
       "benchmark": "Eterna100-V2 — 逆折叠成功率受 Folding Engine 定义影响",
       "capability": "rna_inverse_folding_and_design",
@@ -13096,6 +13483,7 @@
     },
     {
       "admitted": false,
+      "artifact_uids": [],
       "asset_ids": [],
       "benchmark": "Eterna100-V2 — 逆折叠成功率受 Folding Engine 定义影响",
       "capability": "rna_inverse_folding_and_design",
@@ -13124,6 +13512,7 @@
     },
     {
       "admitted": false,
+      "artifact_uids": [],
       "asset_ids": [],
       "benchmark": "Benchmarking Biomedical Foundation Models — FM 评价的科学方法论",
       "capability": "methodology_or_controls",
@@ -13152,6 +13541,7 @@
     },
     {
       "admitted": false,
+      "artifact_uids": [],
       "asset_ids": [],
       "benchmark": "Benchmarking Biomedical Foundation Models — FM 评价的科学方法论",
       "capability": "methodology_or_controls",
@@ -13180,6 +13570,7 @@
     },
     {
       "admitted": false,
+      "artifact_uids": [],
       "asset_ids": [],
       "benchmark": "RNA Design 2026 Update — 现有逆折叠计算方法的边界清单",
       "capability": "methodology_or_controls",
@@ -13208,6 +13599,7 @@
     },
     {
       "admitted": false,
+      "artifact_uids": [],
       "asset_ids": [],
       "benchmark": "RNA Design 2026 Update — 现有逆折叠计算方法的边界清单",
       "capability": "methodology_or_controls",
@@ -13236,6 +13628,7 @@
     },
     {
       "admitted": false,
+      "artifact_uids": [],
       "asset_ids": [],
       "benchmark": "Deep learning for RNA secondary structure determination: gauging generalizability and broadening the scope of traditional methods",
       "capability": "rna_secondary_structure",
@@ -13264,6 +13657,7 @@
     },
     {
       "admitted": false,
+      "artifact_uids": [],
       "asset_ids": [],
       "benchmark": "Deep learning for RNA secondary structure determination: gauging generalizability and broadening the scope of traditional methods",
       "capability": "chemical_reactivity",
@@ -13292,6 +13686,7 @@
     },
     {
       "admitted": false,
+      "artifact_uids": [],
       "asset_ids": [],
       "benchmark": "ROMET-RNA benchmarks and selects RNA 3D structures using multiple predictors and alignment strategies",
       "capability": "rna_tertiary_structure",
@@ -13320,6 +13715,7 @@
     },
     {
       "admitted": false,
+      "artifact_uids": [],
       "asset_ids": [],
       "benchmark": "ROMET-RNA benchmarks and selects RNA 3D structures using multiple predictors and alignment strategies",
       "capability": "rna_tertiary_structure",
@@ -13348,6 +13744,7 @@
     },
     {
       "admitted": false,
+      "artifact_uids": [],
       "asset_ids": [],
       "benchmark": "RNAInvBench (README official split)",
       "capability": "rna_inverse_folding_and_design",
@@ -13376,6 +13773,7 @@
     },
     {
       "admitted": false,
+      "artifact_uids": [],
       "asset_ids": [],
       "benchmark": "RNAInvBench (README official split)",
       "capability": "rna_inverse_folding_and_design",
@@ -13404,6 +13802,7 @@
     },
     {
       "admitted": false,
+      "artifact_uids": [],
       "asset_ids": [],
       "benchmark": "RNAInvBench (README official split)",
       "capability": "rna_inverse_folding_and_design",
@@ -13432,6 +13831,7 @@
     },
     {
       "admitted": false,
+      "artifact_uids": [],
       "asset_ids": [],
       "benchmark": "RNAInvBench (README official split)",
       "capability": "rna_inverse_folding_and_design",
@@ -13460,6 +13860,7 @@
     },
     {
       "admitted": false,
+      "artifact_uids": [],
       "asset_ids": [],
       "benchmark": "RNAInvBench (README official split)",
       "capability": "rna_inverse_folding_and_design",
@@ -13488,6 +13889,7 @@
     },
     {
       "admitted": false,
+      "artifact_uids": [],
       "asset_ids": [],
       "benchmark": "RNAInvBench (README official split)",
       "capability": "rna_inverse_folding_and_design",
@@ -13516,6 +13918,7 @@
     },
     {
       "admitted": false,
+      "artifact_uids": [],
       "asset_ids": [],
       "benchmark": "RNAInvBench (README official split)",
       "capability": "rna_inverse_folding_and_design",
@@ -13544,6 +13947,7 @@
     },
     {
       "admitted": false,
+      "artifact_uids": [],
       "asset_ids": [],
       "benchmark": "RNAInvBench (README official split)",
       "capability": "rna_inverse_folding_and_design",
@@ -13572,6 +13976,7 @@
     },
     {
       "admitted": false,
+      "artifact_uids": [],
       "asset_ids": [],
       "benchmark": "RNAInvBench (README official split)",
       "capability": "rna_inverse_folding_and_design",
@@ -13600,6 +14005,7 @@
     },
     {
       "admitted": false,
+      "artifact_uids": [],
       "asset_ids": [],
       "benchmark": "RNAInvBench (README official split)",
       "capability": "rna_inverse_folding_and_design",
@@ -13628,6 +14034,7 @@
     },
     {
       "admitted": false,
+      "artifact_uids": [],
       "asset_ids": [],
       "benchmark": "RNAInvBench (README official split)",
       "capability": "rna_inverse_folding_and_design",
@@ -13656,6 +14063,7 @@
     },
     {
       "admitted": false,
+      "artifact_uids": [],
       "asset_ids": [],
       "benchmark": "RNAInvBench (README official split)",
       "capability": "rna_inverse_folding_and_design",
@@ -13684,6 +14092,7 @@
     },
     {
       "admitted": false,
+      "artifact_uids": [],
       "asset_ids": [],
       "benchmark": "RNAInvBench (README official split)",
       "capability": "rna_inverse_folding_and_design",
@@ -13712,6 +14121,7 @@
     },
     {
       "admitted": false,
+      "artifact_uids": [],
       "asset_ids": [],
       "benchmark": "RNAInvBench (README official split)",
       "capability": "rna_inverse_folding_and_design",
@@ -13740,6 +14150,7 @@
     },
     {
       "admitted": false,
+      "artifact_uids": [],
       "asset_ids": [],
       "benchmark": "RNAInvBench (README official split)",
       "capability": "rna_inverse_folding_and_design",
@@ -13768,6 +14179,7 @@
     },
     {
       "admitted": false,
+      "artifact_uids": [],
       "asset_ids": [],
       "benchmark": "RNAInvBench (README official split)",
       "capability": "rna_inverse_folding_and_design",
@@ -13796,6 +14208,7 @@
     },
     {
       "admitted": false,
+      "artifact_uids": [],
       "asset_ids": [],
       "benchmark": "RNAInvBench (README official split)",
       "capability": "rna_inverse_folding_and_design",
@@ -13824,6 +14237,7 @@
     },
     {
       "admitted": false,
+      "artifact_uids": [],
       "asset_ids": [],
       "benchmark": "RNAInvBench (README official split)",
       "capability": "rna_inverse_folding_and_design",
@@ -13852,6 +14266,7 @@
     },
     {
       "admitted": false,
+      "artifact_uids": [],
       "asset_ids": [],
       "benchmark": "RNAInvBench (README official split)",
       "capability": "rna_inverse_folding_and_design",
@@ -13880,6 +14295,7 @@
     },
     {
       "admitted": false,
+      "artifact_uids": [],
       "asset_ids": [],
       "benchmark": "RNAInvBench (README official split)",
       "capability": "rna_inverse_folding_and_design",
@@ -13908,6 +14324,7 @@
     },
     {
       "admitted": false,
+      "artifact_uids": [],
       "asset_ids": [],
       "benchmark": "RNAInvBench (README official split)",
       "capability": "rna_inverse_folding_and_design",
@@ -13936,6 +14353,7 @@
     },
     {
       "admitted": false,
+      "artifact_uids": [],
       "asset_ids": [],
       "benchmark": "RNA-Scope (site detailed subtask)",
       "capability": "rna_protein_binding",
@@ -13964,6 +14382,7 @@
     },
     {
       "admitted": false,
+      "artifact_uids": [],
       "asset_ids": [],
       "benchmark": "RNA-Scope (site detailed subtask)",
       "capability": "rna_protein_binding",
@@ -13992,6 +14411,7 @@
     },
     {
       "admitted": false,
+      "artifact_uids": [],
       "asset_ids": [],
       "benchmark": "RNA-Scope (site detailed subtask)",
       "capability": "rna_protein_binding",
@@ -14020,6 +14440,7 @@
     },
     {
       "admitted": false,
+      "artifact_uids": [],
       "asset_ids": [],
       "benchmark": "RNA-Scope (site detailed subtask)",
       "capability": "rna_protein_binding",
@@ -14048,6 +14469,7 @@
     },
     {
       "admitted": false,
+      "artifact_uids": [],
       "asset_ids": [],
       "benchmark": "RNA-Scope (site detailed subtask)",
       "capability": "rna_protein_binding",
@@ -14076,6 +14498,7 @@
     },
     {
       "admitted": false,
+      "artifact_uids": [],
       "asset_ids": [],
       "benchmark": "RNA-Scope (site detailed subtask)",
       "capability": "rna_protein_binding",
@@ -14104,6 +14527,7 @@
     },
     {
       "admitted": false,
+      "artifact_uids": [],
       "asset_ids": [],
       "benchmark": "RNA-Scope (site detailed subtask)",
       "capability": "rna_protein_binding",
@@ -14132,6 +14556,7 @@
     },
     {
       "admitted": false,
+      "artifact_uids": [],
       "asset_ids": [],
       "benchmark": "RNA-Scope (site detailed subtask)",
       "capability": "rna_protein_binding",
@@ -14160,6 +14585,7 @@
     },
     {
       "admitted": false,
+      "artifact_uids": [],
       "asset_ids": [],
       "benchmark": "RNA-Scope (site detailed subtask)",
       "capability": "rna_protein_binding",
@@ -14188,6 +14614,7 @@
     },
     {
       "admitted": false,
+      "artifact_uids": [],
       "asset_ids": [],
       "benchmark": "RNA-Scope (site detailed subtask)",
       "capability": "rna_protein_binding",
@@ -14216,6 +14643,7 @@
     },
     {
       "admitted": false,
+      "artifact_uids": [],
       "asset_ids": [],
       "benchmark": "RNA-Scope (site detailed subtask)",
       "capability": "rna_protein_binding",
@@ -14244,6 +14672,7 @@
     },
     {
       "admitted": false,
+      "artifact_uids": [],
       "asset_ids": [],
       "benchmark": "RNA-Scope (site detailed subtask)",
       "capability": "rna_protein_binding",
@@ -14272,6 +14701,7 @@
     },
     {
       "admitted": false,
+      "artifact_uids": [],
       "asset_ids": [],
       "benchmark": "RNA-Scope (site detailed subtask)",
       "capability": "rna_protein_binding",
@@ -14300,6 +14730,7 @@
     },
     {
       "admitted": false,
+      "artifact_uids": [],
       "asset_ids": [],
       "benchmark": "RNA-Scope (site detailed subtask)",
       "capability": "rna_protein_binding",
@@ -14328,6 +14759,7 @@
     },
     {
       "admitted": false,
+      "artifact_uids": [],
       "asset_ids": [],
       "benchmark": "RNA-Scope (site detailed subtask)",
       "capability": "rna_protein_binding",
@@ -14356,6 +14788,7 @@
     },
     {
       "admitted": false,
+      "artifact_uids": [],
       "asset_ids": [],
       "benchmark": "RNA-Scope (site detailed subtask)",
       "capability": "rna_protein_binding",
@@ -14384,6 +14817,7 @@
     },
     {
       "admitted": false,
+      "artifact_uids": [],
       "asset_ids": [],
       "benchmark": "RNA-Scope (site detailed subtask)",
       "capability": "rna_protein_binding",
@@ -14412,6 +14846,7 @@
     },
     {
       "admitted": false,
+      "artifact_uids": [],
       "asset_ids": [],
       "benchmark": "RNA-Scope (site detailed subtask)",
       "capability": "rna_protein_binding",
@@ -14440,6 +14875,7 @@
     },
     {
       "admitted": false,
+      "artifact_uids": [],
       "asset_ids": [],
       "benchmark": "RNA-Scope (site detailed subtask)",
       "capability": "rna_protein_binding",
@@ -14468,6 +14904,7 @@
     },
     {
       "admitted": false,
+      "artifact_uids": [],
       "asset_ids": [],
       "benchmark": "RNA-Scope (site detailed subtask)",
       "capability": "rna_protein_binding",
@@ -14496,6 +14933,7 @@
     },
     {
       "admitted": false,
+      "artifact_uids": [],
       "asset_ids": [],
       "benchmark": "RNA-Scope (site detailed subtask)",
       "capability": "rna_protein_binding",
@@ -14524,6 +14962,7 @@
     },
     {
       "admitted": false,
+      "artifact_uids": [],
       "asset_ids": [],
       "benchmark": "mRNABench GitHub current dataset catalog (not necessarily original 59-subtask table)",
       "capability": "rna_scalar_phenotype",
@@ -14552,6 +14991,7 @@
     },
     {
       "admitted": false,
+      "artifact_uids": [],
       "asset_ids": [],
       "benchmark": "mRNABench GitHub current dataset catalog (not necessarily original 59-subtask table)",
       "capability": "rna_scalar_phenotype",
@@ -14580,6 +15020,9 @@
     },
     {
       "admitted": false,
+      "artifact_uids": [
+        "HF_65af1afc977fef855c33@sha256:7f70db03a17fd7b2ebe0cf51f728390873aaec883f33cec91031531984cc7372"
+      ],
       "asset_ids": [
         "HF_65af1afc977fef855c33"
       ],
@@ -14619,6 +15062,7 @@
     },
     {
       "admitted": false,
+      "artifact_uids": [],
       "asset_ids": [],
       "benchmark": "mRNABench GitHub current dataset catalog (not necessarily original 59-subtask table)",
       "capability": "rna_annotation_or_classification",
@@ -14647,6 +15091,9 @@
     },
     {
       "admitted": false,
+      "artifact_uids": [
+        "HF_99fb91290cca6ab46059@sha256:0b91c1d94eb1636c42884f3e893cff657e22ed836ba79a5e423a09746660c100"
+      ],
       "asset_ids": [
         "HF_99fb91290cca6ab46059"
       ],
@@ -14688,6 +15135,10 @@
     },
     {
       "admitted": false,
+      "artifact_uids": [
+        "HF_b539a051ae8e1493083e@sha256:79b4844d5a4a150fc405263badc1b1f175124a374a2650afd809c48a65e696b0",
+        "HF_db1de4a6948422fb33cb@sha256:7625ae3ee627628da709bf7dc9b370b92371d74308859133ff7bda74d96aff52"
+      ],
       "asset_ids": [
         "HF_b539a051ae8e1493083e",
         "HF_db1de4a6948422fb33cb"
@@ -14730,6 +15181,16 @@
     },
     {
       "admitted": false,
+      "artifact_uids": [
+        "EUKA_DOWNSTREAM_ASSEMBLED@sha256:ee30d1fa9ba04ecfec4fba120cd5d195afdda028d73bf0d4731a7ee6921a6339",
+        "EUKA_DS_1f3569ef982b@sha256:d92db65cf4ce3b6d01a0378068f35dd5cf3816c4a1534590b4e321ffdcaea264",
+        "EUKA_DS_3369d8645b6f@sha256:24d21a8c6427c2b878950e6e3cc120dfe691c0839f935bd869c9b180c10f4135",
+        "EUKA_DS_4ad49d0825bd@sha256:e2254e05eb84758af281aa5e800b470b16951633916df38a6031876f1ade36ef",
+        "EUKA_DS_4fa6b4edab94@sha256:8dd063f838f70579e2acc03b2378832793416e00e1bc63add42bdcc57fdd3f78",
+        "EUKA_DS_76bc8e21672d@sha256:d2b3cba8035705aa0d162724bbbe8c54f1c9f914bd34a83999b9819ecab8bead",
+        "EUKA_DS_b528cb53f982@sha256:bd26466dfd286373a9ff188aabda5afa2a4fa528c1355a350ff5b0b307f6ba3e",
+        "EUKA_DS_de91cc8d69ad@sha256:e7c5ebe2133ad4dbaf1d4ac680bc5abccc5fa7b53f2ad28ff5767dcc54b74ec4"
+      ],
       "asset_ids": [
         "EUKA_DOWNSTREAM_ASSEMBLED",
         "EUKA_DS_1f3569ef982b",
@@ -14767,6 +15228,16 @@
     },
     {
       "admitted": false,
+      "artifact_uids": [
+        "EUKA_DOWNSTREAM_ASSEMBLED@sha256:ee30d1fa9ba04ecfec4fba120cd5d195afdda028d73bf0d4731a7ee6921a6339",
+        "EUKA_DS_1f3569ef982b@sha256:d92db65cf4ce3b6d01a0378068f35dd5cf3816c4a1534590b4e321ffdcaea264",
+        "EUKA_DS_3369d8645b6f@sha256:24d21a8c6427c2b878950e6e3cc120dfe691c0839f935bd869c9b180c10f4135",
+        "EUKA_DS_4ad49d0825bd@sha256:e2254e05eb84758af281aa5e800b470b16951633916df38a6031876f1ade36ef",
+        "EUKA_DS_4fa6b4edab94@sha256:8dd063f838f70579e2acc03b2378832793416e00e1bc63add42bdcc57fdd3f78",
+        "EUKA_DS_76bc8e21672d@sha256:d2b3cba8035705aa0d162724bbbe8c54f1c9f914bd34a83999b9819ecab8bead",
+        "EUKA_DS_b528cb53f982@sha256:bd26466dfd286373a9ff188aabda5afa2a4fa528c1355a350ff5b0b307f6ba3e",
+        "EUKA_DS_de91cc8d69ad@sha256:e7c5ebe2133ad4dbaf1d4ac680bc5abccc5fa7b53f2ad28ff5767dcc54b74ec4"
+      ],
       "asset_ids": [
         "EUKA_DOWNSTREAM_ASSEMBLED",
         "EUKA_DS_1f3569ef982b",
@@ -14804,6 +15275,16 @@
     },
     {
       "admitted": false,
+      "artifact_uids": [
+        "EUKA_DOWNSTREAM_ASSEMBLED@sha256:ee30d1fa9ba04ecfec4fba120cd5d195afdda028d73bf0d4731a7ee6921a6339",
+        "EUKA_DS_1f3569ef982b@sha256:d92db65cf4ce3b6d01a0378068f35dd5cf3816c4a1534590b4e321ffdcaea264",
+        "EUKA_DS_3369d8645b6f@sha256:24d21a8c6427c2b878950e6e3cc120dfe691c0839f935bd869c9b180c10f4135",
+        "EUKA_DS_4ad49d0825bd@sha256:e2254e05eb84758af281aa5e800b470b16951633916df38a6031876f1ade36ef",
+        "EUKA_DS_4fa6b4edab94@sha256:8dd063f838f70579e2acc03b2378832793416e00e1bc63add42bdcc57fdd3f78",
+        "EUKA_DS_76bc8e21672d@sha256:d2b3cba8035705aa0d162724bbbe8c54f1c9f914bd34a83999b9819ecab8bead",
+        "EUKA_DS_b528cb53f982@sha256:bd26466dfd286373a9ff188aabda5afa2a4fa528c1355a350ff5b0b307f6ba3e",
+        "EUKA_DS_de91cc8d69ad@sha256:e7c5ebe2133ad4dbaf1d4ac680bc5abccc5fa7b53f2ad28ff5767dcc54b74ec4"
+      ],
       "asset_ids": [
         "EUKA_DOWNSTREAM_ASSEMBLED",
         "EUKA_DS_1f3569ef982b",
@@ -14841,6 +15322,16 @@
     },
     {
       "admitted": false,
+      "artifact_uids": [
+        "EUKA_DOWNSTREAM_ASSEMBLED@sha256:ee30d1fa9ba04ecfec4fba120cd5d195afdda028d73bf0d4731a7ee6921a6339",
+        "EUKA_DS_1f3569ef982b@sha256:d92db65cf4ce3b6d01a0378068f35dd5cf3816c4a1534590b4e321ffdcaea264",
+        "EUKA_DS_3369d8645b6f@sha256:24d21a8c6427c2b878950e6e3cc120dfe691c0839f935bd869c9b180c10f4135",
+        "EUKA_DS_4ad49d0825bd@sha256:e2254e05eb84758af281aa5e800b470b16951633916df38a6031876f1ade36ef",
+        "EUKA_DS_4fa6b4edab94@sha256:8dd063f838f70579e2acc03b2378832793416e00e1bc63add42bdcc57fdd3f78",
+        "EUKA_DS_76bc8e21672d@sha256:d2b3cba8035705aa0d162724bbbe8c54f1c9f914bd34a83999b9819ecab8bead",
+        "EUKA_DS_b528cb53f982@sha256:bd26466dfd286373a9ff188aabda5afa2a4fa528c1355a350ff5b0b307f6ba3e",
+        "EUKA_DS_de91cc8d69ad@sha256:e7c5ebe2133ad4dbaf1d4ac680bc5abccc5fa7b53f2ad28ff5767dcc54b74ec4"
+      ],
       "asset_ids": [
         "EUKA_DOWNSTREAM_ASSEMBLED",
         "EUKA_DS_1f3569ef982b",
@@ -14878,6 +15369,16 @@
     },
     {
       "admitted": false,
+      "artifact_uids": [
+        "EUKA_DOWNSTREAM_ASSEMBLED@sha256:ee30d1fa9ba04ecfec4fba120cd5d195afdda028d73bf0d4731a7ee6921a6339",
+        "EUKA_DS_1f3569ef982b@sha256:d92db65cf4ce3b6d01a0378068f35dd5cf3816c4a1534590b4e321ffdcaea264",
+        "EUKA_DS_3369d8645b6f@sha256:24d21a8c6427c2b878950e6e3cc120dfe691c0839f935bd869c9b180c10f4135",
+        "EUKA_DS_4ad49d0825bd@sha256:e2254e05eb84758af281aa5e800b470b16951633916df38a6031876f1ade36ef",
+        "EUKA_DS_4fa6b4edab94@sha256:8dd063f838f70579e2acc03b2378832793416e00e1bc63add42bdcc57fdd3f78",
+        "EUKA_DS_76bc8e21672d@sha256:d2b3cba8035705aa0d162724bbbe8c54f1c9f914bd34a83999b9819ecab8bead",
+        "EUKA_DS_b528cb53f982@sha256:bd26466dfd286373a9ff188aabda5afa2a4fa528c1355a350ff5b0b307f6ba3e",
+        "EUKA_DS_de91cc8d69ad@sha256:e7c5ebe2133ad4dbaf1d4ac680bc5abccc5fa7b53f2ad28ff5767dcc54b74ec4"
+      ],
       "asset_ids": [
         "EUKA_DOWNSTREAM_ASSEMBLED",
         "EUKA_DS_1f3569ef982b",
@@ -14915,6 +15416,16 @@
     },
     {
       "admitted": false,
+      "artifact_uids": [
+        "EUKA_DOWNSTREAM_ASSEMBLED@sha256:ee30d1fa9ba04ecfec4fba120cd5d195afdda028d73bf0d4731a7ee6921a6339",
+        "EUKA_DS_1f3569ef982b@sha256:d92db65cf4ce3b6d01a0378068f35dd5cf3816c4a1534590b4e321ffdcaea264",
+        "EUKA_DS_3369d8645b6f@sha256:24d21a8c6427c2b878950e6e3cc120dfe691c0839f935bd869c9b180c10f4135",
+        "EUKA_DS_4ad49d0825bd@sha256:e2254e05eb84758af281aa5e800b470b16951633916df38a6031876f1ade36ef",
+        "EUKA_DS_4fa6b4edab94@sha256:8dd063f838f70579e2acc03b2378832793416e00e1bc63add42bdcc57fdd3f78",
+        "EUKA_DS_76bc8e21672d@sha256:d2b3cba8035705aa0d162724bbbe8c54f1c9f914bd34a83999b9819ecab8bead",
+        "EUKA_DS_b528cb53f982@sha256:bd26466dfd286373a9ff188aabda5afa2a4fa528c1355a350ff5b0b307f6ba3e",
+        "EUKA_DS_de91cc8d69ad@sha256:e7c5ebe2133ad4dbaf1d4ac680bc5abccc5fa7b53f2ad28ff5767dcc54b74ec4"
+      ],
       "asset_ids": [
         "EUKA_DOWNSTREAM_ASSEMBLED",
         "EUKA_DS_1f3569ef982b",
@@ -14952,6 +15463,16 @@
     },
     {
       "admitted": false,
+      "artifact_uids": [
+        "EUKA_DOWNSTREAM_ASSEMBLED@sha256:ee30d1fa9ba04ecfec4fba120cd5d195afdda028d73bf0d4731a7ee6921a6339",
+        "EUKA_DS_1f3569ef982b@sha256:d92db65cf4ce3b6d01a0378068f35dd5cf3816c4a1534590b4e321ffdcaea264",
+        "EUKA_DS_3369d8645b6f@sha256:24d21a8c6427c2b878950e6e3cc120dfe691c0839f935bd869c9b180c10f4135",
+        "EUKA_DS_4ad49d0825bd@sha256:e2254e05eb84758af281aa5e800b470b16951633916df38a6031876f1ade36ef",
+        "EUKA_DS_4fa6b4edab94@sha256:8dd063f838f70579e2acc03b2378832793416e00e1bc63add42bdcc57fdd3f78",
+        "EUKA_DS_76bc8e21672d@sha256:d2b3cba8035705aa0d162724bbbe8c54f1c9f914bd34a83999b9819ecab8bead",
+        "EUKA_DS_b528cb53f982@sha256:bd26466dfd286373a9ff188aabda5afa2a4fa528c1355a350ff5b0b307f6ba3e",
+        "EUKA_DS_de91cc8d69ad@sha256:e7c5ebe2133ad4dbaf1d4ac680bc5abccc5fa7b53f2ad28ff5767dcc54b74ec4"
+      ],
       "asset_ids": [
         "EUKA_DOWNSTREAM_ASSEMBLED",
         "EUKA_DS_1f3569ef982b",
@@ -14989,6 +15510,16 @@
     },
     {
       "admitted": false,
+      "artifact_uids": [
+        "EUKA_DOWNSTREAM_ASSEMBLED@sha256:ee30d1fa9ba04ecfec4fba120cd5d195afdda028d73bf0d4731a7ee6921a6339",
+        "EUKA_DS_1f3569ef982b@sha256:d92db65cf4ce3b6d01a0378068f35dd5cf3816c4a1534590b4e321ffdcaea264",
+        "EUKA_DS_3369d8645b6f@sha256:24d21a8c6427c2b878950e6e3cc120dfe691c0839f935bd869c9b180c10f4135",
+        "EUKA_DS_4ad49d0825bd@sha256:e2254e05eb84758af281aa5e800b470b16951633916df38a6031876f1ade36ef",
+        "EUKA_DS_4fa6b4edab94@sha256:8dd063f838f70579e2acc03b2378832793416e00e1bc63add42bdcc57fdd3f78",
+        "EUKA_DS_76bc8e21672d@sha256:d2b3cba8035705aa0d162724bbbe8c54f1c9f914bd34a83999b9819ecab8bead",
+        "EUKA_DS_b528cb53f982@sha256:bd26466dfd286373a9ff188aabda5afa2a4fa528c1355a350ff5b0b307f6ba3e",
+        "EUKA_DS_de91cc8d69ad@sha256:e7c5ebe2133ad4dbaf1d4ac680bc5abccc5fa7b53f2ad28ff5767dcc54b74ec4"
+      ],
       "asset_ids": [
         "EUKA_DOWNSTREAM_ASSEMBLED",
         "EUKA_DS_1f3569ef982b",
@@ -15026,6 +15557,16 @@
     },
     {
       "admitted": false,
+      "artifact_uids": [
+        "EUKA_DOWNSTREAM_ASSEMBLED@sha256:ee30d1fa9ba04ecfec4fba120cd5d195afdda028d73bf0d4731a7ee6921a6339",
+        "EUKA_DS_1f3569ef982b@sha256:d92db65cf4ce3b6d01a0378068f35dd5cf3816c4a1534590b4e321ffdcaea264",
+        "EUKA_DS_3369d8645b6f@sha256:24d21a8c6427c2b878950e6e3cc120dfe691c0839f935bd869c9b180c10f4135",
+        "EUKA_DS_4ad49d0825bd@sha256:e2254e05eb84758af281aa5e800b470b16951633916df38a6031876f1ade36ef",
+        "EUKA_DS_4fa6b4edab94@sha256:8dd063f838f70579e2acc03b2378832793416e00e1bc63add42bdcc57fdd3f78",
+        "EUKA_DS_76bc8e21672d@sha256:d2b3cba8035705aa0d162724bbbe8c54f1c9f914bd34a83999b9819ecab8bead",
+        "EUKA_DS_b528cb53f982@sha256:bd26466dfd286373a9ff188aabda5afa2a4fa528c1355a350ff5b0b307f6ba3e",
+        "EUKA_DS_de91cc8d69ad@sha256:e7c5ebe2133ad4dbaf1d4ac680bc5abccc5fa7b53f2ad28ff5767dcc54b74ec4"
+      ],
       "asset_ids": [
         "EUKA_DOWNSTREAM_ASSEMBLED",
         "EUKA_DS_1f3569ef982b",

@@ -4,17 +4,17 @@
   "selection": "explicit metadata/code allowlist",
   "raw_and_experimental_observations_included": false,
   "original_audit_markdown_included": false,
-  "file_count": 354,
+  "file_count": 360,
   "files": [
     {
       "path": ".github/workflows/pages.yml",
-      "bytes": 2581,
-      "sha256": "9b4c2b5eb0cc150b307650cc30c4c15a9d4acc3012e842c9ad97eee31c19a6b3"
+      "bytes": 2496,
+      "sha256": "c4960f1367cd86cda91d245233e0b26d7d75b766c443318cbf84ef67ba8d7011"
     },
     {
       "path": ".gitignore",
-      "bytes": 892,
-      "sha256": "8c18f89b588241a48d1a1b0086839c1d7c01662675f203a98c926eb4dfb195d1"
+      "bytes": 995,
+      "sha256": "cf8c7cfa3b8fbf7b17451f61c0f430d529677f9bd8b6d1a7f296a1d07c5a53e6"
     },
     {
       "path": "LICENSE_NOTICE.md",
@@ -23,8 +23,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 18994,
-      "sha256": "f58da38dcecaa7e2a0688b9575dd159027de44a860fdfc7de712af6a6710ba19"
+      "bytes": 21720,
+      "sha256": "efc9f62f50d69627045e113b8a59d638830a810880209f27d4366bb315e3fad5"
     },
     {
       "path": "configs/assay_schema_example.json",
@@ -58,8 +58,8 @@
     },
     {
       "path": "configs/native_sdk.json",
-      "bytes": 1159,
-      "sha256": "6290889eaafc361da96e6e4f235abac02ca67c09506001532bbf68c1bd1f04cf"
+      "bytes": 1259,
+      "sha256": "9f39372e564e3ad4d16c4f8ac4abb48eadfcf2b70b7386d249a826c2426116c9"
     },
     {
       "path": "configs/orthus_mrl_source_review.json",
@@ -203,8 +203,8 @@
     },
     {
       "path": "data/registries/dataset_catalog.json",
-      "bytes": 648875,
-      "sha256": "a7856116688b3597282662231852c9a8e64ce5e342848e8cc833b8702e455ea1"
+      "bytes": 682943,
+      "sha256": "76b79358af60d2927c45416286e12de64663135127eaaa24dc31c265b7f852c1"
     },
     {
       "path": "data/registries/download_packages_47.csv",
@@ -230,6 +230,11 @@
       "path": "data/registries/task_baselines_and_admission_198.csv",
       "bytes": 204653,
       "sha256": "c8f0ea233ea0a84826c077d9621a172e69ddbe78f8003588787d1c80aedfbd71"
+    },
+    {
+      "path": "data/registries/task_workstream_index.json",
+      "bytes": 145979,
+      "sha256": "fcd5b349858ed5d16ff50ebbc2167494fbe3e7cf3d91a9436002e0bbf04629dd"
     },
     {
       "path": "data/task_bundles/T0001.json",
@@ -1257,6 +1262,11 @@
       "sha256": "3c5c5a8b8703418155d6d9a35220d8a17c47c821fd49276af33c42fd36e060e5"
     },
     {
+      "path": "docs/TASK_WORKSTREAMS.md",
+      "bytes": 5387,
+      "sha256": "a8e7081f91d9119e68ee1006ab10f691db3d490e80c85fd6bb94f19b2cc22b5b"
+    },
+    {
       "path": "pyproject.toml",
       "bytes": 411,
       "sha256": "e4578bc591a06366fc5f48c80bfa9e06fe9e218c77cb306116cd47d959a6fb66"
@@ -1283,8 +1293,8 @@
     },
     {
       "path": "rna_gym/datasets.py",
-      "bytes": 7548,
-      "sha256": "c66018f89859c1016c4b721739b0c890883d59f1662c2b7ddfb874845010b2d2"
+      "bytes": 10459,
+      "sha256": "e72c99366c6d6da94bfe6a50e902bacbfdec03bae328a54ac57c607fabadfeb5"
     },
     {
       "path": "rna_gym/models.py",
@@ -1375,6 +1385,11 @@
       "path": "tests/test_admission_gate.py",
       "bytes": 2040,
       "sha256": "d5e7be93de6feb0732207f9de15df9bfeec54ba01fffb6434543e735bedaa619"
+    },
+    {
+      "path": "tests/test_asset_versions.py",
+      "bytes": 7443,
+      "sha256": "1ca6f881c3dd3f1459d2bae2789f8ac9f7c2595b8316180a86b31417d3e85ba2"
     },
     {
       "path": "tests/test_atom_identity.py",
@@ -1527,6 +1542,11 @@
       "sha256": "0c201a318fc78616ae9123a12234f4a64f2b31a3f6259128c78bd7550ff26196"
     },
     {
+      "path": "tests/test_workstream_index.py",
+      "bytes": 4134,
+      "sha256": "361f543dbe0f88d1ec64e19d5f330020e845aff9d2017ffafde8b22e4a42135f"
+    },
+    {
       "path": "tools/__init__.py",
       "bytes": 71,
       "sha256": "01584dcbab244a7fc06d118ba4e84a927635e3f7298387fe410660ae21ea02c3"
@@ -1557,6 +1577,11 @@
       "sha256": "b5af4971c9d3d95d7d89b2c516717b1b797e5bc152105d50bcb371fadeb84832"
     },
     {
+      "path": "tools/asset_identity.py",
+      "bytes": 439,
+      "sha256": "cacf08ae002341339822dcbb3ea4899ba38a9f8b128beb6875f331eca437f5e3"
+    },
+    {
       "path": "tools/audit_mrl_group_splits.py",
       "bytes": 20680,
       "sha256": "078590decf76c2480488c94bbfd1f9aee539aef84c44b77bb2256d0174f6ec35"
@@ -1573,8 +1598,8 @@
     },
     {
       "path": "tools/build_dataset_catalog.py",
-      "bytes": 15222,
-      "sha256": "595866f6864d3ce4411aad4e34c25240c2094000624f10ef421f207183fa7daf"
+      "bytes": 16321,
+      "sha256": "9fb99b27fcb649ab1a9cd1f9308a625b9bee744914d321388a586e2d03770a0e"
     },
     {
       "path": "tools/build_mrl_split_site.py",
@@ -1595,6 +1620,11 @@
       "path": "tools/build_task_bundles.py",
       "bytes": 5071,
       "sha256": "66f90b3ea8862431042cf9ae11e8ab26695f66e16da33e7b764e3c68f7cdcdc5"
+    },
+    {
+      "path": "tools/build_workstream_index.py",
+      "bytes": 6815,
+      "sha256": "5f43ab91ffbd8232ea0e317ddd0060fefed949f476dd3514f1327f682052c4f5"
     },
     {
       "path": "tools/catalog_hf.py",
@@ -1683,8 +1713,8 @@
     },
     {
       "path": "tools/prepare_public.py",
-      "bytes": 5264,
-      "sha256": "38a01a989cf416c986d7e3fd8730d99d07e1efdb63f7be49522fe9d6496b0b38"
+      "bytes": 5345,
+      "sha256": "098a0b65e8822a57703be41f416f237266eadbad864991ac84bf0d1692c609cd"
     },
     {
       "path": "tools/publish_github.py",

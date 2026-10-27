@@ -15,6 +15,7 @@
   <a href="docs/NATIVE_SDK.md">Python API</a> ·
   <a href="docs/DATASET_TASK_LABEL_AUDIT.md">Data &amp; labels</a> ·
   <a href="#capabilities">Capabilities</a> ·
+  <a href="#workstreams">Task workstreams / 任务分块</a> ·
   <a href="#中文">中文</a> · <a href="#english">English</a> ·
   <a href="https://mondragondeiontonio-sketch.github.io/RNA-GYM/">Website</a>
 </p>
@@ -52,6 +53,60 @@
 Explore the [Dataset Atlas][atlas], [QC Dashboard][qc] and
 [task/label audit][label-audit]. Local-file figures describe the publisher's
 snapshot, not data automatically available on a fresh clone.
+
+<a id="workstreams"></a>
+
+## Task workstreams · 按任务分块推进
+
+我们按生物学输入与输出拆分工作，而不是同时启动198条任务。
+下面的分块**只用于工作分配**，不新增实验、不改变旧T/X任务ID，也不合并不同测量或排行榜。
+Every registered row belongs to exactly one workstream; these are not independent
+assay counts or a claim that every dataset is ready to train.
+
+<!-- WORKSTREAMS:START -->
+
+| Workstream / 工作块 | Registered rows / 注册行 | Admitted / 准入 |
+|---|---:|---:|
+| 序列与调控 / Sequence & regulation | 68 | 0 |
+| 二级结构 / Secondary structure | 13 | 0 |
+| 三级结构 / Tertiary structure | 16 | 0 |
+| 突变效应 / Variant effects | 9 | 0 |
+| 逐核苷酸读出 / Nucleotide probing | 10 | 0 |
+| RNA–RNA 相互作用 / RNA pairs | 6 | 0 |
+| RNA–配体 / RNA–ligand | 15 | 0 |
+| 逆折叠与设计 / Inverse folding & design | 34 | 0 |
+| 原始信号 / Direct-RNA signals | 4 | 0 |
+| 方法与待解析项 / Methods & unresolved | 23 | 0 |
+| **Total / 合计** | **198** | **0** |
+
+<!-- WORKSTREAMS:END -->
+
+- **序列与调控 / Sequence:** first close one assay's source, units, conditions and
+  split; keep MRL, TE, RSS, half-life and annotation targets distinct.
+- **二级结构 / 2D:** verify paired/unpaired versus pair-edge labels, residue/token
+  maps, masks and decoder. Chemical probing is a separate task, not pair truth.
+- **三级结构 / 3D:** verify assembly/model/chain, missing residues, geometry and
+  sequence/structure homology before model evaluation.
+- **突变 / Variants:** verify RNA substrate, WT/variant round-trip, readout
+  orientation and RNAGym/NABench experimental reuse; no cosine-as-fitness shortcut.
+- **Other workstreams:** paired RNA, ligands, design and raw signal keep their
+  own identities, labels and evaluation contracts; scalar heads do not cover them.
+
+[完整工作块说明](docs/TASK_WORKSTREAMS.md) ·
+[机器可读任务分块索引](data/registries/task_workstream_index.json)
+
+```bash
+# No downloads, model loading or training.
+python tools/build_workstream_index.py --verify
+python tools/build_workstream_index.py --task T0021
+```
+
+**Current continuation:** W00 hash/version reconciliation is complete. W01 is
+still blocked by original-assay/rights/reviewer evidence. W02 now addresses file
+version identity and work allocation; unresolved assay fields remain unknown.
+The independent review still flags ranking-result identity/label-budget checks,
+native execution budgets and bootstrap instability reporting. **This is not a
+formal benchmark release or a declaration that those blockers are fixed.**
 
 <a id="quick-start"></a>
 

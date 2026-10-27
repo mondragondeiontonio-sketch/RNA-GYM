@@ -11,6 +11,11 @@ import hashlib
 import json
 from pathlib import Path
 
+if __package__:
+ from .asset_identity import artifact_uid
+else:
+ from asset_identity import artifact_uid
+
 ROOT=Path(__file__).resolve().parents[1]
 TYPE_MAP={
  'RNA 2D':('secondary_structure','rna_secondary_structure'),
@@ -152,19 +157,34 @@ def build(root):
    candidates=[f for f in path.parent.iterdir() if f.is_file() and f.name not in ('provenance.json',) and f.suffix not in ('.json','.lock','.partial')]
    physical=candidates[0] if len(candidates)==1 else None
   observed=p.get('sha256',p.get('observed_sha256'))
+  uid=artifact_uid(aid,observed)
   size_ok=bool(physical and physical.is_file() and physical.stat().st_size==p.get('bytes'))
   ev=[x for x in evidence.get(aid,[]) if x.get('source_sha256') in (None,observed)]
   state='LABEL_VALUES_VERIFIED_IN_HASH_BOUND_QC' if ev else 'LABELS_NOT_ESTABLISHED_BY_SELECTED_EVIDENCE'
   if aid.startswith('RNA3DB_') and 'mmcif' in str(name):state='STRUCTURAL_COORDINATE_TARGETS_PRESENT_PAIR_LABEL_EXTRACTION_SEPARATE'
   if aid in ('HF_287b2797cface258321d','HF_51b53dab485ecb3d7409'):state='EXCLUDED_MODEL_RESULT_TABLE_NOT_GROUND_TRUTH'
-  item={'asset_id':aid,'package_group_id':p.get('package_group_id'),'filename':name,
+  item={'artifact_uid':uid,'asset_id':aid,'provenance_record_count':1,'package_group_id':p.get('package_group_id'),'filename':name,
     'source_sha256':observed,'file_bytes':p.get('bytes'),'physical_file_present':bool(physical and physical.is_file()),
     'physical_file_size_matches_provenance':size_ok,'source_url':p.get('official_source_url',p.get('requested_url')),
     'label_state':state,'label_evidence':ev,'rights_decision':p.get('rights',{}).get('decision','UNRESOLVED'),
     'scientific_admission':False,'count_scope':'PHYSICAL_FILE_VERSION_NOT_INDEPENDENT_ASSAY'}
-  assets.append(item)
-  private[aid]={'path':str(physical.relative_to(root)) if physical else None,
+  locator={'path':str(physical.relative_to(root)) if physical else None,
     'provenance':str(path.relative_to(root)),'source_sha256':observed,'bytes':p.get('bytes')}
+  if uid in private:
+   previous=next(a for a in assets if a['artifact_uid']==uid)
+   if previous['package_group_id']!=item['package_group_id']:
+    raise ValueError('SAME_ARTIFACT_CONFLICTING_PACKAGE_REQUIRES_SOURCE_REVIEW')
+   previous['provenance_record_count']+=1
+   private[uid]['provenance_aliases'].append(locator['provenance'])
+   private[uid]['path_aliases'].append(locator['path'])
+   if not previous['physical_file_present'] and item['physical_file_present']:
+    previous['physical_file_present']=True
+    previous['physical_file_size_matches_provenance']=size_ok
+    private[uid].update(locator)
+  else:
+   assets.append(item)
+   private[uid]={**locator,'provenance_aliases':[locator['provenance']],
+                 'path_aliases':[locator['path']]}
   inputs[str(path.relative_to(root))]=digest(path)
  registry=root/'data/registries/task_baselines_and_admission_198.csv';rows=table(registry)
  current={r['task_id']:r for r in table(root/'data/audit/task_master.tsv','\t')}
@@ -188,7 +208,8 @@ def build(root):
     'capability_assignment_scope':'REGISTERED_DESCRIPTION_NOT_SCIENTIFIC_IDENTITY_APPROVAL',
     'input_track':row['公平输入轨道'],'registered_label_description':row['标签/计数(原登记)'],
     'registered_label_verified_flag':row['已有标签是否实测核验'],'registered_downloaded_flag':row['源数据已下载'],
-    'package_group_id':package,'source_family_id':row['来源族ID'],'asset_ids':[a['asset_id'] for a in linked],
+    'package_group_id':package,'source_family_id':row['来源族ID'],'asset_ids':list(dict.fromkeys(a['asset_id'] for a in linked)),
+    'artifact_uids':[a['artifact_uid'] for a in linked],
     'local_package_files':len(present),'label_files_in_package':len(label_files),
     'label_values_present_in_source_package':bool(label_files),
     'exact_assay_mapping_verified':current[tid]['state'].startswith('ADMITTED'),'task_level_sample_n':None,
@@ -198,7 +219,9 @@ def build(root):
   tasks.append(task)
  inputs[str(registry.relative_to(root))]=digest(registry)
  inputs['data/audit/task_master.tsv']=digest(root/'data/audit/task_master.tsv')
- result={'schema_version':'rna_gym.dataset_catalog.v1','snapshot_scope':'RECONCILED_LOCAL_PROVENANCE_AND_PRIOR_FULL_QC',
+ result={'schema_version':'rna_gym.dataset_catalog.v2',
+   'artifact_identity':'asset_id+source_sha256-v1',
+   'producer_sha256':digest(Path(__file__)),'snapshot_scope':'RECONCILED_LOCAL_PROVENANCE_AND_PRIOR_FULL_QC',
    'task_count':len(tasks),'task_type_counts':dict(Counter(t['registered_task_type'] for t in tasks)),
    'physical_file_versions':len(assets),'physical_files_present':sum(a['physical_file_present'] for a in assets),
    'package_groups_with_local_files':len({a['package_group_id'] for a in assets if a['physical_file_present']}),
@@ -222,7 +245,7 @@ def main():
  if not args.private_out.resolve().is_relative_to(args.root.resolve()/'runs'):
   parser.error('Private raw paths must remain in ignored runs/')
  catalog,private=build(args.root)
- save(args.out,catalog);save(args.private_out,{'schema_version':'rna_gym.private_asset_paths.v1','assets':private})
+ save(args.out,catalog);save(args.private_out,{'schema_version':'rna_gym.private_asset_paths.v2','artifacts':private})
  print(json.dumps({k:v for k,v in catalog.items() if k not in ('tasks','assets','evidence_input_sha256')},ensure_ascii=False,indent=2))
 
 

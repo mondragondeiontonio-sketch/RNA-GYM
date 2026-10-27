@@ -6,6 +6,7 @@ import io
 from pathlib import Path
 import zipfile
 from ._paths import project_root
+from tools.asset_identity import artifact_uid
 
 
 class DatasetResolutionError(ValueError):pass
@@ -16,10 +17,10 @@ class Dataset:
     @property
     def task_id(self):return self.record['task_id']
     @property
-    def assets(self):return [self.hub.assets[x] for x in self.record['asset_ids']]
+    def assets(self):return [self.hub.artifacts[x] for x in self.record['artifact_uids']]
     def describe(self):return {**self.record,'assets':self.assets}
 
-    def preview(self,*,rows=3,asset_id=None,member=None):
+    def preview(self,*,rows=3,asset_id=None,source_sha256=None,member=None):
         """Inspect raw local rows, never cast T/U, deduplicate or assign a split.
 
         Inspection is not scientific admission or permission to redistribute raw
@@ -30,10 +31,12 @@ class Dataset:
                    (str(a['filename']).endswith(('.parquet','.tsv.gz','.csv.gz')))]
         if asset_id is None:
             if len(supported)!=1:raise DatasetResolutionError('Choose asset_id explicitly; package members/versions are not one assay')
-            asset_id=supported[0]['asset_id']
-        if asset_id not in self.record['asset_ids']:raise DatasetResolutionError('Asset is not a registered source package member')
-        asset=self.hub.assets[asset_id]
-        location=self.hub.private['assets'].get(asset_id)
+            asset_id=supported[0]['artifact_uid']
+        asset=self.hub.resolve_asset(asset_id,source_sha256=source_sha256)
+        uid=asset['artifact_uid']
+        if uid not in self.record['artifact_uids']:
+            raise DatasetResolutionError('Asset is not a registered source package member')
+        location=self.hub.private['artifacts'].get(uid)
         if not location or not location.get('path'):raise FileNotFoundError('LOCAL_RAW_BYTES_NOT_AVAILABLE_NO_DOWNLOAD')
         path=(self.hub.root/location['path']).resolve()
         if not path.is_relative_to(self.hub.root/'raw_cache'):raise ValueError('Raw path escaped quarantine')
@@ -70,7 +73,8 @@ class Dataset:
                 records=[r for _,r in zip(range(rows),reader)]
         else:raise DatasetResolutionError('Inspection reader not implemented for this format; no silent substitution')
         return {'scope':'LOCAL_RAW_INSPECTION_NOT_ASSAY_ADMISSION','task_id':self.task_id,
-                'asset_id':asset_id,'source_sha256':location['source_sha256'],'member':member,
+                'asset_id':asset['asset_id'],'artifact_uid':uid,
+                'source_sha256':location['source_sha256'],'member':member,
                 'records':records,'labels_or_sequences_transformed':False,'observations_dropped':0,
                 'official_split_inferred':False,'rankable_real_result':False}
 
@@ -81,18 +85,67 @@ class DatasetHub:
         self.root=project_root(root)
         self.config=read_json(self.root/'configs/native_sdk.json')
         self.catalog=read_json(self.root/self.config['dataset_catalog'])
-        self.assets={a['asset_id']:dict(a) for a in self.catalog['assets']}
+        self.artifacts={}
+        self.asset_versions={}
+        for original in self.catalog['assets']:
+            asset=dict(original)
+            uid=artifact_uid(asset['asset_id'],asset['source_sha256'])
+            if asset.get('artifact_uid',uid)!=uid or uid in self.artifacts:
+                raise ValueError('INVALID_OR_DUPLICATE_ARTIFACT_VERSION')
+            asset['artifact_uid']=uid
+            self.artifacts[uid]=asset
+            self.asset_versions.setdefault(asset['asset_id'],[]).append(uid)
+        # Preserve the old logical-ID lookup when it is unambiguous. Multiple
+        # versions instead expose their explicit keys; nothing is overwritten.
+        self.assets={}
+        for aid,uids in self.asset_versions.items():
+            for uid in uids:
+                self.assets[aid if len(uids)==1 else uid]=self.artifacts[uid]
         self.records={r['task_id']:dict(r) for r in self.catalog['tasks']}
         private=self.root/self.config['private_assets_manifest']
-        self.private=read_json(private) if private.is_file() else {'assets':{}}
-        for aid,asset in self.assets.items():
-            location=self.private['assets'].get(aid,{})
+        original=read_json(private) if private.is_file() else {}
+        locations=original.get('artifacts',original.get('assets',{}))
+        normalized={}
+        for uid,asset in self.artifacts.items():
+            location=locations.get(uid)
+            if location is None and asset['asset_id'] in locations:
+                if len(self.asset_versions[asset['asset_id']])!=1:
+                    raise ValueError('AMBIGUOUS_LEGACY_ARTIFACT_LOCATOR_REBUILD_REQUIRED')
+                location=locations[asset['asset_id']]
+            if location is not None:
+                if location.get('source_sha256')!=asset['source_sha256']:
+                    raise ValueError('ARTIFACT_LOCATOR_HASH_MISMATCH')
+                normalized[uid]=location
             asset['physical_file_present_at_snapshot']=asset['physical_file_present']
-            asset['physical_file_present']=bool(location.get('path') and (self.root/location['path']).is_file())
+            asset['physical_file_present']=bool(location and location.get('path') and
+                (self.root/location['path']).is_file())
+        self.private={'artifacts':normalized,'assets':{
+            key:normalized[asset['artifact_uid']] for key,asset in self.assets.items()
+            if asset['artifact_uid'] in normalized}}
         for record in self.records.values():
+            record['asset_ids']=list(dict.fromkeys(record['asset_ids']))
+            uids=record.get('artifact_uids')
+            if uids is None:
+                uids=[uid for aid in record['asset_ids'] for uid in self.asset_versions.get(aid,[])]
+            if len(set(uids))!=len(uids) or any(uid not in self.artifacts or
+                    self.artifacts[uid]['asset_id'] not in record['asset_ids'] for uid in uids):
+                raise ValueError('TASK_ARTIFACT_VERSION_MAPPING_MISMATCH')
+            record['artifact_uids']=list(uids)
             record['local_package_files_at_snapshot']=record['local_package_files']
-            record['local_package_files']=sum(self.assets[aid]['physical_file_present'] for aid in record['asset_ids'])
-            record['label_files_present_now']=sum(bool(self.assets[aid]['label_evidence']) and self.assets[aid]['physical_file_present'] for aid in record['asset_ids'])
+            record['local_package_files']=sum(self.artifacts[uid]['physical_file_present'] for uid in uids)
+            record['label_files_present_now']=sum(bool(self.artifacts[uid]['label_evidence']) and
+                self.artifacts[uid]['physical_file_present'] for uid in uids)
+
+    def resolve_asset(self,asset_id,*,source_sha256=None):
+        if asset_id in self.artifacts:
+            candidates=[asset_id]
+        else:
+            candidates=self.asset_versions.get(asset_id,[])
+        if source_sha256 is not None:
+            candidates=[uid for uid in candidates if self.artifacts[uid]['source_sha256']==source_sha256]
+        if not candidates:raise DatasetResolutionError('UNKNOWN_ASSET_VERSION')
+        if len(candidates)!=1:raise DatasetResolutionError('AMBIGUOUS_ASSET_VERSION_SELECT_SHA256')
+        return self.artifacts[candidates[0]]
 
     def list(self,*,task_type=None,capability=None,with_local_labels=None):
         values=list(self.records.values())
@@ -101,12 +154,12 @@ class DatasetHub:
         if with_local_labels is not None:values=[r for r in values if (r['label_files_present_now']>0)==with_local_labels]
         return values
 
-    def preview_asset(self,asset_id,*,rows=3,member=None):
-        if asset_id not in self.assets:raise DatasetResolutionError('UNKNOWN_ASSET_ID')
-        # Unmapped assets remain inspectable, not silently assigned a new task,
-        # source assay, split or ranking weight.
-        return Dataset(self,{'task_id':None,'asset_ids':[asset_id]}).preview(
-            rows=rows,asset_id=asset_id,member=member)
+    def preview_asset(self,asset_id,*,rows=3,source_sha256=None,member=None):
+        asset=self.resolve_asset(asset_id,source_sha256=source_sha256)
+        # Raw inspection does not infer an assay, split, or ranking weight.
+        return Dataset(self,{'task_id':None,'asset_ids':[asset['asset_id']],
+            'artifact_uids':[asset['artifact_uid']]}).preview(
+                rows=rows,asset_id=asset['artifact_uid'],member=member)
 
     def resolve(self,name):
         if name in self.records:return [name]
