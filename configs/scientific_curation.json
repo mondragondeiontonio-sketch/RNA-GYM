@@ -1,0 +1,12 @@
+{
+  "version": "rnagym-qc-2026-10-28-v1",
+  "seed": 20261028,
+  "mmseqs": "runs/20261028_scientific_curation/mmseqs/bin/mmseqs",
+  "ood_min_identity": 0.8,
+  "ood_bidirectional_coverage": 0.8,
+  "class_protocol": "stratify when binary class group support permits; never resample",
+  "normalization": "none",
+  "raw_sequence_policy": "preserved verbatim; U/T equivalence only in clustering and explicit comparison views",
+  "observation_policy": "source + declared construct/locus/condition identity; unknown context is not silently collapsed",
+  "admission": "recommendations only; no human signoff or formal admission state edits"
+}

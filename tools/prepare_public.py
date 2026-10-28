@@ -19,7 +19,9 @@ TOP = ['README.md', 'requirements-qc.txt', 'LICENSE_NOTICE.md', '.gitignore', '.
        'tools/api_console/api-console.js', 'pyproject.toml',
        'docs/NATIVE_SDK.md', 'docs/DATASET_TASK_LABEL_AUDIT.md',
        'docs/SPLIT_ADMISSION_AUDIT.md', 'data/registries/upstream_split_audit.json', 'data/registries/dataset_catalog.json',
-       'data/registries/task_workstream_index.json', 'docs/TASK_WORKSTREAMS.md']
+       'data/registries/task_workstream_index.json', 'docs/TASK_WORKSTREAMS.md', 'data/registries/fine_task_catalog.json',
+       'data/registries/curated_endpoint_units.json', 'data/registries/fine_task_category_mapping.tsv', 'data/registries/utr_legacy_102.json',
+       'data/registries/utr_revised_87_metadata.json', 'data/registries/utr_historical_result_status.json']
 REGISTRIES = ['search_level_task_crosswalk_198.csv', 'download_packages_47.csv',
     'source_family_crosswalk_123.csv', 'task_baselines_and_admission_198.csv',
     'RNAGym_NABench_DMS_ID_91.csv', 'miRBench_splits_3.csv']
@@ -47,6 +49,7 @@ def selected_files(root):
     selected += ['data/audit/' + f for f in AUDIT]
     for folder, suffix in [('tools', '.py'), ('tests', '.py'), ('configs', '.json'), ('configs', '.yaml')]:
         selected += [str(p.relative_to(root)) for p in sorted((root / folder).glob('*' + suffix))]
+    selected += [str(p.relative_to(root)) for p in sorted((root / 'tools/curation').glob('*.py'))]
     selected += [str(p.relative_to(root)) for p in sorted((root / 'rna_gym').glob('*.py'))]
     selected += [str(p.relative_to(root)) for p in sorted((root / 'data/task_bundles').glob('*.json'))]
     selected += [str(p.relative_to(root)) for p in sorted((root / 'site').rglob('*'))

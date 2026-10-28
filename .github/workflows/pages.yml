@@ -66,6 +66,7 @@ jobs:
           python -m unittest discover -s tests -v
           python tools/build_task_bundles.py --verify
           python tools/build_workstream_index.py --verify
+          python tools/build_fine_taxonomy.py --verify
       - name: Upload only the public static site
         if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
         uses: actions/upload-pages-artifact@v3

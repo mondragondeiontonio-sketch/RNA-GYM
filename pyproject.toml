@@ -11,6 +11,6 @@ dependencies = []
 
 [tool.setuptools.packages.find]
 where = ["."]
-include = ["rna_gym*", "tools"]
+include = ["rna_gym*", "tools*"]
 exclude = ["tests*", "runs*"]
 namespaces = false

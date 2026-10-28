@@ -1,0 +1,35 @@
+{
+  "fold_metric_table_sha256": "3ddd141fec929b9af09b73fb108e7ac48613312edf18546316b929d3b7354d3b",
+  "fold_metrics_available": [
+    "spearman",
+    "pearson",
+    "mse",
+    "rmse",
+    "mae",
+    "r2"
+  ],
+  "formal_results": 0,
+  "full_compute_status": {
+    "PASS": 96
+  },
+  "full_fold_metric_rows": 960,
+  "heads": [
+    "mlp",
+    "ridge"
+  ],
+  "matrix_rows": 96,
+  "matrix_sha256": "4aadfd1907e35961da2bc142ae9d5d0364318eb92e0253697678d6d65df8bb13",
+  "metric_scales": {
+    "zscore_label": 96
+  },
+  "models_trained_this_integration": 0,
+  "raw_pooled_scores_present": 0,
+  "reporting_status": {
+    "RAW_INVERSE_PENDING": 96
+  },
+  "selected12_fold_files_bound_to_legacy102": 120,
+  "selected12_source_binding_gaps": [],
+  "status": "EXISTING_EXTERNAL_RESULTS_NOT_RNAGYM_SCORES",
+  "unique_datasets": 12,
+  "unique_models": 4
+}
