@@ -16,6 +16,7 @@
   <a href="docs/DATASET_TASK_LABEL_AUDIT.md">Data &amp; labels</a> ·
   <a href="#capabilities">Capabilities</a> ·
   <a href="#workstreams">Task workstreams / 任务分块</a> ·
+  <a href="#fine-tasks">Task types &amp; metrics / 任务与指标</a> ·
   <a href="#中文">中文</a> · <a href="#english">English</a> ·
   <a href="https://mondragondeiontonio-sketch.github.io/RNA-GYM/">Website</a>
 </p>
@@ -46,7 +47,8 @@
 | What | Verified scope | What it does **not** mean |
 |---|---|---|
 | Registry | **198 task rows · 123 source families · 47 acquisition groups** | These are not counts of independently verified assays. |
-| Local source snapshot | **50 file versions · 16 package groups** | Raw files are not shipped with this repository. |
+| Original RNA-Gym source snapshot | **50 file versions · 16 package groups** | UTR extension is counted separately; raw files are not shipped. |
+| UTR read-only extension | **102 dataset views · 1,020 verified fold files · 3,986,838 CV records** | The revised 87-entry metadata catalog is not an additional 87 local datasets. |
 | Target evidence | **26 files/archives** with targets or reference structures | An observed target is not necessarily an admitted experimental label. |
 | Native encoder | **RNA-FM**, real CUDA encoding from source and an installed wheel | Other registered models are not silently substituted. |
 | Evaluation & ranking | Fixed-budget readouts and compatible-panel ranking contracts | No fabricated scores, missing-as-zero entries or unofficial main leaderboard. |
@@ -82,6 +84,8 @@ assay counts or a claim that every dataset is ready to train.
 
 <!-- WORKSTREAMS:END -->
 
+
+
 - **序列与调控 / Sequence:** first close one assay's source, units, conditions and
   split; keep MRL, TE, RSS, half-life and annotation targets distinct.
 - **二级结构 / 2D:** verify paired/unpaired versus pair-edge labels, residue/token
@@ -108,6 +112,289 @@ version identity and work allocation; unresolved assay fields remain unknown.
 The independent review still flags ranking-result identity/label-budget checks,
 native execution budgets and bootstrap instability reporting. **This is not a
 formal benchmark release or a declaration that those blockers are fixed.**
+
+<!-- FINE_TASKS:START -->
+
+<a id="fine-tasks"></a>
+
+## 细粒度任务、数据集数量与评价指标
+
+本表按 **52 个生物学 readout 细分类** 划分，不把 MRL、TE、半衰期、RNA/DNA activity、
+蛋白 reporter output 混为“序列回归”。原 198 行与上面的 10 个工作分块保持不变。
+
+- 原有本地 QC：**175 个 source-context/readout 数据单元**。
+- UTR_bench 本地接入：**102 个 dataset/readout-condition 视图**，
+  继承 1,020 个十折文件；它们不是 1,020 个数据集，也不新增 102 个已批准 assay。
+- 两者合计 **277 个数据视图**；不是已完成跨来源去重的独立实验数。
+- UTR 的另一份 **87 项修订目录**只接入元数据，不再加到 102 上：
+  它包含 81 个 existing handles 和 6 个补充视图；与本地 102 目录相比，不含 21 个 CoM 视图。
+  这是目录差异，不是已证明的直接版本迁移；相同家族/handle 不代表文件或标签版本相同。
+- 同一多输出数据单元可在多个 readout 类别出现；“198 登记引用”也是多对多引用，
+  **各分类行不能直接相加当作独立数据集/实验数**。0 表示该口径下尚无数据，不能凭名称补数。
+
+### 各细分类的数量与指标
+
+“主指标”是本轮明确写出的 **RNA-Gym 建议报告协议**，不是伪造的原论文主指标、
+不是已运行分数，也不修改旧训练 receipt。机器清单的 `source_metrics_at_snapshot`
+保留相应来源元信息，`metric_origin` 明确区分旧 RNA-Gym QC 建议与 UTR 代码实际输出，
+不能将两者一概叫作原论文指标或已算出的分数；198 登记声称的指标也单独保留。
+未确认输入/标签的登记仍需源证据核实。
+表中“原尺度”指当前发布文件的数值尺度，不等于原始实验 reads 或原始仪器量；
+单位/变换尚未证实的 QC 单元仍保留其 `UNRESOLVED_SOURCE_SCALE`，不得冒称已核实的小时值。
+
+| 类别 | RNA-Gym QC 单元 | UTR 本地视图 | 87 修订目录（仅元数据） | 198 登记引用 | 主指标（本轮建议） | 次指标 |
+|---|---|---|---|---|---|---|
+| 序列/翻译 / MRL（原尺度） | 3 | 8 | 8 | 6 | Spearman ρ | R², Pearson r, RMSE, MAE |
+| 序列/翻译 / MRL（log₂） | 0 | 4 | 4 | 0 | Spearman ρ | R², Pearson r, RMSE, MAE |
+| 序列/翻译 / TE（实测定义） | 0 | 0 | 0 | 3 | Spearman ρ | R², Pearson r, RMSE, MAE |
+| 序列/翻译 / TE/translation reporter score | 3 | 0 | 0 | 2 | Spearman ρ | R², Pearson r, RMSE |
+| 序列/稳定性 / 半衰期（时间原尺度） | 5 | 1 | 1 | 4 | Spearman ρ | R², Pearson r, RMSE, MAE |
+| 序列/稳定性 / 半衰期（log 尺度） | 1 | 4 | 10 | 2 | Spearman ρ | R², Pearson r, RMSE, MAE |
+| 序列/稳定性 / 半衰期共识 PC1 | 2 | 0 | 0 | 2 | Spearman ρ | R², Pearson r, RMSE |
+| 序列/稳定性 / 衰减率及其变换 | 2 | 30 | 30 | 3 | Spearman ρ | R², Pearson r, RMSE, MAE |
+| 序列/稳定性 / RNA retention/stability index | 0 | 2 | 2 | 0 | Spearman ρ | R², RMSE, MAE |
+| 序列/稳定性 / RNA log-retention score | 0 | 2 | 2 | 0 | Spearman ρ | R², RMSE, MAE |
+| 序列/表达 / RNA abundance/expression | 4 | 16 | 16 | 3 | Spearman ρ | R², Pearson r, RMSE, MAE |
+| 序列/表达 / RNA/DNA reporter activity | 0 | 12 | 12 | 0 | Spearman ρ | R², Pearson r, RMSE, MAE |
+| 序列/蛋白输出代理 / Protein reporter CoM | 0 | 21 | 0 | 0 | Spearman ρ | R², Pearson r, RMSE, MAE |
+| 序列/蛋白输出代理 / Protein/YFP reporter output | 3 | 1 | 1 | 2 | Spearman ρ | R², Pearson r, RMSE, MAE |
+| 序列/翻译代理 / HP_Free fraction | 1 | 0 | 0 | 2 | Spearman ρ | R², RMSE, MAE |
+| 序列/加工 / APA/isoform usage | 1 | 0 | 0 | 2 | Spearman ρ | R², RMSE, MAE |
+| 功能注释 / GO 分子功能多标签 | 1 | 0 | 0 | 1 | macro-AUPRC | macro-AUROC, macro F1 |
+| 功能注释 / Protein localization 多标签 | 1 | 0 | 0 | 1 | macro-AUPRC | macro-AUROC, macro F1 |
+| RNA 定位 / RNA subcellular localization（schema 待核） | 0 | 0 | 0 | 2 | 待 schema 核实 | — |
+| 家族注释 / RNA family/type annotation | 3 | 0 | 0 | 0 | macro F1 | accuracy |
+| 相互作用注释 / miRNA target presence 多标签 | 1 | 0 | 0 | 1 | macro-AUPRC | macro-AUROC, macro F1 |
+| RNA–RNA / miRNA–target-site binding | 3 | 0 | 0 | 1 | AUPRC | AUROC, binary F1, MCC |
+| RNA–RNA / 其他 RNA–RNA interaction/duplex | 0 | 0 | 0 | 4 | AUPRC | AUROC, binary F1, MCC |
+| RNA 同源性 / Sequence-pair homology/retrieval | 0 | 0 | 0 | 2 | AUROC | AUPRC, top_k_recall |
+| RNA–蛋白 / RBP/CLIP/eCLIP binding | 54 | 0 | 0 | 30 | AUPRC | AUROC, binary F1, MCC |
+| 结构预测 / 2D base-pair prediction | 0 | 0 | 0 | 8 | pair F1 | MCC, precision, recall |
+| 结构预测 / RNA binary contact graph | 2 | 0 | 0 | 3 | contact F1 | MCC, precision, recall |
+| 结构预测 / Residue distance/map regression | 0 | 0 | 0 | 2 | MAE | RMSE, R² |
+| 结构预测 / 3D coordinate prediction | 1 | 0 | 0 | 12 | lDDT | TM-score, RMSD |
+| 结构评估 / Model quality/decoy ranking | 0 | 0 | 0 | 3 | Spearman ρ | Pearson r, MAE |
+| 化学探针 / DMS reactivity（逐核苷酸） | 1 | 0 | 0 | 4 | Pearson r | Spearman ρ, MAE, RMSE |
+| 化学探针 / 2A3 reactivity | 1 | 0 | 0 | 4 | Pearson r | Spearman ρ, MAE, RMSE |
+| 化学探针 / SHAPE/icSHAPE/其他 modifier | 0 | 0 | 0 | 8 | Pearson r | Spearman ρ, MAE, RMSE |
+| 突变效应 / Ribozyme RNA activity DMS | 26 | 0 | 0 | 5 | Spearman ρ | Pearson r, R² |
+| 突变效应 / tRNA fitness DMS | 3 | 0 | 0 | 4 | Spearman ρ | Pearson r, R² |
+| 突变效应 / Aptamer fitness/activity DMS | 2 | 0 | 0 | 5 | Spearman ρ | Pearson r, R² |
+| 突变效应 / RNA splicing DMS | 2 | 0 | 0 | 3 | Spearman ρ | Pearson r, R² |
+| 突变效应代理 / Coding-protein phenotype DMS | 37 | 0 | 0 | 3 | Spearman ρ | Pearson r, R² |
+| 突变效应待核 / DMS score，RNA 机制待核 | 5 | 0 | 0 | 6 | Spearman ρ | Pearson r |
+| 变异注释代理 / Clinical/Trait variant annotation | 4 | 0 | 0 | 2 | AUPRC | AUROC, binary F1, MCC |
+| 功能代理 / Growth/enrichment score | 0 | 1 | 1 | 0 | Spearman ρ | R², Pearson r |
+| RNA–配体 / Binding affinity Kd/Ki | 0 | 0 | 0 | 2 | Spearman ρ | MAE, RMSE |
+| RNA–配体 / Binding/native–decoy classification | 0 | 0 | 0 | 5 | AUPRC | AUROC, binary F1, enrichment_factor |
+| RNA–配体代理 / Docking/derived score | 0 | 0 | 0 | 1 | Spearman ρ | R², MAE |
+| RNA 设计 / 2D inverse folding | 0 | 0 | 0 | 25 | folding success | structure_f1, sequence recovery |
+| RNA 设计 / 3D inverse folding | 0 | 0 | 0 | 11 | sequence recovery | perplexity, structure_consistency |
+| RNA 设计 / Conditional RNA generation/editing | 0 | 0 | 0 | 1 | target_success | diversity, novelty |
+| 修饰/测序 / RNA modification/site detection | 9 | 0 | 0 | 13 | AUPRC | AUROC, binary F1 |
+| 修饰/测序 / Direct-RNA signal/basecalling | 0 | 0 | 0 | 0 | CER | identity_rate |
+| 控制/方法 / Sanity control / method-only | 0 | 0 | 0 | 8 | 不适用 | — |
+| 范围外 / DNA-only task | 0 | 0 | 0 | 6 | 依源协议确认 | — |
+| 待核 / 输入/目标尚未确认 | 0 | 0 | 0 | 20 | 待 schema 核实 | — |
+
+### 指标的含义与汇总边界
+
+- **R²**：`1 − Σ(y−ŷ)² / Σ(y−ȳ)²`，允许负值，**不是 Pearson r 的平方**。
+  定量回归在该版本已声明的 label 尺度上报告，不能混合小时、分钟、log 或 PC1。
+- **Spearman ρ**：排序相关性；DMS 和无量纲共识分数优先看排序。
+  常数标签/预测导致的未定义值记录 NA，不补成 0；R² 的零方差与 AUROC 的单类情况也需报告 NA。
+- **F1**：区分 binary F1、macro-F1、base-pair F1 与 contact F1；阈值只由 validation
+  决定。严重不平衡的结合/修饰任务以 AUPRC 为建议主指标，同时报 AUROC/F1/MCC。
+- **逐核苷酸 probing**：按序列、modifier 与有效位置 mask 分别算 Pearson/MAE 等；
+  化学 DMS 不等于 deep mutational scanning，不混用两个术语的标签。
+- R²、相关系数、AUC 与 F1 通常越高越好；MSE/MAE/RMSE/RMSD/CER 越低越好。
+- **结构和生成任务**不能统一用 R²/F1：3D 用 lDDT/TM-score/RMSD，
+  inverse folding 用结构成功率或 sequence recovery，并保留具体协议条件。
+- 先按 assay/readout/条件给分数；不能按样本量把镜像、多个 CV 版本或多个 readout
+  重复加权。跨折 z-score 预测不能直接拼成 raw-unit pooled 指标。
+
+### UTR_bench 已接入的 102 个本地视图
+
+本地目录包含 **61 个 3′UTR 文件夹视图、41 个 5′UTR 文件夹视图**，
+合计 **3,986,838 条 CV 记录（按任务视图计数）**，不是十折展开后的重复行数。
+
+继承数据的 `sequence / raw_label / zscore_label / set / fold` 五列，不改 raw label、
+不再次 log、不重新拟合 z-score，也不覆盖原 train/val/test。原 protected 数据继续排除。
+这些 split 名为 `UTR_LEGACY_10FOLD`，**不冒充本项目新建的 EAZY 或 OOD_split**。
+既有 RNA-Gym 数据仍有独立 EAZY/OOD；旧 UTR 数据的新 OOD 尚未构造。
+
+| 来源家族 | 本地数据集视图 | 细分类 | label 单位/尺度 | 主指标 | 次指标 |
+|---|---|---|---|---|---|
+| castillo | 4 | MRL（原尺度） | MRL | Spearman ρ | R², Pearson r, RMSE, MAE |
+| com | 21 | Protein reporter CoM | fraction/bin CoM [1,4] | Spearman ρ | R², Pearson r, RMSE, MAE |
+| danio | 4 | MRL（log₂） | log2 mean ribosome load | Spearman ρ | R², Pearson r, RMSE, MAE |
+| david | 2 | RNA retention/stability index | dimensionless ratio | Spearman ρ | R², RMSE, MAE |
+| geisberg | 1 | 半衰期（时间原尺度） | min | Spearman ρ | R², Pearson r, RMSE, MAE |
+| maputr | 6 | RNA/DNA reporter activity | ln RNA/DNA allele activity | Spearman ρ | R², Pearson r, RMSE, MAE |
+| penta | 16 | RNA abundance/expression | ln1p normalized reporter RNA expression | Spearman ρ | R², Pearson r, RMSE, MAE |
+| rabani | 2 | 半衰期（log 尺度） | ln(half-life / 1 hour) | Spearman ρ | R², Pearson r, RMSE, MAE |
+| sabeti | 6 | RNA/DNA reporter activity | log2 RNA/DNA activity | Spearman ρ | R², Pearson r, RMSE, MAE |
+| sample | 4 | MRL（原尺度） | MRL | Spearman ρ | R², Pearson r, RMSE, MAE |
+| su | 2 | 半衰期（log 尺度） | ln(half-life / 1 minute) | Spearman ρ | R², Pearson r, RMSE, MAE |
+| tria | 30 | 衰减率及其变换 | dimensionless negative log1p decay-rate score | Spearman ρ | R², Pearson r, RMSE, MAE |
+| virus197 | 2 | RNA log-retention score | log2 ratio | Spearman ρ | R², RMSE, MAE |
+| yeast_leaders | 1 | Protein/YFP reporter output | author normalized YFP reporter expression | Spearman ρ | R², Pearson r, RMSE, MAE |
+| yeast_random | 1 | Growth/enrichment score | growth/enrichment | Spearman ρ | R², Pearson r |
+
+**关键区分：**本地 UTR 包有 12 个 MRL 视图，但没有经该清单确认的独立实测 TE 视图。
+RNA/DNA activity、protein CoM、YFP 与 growth score 不会为了填充 TE 类别而改名。
+旧 Geisberg 102 包使用 **min**，87 修订元数据写为 **h**；两版本不换算、不合并、不互用结果。
+旧目录中的 viral-genome proxy 保留该输入限定，不能仅凭 `3UTR/` 文件夹名冒称精确 3′UTR。
+
+<details>
+<summary>展开：102 个本地 UTR 数据视图的细分类与主指标</summary>
+
+| 数据集 ID | 类别 | 条件 | N（当前本地） | label 单位 | 建议主指标 |
+|---|---|---|---|---|---|
+| 3UTR/001_com_SW480_Set3 | Protein reporter CoM | SW480 | 7358 | fraction/bin CoM [1,4] | Spearman ρ |
+| 3UTR/002_com_NALM6_Set1 | Protein reporter CoM | NALM6 | 28124 | fraction/bin CoM [1,4] | Spearman ρ |
+| 3UTR/003_com_MDAMB231_Set3 | Protein reporter CoM | MDAMB231 | 6836 | fraction/bin CoM [1,4] | Spearman ρ |
+| 3UTR/004_com_Jurkat_Set1 | Protein reporter CoM | Jurkat | 28141 | fraction/bin CoM [1,4] | Spearman ρ |
+| 3UTR/005_com_NALM6_Set2 | Protein reporter CoM | NALM6 | 6250 | fraction/bin CoM [1,4] | Spearman ρ |
+| 3UTR/006_com_SW480_Set1 | Protein reporter CoM | SW480 | 27467 | fraction/bin CoM [1,4] | Spearman ρ |
+| 3UTR/007_com_HepG2_Set2 | Protein reporter CoM | HepG2 | 7412 | fraction/bin CoM [1,4] | Spearman ρ |
+| 3UTR/008_com_HepG2_Set1 | Protein reporter CoM | HepG2 | 27697 | fraction/bin CoM [1,4] | Spearman ρ |
+| 3UTR/009_com_PA1_Set1 | Protein reporter CoM | PA1 | 27996 | fraction/bin CoM [1,4] | Spearman ρ |
+| 3UTR/010_com_Jurkat_Set2 | Protein reporter CoM | Jurkat | 7019 | fraction/bin CoM [1,4] | Spearman ρ |
+| 3UTR/011_david_Beas2B_NOT_APPLICABLE_OR_UNKNOWN | RNA retention/stability index | Beas2B | 7231 | dimensionless ratio | Spearman ρ |
+| 3UTR/012_david_Jurkat_NOT_APPLICABLE_OR_UNKNOWN | RNA retention/stability index | Jurkat | 28739 | dimensionless ratio | Spearman ρ |
+| 3UTR/013_geisberg_yeast_NOT_APPLICABLE_OR_UNKNOWN | 半衰期（时间原尺度） | yeast | 21244 | min | Spearman ρ |
+| 3UTR/014_maputr_HeLa_NOT_APPLICABLE_OR_UNKNOWN | RNA/DNA reporter activity | HeLa | 13700 | ln RNA/DNA allele activity | Spearman ρ |
+| 3UTR/015_maputr_HeLa_NOT_APPLICABLE_OR_UNKNOWN | RNA/DNA reporter activity | HeLa | 8805 | ln RNA/DNA allele activity | Spearman ρ |
+| 3UTR/016_maputr_HEK293_NOT_APPLICABLE_OR_UNKNOWN | RNA/DNA reporter activity | HEK293 | 13696 | ln RNA/DNA allele activity | Spearman ρ |
+| 3UTR/017_maputr_HEK293_NOT_APPLICABLE_OR_UNKNOWN | RNA/DNA reporter activity | HEK293 | 13769 | ln RNA/DNA allele activity | Spearman ρ |
+| 3UTR/018_maputr_HeLa_NOT_APPLICABLE_OR_UNKNOWN | RNA/DNA reporter activity | HeLa | 13774 | ln RNA/DNA allele activity | Spearman ρ |
+| 3UTR/019_maputr_HeLa_NOT_APPLICABLE_OR_UNKNOWN | RNA/DNA reporter activity | HeLa | 8805 | ln RNA/DNA allele activity | Spearman ρ |
+| 3UTR/020_rabani_embryo_NOT_APPLICABLE_OR_UNKNOWN | 半衰期（log 尺度） | embryo | 89044 | ln(half-life / 1 hour) | Spearman ρ |
+| 3UTR/021_rabani_oocyte_NOT_APPLICABLE_OR_UNKNOWN | 半衰期（log 尺度） | oocyte | 43591 | ln(half-life / 1 hour) | Spearman ρ |
+| 3UTR/022_sabeti_HMEC_NOT_APPLICABLE_OR_UNKNOWN | RNA/DNA reporter activity | HMEC | 29816 | log2 RNA/DNA activity | Spearman ρ |
+| 3UTR/023_sabeti_GM12878_NOT_APPLICABLE_OR_UNKNOWN | RNA/DNA reporter activity | GM12878 | 29816 | log2 RNA/DNA activity | Spearman ρ |
+| 3UTR/024_sabeti_HEK293FT_NOT_APPLICABLE_OR_UNKNOWN | RNA/DNA reporter activity | HEK293FT | 29812 | log2 RNA/DNA activity | Spearman ρ |
+| 3UTR/025_sabeti_HEPG2_NOT_APPLICABLE_OR_UNKNOWN | RNA/DNA reporter activity | HEPG2 | 29816 | log2 RNA/DNA activity | Spearman ρ |
+| 3UTR/026_sabeti_SKNSH_NOT_APPLICABLE_OR_UNKNOWN | RNA/DNA reporter activity | SKNSH | 29816 | log2 RNA/DNA activity | Spearman ρ |
+| 3UTR/027_sabeti_K562_NOT_APPLICABLE_OR_UNKNOWN | RNA/DNA reporter activity | K562 | 29816 | log2 RNA/DNA activity | Spearman ρ |
+| 3UTR/028_su_HEK293T_NOT_APPLICABLE_OR_UNKNOWN | 半衰期（log 尺度） | HEK293T | 2280 | ln(half-life / 1 minute) | Spearman ρ |
+| 3UTR/029_su_SHSY5Y_NOT_APPLICABLE_OR_UNKNOWN | 半衰期（log 尺度） | SHSY5Y | 3198 | ln(half-life / 1 minute) | Spearman ρ |
+| 3UTR/030_tria_AsPC-1_NOT_APPLICABLE_OR_UNKNOWN | 衰减率及其变换 | AsPC-1 | 23008 | dimensionless negative log1p decay-rate score | Spearman ρ |
+| 3UTR/031_tria_A549_NOT_APPLICABLE_OR_UNKNOWN | 衰减率及其变换 | A549 | 24400 | dimensionless negative log1p decay-rate score | Spearman ρ |
+| 3UTR/032_tria_A498_NOT_APPLICABLE_OR_UNKNOWN | 衰减率及其变换 | A498 | 23138 | dimensionless negative log1p decay-rate score | Spearman ρ |
+| 3UTR/033_tria_LOX-IMVI_NOT_APPLICABLE_OR_UNKNOWN | 衰减率及其变换 | LOX-IMVI | 23708 | dimensionless negative log1p decay-rate score | Spearman ρ |
+| 3UTR/034_tria_RPMI-7951_NOT_APPLICABLE_OR_UNKNOWN | 衰减率及其变换 | RPMI-7951 | 19740 | dimensionless negative log1p decay-rate score | Spearman ρ |
+| 3UTR/035_tria_LS_180_NOT_APPLICABLE_OR_UNKNOWN | 衰减率及其变换 | LS_180 | 22960 | dimensionless negative log1p decay-rate score | Spearman ρ |
+| 3UTR/036_tria_LoVo_NOT_APPLICABLE_OR_UNKNOWN | 衰减率及其变换 | LoVo | 23280 | dimensionless negative log1p decay-rate score | Spearman ρ |
+| 3UTR/037_tria_KATO_III_NOT_APPLICABLE_OR_UNKNOWN | 衰减率及其变换 | KATO_III | 19738 | dimensionless negative log1p decay-rate score | Spearman ρ |
+| 3UTR/038_tria_NCI-H460_NOT_APPLICABLE_OR_UNKNOWN | 衰减率及其变换 | NCI-H460 | 24737 | dimensionless negative log1p decay-rate score | Spearman ρ |
+| 3UTR/039_tria_SW480_NOT_APPLICABLE_OR_UNKNOWN | 衰减率及其变换 | SW480 | 23177 | dimensionless negative log1p decay-rate score | Spearman ρ |
+| 3UTR/040_tria_H4_NOT_APPLICABLE_OR_UNKNOWN | 衰减率及其变换 | H4 | 23103 | dimensionless negative log1p decay-rate score | Spearman ρ |
+| 3UTR/041_tria_SW_900_NOT_APPLICABLE_OR_UNKNOWN | 衰减率及其变换 | SW_900 | 23552 | dimensionless negative log1p decay-rate score | Spearman ρ |
+| 3UTR/042_tria_Hs_766T_NOT_APPLICABLE_OR_UNKNOWN | 衰减率及其变换 | Hs_766T | 23221 | dimensionless negative log1p decay-rate score | Spearman ρ |
+| 3UTR/043_tria_MIA_PaCa-2_NOT_APPLICABLE_OR_UNKNOWN | 衰减率及其变换 | MIA_PaCa-2 | 21488 | dimensionless negative log1p decay-rate score | Spearman ρ |
+| 3UTR/044_tria_NCI-H23_NOT_APPLICABLE_OR_UNKNOWN | 衰减率及其变换 | NCI-H23 | 24150 | dimensionless negative log1p decay-rate score | Spearman ρ |
+| 3UTR/045_tria_hTERT-HPNE_NOT_APPLICABLE_OR_UNKNOWN | 衰减率及其变换 | hTERT-HPNE | 24199 | dimensionless negative log1p decay-rate score | Spearman ρ |
+| 3UTR/046_tria_A-427_NOT_APPLICABLE_OR_UNKNOWN | 衰减率及其变换 | A-427 | 20311 | dimensionless negative log1p decay-rate score | Spearman ρ |
+| 3UTR/047_tria_A-172_NOT_APPLICABLE_OR_UNKNOWN | 衰减率及其变换 | A-172 | 23840 | dimensionless negative log1p decay-rate score | Spearman ρ |
+| 3UTR/048_tria_SW48_NOT_APPLICABLE_OR_UNKNOWN | 衰减率及其变换 | SW48 | 23078 | dimensionless negative log1p decay-rate score | Spearman ρ |
+| 3UTR/049_tria_HT-29_NOT_APPLICABLE_OR_UNKNOWN | 衰减率及其变换 | HT-29 | 21666 | dimensionless negative log1p decay-rate score | Spearman ρ |
+| 3UTR/050_tria_NCI-H2030_NOT_APPLICABLE_OR_UNKNOWN | 衰减率及其变换 | NCI-H2030 | 24503 | dimensionless negative log1p decay-rate score | Spearman ρ |
+| 3UTR/051_tria_NCI-H2122_NOT_APPLICABLE_OR_UNKNOWN | 衰减率及其变换 | NCI-H2122 | 23221 | dimensionless negative log1p decay-rate score | Spearman ρ |
+| 3UTR/052_tria_HOP62_NOT_APPLICABLE_OR_UNKNOWN | 衰减率及其变换 | HOP62 | 24311 | dimensionless negative log1p decay-rate score | Spearman ρ |
+| 3UTR/053_tria_PANC-1_NOT_APPLICABLE_OR_UNKNOWN | 衰减率及其变换 | PANC-1 | 19046 | dimensionless negative log1p decay-rate score | Spearman ρ |
+| 3UTR/054_tria_J82_NOT_APPLICABLE_OR_UNKNOWN | 衰减率及其变换 | J82 | 23994 | dimensionless negative log1p decay-rate score | Spearman ρ |
+| 3UTR/055_tria_NCI-H1792_NOT_APPLICABLE_OR_UNKNOWN | 衰减率及其变换 | NCI-H1792 | 23476 | dimensionless negative log1p decay-rate score | Spearman ρ |
+| 3UTR/056_tria_C-33A_NOT_APPLICABLE_OR_UNKNOWN | 衰减率及其变换 | C-33A | 21197 | dimensionless negative log1p decay-rate score | Spearman ρ |
+| 3UTR/057_tria_BT-474_NOT_APPLICABLE_OR_UNKNOWN | 衰减率及其变换 | BT-474 | 22480 | dimensionless negative log1p decay-rate score | Spearman ρ |
+| 3UTR/058_tria_SW_1271_NOT_APPLICABLE_OR_UNKNOWN | 衰减率及其变换 | SW_1271 | 24306 | dimensionless negative log1p decay-rate score | Spearman ρ |
+| 3UTR/059_tria_C32_NOT_APPLICABLE_OR_UNKNOWN | 衰减率及其变换 | C32 | 24482 | dimensionless negative log1p decay-rate score | Spearman ρ |
+| 3UTR/060_virus197_UNVERIFIED_NOT_APPLICABLE_OR_UNKNOWN | RNA log-retention score | UNVERIFIED | 4655 | log2 ratio | Spearman ρ |
+| 3UTR/061_virus197_UNVERIFIED_NOT_APPLICABLE_OR_UNKNOWN | RNA log-retention score | UNVERIFIED | 3059 | log2 ratio | Spearman ρ |
+| 5UTR/062_castillo_HepG2_NOT_APPLICABLE_OR_UNKNOWN | MRL（原尺度） | HepG2 | 288572 | MRL | Spearman ρ |
+| 5UTR/063_castillo_HEK293T_NOT_APPLICABLE_OR_UNKNOWN | MRL（原尺度） | HEK293T | 148689 | MRL | Spearman ρ |
+| 5UTR/064_castillo_HEK293T_NOT_APPLICABLE_OR_UNKNOWN | MRL（原尺度） | HEK293T | 113199 | MRL | Spearman ρ |
+| 5UTR/065_castillo_T_cell_NOT_APPLICABLE_OR_UNKNOWN | MRL（原尺度） | T_cell | 349632 | MRL | Spearman ρ |
+| 5UTR/066_com_MDAMB231_Set1 | Protein reporter CoM | MDAMB231 | 18919 | fraction/bin CoM [1,4] | Spearman ρ |
+| 5UTR/067_com_PA1_Set2 | Protein reporter CoM | PA1 | 10187 | fraction/bin CoM [1,4] | Spearman ρ |
+| 5UTR/068_com_NALM6_Set1 | Protein reporter CoM | NALM6 | 21163 | fraction/bin CoM [1,4] | Spearman ρ |
+| 5UTR/069_com_SW480_Set3 | Protein reporter CoM | SW480 | 6913 | fraction/bin CoM [1,4] | Spearman ρ |
+| 5UTR/070_com_MDAMB231_Set3 | Protein reporter CoM | MDAMB231 | 9835 | fraction/bin CoM [1,4] | Spearman ρ |
+| 5UTR/071_com_Jurkat_Set2 | Protein reporter CoM | Jurkat | 10852 | fraction/bin CoM [1,4] | Spearman ρ |
+| 5UTR/072_com_HepG2_Set2 | Protein reporter CoM | HepG2 | 10888 | fraction/bin CoM [1,4] | Spearman ρ |
+| 5UTR/073_com_Jurkat_Set1 | Protein reporter CoM | Jurkat | 19493 | fraction/bin CoM [1,4] | Spearman ρ |
+| 5UTR/074_com_SW480_Set1 | Protein reporter CoM | SW480 | 20824 | fraction/bin CoM [1,4] | Spearman ρ |
+| 5UTR/075_com_NALM6_Set3 | Protein reporter CoM | NALM6 | 10897 | fraction/bin CoM [1,4] | Spearman ρ |
+| 5UTR/076_com_HepG2_Set1 | Protein reporter CoM | HepG2 | 17079 | fraction/bin CoM [1,4] | Spearman ρ |
+| 5UTR/077_danio_embryo_NOT_APPLICABLE_OR_UNKNOWN | MRL（log₂） | embryo | 18021 | log2 mean ribosome load | Spearman ρ |
+| 5UTR/078_danio_embryo_NOT_APPLICABLE_OR_UNKNOWN | MRL（log₂） | embryo | 18021 | log2 mean ribosome load | Spearman ρ |
+| 5UTR/079_danio_embryo_NOT_APPLICABLE_OR_UNKNOWN | MRL（log₂） | embryo | 18021 | log2 mean ribosome load | Spearman ρ |
+| 5UTR/080_danio_embryo_NOT_APPLICABLE_OR_UNKNOWN | MRL（log₂） | embryo | 18021 | log2 mean ribosome load | Spearman ρ |
+| 5UTR/081_penta_PANC-1_NOT_APPLICABLE_OR_UNKNOWN | RNA abundance/expression | PANC-1 | 17820 | ln1p normalized reporter RNA expression | Spearman ρ |
+| 5UTR/082_penta_SW48_NOT_APPLICABLE_OR_UNKNOWN | RNA abundance/expression | SW48 | 20559 | ln1p normalized reporter RNA expression | Spearman ρ |
+| 5UTR/083_penta_LS_180_NOT_APPLICABLE_OR_UNKNOWN | RNA abundance/expression | LS_180 | 21047 | ln1p normalized reporter RNA expression | Spearman ρ |
+| 5UTR/084_penta_HEC-1-A_NOT_APPLICABLE_OR_UNKNOWN | RNA abundance/expression | HEC-1-A | 21083 | ln1p normalized reporter RNA expression | Spearman ρ |
+| 5UTR/085_penta_NCI-H2122_NOT_APPLICABLE_OR_UNKNOWN | RNA abundance/expression | NCI-H2122 | 19546 | ln1p normalized reporter RNA expression | Spearman ρ |
+| 5UTR/086_penta_HT-29_NOT_APPLICABLE_OR_UNKNOWN | RNA abundance/expression | HT-29 | 17793 | ln1p normalized reporter RNA expression | Spearman ρ |
+| 5UTR/087_penta_BT-474_NOT_APPLICABLE_OR_UNKNOWN | RNA abundance/expression | BT-474 | 19305 | ln1p normalized reporter RNA expression | Spearman ρ |
+| 5UTR/088_penta_SW480_NOT_APPLICABLE_OR_UNKNOWN | RNA abundance/expression | SW480 | 21617 | ln1p normalized reporter RNA expression | Spearman ρ |
+| 5UTR/089_penta_LoVo_NOT_APPLICABLE_OR_UNKNOWN | RNA abundance/expression | LoVo | 19525 | ln1p normalized reporter RNA expression | Spearman ρ |
+| 5UTR/090_penta_NCI-H23_NOT_APPLICABLE_OR_UNKNOWN | RNA abundance/expression | NCI-H23 | 19565 | ln1p normalized reporter RNA expression | Spearman ρ |
+| 5UTR/091_penta_NCI-H460_NOT_APPLICABLE_OR_UNKNOWN | RNA abundance/expression | NCI-H460 | 20675 | ln1p normalized reporter RNA expression | Spearman ρ |
+| 5UTR/092_penta_NCI-H2030_NOT_APPLICABLE_OR_UNKNOWN | RNA abundance/expression | NCI-H2030 | 19826 | ln1p normalized reporter RNA expression | Spearman ρ |
+| 5UTR/093_penta_HCT15_NOT_APPLICABLE_OR_UNKNOWN | RNA abundance/expression | HCT15 | 19966 | ln1p normalized reporter RNA expression | Spearman ρ |
+| 5UTR/094_penta_NCI-H1573_NOT_APPLICABLE_OR_UNKNOWN | RNA abundance/expression | NCI-H1573 | 19061 | ln1p normalized reporter RNA expression | Spearman ρ |
+| 5UTR/095_penta_SW1417_NOT_APPLICABLE_OR_UNKNOWN | RNA abundance/expression | SW1417 | 19475 | ln1p normalized reporter RNA expression | Spearman ρ |
+| 5UTR/096_penta_KATO_III_NOT_APPLICABLE_OR_UNKNOWN | RNA abundance/expression | KATO_III | 20381 | ln1p normalized reporter RNA expression | Spearman ρ |
+| 5UTR/097_sample_HEK293T_NOT_APPLICABLE_OR_UNKNOWN | MRL（原尺度） | HEK293T | 308882 | MRL | Spearman ρ |
+| 5UTR/098_sample_HEK293T_NOT_APPLICABLE_OR_UNKNOWN | MRL（原尺度） | HEK293T | 99301 | MRL | Spearman ρ |
+| 5UTR/099_sample_HEK293T_FULL_LIBRARY_subset_column_retained | MRL（原尺度） | HEK293T | 106522 | MRL | Spearman ρ |
+| 5UTR/100_sample_HEK293T_NOT_APPLICABLE_OR_UNKNOWN | MRL（原尺度） | HEK293T | 210641 | MRL | Spearman ρ |
+| 5UTR/101_yeast_leaders_yeast_NOT_APPLICABLE_OR_UNKNOWN | Protein/YFP reporter output | yeast | 9382 | author normalized YFP reporter expression | Spearman ρ |
+| 5UTR/102_yeast_random_BY4741_NOT_APPLICABLE_OR_UNKNOWN | Growth/enrichment score | BY4741 | 489348 | growth/enrichment | Spearman ρ |
+
+</details>
+
+### 旧 UTR 评测结果究竟报告什么
+
+本地旧 102 包 ML 代码实际计算 **Spearman、MSE、MAE**，完整十折才汇总 raw-unit OOF；
+Selected12 迁移结果另有 **Spearman、Pearson、MSE、RMSE、MAE、R²** 六项，
+不能把后一套字段冒称旧 102 包已全部计算。
+这不意味着旧实验曾声明本表的新建议主指标。Selected12 迁移矩阵实际有
+**96 个 model×dataset×head 记录**、
+**12 个数据集**，记录的是 fold-mean 指标及其 label 尺度。
+其中 **960 条 Full fold 指标**均是既有结果，
+Selected12 的 **120 个源 fold 文件 SHA256**
+匹配本轮接入的旧 102 包，而不是 87 项修订目录。96 个矩阵记录均为 `zscore_label` 尺度。
+该矩阵的 `reporting_status` 为 `RAW_INVERSE_PENDING`，raw pooled 分数为空；
+**这些是旧项目的非主榜中间结果，不是新 RNA-Gym 正式分数**。本轮没有训练、重算或换算这些分数。
+
+### 查询与复用
+
+```python
+from rna_gym import DatasetHub
+
+hub = DatasetHub()
+hub.categories()                          # 每类数量、主指标、次指标
+hub.dataset_views(category="seq.mrl.native")
+hub.dataset_views(source="UTR_LEGACY_102")
+
+# 仅在已绑定本地 UTR 数据的环境可读；fresh clone 不自动下载数据。
+data = hub.utr("UTR102:5UTR/102_yeast_random_BY4741_NOT_APPLICABLE_OR_UNKNOWN")
+data.preview(fold=0, rows=3)
+for row in data.iter_fold(fold=0, split="test"):
+    break  # 保留原始标签与既有划分；读取不是科学准入或训练授权。
+```
+
+机器入口：
+[fine taxonomy](data/registries/fine_task_catalog.json)、
+[UTR 本地 102 清单](data/registries/utr_legacy_102.json)、
+[UTR 87 版本元数据](data/registries/utr_revised_87_metadata.json)、
+[旧结果状态](data/registries/utr_historical_result_status.json)。
+原 198 行、175 个 QC 数据版本、已有 split、标签、正式 gate 和人工审批均未改写。
+
+<!-- FINE_TASKS:END -->
 
 ## Existing splits · 现有划分与复用准入
 

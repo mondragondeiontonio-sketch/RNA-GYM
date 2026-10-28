@@ -56,3 +56,7 @@ dist/
 
 # User-authorized upstream split/recipe audit; aggregate metadata only.
 !docs/SPLIT_ADMISSION_AUDIT.md
+
+# Scientific curation outputs include acquired sequences/labels; local only.
+data/processed/
+reports/scientific_admission/

@@ -42,5 +42,7 @@
   ],
   "formal_rankings_require_frozen_panel_and_result_review": true,
   "upstream_split_registry": "data/registries/upstream_split_audit.json",
-  "upstream_reuse_policy": "configs/upstream_reuse_policy.json"
+  "upstream_reuse_policy": "configs/upstream_reuse_policy.json",
+  "fine_task_registry": "data/registries/fine_task_catalog.json",
+  "utr_private_manifest": "runs/20261028_utr_taxonomy/utr_local_manifest.private.json"
 }

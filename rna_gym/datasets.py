@@ -136,6 +136,21 @@ class DatasetHub:
             record['label_files_present_now']=sum(bool(self.artifacts[uid]['label_evidence']) and
                 self.artifacts[uid]['physical_file_present'] for uid in uids)
 
+    def categories(self):
+        """Fine biological endpoint categories, counts and proposed metrics."""
+        from .utr import categories
+        return categories(self)
+
+    def dataset_views(self,*,category=None,source=None):
+        """QC and UTR extension views; not additional admitted task rows."""
+        from .utr import dataset_views
+        return dataset_views(self,category=category,source=source)
+
+    def utr(self,dataset_id):
+        """Read an explicitly bound UTR legacy dataset without modifying it."""
+        from .utr import UTRDataset
+        return UTRDataset(self,dataset_id)
+
     def protocols(self,*,package=None,admitted=None):
         """Frozen upstream split/recipe decisions, separate from formal task admission.
 
