@@ -2,7 +2,7 @@
   "schema_version": "rnagym.model_adapters.v1",
   "status": "PROVISIONAL",
   "format": "JSON-compatible YAML 1.2; stdlib json-readable",
-  "real_model_smokes_performed": 0,
+  "real_model_smokes_performed": 6,
   "weights_downloaded": false,
   "tracks": [
     {
@@ -140,11 +140,11 @@
       "source_readme_sha256": "f9f1c1d62adc471661ca98b30c0250e9f3ce0cff7433830f149f5f48ea41c3da",
       "source_checked_date_utc": "2026-10-23",
       "upstream_commit": null,
-      "checkpoint_revision": null,
-      "checkpoint_sha256": null,
+      "checkpoint_revision": "local-sha256:5b5d7d87b37c291ef42c140ef9edf7aea29f255fa2a4fd435f776c52e93d5e99",
+      "checkpoint_sha256": "5b5d7d87b37c291ef42c140ef9edf7aea29f255fa2a4fd435f776c52e93d5e99",
       "tokenizer_revision": null,
-      "tokenizer_vocab_sha256": null,
-      "maximum_sequence_length": null,
+      "tokenizer_vocab_sha256": "3fda088d6fa8a55dd28bea5ddc6307b10453d711dc60aba9780328e08f17a232",
+      "maximum_sequence_length": 1022,
       "prompt_format": null,
       "documented_api": {
         "load": "fm.pretrained.rna_fm_t12()",
@@ -162,21 +162,42 @@
         "full_fine_tuning",
         "random_initialization"
       ],
-      "runtime_loadability": "BLOCKED_LOADABILITY",
-      "weights_locally_verified": false,
+      "runtime_loadability": "VERIFIED_LOCAL_GPU_DIAGNOSTIC_ONLY",
+      "weights_locally_verified": true,
       "remote_code_execution": "FORBIDDEN_UNTIL_REVIEWED",
       "unresolved_requirements": [
-        "pin upstream commit and checkpoint revision/hash",
-        "verify tokenizer and BOS/EOS nucleotide alignment",
-        "verify maximum supported input length; never silently truncate",
-        "review exact checkpoint terms",
-        "explicitly approve local checkpoint access and bounded execution",
-        "run real loadability/input-output smoke after authorization"
+        "upstream checkpoint revision and complete legal provenance not independently verified; local declaration only",
+        "scientifically admitted assay with exact input/split/metric binding",
+        "pretraining overlap audit",
+        "full panel and all scientific seed protocols remain unexecuted",
+        "native functional scoring/pair decoding require separate implementation and protocol"
       ],
       "evidence": [
         "tests/test_evaluation_protocol.py",
         "docs/EVALUATION_PROTOCOL.md"
-      ]
+      ],
+      "bounded_local_adapter": {
+        "implementation": "tools/rnafm_adapter.py",
+        "frozen_pilot_entry": "tools/frozen_pilot.py",
+        "checkpoint_manifest_required": true,
+        "checkpoint_terms_scope": "Pinned local model-card declaration plus current user local-use authorization; no redistribution approval",
+        "gpu_only": true,
+        "dtype": "float32",
+        "sequence_transform": "NONE",
+        "length_policy": "REJECT_NO_TRUNCATION",
+        "source_tree_sha256": "7628800b7663157ee69a23656ea85d9a34302be64c15a36f369a168d3a952541",
+        "evidence_scope": "UNLABELED_REAL_FM_GPU_DIAGNOSTIC_NOT_ASSAY_PERFORMANCE",
+        "diagnostic_evidence": [
+          "runs/20261027_gpu_continuation/rnafm_pretrained_gpu_retry1/diagnostic.json",
+          "runs/20261027_gpu_continuation/rnafm_random_gpu/diagnostic.json"
+        ],
+        "resource_profile_evidence": "runs/20261027_gpu_continuation/rnafm_resource_profile.json",
+        "global_scientific_execution_enabled": false,
+        "existing_admission_gate_required": true,
+        "native_functional_score_implemented": false,
+        "pair_output_implemented": false,
+        "interactive_api_entry": "tools/interactive_api.py"
+      }
     },
     {
       "model_id": "ERNIE-RNA",
@@ -337,5 +358,18 @@
     "tools/evaluation_protocol.py",
     "tests/test_evaluation_protocol.py",
     "docs/EVALUATION_PROTOCOL.md"
-  ]
+  ],
+  "real_model_smoke_scope": "Two earlier local diagnostics plus four real HTTP GPU diagnostic jobs; one checkpoint, no real assay scores",
+  "legacy_adapter_plan_scope": "Legacy adapter-plan CLI remains a non-executing plan with no supplied checkpoint manifest; use the bounded_local_adapter entry for authorized execution",
+  "interactive_api": {
+    "entrypoint": "tools/interactive_api.py",
+    "config": "configs/interactive_api.json",
+    "transport": "authenticated_loopback_HTTP_JSON",
+    "console_assets": "tools/api_console/",
+    "task_catalog_preserved": true,
+    "existing_admission_gate_required": true,
+    "fm_cpu_fallback": false,
+    "executed_gpu_evidence": "runs/20261027_interactive_api/real_gpu_http_acceptance.json",
+    "all_task_request_evidence": "runs/20261027_interactive_api/all_task_api_trials.json"
+  }
 }

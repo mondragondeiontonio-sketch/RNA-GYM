@@ -1,0 +1,46 @@
+{
+  "schema_version": "rna_gym.native_sdk_config.v1",
+  "interface": "LOCAL_PYTHON_NO_HTTP_OR_OPENAI_DEPENDENCY",
+  "model_registry": "configs/model_adapter_registry.yaml",
+  "model_manifest": "runs/20261027_gpu_continuation/model_manifest.json",
+  "dataset_catalog": "data/registries/dataset_catalog.json",
+  "private_assets_manifest": "runs/resume_20261027_165803/asset_inventory.v2.private.json",
+  "execution_bindings_source": "configs/interactive_api.json",
+  "execution_bindings_key": "task_bindings",
+  "dataset_aliases": {
+    "utr_translation": [
+      "T0009",
+      "T0017"
+    ],
+    "mrl_sugimoto": [
+      "T0021"
+    ],
+    "mrl_half_life": [
+      "T0022"
+    ],
+    "human_rna_half_life": [
+      "T0020"
+    ]
+  },
+  "alias_scope": "Task collections only; aliases do not create canonical assay IDs or independent sources",
+  "supported_frozen_scalar_protocols": [
+    "frozen_ridge",
+    "frozen_linear",
+    "frozen_mlp"
+  ],
+  "fixed_low_label_budget": 64,
+  "default_feature_layer": "last",
+  "default_pooling": "masked_mean",
+  "no_silent_truncation": true,
+  "fm_cpu_fallback": false,
+  "formal_training_seeds_unchanged": [
+    11,
+    23,
+    47,
+    71,
+    101
+  ],
+  "formal_rankings_require_frozen_panel_and_result_review": true,
+  "upstream_split_registry": "data/registries/upstream_split_audit.json",
+  "upstream_reuse_policy": "configs/upstream_reuse_policy.json"
+}

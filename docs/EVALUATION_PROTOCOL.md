@@ -14,9 +14,9 @@ of truth for acquisition or scientific admission jobs.
 | Train-only null/Ridge/logistic controls | VERIFIED | `tests/test_evaluation_protocol.py` |
 | Pair seed and single-role negative controls | VERIFIED | Exact synthetic inputs, not biological claims |
 | Real task execution | BLOCKED by default | No real task is enabled in the baseline registry |
-| Six FM evaluation tracks | PROVISIONAL | Contracts only; no encoder loaded or trained |
+| Six FM evaluation tracks | PROVISIONAL | One local RNA-FM representation adapter verified; no encoder training |
 | RNA-LLM and RNA-Agent interfaces | PROVISIONAL | Schema validators only |
-| Model loadability | BLOCKED_LOADABILITY | No local checkpoints verified or loaded |
+| Model loadability | LOCAL GPU DIAGNOSTIC VERIFIED for one RNA-FM checkpoint | Other models remain blocked; no assay scores |
 | Carbon-X metadata | BLOCKED | Exact model card/version could not be verified |
 | Real rankings | BLOCKED | No real performance numbers produced |
 
@@ -257,3 +257,128 @@ any of the 45 previously acquired artifacts.
 This worker does not assert the previous 81-test regression suite passed again,
 resolve scientific Task 0–2, enable real assays, rebuild splits, deploy a site,
 or launch frozen/GPU inference. Those remain separate main-thread workstreams.
+
+## Local GPU continuation — 2026-10-27
+
+`tools/rnafm_adapter.py` provides a real, pinned local RNA-FM encoder, not a
+replacement benchmark framework. All encoder forward passes require an explicit
+allocated `cuda:N` device. CPU checkpoint deserialization is not CPU inference.
+The adapter never downloads weights or calls a hub loader. A pinned source tree,
+checkpoint SHA256, tokenizer vocabulary/configuration, layer, pooling policy,
+initialization/seed, dtype and execution versions form the cache identity.
+Cache payload integrity is verified before reuse. Labels and split membership
+are intentionally absent from a label-free representation cache.
+
+The checkpoint model card locally declares Apache-2.0; the source declares MIT.
+This is recorded evidence, not an independently verified legal chain or permission
+to redistribute weights. A local manifest must pin both files and current user
+local-use scope. Safe checkpoint loading allows only `argparse.Namespace` in
+addition to PyTorch's restricted weights-only loader. The encoder-only loader
+imports actual upstream model submodules but not unrelated downstream task heads
+and their optional profiling dependencies. No model code or weights are replaced.
+
+The supported interface is A/C/G/U, one token per nucleotide, last-layer
+representations, valid-nucleotide mean pooling excluding BOS/EOS/padding, eval
+mode and inference-mode gradients disabled. The observed limit is 1022 nt plus
+two special tokens. Empty, DNA, lowercase, ambiguous or overlength inputs are
+rejected without normalization or truncation. This does not establish a universal
+limit for other RNA-FM checkpoints or interfaces. Pooled representations are not
+native fitness or structure-pair scores.
+
+Real pretrained and architecture-matched random branches were executed only on
+synthetic, **unlabeled** RNA for engineering verification. These are not real
+assay results, scientific initialization comparisons or a completed W06 pilot.
+A separate length/batch profile tested batch 4 through 1022 nt. The current Slurm
+allocation exposes one V100, despite authorization for two; no hidden/unallocated
+GPU is used. Detailed checkpoint/command/resource evidence remains in ignored
+local run artifacts and is not copied into a public release.
+
+## Metrics and paired uncertainty
+
+Binary `average_precision` is non-interpolated
+`sum(delta_recall * precision)` over descending **distinct score thresholds**,
+with positive class 1 and tied scores entering together. It is not trapezoidal
+PR-AUC. No-positive AP is null; all-positive AP is 1. AUROC is null if an observed
+class is missing. MCC uses the fixed probability threshold 0.5 and is null when
+any confusion-matrix margin makes its denominator zero. Undefined-reason fields
+are explicit; existing F1/null policies remain unchanged. Spearman preserves its
+sign and average tied ranks. Negative correlation is never made positive.
+
+`tools/paired_statistics.py` resamples the same declared groups for both methods.
+Undefined replicates are counted without redraw. It reports attempted, valid and
+undefined replicates; a returned conditional interval is not by itself formal
+support. Group independence must be established separately. This bootstrap
+conditions on fitted models and the supplied panel, not training-seed uncertainty
+or independent-source generalization. No across-domain overall score is defined.
+
+## Gate-bound frozen pilot candidate
+
+`configs/rnafm_frozen_pilot.json` remains **HOLD and disabled**. It is a bounded
+64-target-label development candidate with both pilot seeds 11 and 23, paired
+pretrained/random initialization, fixed Ridge alpha 1, zero HPO/tune/calibration
+labels, and 2000 bootstrap draws. It does not reduce or replace the five-seed,
+four-budget formal learning-curve design. The original planning contracts and
+historical task IDs/splits/statuses are unchanged.
+
+`tools/frozen_pilot.py` calls the existing scientific admission/binding check
+before opening disabled-task labels or loading a model. Once genuinely admitted,
+it uses the same label-blind 64-observation selection for mean, sequence-statistic,
+k-mer and frozen FM Ridge controls. Feature scalers and target z-scores are fit
+on selected training rows only; predictions are inverse-transformed to raw units.
+The union of fit/tune/calibration labels is recorded, along with zero test labels
+used for selection. Per-sample prediction IDs, exact input hashes, numeric heads,
+metrics, model resources and hash-chained stage events are persisted. Failed or
+interrupted cells remain in the error denominator, rather than becoming N/A.
+A comparison's main CI is null when the declared group minimum or valid-draw
+fraction is not met; any conditional CI is marked separately.
+
+The bounded runner is implemented and its head/gate contracts are tested, but
+has **not** been executed end-to-end on an admitted real assay. It has no automatic
+admission, formal protocol freeze, remote publication or complete restart/replay
+implementation. Its status cannot be promoted from these synthetic tests.
+
+A safe readiness check, which intentionally exits 2 for the shipped HOLD config:
+
+```bash
+python tools/frozen_pilot.py \
+  --config configs/rnafm_frozen_pilot.json \
+  --input PENDING_OBSERVATIONS.jsonl --splits PENDING_SPLITS.json \
+  --manifest LOCAL_PINNED_MODEL_MANIFEST.json --out runs/real_pilot \
+  --dry-run
+```
+
+The legacy `evaluation_protocol.py adapter-plan` remains a non-executing metadata
+plan without checkpoint arguments. Its blocked status is not a statement that
+the separate pinned, bounded local adapter has never executed.
+
+## Interactive HTTP execution
+
+All current acceptance requests, including the software suites and actual GPU
+checks, can be submitted through the authenticated loopback API. See
+[interactive API](INTERACTIVE_API.md) for endpoints, the console, security,
+idempotency, cancellation, bounded recovery and the exact scientific limits.
+The console is intentionally outside the historical static site's allowlist.
+The frozen pilot's nested cell serialization now explicitly creates new parent
+directories; existing artifacts remain immutable. No existing gate was weakened.
+
+## Upstream reuse scope and result integrity (2026-10-28)
+
+The user-authorized `UPSTREAM_PROTOCOL_REUSE` tier recognizes frozen, documented
+upstream partitions. It does not replace formal task/input/label/split binding,
+rights review, matched compute budgets or result review. A validation partition
+remains development data; it never becomes a hidden or formal test partition.
+
+Rank import now requires all five native artifacts and the original
+`native_result.json`; model/protocol/initialization identity must match the frozen
+resolved configuration. Current fixed <=64 readouts require fit UID count = total
+unique budget and tune/calibration/HPO = 0. An inconsistent ledger cannot enter a
+ranking merely because one claimed total or replayed metric matches.
+
+Bootstrap reports `invalid_fraction`, `conditional_ci`, `formal_ci` and
+`formal_ci_eligible`. Undefined draws stay in the denominator; >5% makes the
+resampling unstable, and <10 declared groups cannot yield `formal_ci`. Legacy `ci`
+is explicitly an alias of conditional CI. Group count alone never establishes
+scientific independence. No new real assay statistics were produced by this audit.
+
+Persistent shared native execution budgets (R03) remain incomplete. No automatic
+bulk FM execution is authorized by source reuse admission or this documentation.

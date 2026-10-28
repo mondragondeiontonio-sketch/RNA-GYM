@@ -1,4 +1,39 @@
-# Current scientific audit — 2026-10-23
+# Current local continuation — 2026-10-27
+
+## 2026-10-28: scoped upstream reuse admission
+
+The user authorized accepting existing, clearly documented upstream split protocols.
+The frozen split audit rehashed 50 local files and inspected/replayed 377 protocol
+variants: 206 pass `UPSTREAM_PROTOCOL_REUSE`, 171 remain HOLD. This is not a count
+of independent assays. Validation-only RNAGym protocols stay development-only.
+Formal core remains 0; no model scores, redistribution licenses or human signatures
+were created. Old dated snapshots below remain historical, not silently updated.
+
+See [the split/admission audit](SPLIT_ADMISSION_AUDIT.md) and the native
+`DatasetHub.protocols()` metadata API. R01/R02 and the R04 interval-status guard now
+have new positive/negative regression coverage; persistent shared native execution
+budgets (R03) remain open. Do not infer full protocol execution readiness.
+
+
+The real RNA-FM checkpoint and matched random architecture completed GPU-only
+unlabeled engineering checks on one allocated V100. A batch/length resource profile
+also executed. These are not real assay performance, scientific admission or a
+formal multi-seed benchmark. Local command/hash/resource evidence is retained in
+ignored runs; no weights, labels, human signatures or results were published.
+
+AP/MCC and paired group bootstrap now have synthetic boundary/reference tests.
+The frozen pilot entry still calls the unchanged human-reviewed admission gate.
+The shipped candidate remains HOLD. No real assay is enabled or added to a main
+leaderboard. T0021/T0022 retain their existing HOLD states.
+
+The environment exposes one GPU, not the two authorized in the current request.
+No allocation bypass, network download or remote Git operation occurred.
+The local working project lacks Git metadata; its historical public-release
+snapshot remains untouched. See local HANDOFF.md for evidence and resumption.
+
+---
+
+## Current scientific audit — 2026-10-23
 
 ## Verified scope, not scientific admission
 

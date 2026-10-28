@@ -5,14 +5,15 @@ on:
     branches: [main]
     paths:
       - 'README.md'
+      - 'rna_gym/**'
+      - 'pyproject.toml'
+      - 'configs/**'
       - 'site/**'
       - 'tools/generate_site.py'
       - 'tests/**'
       - 'tools/**'
       - 'data/task_bundles/**'
-      - 'data/registries/task_baselines_and_admission_198.csv'
-      - 'data/registries/source_family_crosswalk_123.csv'
-      - 'data/registries/download_packages_47.csv'
+      - 'data/registries/**'
       - 'data/assets/download_assets.csv'
       - 'data/audit/task_status.tsv'
       - 'data/audit/asset_evidence.json'
@@ -22,6 +23,9 @@ on:
   pull_request:
     paths:
       - 'README.md'
+      - 'rna_gym/**'
+      - 'pyproject.toml'
+      - 'configs/**'
       - 'site/**'
       - 'tools/generate_site.py'
       - 'tests/**'
@@ -53,12 +57,15 @@ jobs:
           python-version: '3.11'
       - name: Verify deterministic registry, statistics and provenance
         run: python tools/generate_site.py --verify
+      - name: Verify scoped upstream split decisions
+        run: python tools/audit_dataset_splits.py --verify data/registries/upstream_split_audit.json
       - name: Test public-site invariants
         run: python -m unittest discover -s tests -p test_site.py -v
       - name: Test acquisition, gates, publication safety and all task bundles
         run: |
           python -m unittest discover -s tests -v
           python tools/build_task_bundles.py --verify
+          python tools/build_workstream_index.py --verify
       - name: Upload only the public static site
         if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
         uses: actions/upload-pages-artifact@v3
