@@ -68,7 +68,7 @@ assay counts or a claim that every dataset is ready to train.
 
 <!-- WORKSTREAMS:START -->
 
-| Workstream / 工作块 | Registered rows / 注册行 | Admitted / 准入 |
+| Workstream / 工作块 | Registered rows / 注册行 | Admitted / 矫正 |
 |---|---:|---:|
 | 序列与调控 / Sequence & regulation | 68 | 0 |
 | 二级结构 / Secondary structure | 13 | 0 |
@@ -142,7 +142,7 @@ formal benchmark release or a declaration that those blockers are fixed.**
 表中“原尺度”指当前发布文件的数值尺度，不等于原始实验 reads 或原始仪器量；
 单位/变换尚未证实的 QC 单元仍保留其 `UNRESOLVED_SOURCE_SCALE`，不得冒称已核实的小时值。
 
-| 类别 | RNA-Gym QC 单元 | UTR 本地视图 | 87 修订目录（仅元数据） | 198 登记引用 | 主指标（本轮建议） | 次指标 |
+| 类别 | RNA-Gym QC 单元 | UTR 本地视图 | 87 修订目录（元数据） | 198 登记引用 | 主指标 | 次指标 |
 |---|---|---|---|---|---|---|
 | 序列/翻译 / MRL（原尺度） | 3 | 8 | 8 | 6 | Spearman ρ | R², Pearson r, RMSE, MAE |
 | 序列/翻译 / MRL（log₂） | 0 | 4 | 4 | 0 | Spearman ρ | R², Pearson r, RMSE, MAE |
@@ -249,7 +249,7 @@ RNA/DNA activity、protein CoM、YFP 与 growth score 不会为了填充 TE 类�
 <details>
 <summary>展开：102 个本地 UTR 数据视图的细分类与主指标</summary>
 
-| 数据集 ID | 类别 | 条件 | N（当前本地） | label 单位 | 建议主指标 |
+| 数据集 ID | 类别 | 条件 | N（当前本地） | label 单位 | 主指标 |
 |---|---|---|---|---|---|
 | 3UTR/001_com_SW480_Set3 | Protein reporter CoM | SW480 | 7358 | fraction/bin CoM [1,4] | Spearman ρ |
 | 3UTR/002_com_NALM6_Set1 | Protein reporter CoM | NALM6 | 28124 | fraction/bin CoM [1,4] | Spearman ρ |
