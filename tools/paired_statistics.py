@@ -49,7 +49,10 @@ def paired_group_bootstrap(labels, predictions_a, predictions_b, groups, *,
               'n_observations': len(labels), 'n_groups': len(clusters),
               'replicates_requested': replicates, 'replicates_attempted': 0, 'seed': seed,
               'confidence': confidence, 'difference': a-b if a is not None and b is not None else None,
-              'ci': None, 'valid_replicates': 0, 'undefined_replicates': 0,
+              'ci': None, 'conditional_ci': None, 'formal_ci': None,
+              'formal_ci_eligible': False, 'invalid_fraction': None, 'ci_status': 'UNDEFINED',
+              'ci_semantics': 'LEGACY_ALIAS_OF_CONDITIONAL_CI_NOT_FORMAL',
+              'valid_replicates': 0, 'undefined_replicates': 0,
               'scope': 'CONDITIONAL_ON_FIXED_MODELS_AND_DECLARED_GROUPS',
               'undefined_draw_policy': 'COUNT_WITHOUT_REDRAW_REPORT_CONDITIONAL_CI'}
     if a is None or b is None or len(clusters) < 2:
@@ -72,4 +75,14 @@ def paired_group_bootstrap(labels, predictions_a, predictions_b, groups, *,
     if differences:
         tail = (1-confidence)/2
         report['ci'] = [_percentile(differences, tail), _percentile(differences, 1-tail)]
+        report['conditional_ci'] = list(report['ci'])
+    report['invalid_fraction'] = report['undefined_replicates']/report['replicates_attempted']
+    unstable = report['invalid_fraction'] > 0.05
+    report['ci_status'] = 'UNSTABLE_RESAMPLING' if unstable else 'CONDITIONAL_ONLY' if len(clusters)<10 else report['status']
+    report['formal_ci_eligible'] = bool(differences) and not unstable and len(clusters)>=10
+    if report['formal_ci_eligible']:
+        report['formal_ci'] = list(report['conditional_ci'])
+    if unstable:
+        report['status'] = 'UNSTABLE_RESAMPLING'
+
     return report

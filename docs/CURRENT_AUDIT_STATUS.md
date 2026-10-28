@@ -1,5 +1,20 @@
 # Current local continuation — 2026-10-27
 
+## 2026-10-28: scoped upstream reuse admission
+
+The user authorized accepting existing, clearly documented upstream split protocols.
+The frozen split audit rehashed 50 local files and inspected/replayed 377 protocol
+variants: 206 pass `UPSTREAM_PROTOCOL_REUSE`, 171 remain HOLD. This is not a count
+of independent assays. Validation-only RNAGym protocols stay development-only.
+Formal core remains 0; no model scores, redistribution licenses or human signatures
+were created. Old dated snapshots below remain historical, not silently updated.
+
+See [the split/admission audit](SPLIT_ADMISSION_AUDIT.md) and the native
+`DatasetHub.protocols()` metadata API. R01/R02 and the R04 interval-status guard now
+have new positive/negative regression coverage; persistent shared native execution
+budgets (R03) remain open. Do not infer full protocol execution readiness.
+
+
 The real RNA-FM checkpoint and matched random architecture completed GPU-only
 unlabeled engineering checks on one allocated V100. A batch/length resource profile
 also executed. These are not real assay performance, scientific admission or a

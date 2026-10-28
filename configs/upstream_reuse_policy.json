@@ -1,0 +1,22 @@
+{
+  "schema_version": "rna_gym.upstream_reuse_policy.v1",
+  "policy_id": "USER_SPLIT_WORKFLOW_REUSE_20261028",
+  "authorization_kind": "USER_IN_SESSION_CONDITIONAL_RULE_NOT_PER_ASSAY_SIGNATURE",
+  "effective_date": "2026-10-28",
+  "admission_scope": "UPSTREAM_PROTOCOL_REUSE",
+  "criteria": [
+    "existing immutable source bytes",
+    "explicit nonempty train and heldout partition",
+    "identified input and target columns",
+    "hash-pinned author workflow and explicit loading recipe",
+    "membership check with explicit key basis",
+    "no invalid labels or known cross-partition key sharing"
+  ],
+  "validation_is_not_test": true,
+  "editor_checkpoints_are_not_protocols": true,
+  "formal_core_gate": "UNCHANGED_tools/admission_gate.py",
+  "formal_leaderboard_eligibility_granted": false,
+  "redistribution_rights_or_human_signatures_granted": false,
+  "default_execution_binding_granted": false,
+  "count_unit": "UPSTREAM PARTITION PROTOCOL VARIANTS, NOT INDEPENDENT ORIGINAL ASSAYS"
+}

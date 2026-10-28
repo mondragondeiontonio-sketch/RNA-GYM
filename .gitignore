@@ -53,3 +53,6 @@ dist/
 
 # Public task allocation view; does not contain assay/sample audit records.
 !docs/TASK_WORKSTREAMS.md
+
+# User-authorized upstream split/recipe audit; aggregate metadata only.
+!docs/SPLIT_ADMISSION_AUDIT.md

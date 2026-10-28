@@ -73,6 +73,20 @@ python -m pip install --no-deps --no-build-isolation -e .
 `RNA_GYM_ROOT` 指向实际 checkout；模型/原始数据仍需当地提供并 hash pin。
 包只含代码，不能伪装成已经随 Git 分发了私有数据或权重。
 
+## 已有 split 的复用准入（2026-10-28）
+
+`DatasetHub().protocols(admitted=True)` 返回用户新规则下已接受的上游分区协议 metadata；
+当前 snapshot 为 206 项。`package=` 可筛选 `RNAGYM_DMS`、`EUKAUTR`、`MIR_BENCH`、
+`RNA3DB` 等。它与 `DatasetHub.list()` 的 198 个原 ID、原正式 `admitted` 字段分开。
+
+每项有真实 `partitions`、member/file hash、行数、输入/目标列、固定工作流和 recipe，
+并在当前机器检查 `raw_bytes_available_now`；新 clone 只带 metadata，不下载数据。
+RNAGym 的 validation 不改称 test；结构版次不匹配、共享输入、editor checkpoint 和
+缺少明确输入/目标的协议继续 HOLD。复用准入不是正式分数，也不自动创建执行 binding。
+
+详见 [划分与准入审计](SPLIT_ADMISSION_AUDIT.md)。原正式 gate 与五种子未改变；
+R03 持久共享数量/时间/磁盘预算仍待实现，不依据复用通过状态开展无界 GPU 推理。
+
 ## 数据目录：存在、标签和准入分别查询
 
 ```python

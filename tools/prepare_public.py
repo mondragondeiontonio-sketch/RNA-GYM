@@ -18,7 +18,7 @@ TOP = ['README.md', 'requirements-qc.txt', 'LICENSE_NOTICE.md', '.gitignore', '.
        'tools/api_console/api-console.html', 'tools/api_console/api-console.css',
        'tools/api_console/api-console.js', 'pyproject.toml',
        'docs/NATIVE_SDK.md', 'docs/DATASET_TASK_LABEL_AUDIT.md',
-       'data/registries/dataset_catalog.json',
+       'docs/SPLIT_ADMISSION_AUDIT.md', 'data/registries/upstream_split_audit.json', 'data/registries/dataset_catalog.json',
        'data/registries/task_workstream_index.json', 'docs/TASK_WORKSTREAMS.md']
 REGISTRIES = ['search_level_task_crosswalk_198.csv', 'download_packages_47.csv',
     'source_family_crosswalk_123.csv', 'task_baselines_and_admission_198.csv',

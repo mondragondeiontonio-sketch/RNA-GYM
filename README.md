@@ -22,23 +22,24 @@
 
 <p align="center">
   <a href="https://github.com/mondragondeiontonio-sketch/RNA-GYM/actions/workflows/pages.yml">
-    <img alt="SDK branch verification workflow" src="https://github.com/mondragondeiontonio-sketch/RNA-GYM/actions/workflows/pages.yml/badge.svg?branch=native-sdk-python-api-20261027">
+    <img alt="Main verification workflow" src="https://github.com/mondragondeiontonio-sketch/RNA-GYM/actions/workflows/pages.yml/badge.svg?branch=main">
   </a>
   <img alt="Python 3.10 or newer" src="https://img.shields.io/badge/Python-3.10%2B-3776ab">
   <img alt="Native local Python API" src="https://img.shields.io/badge/API-local_Python-247a91">
-  <img alt="Scientific admission: 0 admitted tasks" src="https://img.shields.io/badge/admitted_tasks-0-a56a23">
+  <img alt="Formal core: 0 admitted tasks" src="https://img.shields.io/badge/formal_core-0-a56a23">
 </p>
 
 > [!IMPORTANT]
 > **Research infrastructure, not an admitted benchmark release.** Updated
-> **2026-10-27**: the native SDK and real RNA-FM GPU encoding are verified;
-> **0 admitted tasks** and **no reviewed real-assay model scores** are available.
+> **2026-10-28**: **206 upstream split protocols** pass the user-authorized reuse
+> policy; **formal core: 0 admitted tasks**, with no reviewed real-assay model scores.
+> The native SDK and real RNA-FM GPU encoding are verified.
 > Data acquisition, label evidence, scientific admission and ranking eligibility
 > are separate milestones. 本地已有数据与标签；科学 HOLD 不等于“没有数据”。
 >
-> The SDK is currently on `native-sdk-python-api-20261027`
-> ([PR #4](https://github.com/mondragondeiontonio-sketch/RNA-GYM/pull/4)),
-> not yet merged into `main`. The website is a separately deployed audit preview.
+> Upstream protocol reuse is separate from formal task/score admission.
+> See the [split and admission audit](docs/SPLIT_ADMISSION_AUDIT.md).
+> The website is an audit preview with its own dated snapshots.
 
 ## At a glance · 项目概览
 
@@ -108,6 +109,35 @@ The independent review still flags ranking-result identity/label-budget checks,
 native execution budgets and bootstrap instability reporting. **This is not a
 formal benchmark release or a declaration that those blockers are fixed.**
 
+## Existing splits · 现有划分与复用准入
+
+**50 local files rehashed · 377 protocol variants checked · 206 accepted for upstream reuse.**
+This is **not** 206 independent experiments or formal leaderboard entries.
+
+| Source | Scoped reuse passes | Important boundary |
+|---|---:|---|
+| RNAGym DMS | 56 | Train/validation, **development only**; never renamed test. |
+| EukaUTR | 147 | 86 test protocols + 61 dev protocols; editor checkpoints excluded. |
+| miRBench | 2 | Original Hejret/Manakov splits; no unreviewed cross-source pooling. |
+| RNA3DB | 1 | Matching 2026-01-05 split/reference release; empty valid kept. |
+| RMDB / unresolved sources | HOLD | Shared inputs, unresolved recipe or unmatched release remain explicit. |
+
+```python
+from rna_gym import DatasetHub
+
+hub = DatasetHub()
+protocols = hub.protocols(admitted=True)
+print(len(protocols))                        # 206 in the 2026-10-28 snapshot
+protocol = next(iter(protocols))
+print(protocol["admission_scope"])           # UPSTREAM_PROTOCOL_REUSE
+print(protocol["raw_bytes_available_now"])
+```
+
+每个协议保留成员文件、角色、行数、hash、输入/标签列与固定作者工作流。
+通过复用准入不等于旧 T/X 任务已完成 exact binding、模态 adapter、执行预算或正式结果审查。
+原始数据不随 Git 分发；所有 377 项候选（包括 171 项 HOLD）均保留。
+完整检查与恢复方法见 [划分与科学复用准入审计](docs/SPLIT_ADMISSION_AUDIT.md)。
+
 <a id="quick-start"></a>
 
 ## Quick start · 快速开始
@@ -118,7 +148,7 @@ Use **Python 3.10+**. Catalog inspection from the checkout needs only the standa
 library; it does not download data or contact a model service.
 
 ```bash
-git clone --branch native-sdk-python-api-20261027 https://github.com/mondragondeiontonio-sketch/RNA-GYM.git
+git clone https://github.com/mondragondeiontonio-sketch/RNA-GYM.git
 cd RNA-GYM
 ```
 
@@ -184,7 +214,7 @@ print(results.status)                  # BLOCKED until this assay is admitted
 
 | Component | Implemented / verified | Remaining boundary |
 |---|---|---|
-| `DatasetHub` | 198-task catalog, types, target evidence, bounded local preview | Local bytes and assay-level identity/rights must be supplied and reviewed. |
+| `DatasetHub` | 198-task catalog, bounded preview and 206 scoped upstream split protocols | Local bytes and assay-level identity/rights must be supplied and reviewed. |
 | `RNAHub.load` / `encode` | RNA-FM on CUDA; last-layer masked mean or per-nucleotide arrays | Other five registered backends are not yet native-verified. |
 | `RNABenchmark.evaluate` | Existing admission gate, frozen scalar heads, predictions/metrics/statistics artifact path | No assay currently passes all scientific gates. |
 | Fixed-label readouts | Ridge, binary linear/logistic and MLP; train-only preprocessing, budget ≤64 | Numerical contract tests are synthetic software tests, not biological results. |
@@ -204,7 +234,8 @@ print(results.status)                  # BLOCKED until this assay is admitted
 
 Multilabel, token, pair, structure, ligand-conditioned and generation tasks need
 modality-specific heads and protocols. They are **not** converted into scalar MLP
-problems. See the [evaluation protocol][evaluation] and
+problems. Persistent shared native execution budgets (review R03) remain incomplete; do not
+launch an unbounded real-data matrix. See the [evaluation protocol][evaluation] and
 [model registry][model-registry].
 
 ## Two views of model quality · 两种排名，不拼凑总分

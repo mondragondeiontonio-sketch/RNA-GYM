@@ -88,10 +88,25 @@ class RNALeaderboard:
         try:
             out=(self.root/result['output_directory']).resolve()
             if not out.is_relative_to(self.root/'runs'):raise ValueError('PRIVATE_PREDICTION_ARTIFACT_PATH_REQUIRED')
+            required={'resolved_config.json','head.json','predictions.json','metrics.json','paired_statistics.json'}
+            if not isinstance(result.get('artifacts'),dict) or not required.issubset(result['artifacts']):
+                raise ValueError('COMPLETE_REQUIRED_ARTIFACT_MANIFEST_REQUIRED')
+            original=ep.read_json(out/'native_result.json')
+            comparable={k:v for k,v in result.items() if k!='result_review_path'}
+            if ep.digest_json(original)!=ep.digest_json(comparable):
+                raise ValueError('RESULT_NOT_BOUND_TO_IMMUTABLE_NATIVE_RECEIPT')
             for name,digest in result['artifacts'].items():
                 path=(out/name).resolve()
                 if not path.is_relative_to(out) or ep.sha256_file(path)!=digest:raise ValueError('RESULT_ARTIFACT_HASH_MISMATCH')
             resolved=ep.read_json(out/'resolved_config.json')
+            for key in ('dataset_id','model_id','protocol','seed','model_initialization',
+                        'model_initialization_seed','label_budget_declared','split_requested',
+                        'input_context','target_column'):
+                if ep.digest_json(resolved.get(key))!=ep.digest_json(result.get(key)):
+                    raise ValueError('RESOLVED_RESULT_IDENTITY_MISMATCH:'+key)
+            if resolved.get('hpo_candidates')!=0:
+                raise ValueError('CURRENT_FIXED_LOW_LABEL_PROTOCOL_REQUIRES_NO_HPO')
+
             cfg=ep.read_json(self.root/self.hub.config['execution_bindings_source'])
             binding=cfg[self.hub.config['execution_bindings_key']][result['dataset_id']]
             task_config=ep.read_json(self.root/binding['config'])
@@ -103,9 +118,28 @@ class RNALeaderboard:
             expected_ids=sorted([r['observation_id'] for r in prepared['rows'] if prepared['splits'][r['observation_id']]=='train'],
                 key=lambda oid:ep.digest_json({'sample_selection_seed':result['seed'],'observation_id':oid}))[:panel.label_budget]
             head=ep.read_json(out/'head.json')
+            expected_kinds={'frozen_ridge':{'linear'},'frozen_linear':{'linear','logistic'},'frozen_mlp':{'mlp'}}
+            if (head.get('protocol')!=result['protocol'] or
+                    head.get('kind') not in expected_kinds.get(result['protocol'],set()) or
+                    head.get('problem_type')!=contract['problem_type']):
+                raise ValueError('HEAD_PROTOCOL_OR_PROBLEM_IDENTITY_MISMATCH')
+            if len(expected_ids)!=panel.label_budget:
+                raise ValueError('INSUFFICIENT_MATCHED_TRAINING_LABELS')
+            expected_ledger={'fit_unique':len(expected_ids),'tune_unique':0,'calibration_unique':0,
+                             'total_unique':len(expected_ids),'test_selection_labels':0,'hpo_candidates':0}
+            ledger=head.get('label_budget',{})
+            if any(type(ledger.get(k)) is not int or ledger[k]!=v for k,v in expected_ledger.items()):
+                raise ValueError('INCONSISTENT_LABEL_UID_BUDGET_OR_NONZERO_TUNING')
+            if result.get('label_budget')!=ledger:
+                raise ValueError('RESULT_HEAD_LABEL_LEDGER_MISMATCH')
+
             if sorted(head['fit_observation_ids'])!=sorted(expected_ids) or sorted(resolved['selected_train_ids'])!=sorted(expected_ids):
                 raise ValueError('UNMATCHED_OR_LABEL_SELECTED_TRAINING_OBSERVATIONS')
             if resolved['model_contract']!=result['model_contract']:raise ValueError('MODEL_CONTRACT_CHANGED')
+            if (result['model_contract'].get('initialization')!=result.get('model_initialization') or
+                    result['model_contract'].get('initialization_seed')!=result.get('model_initialization_seed')):
+                raise ValueError('ENCODER_CONTRACT_INITIALIZATION_IDENTITY_MISMATCH')
+
             if panel.assay_ids and panel.assay_ids.get(result['dataset_id'])!=result['assay_id']:raise ValueError('PANEL_CANONICAL_ASSAY_MISMATCH')
             if panel.source_groups and panel.source_groups.get(result['dataset_id'])!=result['source_family_id']:raise ValueError('PANEL_SOURCE_GROUP_MISMATCH')
             if self.scope=='formal':
@@ -127,7 +161,7 @@ class RNALeaderboard:
             if value is None:return 'UNDEFINED_METRIC',None
             if not math.isfinite(value):raise ValueError('NONFINITE_PRIMARY_METRIC')
             return 'VERIFIED',value
-        except (KeyError,ValueError,OSError,ep.ProtocolError) as exc:
+        except (KeyError,ValueError,TypeError,OSError,ep.ProtocolError) as exc:
             return 'EVIDENCE_REJECTED:'+str(exc),None
 
     def _matrix(self,panel):

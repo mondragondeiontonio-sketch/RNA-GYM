@@ -360,3 +360,25 @@ idempotency, cancellation, bounded recovery and the exact scientific limits.
 The console is intentionally outside the historical static site's allowlist.
 The frozen pilot's nested cell serialization now explicitly creates new parent
 directories; existing artifacts remain immutable. No existing gate was weakened.
+
+## Upstream reuse scope and result integrity (2026-10-28)
+
+The user-authorized `UPSTREAM_PROTOCOL_REUSE` tier recognizes frozen, documented
+upstream partitions. It does not replace formal task/input/label/split binding,
+rights review, matched compute budgets or result review. A validation partition
+remains development data; it never becomes a hidden or formal test partition.
+
+Rank import now requires all five native artifacts and the original
+`native_result.json`; model/protocol/initialization identity must match the frozen
+resolved configuration. Current fixed <=64 readouts require fit UID count = total
+unique budget and tune/calibration/HPO = 0. An inconsistent ledger cannot enter a
+ranking merely because one claimed total or replayed metric matches.
+
+Bootstrap reports `invalid_fraction`, `conditional_ci`, `formal_ci` and
+`formal_ci_eligible`. Undefined draws stay in the denominator; >5% makes the
+resampling unstable, and <10 declared groups cannot yield `formal_ci`. Legacy `ci`
+is explicitly an alias of conditional CI. Group count alone never establishes
+scientific independence. No new real assay statistics were produced by this audit.
+
+Persistent shared native execution budgets (R03) remain incomplete. No automatic
+bulk FM execution is authorized by source reuse admission or this documentation.

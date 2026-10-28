@@ -136,6 +136,29 @@ class DatasetHub:
             record['label_files_present_now']=sum(bool(self.artifacts[uid]['label_evidence']) and
                 self.artifacts[uid]['physical_file_present'] for uid in uids)
 
+    def protocols(self,*,package=None,admitted=None):
+        """Frozen upstream split/recipe decisions, separate from formal task admission.
+
+        A fresh clone can inspect metadata without owning raw bytes. Availability
+        is checked locally; this never downloads data or grants a formal score.
+        """
+        from tools.evaluation_protocol import read_json
+        path=self.root/self.config.get('upstream_split_registry','data/registries/upstream_split_audit.json')
+        if not path.is_file():return []
+        values=read_json(path)['protocols']
+        if package is not None:values=[p for p in values if p['package_group_id']==package]
+        if admitted is not None:
+            if type(admitted) is not bool:raise ValueError('Explicit boolean admitted filter required')
+            values=[p for p in values if p['admitted_upstream_reuse']==admitted]
+        results=[]
+        for value in values:
+            uids={p['artifact_uid'] for p in value['partitions']}
+            if value.get('reference_coordinate_artifact_uid'):uids.add(value['reference_coordinate_artifact_uid'])
+            available=all(uid in self.artifacts and self.artifacts[uid]['physical_file_present'] for uid in uids)
+            results.append({**value,'raw_bytes_available_now':available,
+                            'automatic_dataset_or_model_download':False})
+        return results
+
     def resolve_asset(self,asset_id,*,source_sha256=None):
         if asset_id in self.artifacts:
             candidates=[asset_id]

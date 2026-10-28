@@ -57,6 +57,8 @@ jobs:
           python-version: '3.11'
       - name: Verify deterministic registry, statistics and provenance
         run: python tools/generate_site.py --verify
+      - name: Verify scoped upstream split decisions
+        run: python tools/audit_dataset_splits.py --verify data/registries/upstream_split_audit.json
       - name: Test public-site invariants
         run: python -m unittest discover -s tests -p test_site.py -v
       - name: Test acquisition, gates, publication safety and all task bundles

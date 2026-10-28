@@ -40,5 +40,7 @@
     71,
     101
   ],
-  "formal_rankings_require_frozen_panel_and_result_review": true
+  "formal_rankings_require_frozen_panel_and_result_review": true,
+  "upstream_split_registry": "data/registries/upstream_split_audit.json",
+  "upstream_reuse_policy": "configs/upstream_reuse_policy.json"
 }
