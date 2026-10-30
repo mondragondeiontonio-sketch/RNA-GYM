@@ -32,5 +32,13 @@
     "baseline运行状态": "NOT_RUN"
   },
   "plan_command": "python tools/task_download.py plan --task T0045",
-  "download_policy": "Source-entry links are not file bytes. Explicit package-only opt-in required before file candidates can be acquired for audit."
+  "download_policy": "Source-entry links are not file bytes. Explicit package-only opt-in required before file candidates can be acquired for audit.",
+  "arena_v1": {
+    "mapping_status": "TAXONOMY_REVIEW_REQUIRED",
+    "canonical_task_ids": [],
+    "canonical_task_definitions": [],
+    "local_dataset_mapping": "data/registries/dataset_task_mapping_v1.tsv",
+    "scientific_admission_unchanged": true,
+    "reported_task_n_not_replaced_by_local_subset": true
+  }
 }

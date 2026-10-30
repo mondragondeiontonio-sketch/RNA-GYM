@@ -1,0 +1,1154 @@
+{
+  "summary": {
+    "version": "rnagym-arena-1.0",
+    "date": "2026-10-30",
+    "registered_rows": 198,
+    "mapping_status_counts": {
+      "MAPPED": 107,
+      "TAXONOMY_REVIEW_REQUIRED": 76,
+      "EXCLUDED": 15
+    },
+    "unambiguous_mapped_rows": 107,
+    "mapped_canonical_task_families": 26,
+    "local_resources": 50,
+    "local_qc_units": 175,
+    "local_utr_views": 102,
+    "total_local_views": 277,
+    "label_mapping_rows": 309,
+    "local_assay_identity_count": 175,
+    "independent_assays": "UNKNOWN; canonical/source-context IDs are not experimental-independence proof",
+    "qc_pass_units": 175,
+    "qc_valid_observations": 6182951,
+    "qc_actual_observations": 6209512,
+    "qc_unique_observations": 6182951,
+    "exact_repeated_input_rows": 422400,
+    "duplicate_observation_aliases": 112,
+    "cross_dataset_exact_overlap_pairs": 362,
+    "cross_dataset_UT_overlap_pairs": 363,
+    "mirror_pairs": 70,
+    "supported_tasks": [
+      "APA",
+      "DMS_FITNESS",
+      "GO_FUNCTION",
+      "HALF_LIFE",
+      "MRL_EXACT",
+      "MRL_HL_PAIR",
+      "MRL_PROXY",
+      "NCRNA_FAMILY",
+      "PROTEIN_LOCALIZATION",
+      "RBP_BINDING",
+      "RNA_MODIFICATION",
+      "UTR3_STABILITY",
+      "VEP"
+    ],
+    "no_supported_tasks": [
+      "SSP",
+      "CMP",
+      "DMP",
+      "SSI",
+      "SPL",
+      "RRS",
+      "TE",
+      "FULL_LENGTH_DEGRADATION",
+      "DEGRADATION_SITE",
+      "RNA_LOC_SR",
+      "RNA_LOC_LR",
+      "RNA_SWITCH",
+      "CRISPR_ON_TARGET",
+      "CRISPR_OFF_TARGET",
+      "RNA_DESIGN"
+    ],
+    "core_admitted_tasks": 0,
+    "core_candidate_tasks": 10,
+    "extended_admitted_tasks": 0,
+    "extended_candidate_tasks": 0,
+    "secondary_proxy_candidate_tasks": 4,
+    "completed_split_task_counts": {
+      "D1_STANDARD": 0,
+      "D2_GENERALIZATION": 2,
+      "D3_OOD": 0
+    },
+    "completed_split_dataset_count": 3,
+    "legacy_EAZY_units": 175,
+    "legacy_OOD_feasible_units": 100,
+    "admission_recommendation_counts": {
+      "HOLD": 178,
+      "SECONDARY_PROXY": 5,
+      "EXCLUDED": 15
+    },
+    "review_ready": 0,
+    "formal_admitted_core": 0,
+    "formal_admitted_extended": 0,
+    "exploratory_compute": {
+      "status": "EXECUTED",
+      "parquet_units_verified": 175,
+      "parquet_records_verified": 6182951,
+      "split_datasets": 3,
+      "canonical_tasks": [
+        "HALF_LIFE",
+        "MRL_PROXY"
+      ],
+      "reproduced_result_rows": 9,
+      "evaluated_models": [
+        "mean_null",
+        "median_null",
+        "sequence_stats_ridge"
+      ],
+      "formal_results": 0,
+      "wall_seconds": 39.23359852284193,
+      "raw_modified": false,
+      "admission_modified": false,
+      "models_downloaded": false
+    },
+    "formal_reproduced_rows": 0,
+    "paper_reported_rows": 0,
+    "raw_integrity_verified": true,
+    "raw_modified": false,
+    "human_approval_created": false
+  },
+  "tasks": [
+    {
+      "task_id": "SSP",
+      "display_name": "Secondary Structure",
+      "macro_domain": "Structure",
+      "level1_domain": "Structure",
+      "level2_category": "Secondary Structure",
+      "input_modality": "sequence",
+      "input_definition": "RNA sequence",
+      "target_definition": "base-pair relationship / secondary structure",
+      "problem_type": "pairwise classification",
+      "primary_metric": "F1",
+      "secondary_metrics": [
+        "MCC"
+      ],
+      "normalization": {
+        "direction": "higher",
+        "baseline": 0,
+        "upper": 1
+      },
+      "difficulty_supported": [
+        "D1_STANDARD",
+        "D2_GENERALIZATION",
+        "D3_OOD"
+      ],
+      "core_or_extended": "CORE",
+      "notes": []
+    },
+    {
+      "task_id": "CMP",
+      "display_name": "Contact Map",
+      "macro_domain": "Structure",
+      "level1_domain": "Structure",
+      "level2_category": "3D Geometry",
+      "input_modality": "sequence",
+      "input_definition": "RNA sequence",
+      "target_definition": "spatial contact of nucleotide pairs",
+      "problem_type": "pairwise classification",
+      "primary_metric": "AUPRC",
+      "secondary_metrics": [
+        "F1"
+      ],
+      "normalization": {
+        "direction": "higher",
+        "baseline": "PER_LABEL_PREVALENCE",
+        "upper": 1
+      },
+      "difficulty_supported": [
+        "D1_STANDARD",
+        "D2_GENERALIZATION",
+        "D3_OOD"
+      ],
+      "core_or_extended": "CORE",
+      "notes": []
+    },
+    {
+      "task_id": "DMP",
+      "display_name": "Distance Map",
+      "macro_domain": "Structure",
+      "level1_domain": "Structure",
+      "level2_category": "3D Geometry",
+      "input_modality": "sequence",
+      "input_definition": "RNA sequence",
+      "target_definition": "pairwise nucleotide Euclidean distance",
+      "problem_type": "pairwise regression",
+      "primary_metric": "MAE",
+      "secondary_metrics": [
+        "RMSE"
+      ],
+      "normalization": {
+        "direction": "lower",
+        "baseline": "FROZEN_TRAIN_ONLY_SIMPLE_ERROR",
+        "optimum": 0
+      },
+      "difficulty_supported": [
+        "D1_STANDARD",
+        "D2_GENERALIZATION",
+        "D3_OOD"
+      ],
+      "core_or_extended": "CORE",
+      "notes": []
+    },
+    {
+      "task_id": "SSI",
+      "display_name": "icSHAPE Imputation",
+      "macro_domain": "Structure",
+      "level1_domain": "Structure",
+      "level2_category": "Structure Probing",
+      "input_modality": "sequence_plus_partial_signal",
+      "input_definition": "RNA sequence + partial probing signal + observation mask",
+      "target_definition": "missing icSHAPE reactivity",
+      "problem_type": "site-level regression",
+      "primary_metric": "Pearson",
+      "secondary_metrics": [
+        "Spearman",
+        "MAE"
+      ],
+      "normalization": {
+        "direction": "higher",
+        "baseline": 0,
+        "upper": 1
+      },
+      "difficulty_supported": [
+        "D1_STANDARD",
+        "D2_GENERALIZATION",
+        "D3_OOD"
+      ],
+      "core_or_extended": "CORE",
+      "notes": [
+        "Imputation only. Sequence-only probing requires a separate future ID."
+      ]
+    },
+    {
+      "task_id": "SPL",
+      "display_name": "Splicing",
+      "macro_domain": "Function",
+      "level1_domain": "Function & Regulation",
+      "level2_category": "RNA Processing",
+      "input_modality": "sequence",
+      "input_definition": "pre-mRNA sequence",
+      "target_definition": "donor / acceptor / background",
+      "problem_type": "site-level classification",
+      "primary_metric": "Macro-F1",
+      "secondary_metrics": [
+        "AUPRC"
+      ],
+      "normalization": {
+        "direction": "higher",
+        "baseline": 0,
+        "upper": 1
+      },
+      "difficulty_supported": [
+        "D1_STANDARD",
+        "D2_GENERALIZATION",
+        "D3_OOD"
+      ],
+      "core_or_extended": "CORE",
+      "notes": []
+    },
+    {
+      "task_id": "APA",
+      "display_name": "Poly(A) Usage",
+      "macro_domain": "Function",
+      "level1_domain": "Function & Regulation",
+      "level2_category": "RNA Processing",
+      "input_modality": "sequence",
+      "input_definition": "3′UTR / transcript sequence",
+      "target_definition": "proximal poly(A) site usage",
+      "problem_type": "regression",
+      "primary_metric": "Spearman",
+      "secondary_metrics": [
+        "Pearson"
+      ],
+      "normalization": {
+        "direction": "higher",
+        "baseline": 0,
+        "upper": 1
+      },
+      "difficulty_supported": [
+        "D1_STANDARD",
+        "D2_GENERALIZATION",
+        "D3_OOD"
+      ],
+      "core_or_extended": "CORE",
+      "notes": []
+    },
+    {
+      "task_id": "RNA_MODIFICATION",
+      "display_name": "RNA Modification",
+      "macro_domain": "Function",
+      "level1_domain": "Function & Regulation",
+      "level2_category": "RNA Modification",
+      "input_modality": "sequence",
+      "input_definition": "RNA sequence",
+      "target_definition": "RNA modification site/type, chemistry retained",
+      "problem_type": "site-level classification",
+      "primary_metric": "AUPRC",
+      "secondary_metrics": [
+        "MCC"
+      ],
+      "normalization": {
+        "direction": "higher",
+        "baseline": "PER_LABEL_PREVALENCE",
+        "upper": 1
+      },
+      "difficulty_supported": [
+        "D1_STANDARD",
+        "D2_GENERALIZATION",
+        "D3_OOD"
+      ],
+      "core_or_extended": "CORE",
+      "notes": [
+        "Never combine chemistries or assays silently."
+      ]
+    },
+    {
+      "task_id": "NCRNA_FAMILY",
+      "display_name": "ncRNA Family",
+      "macro_domain": "Function",
+      "level1_domain": "Function & Regulation",
+      "level2_category": "RNA Identity",
+      "input_modality": "sequence",
+      "input_definition": "ncRNA sequence",
+      "target_definition": "RNA family",
+      "problem_type": "multi-class classification",
+      "primary_metric": "Macro-F1",
+      "secondary_metrics": [
+        "MCC"
+      ],
+      "normalization": {
+        "direction": "higher",
+        "baseline": 0,
+        "upper": 1
+      },
+      "difficulty_supported": [
+        "D1_STANDARD",
+        "D2_GENERALIZATION",
+        "D3_OOD"
+      ],
+      "core_or_extended": "CORE",
+      "notes": []
+    },
+    {
+      "task_id": "MRL_EXACT",
+      "display_name": "MRL-exact",
+      "macro_domain": "Function",
+      "level1_domain": "Function & Regulation",
+      "level2_category": "Translation",
+      "input_modality": "sequence",
+      "input_definition": "genuine 5′UTR sequence",
+      "target_definition": "Mean Ribosome Load",
+      "problem_type": "regression",
+      "primary_metric": "Spearman",
+      "secondary_metrics": [
+        "Pearson"
+      ],
+      "normalization": {
+        "direction": "higher",
+        "baseline": 0,
+        "upper": 1
+      },
+      "difficulty_supported": [
+        "D1_STANDARD",
+        "D2_GENERALIZATION",
+        "D3_OOD"
+      ],
+      "core_or_extended": "CORE",
+      "notes": [
+        "RRS != MRL != TE",
+        "MRL: ribosome loading; actual model input is genuine 5′UTR."
+      ]
+    },
+    {
+      "task_id": "MRL_PROXY",
+      "display_name": "MRL-proxy",
+      "macro_domain": "Function",
+      "level1_domain": "Function & Regulation",
+      "level2_category": "Translation",
+      "input_modality": "sequence",
+      "input_definition": "cDNA sequence",
+      "target_definition": "MRL-associated translation phenotype",
+      "problem_type": "regression",
+      "primary_metric": "Spearman",
+      "secondary_metrics": [
+        "Pearson"
+      ],
+      "normalization": {
+        "direction": "higher",
+        "baseline": 0,
+        "upper": 1
+      },
+      "difficulty_supported": [
+        "D1_STANDARD",
+        "D2_GENERALIZATION",
+        "D3_OOD"
+      ],
+      "core_or_extended": "CORE",
+      "notes": [
+        "RRS != MRL != TE",
+        "cDNA input is not genuine 5′UTR MRL."
+      ]
+    },
+    {
+      "task_id": "RRS",
+      "display_name": "Ribosome Recruitment Score",
+      "macro_domain": "Function",
+      "level1_domain": "Function & Regulation",
+      "level2_category": "Translation",
+      "input_modality": "sequence",
+      "input_definition": "5′UTR sequence",
+      "target_definition": "Ribosome Recruitment Score",
+      "problem_type": "regression",
+      "primary_metric": "Spearman",
+      "secondary_metrics": [
+        "Pearson"
+      ],
+      "normalization": {
+        "direction": "higher",
+        "baseline": 0,
+        "upper": 1
+      },
+      "difficulty_supported": [
+        "D1_STANDARD",
+        "D2_GENERALIZATION",
+        "D3_OOD"
+      ],
+      "core_or_extended": "CORE",
+      "notes": [
+        "RRS != MRL != TE",
+        "Translation initiation / ribosome recruitment."
+      ]
+    },
+    {
+      "task_id": "TE",
+      "display_name": "Translation Efficiency",
+      "macro_domain": "Function",
+      "level1_domain": "Function & Regulation",
+      "level2_category": "Translation",
+      "input_modality": "sequence",
+      "input_definition": "full transcript / mRNA",
+      "target_definition": "Translation Efficiency",
+      "problem_type": "regression",
+      "primary_metric": "Spearman",
+      "secondary_metrics": [
+        "Pearson"
+      ],
+      "normalization": {
+        "direction": "higher",
+        "baseline": 0,
+        "upper": 1
+      },
+      "difficulty_supported": [
+        "D1_STANDARD",
+        "D2_GENERALIZATION",
+        "D3_OOD"
+      ],
+      "core_or_extended": "CORE",
+      "notes": [
+        "RRS != MRL != TE",
+        "Global translation efficiency, not reporter protein output alone."
+      ]
+    },
+    {
+      "task_id": "HALF_LIFE",
+      "display_name": "RNA Half-life",
+      "macro_domain": "Function",
+      "level1_domain": "Function & Regulation",
+      "level2_category": "Stability",
+      "input_modality": "sequence",
+      "input_definition": "transcript / UTR / full RNA; record actual region",
+      "target_definition": "RNA half-life; retain PC1 or transformed labels explicitly",
+      "problem_type": "regression",
+      "primary_metric": "Spearman",
+      "secondary_metrics": [
+        "Pearson"
+      ],
+      "normalization": {
+        "direction": "higher",
+        "baseline": 0,
+        "upper": 1
+      },
+      "difficulty_supported": [
+        "D1_STANDARD",
+        "D2_GENERALIZATION",
+        "D3_OOD"
+      ],
+      "core_or_extended": "CORE",
+      "notes": [
+        "Record 5′UTR, 3′UTR, transcript or full RNA explicitly; PC1 is not hours."
+      ]
+    },
+    {
+      "task_id": "FULL_LENGTH_DEGRADATION",
+      "display_name": "Full-length Degradation",
+      "macro_domain": "Function",
+      "level1_domain": "Function & Regulation",
+      "level2_category": "Stability",
+      "input_modality": "sequence",
+      "input_definition": "full-length RNA",
+      "target_definition": "whole-RNA degradation rate / stability",
+      "problem_type": "regression",
+      "primary_metric": "Spearman",
+      "secondary_metrics": [
+        "MAE"
+      ],
+      "normalization": {
+        "direction": "higher",
+        "baseline": 0,
+        "upper": 1
+      },
+      "difficulty_supported": [
+        "D1_STANDARD",
+        "D2_GENERALIZATION",
+        "D3_OOD"
+      ],
+      "core_or_extended": "CORE",
+      "notes": []
+    },
+    {
+      "task_id": "UTR3_STABILITY",
+      "display_name": "3′UTR Stability",
+      "macro_domain": "Function",
+      "level1_domain": "Function & Regulation",
+      "level2_category": "Stability",
+      "input_modality": "sequence",
+      "input_definition": "3′UTR",
+      "target_definition": "3′UTR-driven stability / degradation phenotype",
+      "problem_type": "regression",
+      "primary_metric": "Spearman",
+      "secondary_metrics": [
+        "Pearson"
+      ],
+      "normalization": {
+        "direction": "higher",
+        "baseline": 0,
+        "upper": 1
+      },
+      "difficulty_supported": [
+        "D1_STANDARD",
+        "D2_GENERALIZATION",
+        "D3_OOD"
+      ],
+      "core_or_extended": "CORE",
+      "notes": []
+    },
+    {
+      "task_id": "DEGRADATION_SITE",
+      "display_name": "Site-level Degradation",
+      "macro_domain": "Function",
+      "level1_domain": "Function & Regulation",
+      "level2_category": "Stability",
+      "input_modality": "sequence",
+      "input_definition": "RNA sequence",
+      "target_definition": "per-nucleotide degradation / hydrolysis signal",
+      "problem_type": "site-level regression",
+      "primary_metric": "MAE",
+      "secondary_metrics": [
+        "RMSE"
+      ],
+      "normalization": {
+        "direction": "lower",
+        "baseline": "FROZEN_TRAIN_ONLY_SIMPLE_ERROR",
+        "optimum": 0
+      },
+      "difficulty_supported": [
+        "D1_STANDARD",
+        "D2_GENERALIZATION",
+        "D3_OOD"
+      ],
+      "core_or_extended": "CORE",
+      "notes": []
+    },
+    {
+      "task_id": "MRL_HL_PAIR",
+      "display_name": "MRL-HL Pair",
+      "macro_domain": "Function",
+      "level1_domain": "Function & Regulation",
+      "level2_category": "Translation–Stability Coupling",
+      "input_modality": "sequence",
+      "input_definition": "same RNA sequence",
+      "target_definition": "separate MRL and half-life targets",
+      "problem_type": "multi-task regression",
+      "primary_metric": "Joint-normalized",
+      "secondary_metrics": [
+        "MRL-Spearman",
+        "HL-Spearman"
+      ],
+      "normalization": {
+        "rule": "freeze assay variant or normalize components separately"
+      },
+      "difficulty_supported": [
+        "D1_STANDARD",
+        "D2_GENERALIZATION",
+        "D3_OOD"
+      ],
+      "core_or_extended": "CORE",
+      "notes": [
+        "Separate MRL and half-life normalized scores before joint averaging."
+      ]
+    },
+    {
+      "task_id": "RBP_BINDING",
+      "display_name": "RBP Binding",
+      "macro_domain": "Function",
+      "level1_domain": "Function & Regulation",
+      "level2_category": "RNA–Protein Interaction",
+      "input_modality": "sequence",
+      "input_definition": "RNA sequence",
+      "target_definition": "RBP binding / binding site",
+      "problem_type": "classification",
+      "primary_metric": "AUPRC",
+      "secondary_metrics": [
+        "AUROC"
+      ],
+      "normalization": {
+        "direction": "higher",
+        "baseline": "PER_LABEL_PREVALENCE",
+        "upper": 1
+      },
+      "difficulty_supported": [
+        "D1_STANDARD",
+        "D2_GENERALIZATION",
+        "D3_OOD"
+      ],
+      "core_or_extended": "CORE",
+      "notes": [
+        "Require RBP, cell line, accession, positive definition and negative construction."
+      ]
+    },
+    {
+      "task_id": "RNA_LOC_SR",
+      "display_name": "RNA-Loc-SR",
+      "macro_domain": "Function",
+      "level1_domain": "Function & Regulation",
+      "level2_category": "Localization",
+      "input_modality": "sequence",
+      "input_definition": "transcript sequence",
+      "target_definition": "RNA subcellular localization, short-read assay",
+      "problem_type": "multi-label classification",
+      "primary_metric": "Macro-AUPRC",
+      "secondary_metrics": [],
+      "normalization": {
+        "direction": "higher",
+        "baseline": "PER_LABEL_PREVALENCE",
+        "upper": 1
+      },
+      "difficulty_supported": [
+        "D1_STANDARD",
+        "D2_GENERALIZATION",
+        "D3_OOD"
+      ],
+      "core_or_extended": "CORE",
+      "notes": [
+        "SR and LR assay/isoform/compartment definitions are not interchangeable."
+      ]
+    },
+    {
+      "task_id": "RNA_LOC_LR",
+      "display_name": "RNA-Loc-LR",
+      "macro_domain": "Function",
+      "level1_domain": "Function & Regulation",
+      "level2_category": "Localization",
+      "input_modality": "sequence",
+      "input_definition": "transcript / isoform sequence",
+      "target_definition": "RNA subcellular localization, long-read assay",
+      "problem_type": "multi-label classification",
+      "primary_metric": "Macro-AUPRC",
+      "secondary_metrics": [],
+      "normalization": {
+        "direction": "higher",
+        "baseline": "PER_LABEL_PREVALENCE",
+        "upper": 1
+      },
+      "difficulty_supported": [
+        "D1_STANDARD",
+        "D2_GENERALIZATION",
+        "D3_OOD"
+      ],
+      "core_or_extended": "CORE",
+      "notes": [
+        "SR and LR assay/isoform/compartment definitions are not interchangeable."
+      ]
+    },
+    {
+      "task_id": "GO_FUNCTION",
+      "display_name": "GO Function",
+      "macro_domain": "Function",
+      "level1_domain": "Function & Regulation",
+      "level2_category": "Functional Annotation",
+      "input_modality": "sequence",
+      "input_definition": "coding transcript / mRNA",
+      "target_definition": "GO terms of encoded protein",
+      "problem_type": "multi-label classification",
+      "primary_metric": "AUPRC",
+      "secondary_metrics": [
+        "Fmax"
+      ],
+      "normalization": {
+        "direction": "higher",
+        "baseline": "PER_LABEL_PREVALENCE",
+        "upper": 1
+      },
+      "difficulty_supported": [
+        "D1_STANDARD",
+        "D2_GENERALIZATION",
+        "D3_OOD"
+      ],
+      "core_or_extended": "SECONDARY_PROXY",
+      "notes": [
+        "INDIRECT_RNA_FUNCTION_TASK=TRUE"
+      ]
+    },
+    {
+      "task_id": "PROTEIN_LOCALIZATION",
+      "display_name": "Protein Localization",
+      "macro_domain": "Function",
+      "level1_domain": "Function & Regulation",
+      "level2_category": "Functional Annotation",
+      "input_modality": "sequence",
+      "input_definition": "coding mRNA",
+      "target_definition": "encoded protein localization",
+      "problem_type": "multi-label classification",
+      "primary_metric": "AUPRC",
+      "secondary_metrics": [],
+      "normalization": {
+        "direction": "higher",
+        "baseline": "PER_LABEL_PREVALENCE",
+        "upper": 1
+      },
+      "difficulty_supported": [
+        "D1_STANDARD",
+        "D2_GENERALIZATION",
+        "D3_OOD"
+      ],
+      "core_or_extended": "SECONDARY_PROXY",
+      "notes": [
+        "SECONDARY_PROXY_CANDIDATE=TRUE; not RNA localization."
+      ]
+    },
+    {
+      "task_id": "VEP",
+      "display_name": "Variant Effect",
+      "macro_domain": "Function",
+      "level1_domain": "Perturbation",
+      "level2_category": "Variant Effect",
+      "input_modality": "sequence_pair",
+      "input_definition": "WT / mutant UTR or RNA",
+      "target_definition": "functional effect / pathogenicity",
+      "problem_type": "ASSAY_SPECIFIC",
+      "primary_metric": "ASSAY_SPECIFIC",
+      "secondary_metrics": [
+        "ASSAY_SPECIFIC"
+      ],
+      "normalization": {
+        "rule": "freeze assay variant or normalize components separately"
+      },
+      "difficulty_supported": [
+        "D1_STANDARD",
+        "D2_GENERALIZATION",
+        "D3_OOD"
+      ],
+      "core_or_extended": "CORE",
+      "notes": [
+        "Every dataset freezes exactly one problem type before evaluation."
+      ],
+      "assay_variants": {
+        "classification": {
+          "primary_metric": "AUPRC",
+          "secondary_metrics": [
+            "AUROC"
+          ]
+        },
+        "regression": {
+          "primary_metric": "Spearman",
+          "secondary_metrics": [
+            "Pearson"
+          ]
+        }
+      }
+    },
+    {
+      "task_id": "DMS_FITNESS",
+      "display_name": "DMS Fitness",
+      "macro_domain": "Function",
+      "level1_domain": "Perturbation",
+      "level2_category": "DMS Fitness",
+      "input_modality": "sequence_pair",
+      "input_definition": "WT + mutant sequence",
+      "target_definition": "relative functional fitness",
+      "problem_type": "regression",
+      "primary_metric": "Spearman",
+      "secondary_metrics": [
+        "NDCG"
+      ],
+      "normalization": {
+        "direction": "higher",
+        "baseline": 0,
+        "upper": 1
+      },
+      "difficulty_supported": [
+        "D1_STANDARD",
+        "D2_GENERALIZATION",
+        "D3_OOD"
+      ],
+      "core_or_extended": "CORE",
+      "notes": [
+        "Separate direct RNA, ribozyme, aptamer, splicing and coding protein phenotypes; coding protein is SECONDARY_PROXY."
+      ]
+    },
+    {
+      "task_id": "RNA_SWITCH",
+      "display_name": "RNA Switch",
+      "macro_domain": "Engineering",
+      "level1_domain": "Engineering",
+      "level2_category": "Synthetic RNA",
+      "input_modality": "sequence_pair",
+      "input_definition": "switch sequence + trigger sequence",
+      "target_definition": "toehold / riboswitch activation",
+      "problem_type": "ASSAY_SPECIFIC",
+      "primary_metric": "ASSAY_SPECIFIC",
+      "secondary_metrics": [
+        "ASSAY_SPECIFIC"
+      ],
+      "normalization": {
+        "rule": "freeze assay variant or normalize components separately"
+      },
+      "difficulty_supported": [
+        "D1_STANDARD",
+        "D2_GENERALIZATION",
+        "D3_OOD"
+      ],
+      "core_or_extended": "CORE",
+      "notes": [
+        "Every dataset freezes exactly one problem type before evaluation."
+      ],
+      "assay_variants": {
+        "classification": {
+          "primary_metric": "AUPRC",
+          "secondary_metrics": [
+            "AUROC"
+          ]
+        },
+        "regression": {
+          "primary_metric": "Spearman",
+          "secondary_metrics": [
+            "Pearson"
+          ]
+        }
+      }
+    },
+    {
+      "task_id": "CRISPR_ON_TARGET",
+      "display_name": "CRISPR On-target",
+      "macro_domain": "Engineering",
+      "level1_domain": "Engineering",
+      "level2_category": "CRISPR",
+      "input_modality": "rna_dna_pair",
+      "input_definition": "sgRNA + target DNA",
+      "target_definition": "editing efficiency",
+      "problem_type": "regression",
+      "primary_metric": "Spearman",
+      "secondary_metrics": [
+        "Pearson"
+      ],
+      "normalization": {
+        "direction": "higher",
+        "baseline": 0,
+        "upper": 1
+      },
+      "difficulty_supported": [
+        "D1_STANDARD",
+        "D2_GENERALIZATION",
+        "D3_OOD"
+      ],
+      "core_or_extended": "CORE",
+      "notes": []
+    },
+    {
+      "task_id": "CRISPR_OFF_TARGET",
+      "display_name": "CRISPR Off-target",
+      "macro_domain": "Engineering",
+      "level1_domain": "Engineering",
+      "level2_category": "CRISPR",
+      "input_modality": "rna_dna_pair",
+      "input_definition": "sgRNA + off-target DNA",
+      "target_definition": "off-target activity",
+      "problem_type": "ASSAY_SPECIFIC",
+      "primary_metric": "ASSAY_SPECIFIC",
+      "secondary_metrics": [
+        "ASSAY_SPECIFIC"
+      ],
+      "normalization": {
+        "rule": "freeze assay variant or normalize components separately"
+      },
+      "difficulty_supported": [
+        "D1_STANDARD",
+        "D2_GENERALIZATION",
+        "D3_OOD"
+      ],
+      "core_or_extended": "CORE",
+      "notes": [
+        "Every dataset freezes exactly one problem type before evaluation."
+      ],
+      "assay_variants": {
+        "classification": {
+          "primary_metric": "AUPRC",
+          "secondary_metrics": [
+            "AUROC"
+          ]
+        },
+        "regression": {
+          "primary_metric": "Spearman",
+          "secondary_metrics": [
+            "Pearson"
+          ]
+        }
+      }
+    },
+    {
+      "task_id": "RNA_DESIGN",
+      "display_name": "RNA Design",
+      "macro_domain": "Engineering",
+      "level1_domain": "Design",
+      "level2_category": "RNA Design",
+      "input_modality": "conditional_generation",
+      "input_definition": "target property / structure / constraints",
+      "target_definition": "generated RNA sequence",
+      "problem_type": "conditional generation",
+      "primary_metric": "Success Rate",
+      "secondary_metrics": [
+        "functional score",
+        "structural recovery",
+        "novelty",
+        "diversity"
+      ],
+      "normalization": {
+        "direction": "higher",
+        "baseline": 0,
+        "upper": 1
+      },
+      "difficulty_supported": [
+        "D1_STANDARD",
+        "D2_GENERALIZATION",
+        "D3_OOD"
+      ],
+      "core_or_extended": "EXTENDED",
+      "notes": [
+        "Generation success, not ordinary scalar regression."
+      ]
+    }
+  ],
+  "scoring": {
+    "version": "rnagym-arena-1.0",
+    "status": "FROZEN_PROTOCOL_NO_FORMAL_RESULTS",
+    "macro_domain_weights": {
+      "Structure": 0.3333333333333333,
+      "Function": 0.3333333333333333,
+      "Engineering": 0.3333333333333333
+    },
+    "secondary_proxy_policy": "retain registry/specialist reference tracks; exclude proxy-only capabilities from RNA-specific core weights",
+    "capability_weights": {
+      "Structure": {
+        "3D Geometry": 0.3333333333333333,
+        "Secondary Structure": 0.3333333333333333,
+        "Structure Probing": 0.3333333333333333
+      },
+      "Function": {
+        "DMS Fitness": 0.1,
+        "Localization": 0.1,
+        "RNA Identity": 0.1,
+        "RNA Modification": 0.1,
+        "RNA Processing": 0.1,
+        "RNA–Protein Interaction": 0.1,
+        "Stability": 0.1,
+        "Translation": 0.1,
+        "Translation–Stability Coupling": 0.1,
+        "Variant Effect": 0.1
+      },
+      "Engineering": {
+        "CRISPR": 0.3333333333333333,
+        "RNA Design": 0.3333333333333333,
+        "Synthetic RNA": 0.3333333333333333
+      }
+    },
+    "hierarchy": [
+      "macro_domain",
+      "level2_category",
+      "canonical_task_id",
+      "source_family_id",
+      "assay_id",
+      "dataset_version"
+    ],
+    "aggregation": "equal at every level; dataset versions within an assay do not add source weight",
+    "panel": {
+      "must_freeze_before_results": true,
+      "absent_tasks_do_not_renormalize_weights": true,
+      "formal_requires_human_admission": true,
+      "exclude_secondary_proxy_from_core": true
+    },
+    "normalization": {
+      "higher": "clip((metric-baseline)/(upper-baseline),0,1)",
+      "lower": "clip(1-error/baseline_error,0,1)",
+      "higher_defaults": {
+        "Spearman": [
+          0,
+          1
+        ],
+        "Pearson": [
+          0,
+          1
+        ],
+        "MCC": [
+          0,
+          1
+        ],
+        "F1": [
+          0,
+          1
+        ],
+        "Macro-F1": [
+          0,
+          1
+        ],
+        "AUROC": [
+          0.5,
+          1
+        ],
+        "Success Rate": [
+          0,
+          1
+        ]
+      },
+      "AUPRC": "per-label positive prevalence; freeze evaluation population and prevalence before model outputs",
+      "MAE_RMSE": "frozen train-only simple baseline error, >0",
+      "noise_floor": "optional pre-frozen metadata; never fitted from model results"
+    },
+    "task_weights": {
+      "Structure": {
+        "3D Geometry": {
+          "CMP": 0.5,
+          "DMP": 0.5
+        },
+        "Secondary Structure": {
+          "SSP": 1.0
+        },
+        "Structure Probing": {
+          "SSI": 1.0
+        }
+      },
+      "Function": {
+        "DMS Fitness": {
+          "DMS_FITNESS": 1.0
+        },
+        "Localization": {
+          "RNA_LOC_SR": 0.5,
+          "RNA_LOC_LR": 0.5
+        },
+        "RNA Identity": {
+          "NCRNA_FAMILY": 1.0
+        },
+        "RNA Modification": {
+          "RNA_MODIFICATION": 1.0
+        },
+        "RNA Processing": {
+          "SPL": 0.5,
+          "APA": 0.5
+        },
+        "RNA–Protein Interaction": {
+          "RBP_BINDING": 1.0
+        },
+        "Stability": {
+          "HALF_LIFE": 0.25,
+          "FULL_LENGTH_DEGRADATION": 0.25,
+          "UTR3_STABILITY": 0.25,
+          "DEGRADATION_SITE": 0.25
+        },
+        "Translation": {
+          "MRL_EXACT": 0.25,
+          "MRL_PROXY": 0.25,
+          "RRS": 0.25,
+          "TE": 0.25
+        },
+        "Translation–Stability Coupling": {
+          "MRL_HL_PAIR": 1.0
+        },
+        "Variant Effect": {
+          "VEP": 1.0
+        }
+      },
+      "Engineering": {
+        "CRISPR": {
+          "CRISPR_ON_TARGET": 0.5,
+          "CRISPR_OFF_TARGET": 0.5
+        },
+        "RNA Design": {
+          "RNA_DESIGN": 1.0
+        },
+        "Synthetic RNA": {
+          "RNA_SWITCH": 1.0
+        }
+      }
+    },
+    "primary_metric_only": true,
+    "evaluation_statuses": [
+      "EVALUATED",
+      "UNSUPPORTED",
+      "NOT_RUN",
+      "FAILED",
+      "INCOMPATIBLE",
+      "REPORTED_ONLY"
+    ],
+    "missing_value_policy": "UNSUPPORTED/NOT_RUN/FAILED/INCOMPATIBLE keep raw and normalized NA; REPORTED_ONLY preserves reported raw values outside reproduced score; zero only as coverage penalty",
+    "coverage": {
+      "performance": "sum(w*s)/sum(w) over evaluated cells",
+      "coverage": "sum(w) over evaluated cells",
+      "universal": "performance*coverage"
+    },
+    "universal_eligibility": {
+      "minimum_coverage": 0.7,
+      "minimum_capabilities_per_macro_domain": 1
+    },
+    "specialist": {
+      "domains": [
+        "Structure",
+        "Function",
+        "Engineering"
+      ],
+      "canonical_task_boards": true
+    },
+    "joint_task_score": {
+      "MRL_HL_PAIR": {
+        "components": [
+          "MRL",
+          "Half-life"
+        ],
+        "aggregation": "mean_of_normalized_components"
+      }
+    },
+    "result_sources": [
+      "RNA_GYM_REPRODUCED",
+      "EXTERNAL_VERIFIED",
+      "PAPER_REPORTED"
+    ],
+    "paper_comparability_fields": [
+      "dataset_version",
+      "test_set_hash",
+      "split_hash",
+      "metric",
+      "input_modality",
+      "additional_information"
+    ],
+    "adaptation_tracks": [
+      "zero_shot",
+      "frozen_ridge",
+      "frozen_mlp",
+      "lora",
+      "full_fine_tuning",
+      "random_initialization"
+    ]
+  },
+  "scoring_version": "rnagym-arena-1.0",
+  "results": {
+    "formal_reproduced": [],
+    "paper_reported": []
+  }
+}

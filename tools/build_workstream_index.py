@@ -83,7 +83,7 @@ def build(root=ROOT):
 
 
 def readme_table(index):
-    lines = [START, '', '| Workstream / 工作块 | Registered rows / 注册行 | Admitted / 准入 |',
+    lines = [START, '', '| Workstream / 工作块 | Registered rows / 注册行 | Admitted / 矫正 |',
              '|---|---:|---:|']
     for group in index['workstreams']:
         lines.append(f"| {group['name']} | {group['registered_task_rows']} | {group['admitted_task_rows']} |")

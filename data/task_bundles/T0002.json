@@ -34,5 +34,43 @@
     "baseline运行状态": "NOT_RUN"
   },
   "plan_command": "python tools/task_download.py plan --task T0002",
-  "download_policy": "Source-entry links are not file bytes. Explicit package-only opt-in required before file candidates can be acquired for audit."
+  "download_policy": "Source-entry links are not file bytes. Explicit package-only opt-in required before file candidates can be acquired for audit.",
+  "arena_v1": {
+    "mapping_status": "MAPPED",
+    "canonical_task_ids": [
+      "CMP"
+    ],
+    "canonical_task_definitions": [
+      {
+        "task_id": "CMP",
+        "display_name": "Contact Map",
+        "macro_domain": "Structure",
+        "level1_domain": "Structure",
+        "level2_category": "3D Geometry",
+        "input_modality": "sequence",
+        "input_definition": "RNA sequence",
+        "target_definition": "spatial contact of nucleotide pairs",
+        "problem_type": "pairwise classification",
+        "primary_metric": "AUPRC",
+        "secondary_metrics": [
+          "F1"
+        ],
+        "normalization": {
+          "direction": "higher",
+          "baseline": "PER_LABEL_PREVALENCE",
+          "upper": 1
+        },
+        "difficulty_supported": [
+          "D1_STANDARD",
+          "D2_GENERALIZATION",
+          "D3_OOD"
+        ],
+        "core_or_extended": "CORE",
+        "notes": []
+      }
+    ],
+    "local_dataset_mapping": "data/registries/dataset_task_mapping_v1.tsv",
+    "scientific_admission_unchanged": true,
+    "reported_task_n_not_replaced_by_local_subset": true
+  }
 }

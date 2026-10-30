@@ -50,5 +50,46 @@
     "baseline运行状态": "NOT_RUN"
   },
   "plan_command": "python tools/task_download.py plan --task XMRNA_translation_efficiency_human",
-  "download_policy": "Source-entry links are not file bytes. Explicit package-only opt-in required before file candidates can be acquired for audit."
+  "download_policy": "Source-entry links are not file bytes. Explicit package-only opt-in required before file candidates can be acquired for audit.",
+  "arena_v1": {
+    "mapping_status": "MAPPED",
+    "canonical_task_ids": [
+      "TE"
+    ],
+    "canonical_task_definitions": [
+      {
+        "task_id": "TE",
+        "display_name": "Translation Efficiency",
+        "macro_domain": "Function",
+        "level1_domain": "Function & Regulation",
+        "level2_category": "Translation",
+        "input_modality": "sequence",
+        "input_definition": "full transcript / mRNA",
+        "target_definition": "Translation Efficiency",
+        "problem_type": "regression",
+        "primary_metric": "Spearman",
+        "secondary_metrics": [
+          "Pearson"
+        ],
+        "normalization": {
+          "direction": "higher",
+          "baseline": 0,
+          "upper": 1
+        },
+        "difficulty_supported": [
+          "D1_STANDARD",
+          "D2_GENERALIZATION",
+          "D3_OOD"
+        ],
+        "core_or_extended": "CORE",
+        "notes": [
+          "RRS != MRL != TE",
+          "Global translation efficiency, not reporter protein output alone."
+        ]
+      }
+    ],
+    "local_dataset_mapping": "data/registries/dataset_task_mapping_v1.tsv",
+    "scientific_admission_unchanged": true,
+    "reported_task_n_not_replaced_by_local_subset": true
+  }
 }

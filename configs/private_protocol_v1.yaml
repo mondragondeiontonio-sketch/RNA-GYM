@@ -1,0 +1,20 @@
+{
+  "version": "rnagym-arena-1.0",
+  "status": "INFRASTRUCTURE_ONLY_NO_PRIVATE_TEST_CREATED",
+  "max_private_submissions_per_team_per_week": 2,
+  "qualification": "at least one server-verified successful Public benchmark; no score or rank threshold",
+  "model_version_bound": true,
+  "submission_hash_required": true,
+  "bindings": [
+    "checkpoint_hash",
+    "code_version",
+    "adapter_hash",
+    "prompt_hash",
+    "protocol_hash"
+  ],
+  "labels_in_api": false,
+  "per_sample_errors_in_api": false,
+  "storage": "private evaluation labels outside public/site roots with restricted service permissions",
+  "v1": "Private-Holdout infrastructure",
+  "v2": "prospective / temporal experimental validation"
+}

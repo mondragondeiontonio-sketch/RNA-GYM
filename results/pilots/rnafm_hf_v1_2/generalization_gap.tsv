@@ -1,0 +1,10 @@
+dataset_id	baseline	metric	ID	D2	gap_ID_minus_D2	qualification
+EUKA_karner_decay_rate_763b01f0f301	B0_kmer_linear	Spearman	0.2971472000739798	0.31638880318058726	-0.01924160310660744	different frozen test memberships; same eligible population; approximate group-held-out, NOT strict D3
+EUKA_karner_decay_rate_763b01f0f301	B1_frozen_linear	Spearman	0.19716029755507455	0.19333188138221166	0.003828416172862892	different frozen test memberships; same eligible population; approximate group-held-out, NOT strict D3
+EUKA_karner_decay_rate_763b01f0f301	B2_frozen_mlp	Spearman	0.28061715993796316	0.31457498624389335	-0.033957826305930194	different frozen test memberships; same eligible population; approximate group-held-out, NOT strict D3
+MRNA_rnahl-saluki-human	B0_kmer_linear	Spearman	0.32916607035180645	0.2572631161122813	0.07190295423952514	different frozen test memberships; same eligible population; approximate group-held-out, NOT strict D3
+MRNA_rnahl-saluki-human	B1_frozen_linear	Spearman	0.12729626461453572	0.17660885435881815	-0.04931258974428243	different frozen test memberships; same eligible population; approximate group-held-out, NOT strict D3
+MRNA_rnahl-saluki-human	B2_frozen_mlp	Spearman	0.34610550476292695	0.32136014299763516	0.024745361765291796	different frozen test memberships; same eligible population; approximate group-held-out, NOT strict D3
+MRNA_rnahl-saluki-mouse	B0_kmer_linear	Spearman	0.16346887663357745	0.13194833009199605	0.0315205465415814	different frozen test memberships; same eligible population; approximate group-held-out, NOT strict D3
+MRNA_rnahl-saluki-mouse	B1_frozen_linear	Spearman	0.09391800907397312	-0.015778088600807153	0.10969609767478027	different frozen test memberships; same eligible population; approximate group-held-out, NOT strict D3
+MRNA_rnahl-saluki-mouse	B2_frozen_mlp	Spearman	0.282798083873465	0.20095654577162106	0.08184153810184394	different frozen test memberships; same eligible population; approximate group-held-out, NOT strict D3

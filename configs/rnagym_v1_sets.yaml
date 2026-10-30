@@ -1,0 +1,162 @@
+{
+  "version": "rnagym-arena-1.0",
+  "RNAGYM_V1_CORE_SET": [],
+  "core_candidates": [
+    {
+      "task_id": "APA",
+      "dataset_id": "QC:EUKA_APA_Isoform_ac4368d20e3b",
+      "status": "CANDIDATE_NOT_ADMITTED"
+    },
+    {
+      "task_id": "DMS_FITNESS",
+      "dataset_id": "QC:DMS_Andreasson_2020_ribozyme",
+      "status": "CANDIDATE_NOT_ADMITTED"
+    },
+    {
+      "task_id": "DMS_FITNESS",
+      "dataset_id": "QC:DMS_Beck_2022_ribozyme",
+      "status": "CANDIDATE_NOT_ADMITTED"
+    },
+    {
+      "task_id": "HALF_LIFE",
+      "dataset_id": "QC:EUKA_Rabani_degradation_rate_091f4bcb47ea",
+      "status": "CANDIDATE_NOT_ADMITTED"
+    },
+    {
+      "task_id": "HALF_LIFE",
+      "dataset_id": "QC:EUKA_Zhao_half-life_2699e56f1b7d",
+      "status": "CANDIDATE_NOT_ADMITTED"
+    },
+    {
+      "task_id": "MRL_EXACT",
+      "dataset_id": "UTR102:5UTR/062_castillo_HepG2_NOT_APPLICABLE_OR_UNKNOWN",
+      "status": "CANDIDATE_NOT_ADMITTED"
+    },
+    {
+      "task_id": "MRL_EXACT",
+      "dataset_id": "UTR102:5UTR/063_castillo_HEK293T_NOT_APPLICABLE_OR_UNKNOWN",
+      "status": "CANDIDATE_NOT_ADMITTED"
+    },
+    {
+      "task_id": "MRL_HL_PAIR",
+      "dataset_id": "QC:MRNA_mrl-hl-lbkwk",
+      "status": "CANDIDATE_NOT_ADMITTED"
+    },
+    {
+      "task_id": "MRL_PROXY",
+      "dataset_id": "QC:MRNA_mrl-hl-lbkwk",
+      "status": "CANDIDATE_NOT_ADMITTED"
+    },
+    {
+      "task_id": "MRL_PROXY",
+      "dataset_id": "QC:MRNA_mrl-sugimoto",
+      "status": "CANDIDATE_NOT_ADMITTED"
+    },
+    {
+      "task_id": "NCRNA_FAMILY",
+      "dataset_id": "QC:WANG_Archivell_Nr",
+      "status": "CANDIDATE_NOT_ADMITTED"
+    },
+    {
+      "task_id": "NCRNA_FAMILY",
+      "dataset_id": "QC:WANG_Archivell_n3864_dataset",
+      "status": "CANDIDATE_NOT_ADMITTED"
+    },
+    {
+      "task_id": "RBP_BINDING",
+      "dataset_id": "QC:EUKA_RNA_protein_interaction_00309f93d98f",
+      "status": "CANDIDATE_NOT_ADMITTED"
+    },
+    {
+      "task_id": "RBP_BINDING",
+      "dataset_id": "QC:EUKA_RNA_protein_interaction_061ac3c640ca",
+      "status": "CANDIDATE_NOT_ADMITTED"
+    },
+    {
+      "task_id": "RNA_MODIFICATION",
+      "dataset_id": "QC:EUKA_m6A_modification_154fe56738f9",
+      "status": "CANDIDATE_NOT_ADMITTED"
+    },
+    {
+      "task_id": "RNA_MODIFICATION",
+      "dataset_id": "QC:EUKA_m6A_modification_16b5e48cd4d5",
+      "status": "CANDIDATE_NOT_ADMITTED"
+    },
+    {
+      "task_id": "UTR3_STABILITY",
+      "dataset_id": "QC:EUKA_karner_decay_rate_763b01f0f301",
+      "status": "CANDIDATE_NOT_ADMITTED"
+    },
+    {
+      "task_id": "UTR3_STABILITY",
+      "dataset_id": "UTR102:3UTR/011_david_Beas2B_NOT_APPLICABLE_OR_UNKNOWN",
+      "status": "CANDIDATE_NOT_ADMITTED"
+    }
+  ],
+  "RNAGYM_V1_EXTENDED": [],
+  "extended_candidates": [],
+  "secondary_proxy_candidates": [
+    "QC:DMS_A0A2Z5U3Z0_9INFA_Doud_2016",
+    "QC:DMS_BCHB_CHLTE_Tsuboyama_2023_2KRU",
+    "QC:DMS_BLAT_ECOLX_Firnberg_2014",
+    "QC:DMS_BLAT_ECOLX_Jacquier_2013",
+    "QC:DMS_BRCA1_HUMAN_Findlay_2018",
+    "QC:DMS_C6KNH7_9INFA_Lee_2018",
+    "QC:DMS_CALM1_HUMAN_Weile_2017",
+    "QC:DMS_CAPSD_AAV2S_Sinai_2021",
+    "QC:DMS_CBS_HUMAN_Sun_2020",
+    "QC:DMS_CCDB_ECOLI_Adkar_2012",
+    "QC:DMS_DLG4_RAT_McLaughlin_2012",
+    "QC:DMS_DOCK1_MOUSE_Tsuboyama_2023_2M0Y",
+    "QC:DMS_ESTA_BACSU_Nutschel_2020",
+    "QC:DMS_F7YBW8_MESOW_Ding_2023",
+    "QC:DMS_GFP_AEQVI_Sarkisyan_2016",
+    "QC:DMS_HECD1_HUMAN_Tsuboyama_2023_3DKM",
+    "QC:DMS_IF1_ECOLI_Kelsic_2016",
+    "QC:DMS_MLAC_ECOLI_MacRae_2023",
+    "QC:DMS_MTHR_HUMAN_Weile_2021",
+    "QC:DMS_OBSCN_HUMAN_Tsuboyama_2023_1V1C",
+    "QC:DMS_OXDA_RHOTO_Vanella_2023_activity",
+    "QC:DMS_P53_HUMAN_Kotler_2018",
+    "QC:DMS_PKN1_HUMAN_Tsuboyama_2023_1URF",
+    "QC:DMS_POLG_DEN26_Suphatrakul_2023",
+    "QC:DMS_POLG_PESV_Tsuboyama_2023_2MXD",
+    "QC:DMS_PSAE_PICP2_Tsuboyama_2023_1PSE",
+    "QC:DMS_PTEN_HUMAN_Mighell_2018",
+    "QC:DMS_Q837P4_ENTFA_Meier_2023",
+    "QC:DMS_R1AB_SARS2_Flynn_2022",
+    "QC:DMS_RCRO_LAMBD_Tsuboyama_2023_1ORC",
+    "QC:DMS_RDRP_I33A0_Li_2023",
+    "QC:DMS_RNC_ECOLI_Weeks_2023",
+    "QC:DMS_SPIKE_SARS2_Starr_2020_binding",
+    "QC:DMS_SPTN1_CHICK_Tsuboyama_2023_1TUD",
+    "QC:DMS_SR43C_ARATH_Tsuboyama_2023_2N88",
+    "QC:DMS_SUMO1_HUMAN_Weile_2017",
+    "QC:DMS_TAT_HV1BR_Fernandes_2016",
+    "QC:MRNA_go_dna_dataset_mf",
+    "QC:MRNA_prot-loc",
+    "QC:MRNA_utr-variants-bohn-utr3",
+    "QC:MRNA_utr-variants-bohn-utr5",
+    "QC:MRNA_vep-traitgym-complex",
+    "QC:MRNA_vep-traitgym-mendelian",
+    "UTR102:5UTR/102_yeast_random_BY4741_NOT_APPLICABLE_OR_UNKNOWN"
+  ],
+  "FUTURE_V2_CANDIDATES": [
+    "SSP",
+    "CMP",
+    "DMP",
+    "SSI",
+    "SPL",
+    "RRS",
+    "TE",
+    "FULL_LENGTH_DEGRADATION",
+    "DEGRADATION_SITE",
+    "RNA_LOC_SR",
+    "RNA_LOC_LR",
+    "RNA_SWITCH",
+    "CRISPR_ON_TARGET",
+    "CRISPR_OFF_TARGET",
+    "RNA_DESIGN"
+  ],
+  "note": "Formal sets remain empty pending scientific review and human admission. Candidate selection is not score-based."
+}

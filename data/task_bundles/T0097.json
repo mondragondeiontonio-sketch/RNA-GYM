@@ -32,5 +32,43 @@
     "baseline运行状态": "NOT_RUN"
   },
   "plan_command": "python tools/task_download.py plan --task T0097",
-  "download_policy": "Source-entry links are not file bytes. Explicit package-only opt-in required before file candidates can be acquired for audit."
+  "download_policy": "Source-entry links are not file bytes. Explicit package-only opt-in required before file candidates can be acquired for audit.",
+  "arena_v1": {
+    "mapping_status": "MAPPED",
+    "canonical_task_ids": [
+      "SSP"
+    ],
+    "canonical_task_definitions": [
+      {
+        "task_id": "SSP",
+        "display_name": "Secondary Structure",
+        "macro_domain": "Structure",
+        "level1_domain": "Structure",
+        "level2_category": "Secondary Structure",
+        "input_modality": "sequence",
+        "input_definition": "RNA sequence",
+        "target_definition": "base-pair relationship / secondary structure",
+        "problem_type": "pairwise classification",
+        "primary_metric": "F1",
+        "secondary_metrics": [
+          "MCC"
+        ],
+        "normalization": {
+          "direction": "higher",
+          "baseline": 0,
+          "upper": 1
+        },
+        "difficulty_supported": [
+          "D1_STANDARD",
+          "D2_GENERALIZATION",
+          "D3_OOD"
+        ],
+        "core_or_extended": "CORE",
+        "notes": []
+      }
+    ],
+    "local_dataset_mapping": "data/registries/dataset_task_mapping_v1.tsv",
+    "scientific_admission_unchanged": true,
+    "reported_task_n_not_replaced_by_local_subset": true
+  }
 }

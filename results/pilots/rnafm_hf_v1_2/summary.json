@@ -1,0 +1,26 @@
+{
+  "date": "2026-10-31",
+  "phase": "EXPLORATORY_PILOT",
+  "technical_status": {
+    "INCOMPATIBLE": 16,
+    "PASSED_TECHNICAL_SMOKE": 261
+  },
+  "datasets": 8,
+  "eligible_records": 39095,
+  "unique_embeddings": 38692,
+  "protocol_folds": 33,
+  "metric_rows": 162,
+  "replayed_predictions": 162,
+  "model_id": "RNA-FM-HF",
+  "parameter_count": 99521546,
+  "embedding_dimension": 640,
+  "checkpoint_hash": "5b5d7d87b37c291ef42c140ef9edf7aea29f255fa2a4fd435f776c52e93d5e99",
+  "tokenizer_hash": "3fda088d6fa8a55dd28bea5ddc6307b10453d711dc60aba9780328e08f17a232",
+  "wall_seconds": 1037.451017178595,
+  "peak_allocated_GiB": 0.7940444946289062,
+  "peak_reserved_GiB": 7.8515625,
+  "pretrain_overlap": "PRETRAIN_OVERLAP_UNKNOWN",
+  "universal_score": null,
+  "formal_admitted": 0,
+  "gpu_count": 1
+}

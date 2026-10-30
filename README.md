@@ -42,6 +42,32 @@
 > See the [split and admission audit](docs/SPLIT_ADMISSION_AUDIT.md).
 > The website is an audit preview with its own dated snapshots.
 
+## RNA-FM-HF Pilot v1.2 · 真实探索性评测
+
+**2026-10-31 · EXPLORATORY_PILOT, not a formal leaderboard.**
+Eight real dataset views, 39,095 eligible observations, 38,692 unique frozen
+RNA-FM-HF embeddings, 33 protocol-fold evaluations and 162 model/fold metric rows.
+Existing outer test folds **[0, 3, 7]** are preserved; validation is group-split
+inside the non-test pool. All saved test metrics were replay-verified from predictions. The ncRNA family
+fold 7 lacks two test classes: its full-ontology Macro-F1 is **NA**, and its
+summary uses only two defined folds. Seven other views have complete 3-fold primaries.
+
+- Compare train-only k-mer/statistics baselines, frozen linear readouts and MLPs.
+- ncRNA family and direct RNA DMS show frozen-linear gains; FM is **not** best on
+  every task. Human/mouse half-life uses only the native-length compatible subset.
+- **261/277 technical passes**, including both repaired views; 16 incompatible.
+- One allocated GPU; encoder frozen; no UTR-LM, no full fine-tuning, no new downloads.
+- Formal admission remains zero. No Structure/Engineering or Universal score is
+  fabricated; pretraining overlap remains **UNKNOWN**, not zero leakage.
+- Only aggregate results and code are public; sequences, labels, predictions,
+  embedding caches, model weights and private data are not distributed here.
+
+**[Full report / 完整报告](reports/RNAGYM_RNAFM_HF_PILOT_V1_2.md)** ·
+[Fold-level aggregate metrics](results/pilots/rnafm_hf_v1_2/fold_metrics.tsv) ·
+[Summary and gains](results/pilots/rnafm_hf_v1_2/baseline_comparison.tsv) ·
+[ID vs group generalization](results/pilots/rnafm_hf_v1_2/generalization_gap.tsv) ·
+[Frozen pilot config](configs/rnafm_hf_pilot_v1_2.yaml)
+
 ## At a glance · 项目概览
 
 | What | Verified scope | What it does **not** mean |

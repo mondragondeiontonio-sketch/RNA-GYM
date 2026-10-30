@@ -1,0 +1,209 @@
+{
+  "version": "rnagym-arena-1.0",
+  "status": "FROZEN_PROTOCOL_NO_FORMAL_RESULTS",
+  "macro_domain_weights": {
+    "Structure": 0.3333333333333333,
+    "Function": 0.3333333333333333,
+    "Engineering": 0.3333333333333333
+  },
+  "secondary_proxy_policy": "retain registry/specialist reference tracks; exclude proxy-only capabilities from RNA-specific core weights",
+  "capability_weights": {
+    "Structure": {
+      "3D Geometry": 0.3333333333333333,
+      "Secondary Structure": 0.3333333333333333,
+      "Structure Probing": 0.3333333333333333
+    },
+    "Function": {
+      "DMS Fitness": 0.1,
+      "Localization": 0.1,
+      "RNA Identity": 0.1,
+      "RNA Modification": 0.1,
+      "RNA Processing": 0.1,
+      "RNA–Protein Interaction": 0.1,
+      "Stability": 0.1,
+      "Translation": 0.1,
+      "Translation–Stability Coupling": 0.1,
+      "Variant Effect": 0.1
+    },
+    "Engineering": {
+      "CRISPR": 0.3333333333333333,
+      "RNA Design": 0.3333333333333333,
+      "Synthetic RNA": 0.3333333333333333
+    }
+  },
+  "hierarchy": [
+    "macro_domain",
+    "level2_category",
+    "canonical_task_id",
+    "source_family_id",
+    "assay_id",
+    "dataset_version"
+  ],
+  "aggregation": "equal at every level; dataset versions within an assay do not add source weight",
+  "panel": {
+    "must_freeze_before_results": true,
+    "absent_tasks_do_not_renormalize_weights": true,
+    "formal_requires_human_admission": true,
+    "exclude_secondary_proxy_from_core": true
+  },
+  "normalization": {
+    "higher": "clip((metric-baseline)/(upper-baseline),0,1)",
+    "lower": "clip(1-error/baseline_error,0,1)",
+    "higher_defaults": {
+      "Spearman": [
+        0,
+        1
+      ],
+      "Pearson": [
+        0,
+        1
+      ],
+      "MCC": [
+        0,
+        1
+      ],
+      "F1": [
+        0,
+        1
+      ],
+      "Macro-F1": [
+        0,
+        1
+      ],
+      "AUROC": [
+        0.5,
+        1
+      ],
+      "Success Rate": [
+        0,
+        1
+      ]
+    },
+    "AUPRC": "per-label positive prevalence; freeze evaluation population and prevalence before model outputs",
+    "MAE_RMSE": "frozen train-only simple baseline error, >0",
+    "noise_floor": "optional pre-frozen metadata; never fitted from model results"
+  },
+  "task_weights": {
+    "Structure": {
+      "3D Geometry": {
+        "CMP": 0.5,
+        "DMP": 0.5
+      },
+      "Secondary Structure": {
+        "SSP": 1.0
+      },
+      "Structure Probing": {
+        "SSI": 1.0
+      }
+    },
+    "Function": {
+      "DMS Fitness": {
+        "DMS_FITNESS": 1.0
+      },
+      "Localization": {
+        "RNA_LOC_SR": 0.5,
+        "RNA_LOC_LR": 0.5
+      },
+      "RNA Identity": {
+        "NCRNA_FAMILY": 1.0
+      },
+      "RNA Modification": {
+        "RNA_MODIFICATION": 1.0
+      },
+      "RNA Processing": {
+        "SPL": 0.5,
+        "APA": 0.5
+      },
+      "RNA–Protein Interaction": {
+        "RBP_BINDING": 1.0
+      },
+      "Stability": {
+        "HALF_LIFE": 0.25,
+        "FULL_LENGTH_DEGRADATION": 0.25,
+        "UTR3_STABILITY": 0.25,
+        "DEGRADATION_SITE": 0.25
+      },
+      "Translation": {
+        "MRL_EXACT": 0.25,
+        "MRL_PROXY": 0.25,
+        "RRS": 0.25,
+        "TE": 0.25
+      },
+      "Translation–Stability Coupling": {
+        "MRL_HL_PAIR": 1.0
+      },
+      "Variant Effect": {
+        "VEP": 1.0
+      }
+    },
+    "Engineering": {
+      "CRISPR": {
+        "CRISPR_ON_TARGET": 0.5,
+        "CRISPR_OFF_TARGET": 0.5
+      },
+      "RNA Design": {
+        "RNA_DESIGN": 1.0
+      },
+      "Synthetic RNA": {
+        "RNA_SWITCH": 1.0
+      }
+    }
+  },
+  "primary_metric_only": true,
+  "evaluation_statuses": [
+    "EVALUATED",
+    "UNSUPPORTED",
+    "NOT_RUN",
+    "FAILED",
+    "INCOMPATIBLE",
+    "REPORTED_ONLY"
+  ],
+  "missing_value_policy": "UNSUPPORTED/NOT_RUN/FAILED/INCOMPATIBLE keep raw and normalized NA; REPORTED_ONLY preserves reported raw values outside reproduced score; zero only as coverage penalty",
+  "coverage": {
+    "performance": "sum(w*s)/sum(w) over evaluated cells",
+    "coverage": "sum(w) over evaluated cells",
+    "universal": "performance*coverage"
+  },
+  "universal_eligibility": {
+    "minimum_coverage": 0.7,
+    "minimum_capabilities_per_macro_domain": 1
+  },
+  "specialist": {
+    "domains": [
+      "Structure",
+      "Function",
+      "Engineering"
+    ],
+    "canonical_task_boards": true
+  },
+  "joint_task_score": {
+    "MRL_HL_PAIR": {
+      "components": [
+        "MRL",
+        "Half-life"
+      ],
+      "aggregation": "mean_of_normalized_components"
+    }
+  },
+  "result_sources": [
+    "RNA_GYM_REPRODUCED",
+    "EXTERNAL_VERIFIED",
+    "PAPER_REPORTED"
+  ],
+  "paper_comparability_fields": [
+    "dataset_version",
+    "test_set_hash",
+    "split_hash",
+    "metric",
+    "input_modality",
+    "additional_information"
+  ],
+  "adaptation_tracks": [
+    "zero_shot",
+    "frozen_ridge",
+    "frozen_mlp",
+    "lora",
+    "full_fine_tuning",
+    "random_initialization"
+  ]
+}
