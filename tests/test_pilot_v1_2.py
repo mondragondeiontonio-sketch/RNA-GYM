@@ -42,7 +42,7 @@ class PilotProtocolTests(unittest.TestCase):
 
     def test_constant_metric_stays_na(self):
         import numpy as np
-        from tools.pilot_v1_2_run import metric_values
+        from tools.pilot_v1_2_scoring import metric_values
         r=metric_values(np.arange(10.),np.ones(10),"regression",[])
         self.assertIsNone(r["Spearman"])
         self.assertIn("Spearman",r["undefined_reasons"])
@@ -50,16 +50,23 @@ class PilotProtocolTests(unittest.TestCase):
 
     def test_negative_dms_does_not_fabricate_ndcg_relevance(self):
         import numpy as np
-        from tools.pilot_v1_2_run import metric_values
+        from tools.pilot_v1_2_scoring import metric_values
         r=metric_values(np.arange(-5.,5.),np.arange(10.),"regression",[])
         self.assertIsNone(r["NDCG"])
 
     def test_family_classification_has_declared_support(self):
         import numpy as np
-        from tools.pilot_v1_2_run import metric_values
+        from tools.pilot_v1_2_scoring import metric_values
         r=metric_values(np.array([0,1,0,1]),np.array([[.9,.1],[.1,.9],[.8,.2],[.2,.8]]),"classification",["a","b"])
         self.assertEqual(r["Macro-F1"],1.)
         self.assertEqual(r["class_support"]["a"]["positive"],2)
+
+    def test_missing_test_class_is_na_not_zero(self):
+        import numpy as np
+        from tools.pilot_v1_2_scoring import metric_values
+        r=metric_values(np.array([0,0,0]),np.array([[.8,.2],[.9,.1],[.7,.3]]),"classification",["a","b"])
+        self.assertIsNone(r["Macro-F1"])
+        self.assertIn("Macro-F1",r["undefined_reasons"])
 
     def test_fixed_budget_no_utrlm_or_full_ft(self):
         c=json.loads((ROOT/"configs/rnafm_hf_pilot_v1_2.yaml").read_text())

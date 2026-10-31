@@ -7,7 +7,7 @@ import sqlite3
 import numpy as np
 from tools.build_arena_v1 import ROOT, load, dump, sha, table, tsv
 from tools.pilot_v1_2_data import RUN, CONFIG
-from tools.pilot_v1_2_run import metric_values
+from tools.pilot_v1_2_scoring import metric_values
 PUBLIC = ROOT/'results/pilots/rnafm_hf_v1_2'
 
 
@@ -62,8 +62,8 @@ def main():
         for role in ['train','validation','test']:s[role+'_n_by_fold']=json.dumps([int(r['n_'+role]) for r in rs])
         for metric in ['Spearman','Pearson','MAE','RMSE','NDCG','Macro-F1','MCC','Macro-AUPRC','Macro-AUROC']:
             values=[float(r[metric]) for r in rs if r.get(metric) not in ('',None)]
-            s[metric+'_mean']=float(np.mean(values)) if len(values)==len(rs) else None
-            s[metric+'_std']=float(np.std(values,ddof=1)) if len(values)==len(rs) and len(values)>1 else None
+            s[metric+'_mean']=float(np.mean(values)) if values else None
+            s[metric+'_std']=float(np.std(values,ddof=1)) if len(values)>1 else None
             s[metric+'_defined_folds']=len(values)
         summaries.append(s)
     lookup={(r['dataset_id'],r['protocol'],r['baseline']):r for r in summaries}
@@ -71,7 +71,7 @@ def main():
     for did,task,protocol,diff in sorted({(r['dataset_id'],r['task_id'],r['protocol'],r['difficulty']) for r in rows}):
         b0,b1,b2=[lookup[(did,protocol,b)] for b in ['B0_kmer_linear','B1_frozen_linear','B2_frozen_mlp']]
         metric=b0['primary_metric'];k=metric+'_mean'
-        compare.append(dict(dataset_id=did,task_id=task,protocol=protocol,difficulty=diff,metric=metric,B0=b0[k],frozen_linear=b1[k],frozen_MLP=b2[k],frozen_representation_gain=b1[k]-b0[k],nonlinear_readout_gain=b2[k]-b1[k],n_folds=3,phase='EXPLORATORY_PILOT'))
+        compare.append(dict(dataset_id=did,task_id=task,protocol=protocol,difficulty=diff,metric=metric,B0=b0[k],frozen_linear=b1[k],frozen_MLP=b2[k],frozen_representation_gain=b1[k]-b0[k],nonlinear_readout_gain=b2[k]-b1[k],n_folds_executed=3,n_defined_primary_folds=b0[metric+'_defined_folds'],phase='EXPLORATORY_PILOT'))
     for did in sorted({r['dataset_id'] for r in summaries}):
         for b in ['B0_kmer_linear','B1_frozen_linear','B2_frozen_mlp']:
             a=lookup.get((did,'EAZY',b));d=lookup.get((did,'OOD_split',b))
@@ -163,7 +163,14 @@ def render(selected,compare,gaps,lookup,c,audit,model):
         'correlations remain NA. Ridge alpha=1, logistic C=1, AdamW LR=.001, weight decay',
         '.0001, batch 32, max 15 epochs, patience 3, seed 42, no HPO. These are fixed',
         'pilot engineering defaults, not official author-optimal settings.','',
-        'All cells show test-fold mean ± sample SD, not validation scores or pooled train',
+        'Cells show defined test-fold mean ± sample SD, not validation or pooled train scores.',
+        '**ncRNA family fold 7 lacks 23s and telomerase positives: Macro-F1 is NA, not 0;**',
+        '**its table row summarizes only two defined folds and is NOT a complete three-fold result.**',
+        'The other seven datasets have all three primary test metrics. Original splits and',
+        'predictions are unchanged; the metric-support correction is explicitly archived.',
+        'No dataset was removed on the basis of its model performance. Do not compare the',
+        'two-fold family estimate as a fully supported three-fold ranking. All other',
+        'metrics follow their recorded support rules. These are not pooled train',
         'metrics. Test sample sizes are per folds 0,3,7. Full Pearson/MAE/RMSE/class-support',
         'metrics and NA reasons are saved in the fold tables.','',
         '| Dataset | Protocol | N train / test by fold | Task | B0 | Frozen linear | Frozen MLP | Primary |',
@@ -181,7 +188,7 @@ def render(selected,compare,gaps,lookup,c,audit,model):
         'invented to make ranking metrics defined. Macro-AUPRC/AUROC need positive/negative',
         'support for every declared test class; otherwise NA. No incompatible raw metrics',
         'are averaged across tasks.','',
-        '### Representation/readout gains','',
+        '### Representation/readout gains (family: two defined folds only)','',
         '| Dataset | Protocol | Frozen linear − k-mer | MLP − frozen linear |',
         '|---|---|---:|---:|']
     for r in compare:lines.append(f'| {r["dataset_id"]} | {r["protocol"]} | {r["frozen_representation_gain"]:+.4f} | {r["nonlinear_readout_gain"]:+.4f} |')
@@ -226,7 +233,10 @@ def render(selected,compare,gaps,lookup,c,audit,model):
         '- Platform lacks complete admitted Structure/Engineering panels: **no Universal',
         '  Score**. This is unavailable platform capability, not a missing-model zero.','',
         '## Part E — Next benchmark decisions','',
-        '1. Expand direct RNA DMS, genuine 5′UTR MRL and ncRNA family to full CV/multiple',
+        '1. Expand direct RNA DMS and genuine 5′UTR MRL to full CV/multiple seeds. ncRNA',
+        '   family first needs a NEW versioned group-stratified outer protocol with every',
+        '   declared test class represented; do not edit the frozen legacy test fold.',
+        '   Then expand ncRNA family to full CV/multiple',
         '   seeds after scientific review. Preserve single-WT and closed-set limitations.',
         '2. MRL-proxy and 3′UTR stability remain native-length-population pilots; their',
         '   source units/assay identity require review. Half-life needs long-sequence',

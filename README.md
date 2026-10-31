@@ -48,7 +48,9 @@
 Eight real dataset views, 39,095 eligible observations, 38,692 unique frozen
 RNA-FM-HF embeddings, 33 protocol-fold evaluations and 162 model/fold metric rows.
 Existing outer test folds **[0, 3, 7]** are preserved; validation is group-split
-inside the non-test pool. All saved test metrics were replay-verified from predictions.
+inside the non-test pool. All saved test metrics were replay-verified from predictions. The ncRNA family
+fold 7 lacks two test classes: its full-ontology Macro-F1 is **NA**, and its
+summary uses only two defined folds. Seven other views have complete 3-fold primaries.
 
 - Compare train-only k-mer/statistics baselines, frozen linear readouts and MLPs.
 - ncRNA family and direct RNA DMS show frozen-linear gains; FM is **not** best on

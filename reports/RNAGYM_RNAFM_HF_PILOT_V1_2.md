@@ -97,7 +97,14 @@ correlations remain NA. Ridge alpha=1, logistic C=1, AdamW LR=.001, weight decay
 .0001, batch 32, max 15 epochs, patience 3, seed 42, no HPO. These are fixed
 pilot engineering defaults, not official author-optimal settings.
 
-All cells show test-fold mean ± sample SD, not validation scores or pooled train
+Cells show defined test-fold mean ± sample SD, not validation or pooled train scores.
+**ncRNA family fold 7 lacks 23s and telomerase positives: Macro-F1 is NA, not 0;**
+**its table row summarizes only two defined folds and is NOT a complete three-fold result.**
+The other seven datasets have all three primary test metrics. Original splits and
+predictions are unchanged; the metric-support correction is explicitly archived.
+No dataset was removed on the basis of its model performance. Do not compare the
+two-fold family estimate as a fully supported three-fold ranking. All other
+metrics follow their recorded support rules. These are not pooled train
 metrics. Test sample sizes are per folds 0,3,7. Full Pearson/MAE/RMSE/class-support
 metrics and NA reasons are saved in the fold tables.
 
@@ -113,7 +120,7 @@ metrics and NA reasons are saved in the fold tables.
 | MRNA_rnahl-saluki-human | OOD_split | [532, 544, 529] / [65, 52, 69] | HALF_LIFE | 0.2573 ± 0.1310 | 0.1766 ± 0.1076 | 0.3214 ± 0.2039 | Spearman |
 | MRNA_rnahl-saluki-mouse | EAZY | [783, 788, 786] / [99, 93, 95] | HALF_LIFE | 0.1635 ± 0.0256 | 0.0939 ± 0.0464 | 0.2828 ± 0.0980 | Spearman |
 | MRNA_rnahl-saluki-mouse | OOD_split | [795, 781, 778] / [87, 102, 105] | HALF_LIFE | 0.1319 ± 0.0686 | -0.0158 ± 0.0764 | 0.2010 ± 0.1518 | Spearman |
-| WANG_Archivell_Nr | EAZY | [1031, 1032, 1032] / [128, 127, 127] | NCRNA_FAMILY | 0.6513 ± 0.0342 | 0.8777 ± 0.1229 | 0.8656 ± 0.1126 | Macro-F1 |
+| WANG_Archivell_Nr | EAZY | [1031, 1032, 1032] / [128, 127, 127] | NCRNA_FAMILY | 0.6710 ± 0.0005 | 0.9470 ± 0.0364 | 0.9302 ± 0.0196 | Macro-F1 |
 
 Completed **33 protocol-fold cells**, **162 model/fold rows**.
 All **162** saved prediction metric sets were independently replayed
@@ -122,7 +129,7 @@ invented to make ranking metrics defined. Macro-AUPRC/AUROC need positive/negati
 support for every declared test class; otherwise NA. No incompatible raw metrics
 are averaged across tasks.
 
-### Representation/readout gains
+### Representation/readout gains (family: two defined folds only)
 
 | Dataset | Protocol | Frozen linear − k-mer | MLP − frozen linear |
 |---|---|---:|---:|
@@ -136,7 +143,7 @@ are averaged across tasks.
 | MRNA_rnahl-saluki-human | OOD_split | -0.0807 | +0.1448 |
 | MRNA_rnahl-saluki-mouse | EAZY | -0.0696 | +0.1889 |
 | MRNA_rnahl-saluki-mouse | OOD_split | -0.1477 | +0.2167 |
-| WANG_Archivell_Nr | EAZY | +0.2264 | -0.0120 |
+| WANG_Archivell_Nr | EAZY | +0.2760 | -0.0168 |
 
 **Interpretation:** ncRNA family and both direct RNA DMS assays show positive
 frozen-linear gains; MRL-proxy gain is modest. Frozen linear underperforms k-mer
@@ -195,7 +202,10 @@ membership remains **PRETRAIN_OVERLAP_UNKNOWN**, not zero leakage.
 
 ## Part E — Next benchmark decisions
 
-1. Expand direct RNA DMS, genuine 5′UTR MRL and ncRNA family to full CV/multiple
+1. Expand direct RNA DMS and genuine 5′UTR MRL to full CV/multiple seeds. ncRNA
+   family first needs a NEW versioned group-stratified outer protocol with every
+   declared test class represented; do not edit the frozen legacy test fold.
+   Then expand ncRNA family to full CV/multiple
    seeds after scientific review. Preserve single-WT and closed-set limitations.
 2. MRL-proxy and 3′UTR stability remain native-length-population pilots; their
    source units/assay identity require review. Half-life needs long-sequence
