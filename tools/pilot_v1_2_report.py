@@ -7,7 +7,7 @@ import sqlite3
 import numpy as np
 from tools.build_arena_v1 import ROOT, load, dump, sha, table, tsv
 from tools.pilot_v1_2_data import RUN, CONFIG
-from tools.pilot_v1_2_scoring import metric_values
+from tools.pilot_v1_2_scoring import metric_values, enforce_table_support
 PUBLIC = ROOT/'results/pilots/rnafm_hf_v1_2'
 
 
@@ -53,6 +53,13 @@ def verify_cache(model,config):
 def main():
     rows=table(RUN/'fold_metrics.tsv');audit=load(RUN/'execution_audit.json');selected=table(RUN/'selected_datasets.tsv')
     model=load(RUN/'model_manifest.json');config=load(CONFIG)
+    corrections=enforce_table_support(rows)
+    if corrections:
+        raw_sha=sha(RUN/'fold_metrics.tsv')
+        backup=RUN/('raw_metrics_before_support_'+raw_sha[:12]+'.tsv')
+        if not backup.exists(): backup.write_bytes((RUN/'fold_metrics.tsv').read_bytes())
+        tsv(RUN/'fold_metrics.tsv',rows,list(rows[0]))
+        dump(RUN/('support_correction_'+raw_sha[:12]+'.json'),dict(raw_metrics_sha256=raw_sha,corrections=corrections,policy='test support validity only, no training/split/prediction changes'))
     replay_n=replay(rows);cached=verify_cache(model,config)
     grouped=collections.defaultdict(list)
     for r in rows:grouped[(r['dataset_id'],r['task_id'],r['protocol'],r['difficulty'],r['baseline'])].append(r)
