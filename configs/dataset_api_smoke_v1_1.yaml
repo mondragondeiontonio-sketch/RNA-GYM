@@ -1,0 +1,33 @@
+{
+  "version": "rnagym-dataset-api-smoke-1.1",
+  "purpose": "TECHNICAL_INTEGRATION_ONLY_NOT_MODEL_RANKING_OR_SCIENTIFIC_ADMISSION",
+  "model_id": "RNA-FM",
+  "deployment": "RNA-FM-HF",
+  "model_manifest": "runs/20261027_gpu_continuation/model_manifest.json",
+  "excluded_model_ids": [
+    "UTR-LM",
+    "UTR-LM-MRL",
+    "UTR-LM-TE_EL"
+  ],
+  "exclusion_reason": "latest user instruction; UTR-pretraining contamination concern",
+  "api": "existing rna_gym.RNAHub and DatasetHub Python API; not an HTTP deployment claim",
+  "gpu_physical_uuid": "GPU-982cb6eb-c572-d1e8-16ac-e16ad99ffcab",
+  "maximum_gpu_count": 1,
+  "epochs": 2,
+  "adaptation_track": "frozen_encoder_plus_two_epoch_mlp_integration_smoke",
+  "sample_cap_per_dataset": 12,
+  "scan_cap_per_dataset": 4096,
+  "maximum_sequence_length": 1022,
+  "length_policy": "NO_TRUNCATION; select compatible full sequences, otherwise report blocked/incompatible",
+  "feature_view": "explicit uppercase and DNA T-to-RNA U mapping, raw input and raw identity unchanged",
+  "head": {
+    "hidden_width": 128,
+    "dropout": 0.2,
+    "learning_rate": 0.0003,
+    "weight_decay": 0.01
+  },
+  "seed": 20261030,
+  "hyperparameter_search_trials": 0,
+  "formal_leaderboard_eligible": false,
+  "scientific_admission_policy": "model execution success cannot grant admission; real human approval still required"
+}

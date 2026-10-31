@@ -1,0 +1,27 @@
+{
+  "version":"rnagym-rnafm-hf-pilot-1.2",
+  "phase":"EXPLORATORY_PILOT",
+  "model":"RNA-FM-HF",
+  "model_manifest":"runs/20261027_gpu_continuation/model_manifest.json",
+  "encoder":"frozen", "gpu_count":1,
+  "outer_folds_10":[0,3,7], "validation_fraction":0.1,
+  "mlp_max_epochs":15,"early_stopping_patience":3,
+  "head_lr":0.001,"weight_decay":0.0001,"head_batch_size":32,
+  "hidden_width":128,"dropout":0.2,"seed":42,
+  "ridge_alpha":1.0,"logistic_C":1.0,"hpo_trials":0,
+  "setting_origin":"fixed user pilot engineering defaults, not author-optimal",
+  "preprocessing_version":"literal-retained_explicit-uppercase-TtoU-v1",
+  "representation":"last-valid-nucleotide-masked-mean-fp32",
+  "maximum_nt":1022,"no_truncation":true,"no_test_tuning":true,
+  "formal_leaderboard_eligible":false,"compute_universal_score":false,
+  "datasets":[
+    {"unit":"DMS_Andreasson_2020_ribozyme","task":"DMS_FITNESS","target":"scalar","type":"regression","protocols":["EAZY"]},
+    {"unit":"DMS_Domingo_2018_tRNA","task":"DMS_FITNESS","target":"scalar","type":"regression","protocols":["EAZY"]},
+    {"unit":"MRNA_rnahl-saluki-human","task":"HALF_LIFE","target":"target","type":"regression","protocols":["EAZY","OOD_split"]},
+    {"unit":"MRNA_rnahl-saluki-mouse","task":"HALF_LIFE","target":"target","type":"regression","protocols":["EAZY","OOD_split"]},
+    {"unit":"MRNA_mrl-sugimoto","task":"MRL_PROXY","target":"target","type":"regression","protocols":["OOD_split"]},
+    {"unit":"EUKA_karner_decay_rate_763b01f0f301","task":"UTR3_STABILITY","target":"mean_log_decay","type":"regression","protocols":["EAZY","OOD_split"]},
+    {"unit":"WANG_Archivell_Nr","task":"NCRNA_FAMILY","target":"family","type":"classification","protocols":["EAZY"]},
+    {"unit":"5UTR/077_danio_embryo_NOT_APPLICABLE_OR_UNKNOWN","task":"MRL_EXACT","target":"raw_label","type":"regression","protocols":["UTR_LEGACY_10FOLD"]}
+  ]
+}

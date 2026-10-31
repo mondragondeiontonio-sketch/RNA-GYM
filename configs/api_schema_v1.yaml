@@ -1,0 +1,389 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "RNA-Gym Arena",
+    "version": "1.0"
+  },
+  "paths": {
+    "/v1/tasks": {
+      "get": {
+        "summary": "GET /v1/tasks",
+        "responses": {
+          "200": {
+            "description": "Versioned metadata; no hidden labels or per-sample private errors",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TaskList"
+                }
+              }
+            }
+          }
+        },
+        "x-runtime-status": "SCHEMA_ONLY_NOT_DEPLOYED"
+      }
+    },
+    "/v1/tasks/{task_id}": {
+      "get": {
+        "summary": "GET /v1/tasks/{task_id}",
+        "responses": {
+          "200": {
+            "description": "Versioned metadata; no hidden labels or per-sample private errors",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Task"
+                }
+              }
+            }
+          }
+        },
+        "x-runtime-status": "SCHEMA_ONLY_NOT_DEPLOYED",
+        "parameters": [
+          {
+            "name": "task_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    "/v1/datasets": {
+      "get": {
+        "summary": "GET /v1/datasets",
+        "responses": {
+          "200": {
+            "description": "Versioned metadata; no hidden labels or per-sample private errors",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DatasetList"
+                }
+              }
+            }
+          }
+        },
+        "x-runtime-status": "SCHEMA_ONLY_NOT_DEPLOYED"
+      }
+    },
+    "/v1/datasets/{dataset_id}": {
+      "get": {
+        "summary": "GET /v1/datasets/{dataset_id}",
+        "responses": {
+          "200": {
+            "description": "Versioned metadata; no hidden labels or per-sample private errors",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Dataset"
+                }
+              }
+            }
+          }
+        },
+        "x-runtime-status": "SCHEMA_ONLY_NOT_DEPLOYED",
+        "parameters": [
+          {
+            "name": "dataset_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    "/v1/models": {
+      "get": {
+        "summary": "GET /v1/models",
+        "responses": {
+          "200": {
+            "description": "Versioned metadata; no hidden labels or per-sample private errors",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ModelList"
+                }
+              }
+            }
+          }
+        },
+        "x-runtime-status": "SCHEMA_ONLY_NOT_DEPLOYED"
+      }
+    },
+    "/v1/models/{model_id}": {
+      "get": {
+        "summary": "GET /v1/models/{model_id}",
+        "responses": {
+          "200": {
+            "description": "Versioned metadata; no hidden labels or per-sample private errors",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Model"
+                }
+              }
+            }
+          }
+        },
+        "x-runtime-status": "SCHEMA_ONLY_NOT_DEPLOYED",
+        "parameters": [
+          {
+            "name": "model_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    "/v1/leaderboard": {
+      "get": {
+        "summary": "GET /v1/leaderboard",
+        "responses": {
+          "200": {
+            "description": "Versioned metadata; no hidden labels or per-sample private errors",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Leaderboard"
+                }
+              }
+            }
+          }
+        },
+        "x-runtime-status": "SCHEMA_ONLY_NOT_DEPLOYED"
+      }
+    },
+    "/v1/leaderboard/{domain}": {
+      "get": {
+        "summary": "GET /v1/leaderboard/{domain}",
+        "responses": {
+          "200": {
+            "description": "Versioned metadata; no hidden labels or per-sample private errors",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Leaderboard"
+                }
+              }
+            }
+          }
+        },
+        "x-runtime-status": "SCHEMA_ONLY_NOT_DEPLOYED",
+        "parameters": [
+          {
+            "name": "domain",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    "/v1/submissions": {
+      "post": {
+        "summary": "POST /v1/submissions",
+        "responses": {
+          "202": {
+            "description": "Versioned metadata; no hidden labels or per-sample private errors",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SubmissionReceipt"
+                }
+              }
+            }
+          }
+        },
+        "x-runtime-status": "SCHEMA_ONLY_NOT_DEPLOYED",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Submission"
+              }
+            }
+          }
+        },
+        "description": "Team identity comes from authenticated principal, never client body. Qualification and atomic quota checks required."
+      }
+    },
+    "/v1/submissions/{id}": {
+      "get": {
+        "summary": "GET /v1/submissions/{id}",
+        "responses": {
+          "200": {
+            "description": "Versioned metadata; no hidden labels or per-sample private errors",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SubmissionReceipt"
+                }
+              }
+            }
+          }
+        },
+        "x-runtime-status": "SCHEMA_ONLY_NOT_DEPLOYED",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "Task": {
+        "type": "object",
+        "required": [
+          "task_id",
+          "input_definition",
+          "target_definition",
+          "primary_metric"
+        ]
+      },
+      "Dataset": {
+        "type": "object",
+        "required": [
+          "dataset_id",
+          "label_definition",
+          "admission_status"
+        ]
+      },
+      "Model": {
+        "type": "object",
+        "required": [
+          "model_id",
+          "model_version"
+        ]
+      },
+      "Leaderboard": {
+        "type": "object",
+        "required": [
+          "scope",
+          "rows",
+          "protocol_version"
+        ]
+      },
+      "Submission": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "model_id",
+          "model_version",
+          "checkpoint_hash",
+          "adapter_hash",
+          "prompt_hash",
+          "code_version",
+          "protocol_hash",
+          "scope"
+        ],
+        "properties": {
+          "model_id": {
+            "type": "string"
+          },
+          "model_version": {
+            "type": "string"
+          },
+          "checkpoint_hash": {
+            "type": "string"
+          },
+          "adapter_hash": {
+            "type": "string"
+          },
+          "prompt_hash": {
+            "type": "string"
+          },
+          "code_version": {
+            "type": "string"
+          },
+          "protocol_hash": {
+            "type": "string"
+          },
+          "scope": {
+            "type": "string"
+          }
+        }
+      },
+      "SubmissionReceipt": {
+        "type": "object",
+        "required": [
+          "id",
+          "submission_hash",
+          "status"
+        ]
+      },
+      "TaskList": {
+        "type": "object",
+        "properties": {
+          "items": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Task"
+            }
+          }
+        },
+        "required": [
+          "items"
+        ]
+      },
+      "DatasetList": {
+        "type": "object",
+        "properties": {
+          "items": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Dataset"
+            }
+          }
+        },
+        "required": [
+          "items"
+        ]
+      },
+      "ModelList": {
+        "type": "object",
+        "properties": {
+          "items": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Model"
+            }
+          }
+        },
+        "required": [
+          "items"
+        ]
+      }
+    },
+    "securitySchemes": {
+      "BearerAuth": {
+        "type": "http",
+        "scheme": "bearer"
+      }
+    }
+  },
+  "security": [
+    {
+      "BearerAuth": []
+    }
+  ],
+  "x-private-labels-exposed": false,
+  "x-status": "CONTRACT_ONLY_EXISTING_RUN_API_UNCHANGED"
+}

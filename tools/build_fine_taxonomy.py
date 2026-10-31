@@ -291,8 +291,8 @@ def render(value,root=ROOT):
     counts=value['summary'];rows=[]
     for c in value['categories']:
         rows.append({'类别':c['parent']+' / '+c['name'],'RNA-Gym QC 单元':c['rnagym_qc_dataset_units'],
-            'UTR 本地视图':c['utr_local_dataset_views'],'87 修订目录（仅元数据）':c['utr_revised_metadata_views'],
-            '198 登记引用':c['registered_task_references'],'主指标（本轮建议）':pretty_metric(c['primary_metric']),
+            'UTR 本地视图':c['utr_local_dataset_views'],'87 修订目录（元数据）':c['utr_revised_metadata_views'],
+            '198 登记引用':c['registered_task_references'],'主指标':pretty_metric(c['primary_metric']),
             '次指标':', '.join(pretty_metric(x) for x in c['secondary_metrics']) or '—'})
     old=[r for r in value['datasets'] if r['source_collection']=='UTR_LEGACY_102']
     family=[]
@@ -332,7 +332,7 @@ def render(value,root=ROOT):
 表中“原尺度”指当前发布文件的数值尺度，不等于原始实验 reads 或原始仪器量；
 单位/变换尚未证实的 QC 单元仍保留其 `UNRESOLVED_SOURCE_SCALE`，不得冒称已核实的小时值。
 
-'''+table(rows,['类别','RNA-Gym QC 单元','UTR 本地视图','87 修订目录（仅元数据）','198 登记引用','主指标（本轮建议）','次指标'])+'''
+'''+table(rows,['类别','RNA-Gym QC 单元','UTR 本地视图','87 修订目录（元数据）','198 登记引用','主指标','次指标'])+'''
 ### 指标的含义与汇总边界
 
 - **R²**：`1 − Σ(y−ŷ)² / Σ(y−ȳ)²`，允许负值，**不是 Pearson r 的平方**。
@@ -370,8 +370,8 @@ RNA/DNA activity、protein CoM、YFP 与 growth score 不会为了填充 TE 类�
 
 '''+table([{'数据集 ID':r['unit_id'],'类别':CATEGORIES[r['category_ids'][0]]['name'],
             '条件':r['condition'],'N（当前本地）':r['n_records'],'label 单位':r['label_unit'],
-            '建议主指标':pretty_metric(CATEGORIES[r['category_ids'][0]]['primary_metric'])} for r in old],
-            ['数据集 ID','类别','条件','N（当前本地）','label 单位','建议主指标'])+f'''
+            '主指标':pretty_metric(CATEGORIES[r['category_ids'][0]]['primary_metric'])} for r in old],
+            ['数据集 ID','类别','条件','N（当前本地）','label 单位','主指标'])+f'''
 </details>
 
 ### 旧 UTR 评测结果究竟报告什么

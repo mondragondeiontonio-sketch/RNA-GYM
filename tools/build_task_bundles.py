@@ -20,6 +20,8 @@ def build():
     baseline_by_id = {r['task_id']: r for r in baselines}
     if len(tasks)!=198 or len(baseline_by_id)!=198 or len(statuses)!=198:
         raise ValueError('all198task registries must align')
+    taxonomy_path = ROOT/'configs/task_taxonomy_v1.yaml'
+    canonical = {r['task_id']: r for r in json.loads(taxonomy_path.read_text())['tasks']} if taxonomy_path.exists() else {}
     assets = list(read_manifest().values())
     poc_path = ROOT / 'data/audit/p0_assets.csv'
     if poc_path.exists():
@@ -67,6 +69,15 @@ def build():
                             ['Baseline', 'Loss', '指标', 'Metric', 'modality', '输入', '泄露', 'baseline运行'])},
             'plan_command': f'python tools/task_download.py plan --task {tid}',
             'download_policy': 'Source-entry links are not file bytes. Explicit package-only opt-in required before file candidates can be acquired for audit.'}
+        if baseline.get('canonical_mapping_registry'):
+            ids = baseline.get('canonical_task_ids_v1', '').split(';')
+            card['arena_v1'] = {
+                'mapping_status': baseline.get('taxonomy_mapping_status_v1'),
+                'canonical_task_ids': [i for i in ids if i],
+                'canonical_task_definitions': [canonical[i] for i in ids if i in canonical],
+                'local_dataset_mapping': 'data/registries/dataset_task_mapping_v1.tsv',
+                'scientific_admission_unchanged': True,
+                'reported_task_n_not_replaced_by_local_subset': True}
         (folder / (tid + '.json')).write_text(json.dumps(card,ensure_ascii=False,indent=2)+'\n')
         index.append(card)
     target=ROOT / 'data/audit/task_download_index.jsonl'

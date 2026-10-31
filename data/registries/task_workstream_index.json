@@ -1,7 +1,7 @@
 {
   "admitted_task_rows": 0,
   "count_policy": "Every legacy task row occurs exactly once; package/source sets can overlap across groups.",
-  "generator_sha256": "5f43ab91ffbd8232ea0e317ddd0060fefed949f476dd3514f1327f682052c4f5",
+  "generator_sha256": "bc99f03b8f7e02cedf7c2823829d79816e9d9521f59aea4c46c7b159aba21b2d",
   "registered_task_rows": 198,
   "sample_count_policy": "reported_n is source-reported, not actual assay N; task_level_sample_n remains unknown.",
   "schema_version": "rna_gym.task_workstreams.v1",

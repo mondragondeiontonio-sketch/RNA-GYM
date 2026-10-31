@@ -60,3 +60,7 @@ dist/
 # Scientific curation outputs include acquired sequences/labels; local only.
 data/processed/
 reports/scientific_admission/
+
+# Row-level Arena splits and exploratory predictions are local, not public.
+data/splits/
+results/exploratory/

@@ -80,6 +80,22 @@ class Dataset:
 
 
 class DatasetHub:
+    def arena_tasks(self):
+        """The frozen 28 canonical tasks, distinct from 198 historical rows."""
+        from tools.evaluation_protocol import read_json
+        return read_json(self.root/'configs/task_taxonomy_v1.yaml')['tasks']
+
+    def arena_dataset_views(self, *, task_id=None):
+        """Readout-level metadata only; never private labels or observations."""
+        path = self.root/'data/registries/dataset_task_mapping_v1.tsv'
+        with path.open(encoding='utf-8', newline='') as handle:
+            rows = list(csv.DictReader(handle, delimiter='\t'))
+        if task_id is not None:
+            if task_id not in {r['task_id'] for r in self.arena_tasks()}:
+                raise DatasetResolutionError('UNKNOWN_CANONICAL_TASK')
+            rows = [r for r in rows if r['canonical_task_id'] == task_id]
+        return rows
+
     def __init__(self,*,root=None):
         from tools.evaluation_protocol import read_json
         self.root=project_root(root)

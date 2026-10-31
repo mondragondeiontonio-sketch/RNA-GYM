@@ -34,5 +34,57 @@
     "baseline运行状态": "NOT_RUN"
   },
   "plan_command": "python tools/task_download.py plan --task T0011",
-  "download_policy": "Source-entry links are not file bytes. Explicit package-only opt-in required before file candidates can be acquired for audit."
+  "download_policy": "Source-entry links are not file bytes. Explicit package-only opt-in required before file candidates can be acquired for audit.",
+  "arena_v1": {
+    "mapping_status": "MAPPED",
+    "canonical_task_ids": [
+      "RNA_SWITCH"
+    ],
+    "canonical_task_definitions": [
+      {
+        "task_id": "RNA_SWITCH",
+        "display_name": "RNA Switch",
+        "macro_domain": "Engineering",
+        "level1_domain": "Engineering",
+        "level2_category": "Synthetic RNA",
+        "input_modality": "sequence_pair",
+        "input_definition": "switch sequence + trigger sequence",
+        "target_definition": "toehold / riboswitch activation",
+        "problem_type": "ASSAY_SPECIFIC",
+        "primary_metric": "ASSAY_SPECIFIC",
+        "secondary_metrics": [
+          "ASSAY_SPECIFIC"
+        ],
+        "normalization": {
+          "rule": "freeze assay variant or normalize components separately"
+        },
+        "difficulty_supported": [
+          "D1_STANDARD",
+          "D2_GENERALIZATION",
+          "D3_OOD"
+        ],
+        "core_or_extended": "CORE",
+        "notes": [
+          "Every dataset freezes exactly one problem type before evaluation."
+        ],
+        "assay_variants": {
+          "classification": {
+            "primary_metric": "AUPRC",
+            "secondary_metrics": [
+              "AUROC"
+            ]
+          },
+          "regression": {
+            "primary_metric": "Spearman",
+            "secondary_metrics": [
+              "Pearson"
+            ]
+          }
+        }
+      }
+    ],
+    "local_dataset_mapping": "data/registries/dataset_task_mapping_v1.tsv",
+    "scientific_admission_unchanged": true,
+    "reported_task_n_not_replaced_by_local_subset": true
+  }
 }

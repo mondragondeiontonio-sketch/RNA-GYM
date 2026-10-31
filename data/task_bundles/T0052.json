@@ -33,5 +33,48 @@
     "baseline运行状态": "NOT_RUN"
   },
   "plan_command": "python tools/task_download.py plan --task T0052",
-  "download_policy": "Source-entry links are not file bytes. Explicit package-only opt-in required before file candidates can be acquired for audit."
+  "download_policy": "Source-entry links are not file bytes. Explicit package-only opt-in required before file candidates can be acquired for audit.",
+  "arena_v1": {
+    "mapping_status": "MAPPED",
+    "canonical_task_ids": [
+      "RNA_DESIGN"
+    ],
+    "canonical_task_definitions": [
+      {
+        "task_id": "RNA_DESIGN",
+        "display_name": "RNA Design",
+        "macro_domain": "Engineering",
+        "level1_domain": "Design",
+        "level2_category": "RNA Design",
+        "input_modality": "conditional_generation",
+        "input_definition": "target property / structure / constraints",
+        "target_definition": "generated RNA sequence",
+        "problem_type": "conditional generation",
+        "primary_metric": "Success Rate",
+        "secondary_metrics": [
+          "functional score",
+          "structural recovery",
+          "novelty",
+          "diversity"
+        ],
+        "normalization": {
+          "direction": "higher",
+          "baseline": 0,
+          "upper": 1
+        },
+        "difficulty_supported": [
+          "D1_STANDARD",
+          "D2_GENERALIZATION",
+          "D3_OOD"
+        ],
+        "core_or_extended": "EXTENDED",
+        "notes": [
+          "Generation success, not ordinary scalar regression."
+        ]
+      }
+    ],
+    "local_dataset_mapping": "data/registries/dataset_task_mapping_v1.tsv",
+    "scientific_admission_unchanged": true,
+    "reported_task_n_not_replaced_by_local_subset": true
+  }
 }

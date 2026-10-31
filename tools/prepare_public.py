@@ -22,7 +22,9 @@ TOP = ['README.md', 'requirements-qc.txt', 'LICENSE_NOTICE.md', '.gitignore', '.
        'data/registries/task_workstream_index.json', 'docs/TASK_WORKSTREAMS.md', 'data/registries/fine_task_catalog.json',
        'data/registries/curated_endpoint_units.json', 'data/registries/fine_task_category_mapping.tsv', 'data/registries/utr_legacy_102.json',
        'data/registries/utr_revised_87_metadata.json', 'data/registries/utr_historical_result_status.json']
-REGISTRIES = ['search_level_task_crosswalk_198.csv', 'download_packages_47.csv',
+TOP += ['reports/RNAGYM_RNAFM_HF_PILOT_V1_2.md']
+
+REGISTRIES = ['dataset_task_mapping_v1.tsv', 'search_level_task_crosswalk_198.csv', 'download_packages_47.csv',
     'source_family_crosswalk_123.csv', 'task_baselines_and_admission_198.csv',
     'RNAGym_NABench_DMS_ID_91.csv', 'miRBench_splits_3.csv']
 AUDIT = ['task_status.tsv', 'task_master.tsv', 'assay_master.tsv', 'alias_map.tsv',
@@ -52,6 +54,13 @@ def selected_files(root):
     selected += [str(p.relative_to(root)) for p in sorted((root / 'tools/curation').glob('*.py'))]
     selected += [str(p.relative_to(root)) for p in sorted((root / 'rna_gym').glob('*.py'))]
     selected += [str(p.relative_to(root)) for p in sorted((root / 'data/task_bundles').glob('*.json'))]
+    # Versioned aggregate leaderboard schemas only, never exploratory predictions.
+    # Explicit aggregate-only pilot result directory: never runs, predictions or cache.
+    selected += [str(p.relative_to(root)) for p in sorted((root / 'results/pilots/rnafm_hf_v1_2').glob('*.tsv'))]
+    pilot_summary = root / 'results/pilots/rnafm_hf_v1_2/summary.json'
+    if pilot_summary.is_file(): selected.append(str(pilot_summary.relative_to(root)))
+    for scope in ('public', 'published_reference'):
+        selected += [str(p.relative_to(root)) for p in sorted((root / 'results/leaderboards'/scope).glob('*.tsv'))]
     selected += [str(p.relative_to(root)) for p in sorted((root / 'site').rglob('*'))
                  if p.is_file()]
     return sorted(set(selected))

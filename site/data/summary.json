@@ -26,7 +26,7 @@
     {
       "path": "data/registries/task_baselines_and_admission_198.csv",
       "present": true,
-      "sha256": "c8f0ea233ea0a84826c077d9621a172e69ddbe78f8003588787d1c80aedfbd71"
+      "sha256": "84266e137c3c0923254d1174105e31c34a4d8a26dab4cead34468482159c7194"
     },
     {
       "path": "data/registries/source_family_crosswalk_123.csv",

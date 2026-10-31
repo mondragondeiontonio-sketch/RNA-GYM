@@ -1,0 +1,40 @@
+{
+  "version": "rnagym-arena-1.0",
+  "difficulty_cannot_depend_on_model_results": true,
+  "levels": {
+    "D1_STANDARD": [
+      "group-aware standard",
+      "construct/exact-input leakage controls"
+    ],
+    "D2_GENERALIZATION": [
+      "gene-held-out",
+      "WT-held-out",
+      "family-held-out",
+      "target-held-out",
+      "transcript-held-out"
+    ],
+    "D3_OOD": [
+      "assay-held-out",
+      "cell-line-held-out",
+      "species-held-out",
+      "temporal",
+      "structure-cluster-held-out",
+      "ligand-scaffold-held-out",
+      "independent validation",
+      "private prospective"
+    ]
+  },
+  "legacy_rules": {
+    "EAZY": "LEGACY_RANDOM_CONTROL_NOT_AUTOMATIC_D1",
+    "OOD_split": "GROUP_GENERALIZATION_CANDIDATE_NOT_AUTOMATIC_D3",
+    "AUTHOR_SPLIT": "REPRODUCTION_ONLY",
+    "UTR_LEGACY_10FOLD": "PRESERVED_NOT_RNAGYM_SPLIT"
+  },
+  "folds": [
+    10,
+    5,
+    3,
+    "fixed_holdout"
+  ],
+  "too_few_groups": "NOT_FEASIBLE; never split a biological group"
+}

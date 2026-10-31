@@ -1,0 +1,14 @@
+{
+  "version": "arena-cpu-exploratory-v1",
+  "authorization": "2026-10-30 user request permits QC/splits/baselines on HOLD data; no human admission granted",
+  "evaluation_phase": "EXPLORATORY_NOT_ADMITTED",
+  "max_records_per_dataset": 20000,
+  "ridge_alpha": 1.0,
+  "feature_view": "log-length, ACGTN composition, dinucleotides; uppercase and U-to-T only in feature extraction, original input unchanged",
+  "selection": "preregistered local gene-annotated continuous datasets; label semantics explicit; no score-based selection",
+  "datasets": [
+    {"unit_id": "MRNA_rnahl-saluki-human", "canonical_task_id": "HALF_LIFE", "target_column": "target", "group_fields": ["gene"]},
+    {"unit_id": "MRNA_rnahl-saluki-mouse", "canonical_task_id": "HALF_LIFE", "target_column": "target", "group_fields": ["gene"]},
+    {"unit_id": "MRNA_mrl-sugimoto", "canonical_task_id": "MRL_PROXY", "target_column": "target", "group_fields": ["gene"]}
+  ]
+}
