@@ -1678,8 +1678,8 @@
     },
     {
       "path": "tests/test_budget_r03.py",
-      "bytes": 3873,
-      "sha256": "497a787dd913e9d4182b84f581e67cdc2d9402d6266c888490a2b3c3859e69fc"
+      "bytes": 4009,
+      "sha256": "d11001404fcd20a5940cd8e1d3b2956de6f47e26500ae0fc9e9f14b11f79295e"
     },
     {
       "path": "tests/test_compute_guard.py",

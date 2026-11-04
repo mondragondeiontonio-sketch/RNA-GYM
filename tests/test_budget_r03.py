@@ -74,6 +74,10 @@ class BudgetTests(unittest.TestCase):
 
     def test_active_lease_and_direct_gpu_entrypoint_guard(self):
         from unittest.mock import patch
+        try:
+            import numpy  # noqa: F401
+        except ImportError:
+            self.skipTest("optional numpy unavailable")
         from tools.adaptation_smoke_v1 import train
         b=self.make(); t=b.reserve(1); b.assert_active(t); b.settle(t,0)
         with self.assertRaises(BudgetDenied): b.assert_active(t)
