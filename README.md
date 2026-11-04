@@ -42,6 +42,42 @@
 > See the [split and admission audit](docs/SPLIT_ADMISSION_AUDIT.md).
 > The website is an audit preview with its own dated snapshots.
 
+## Real bounded API workflow · 2026-11-03
+
+The local [AdaptationPilot API](docs/ADAPTATION_API.md) now accepts the explicit
+`RNA-FM-HF` deployment name and completes a real, single-GPU LoRA task workflow.
+The existing 64/16/32 Andreasson split and original kcat labels are unchanged.
+Test Spearman: **0.109604**; RMSE: **0.00227126 s⁻¹**. Saved predictions replay
+the metrics. These are tiny exploratory task metrics, **not formal leaderboard
+scores**; scientific admission and Universal Score remain closed. See the
+[execution report](reports/API_WORKFLOW_REAL_RUN_2026-11-03.md).
+
+## Blocker optimization V1.1 · 2026-11-02
+
+The [blocker update](reports/BLOCKER_OPTIMIZATION_UPDATE_2026-11-02.md) adds
+7,343 exact original **kcat** bindings, 18,021 Danio source/label matches, a new
+label-blind gene-grouped candidate split, and a real train-only CPU CMP/DMP baseline.
+Previous splits, Frozen features and the exhausted GPU ledger remain unchanged.
+
+**GPU entry now fails closed:** native model loading and direct adapter calls
+require an approved persistent scope and supervised child lease. Metadata and
+ordinary CPU audits remain usable. See the
+[compute-budget guard](docs/COMPUTE_BUDGET_GUARD_V1_1.md). No new GPU attempt was run.
+Scientific admission remains zero; all formal scoring sets are empty.
+
+## Next-stage local evidence · 2026-11-02
+
+**Exploratory engineering only; formal admitted set remains empty.**
+Taxonomy V1 now has a versioned four-domain/eight-category candidate specification
+with unchanged28 canonical IDs and76 explicit review dispositions. Nine unsigned
+scientific evidence packs, real RNA3DB residue-aligned CMP/DMP labels and replay,
+a durable supervised budget ledger, and tiny matched Scratch/Full-FT results exist.
+LoRA first GPU attempt failed; its fused-attention fix passed CPU tests only.
+No completed Frozen Pilot was reencoded, no existing split changed, and no
+Universal Score was generated. See the
+[execution and acceptance report](reports/NEXT_STAGE_EXECUTION_2026-11-02.md) and
+[score-independent candidate panel](reports/BENCHMARK_PANEL_CANDIDATE_2026-11-02.md).
+
 ## RNA-FM-HF Pilot v1.2 · 真实探索性评测
 
 **2026-10-31 · EXPLORATORY_PILOT, not a formal leaderboard.**

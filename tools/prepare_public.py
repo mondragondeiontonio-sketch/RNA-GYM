@@ -22,7 +22,16 @@ TOP = ['README.md', 'requirements-qc.txt', 'LICENSE_NOTICE.md', '.gitignore', '.
        'data/registries/task_workstream_index.json', 'docs/TASK_WORKSTREAMS.md', 'data/registries/fine_task_catalog.json',
        'data/registries/curated_endpoint_units.json', 'data/registries/fine_task_category_mapping.tsv', 'data/registries/utr_legacy_102.json',
        'data/registries/utr_revised_87_metadata.json', 'data/registries/utr_historical_result_status.json']
-TOP += ['reports/RNAGYM_RNAFM_HF_PILOT_V1_2.md']
+TOP += [
+    'reports/RNAGYM_RNAFM_HF_PILOT_V1_2.md',
+    # Public engineering evidence referenced by the current README.
+    'docs/ADAPTATION_API.md',
+    'docs/COMPUTE_BUDGET_GUARD_V1_1.md',
+    'reports/API_WORKFLOW_REAL_RUN_2026-11-03.md',
+    'reports/BENCHMARK_PANEL_CANDIDATE_2026-11-02.md',
+    'reports/BLOCKER_OPTIMIZATION_UPDATE_2026-11-02.md',
+    'reports/NEXT_STAGE_EXECUTION_2026-11-02.md',
+]
 
 REGISTRIES = ['dataset_task_mapping_v1.tsv', 'search_level_task_crosswalk_198.csv', 'download_packages_47.csv',
     'source_family_crosswalk_123.csv', 'task_baselines_and_admission_198.csv',

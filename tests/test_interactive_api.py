@@ -6,11 +6,13 @@ All tested operations below cross a TCP/HTTP boundary, not direct route calls.
 import copy
 from http.server import ThreadingHTTPServer
 import json
+import os
 from pathlib import Path
 import sys
 import tempfile
 import threading
 import unittest
+from unittest.mock import patch
 from urllib.error import HTTPError
 from urllib.request import Request,urlopen
 
@@ -21,6 +23,11 @@ from interactive_api import Service,handler
 
 class InteractiveHTTPTests(unittest.TestCase):
     def setUp(self):
+        # Synthetic allocation metadata only: dispatcher stays disabled.
+        # Keep this HTTP contract fixture independent of host GPU visibility.
+        allocation = patch.dict(os.environ, {'CUDA_VISIBLE_DEVICES': '0'})
+        allocation.start()
+        self.addCleanup(allocation.stop)
         (ROOT/'runs').mkdir(exist_ok=True)
         self.temp=tempfile.TemporaryDirectory(prefix='http_contract_',dir=ROOT/'runs')
         self.base=Path(self.temp.name)

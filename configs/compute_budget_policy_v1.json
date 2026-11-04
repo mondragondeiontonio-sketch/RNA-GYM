@@ -1,0 +1,29 @@
+{
+  "version": "rna_gym.compute_budget_policy.v1",
+  "status": "FAIL_CLOSED_ONLY_VERSIONED_AUTHORIZED_SCOPES",
+  "authorized_scopes": {
+    "20261102-first-real-adaptation": {
+      "ledger": "runs/20261102_taxonomy_admission_adaptation_v1/r03_shared.sqlite",
+      "gpu_seconds": 600,
+      "attempts": 3,
+      "parallel": 1,
+      "authorization_evidence": "runs/20261102_taxonomy_admission_adaptation_v1/execution_scope.json"
+    },
+    "20261103-rnafm-hf-api-lora-once": {
+      "ledger": "runs/20261103_api_workflow_v1/r03_api.sqlite",
+      "gpu_seconds": 180,
+      "attempts": 1,
+      "parallel": 1,
+      "workflow": "fixed_adaptation_pilot",
+      "mode": "lora",
+      "authorization_evidence": "runs/20261103_api_workflow_v1/execution_authorization.json",
+      "authorization_evidence_sha256": "933630794047a5c22e157d3fe820ae48b35f44e93da3b42938cb2ab56fc10251",
+      "reference_sha256": {
+        "fixed_recipe.json": "16163ac7d82d007bd59783e1d6af5283c0e336dfc3d9be6900a9105b5cb9ec03",
+        "subset.json": "865f93766690c8258f5eb4bf32cb70126220793873ad103d6309013a1ed2332b"
+      }
+    }
+  },
+  "new_scope_requires": "explicit user budget approval and versioned evidence",
+  "legacy_unbound_gpu_execution_allowed": false
+}

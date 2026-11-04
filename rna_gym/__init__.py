@@ -9,3 +9,6 @@ __version__='0.1.0'
 
 from .rankings import RNALeaderboard,RankingPanel
 __all__ += ["RNALeaderboard","RankingPanel"]
+
+from .workflows import AdaptationPilot
+__all__ += ["AdaptationPilot"]

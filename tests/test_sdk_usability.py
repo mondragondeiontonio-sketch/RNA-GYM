@@ -93,10 +93,14 @@ class ManifestResolutionTests(CheckoutFixture):
         path.write_text(json.dumps(data))
         # Stop at the adapter constructor: this tests path routing, never
         # substitutes a fake encoder or claims successful model inference.
-        with patch('tools.rnafm_adapter.RNAFMAdapter',
+        # Authorization is isolated here because this is a path-routing test;
+        # compute-guard tests separately verify real unapproved loads fail closed.
+        with patch('rna_gym.compute_guard.require_compute_lease') as lease, \
+             patch('tools.rnafm_adapter.RNAFMAdapter',
                    side_effect=RuntimeError('PATH_REACHED_ADAPTER')) as adapter:
             with self.assertRaisesRegex(RuntimeError, 'PATH_REACHED_ADAPTER'):
                 RNAHub.load('RNA-FM', root=self.root, manifest=manifest)
+        lease.assert_called_once_with()
         adapter.assert_called_once_with(data, device='cuda:0',
                                         initialization='pretrained', seed=0)
 

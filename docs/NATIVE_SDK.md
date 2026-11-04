@@ -1,5 +1,20 @@
 # 原生 Python SDK：RNAHub、DatasetHub、RNABenchmark 与排名
 
+> **Compute authorization update (2026-11-02 V1.1):** GPU examples below require
+> an approved persistent budget and supervised child lease. Direct/unbound
+> `RNAHub.load()` and `RNAFMAdapter` execution now fail before weight loading.
+> Metadata/QC and ordinary CPU baselines remain available. See
+> [the guard contract](COMPUTE_BUDGET_GUARD_V1_1.md). The old three-attempt scope
+> is exhausted; continuation does not reset it or automatically authorize a new one.
+
+
+## 2026-11-03：有界适配 API 与真实任务指标
+
+新增 `AdaptationPilot`，将既有小样本 recipe、持久预算、RNA-FM-HF 加载、
+LoRA 训练、逐 ID 预测及指标重放串成一次本地 API 调用。正式 `RNABenchmark`
+科学 gate 保持不变。`RNA-FM-HF` 是 pinned RNA-FM 的本地部署别名，
+不是自动下载的另一模型。参见 [适配 API](ADAPTATION_API.md)。
+
 ## 这才是主 API
 
 接口直接在本地 Python 进程中加载模型、读数据和执行协议，**不是 OpenAI API，也不需要

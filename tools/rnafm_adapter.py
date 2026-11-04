@@ -56,6 +56,8 @@ def validate_device(device, torch):
 
 class RNAFMAdapter:
     def __init__(self, manifest, *, device='cuda:0', initialization='pretrained', seed=0):
+        from rna_gym.compute_guard import require_compute_lease
+        require_compute_lease()
         import torch
         self.torch = torch
         self.gpu = validate_device(device, torch)
@@ -128,12 +130,15 @@ class RNAFMAdapter:
         torch.cuda.reset_peak_memory_stats(self.gpu)
 
     def encode(self, records, *, batch_size=4):
+        from rna_gym.compute_guard import require_compute_lease
+        require_compute_lease()
         validate_records(records, self.max_nt)
         if type(batch_size) is not int or not 1 <= batch_size <= 16:
             raise ep.ProtocolError('BATCH_SIZE_OUTSIDE_BOUNDED_RANGE')
         torch = self.torch
         result = []
         for start in range(0, len(records), batch_size):
+            require_compute_lease()
             batch = records[start:start+batch_size]
             _, strings, tokens = self.converter([(r['observation_id'], r['sequence']) for r in batch])
             offset = int(self.alphabet.prepend_bos)

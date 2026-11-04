@@ -47,13 +47,16 @@ class RNAHub:
     def load(name,*,root=None,manifest=None,device='cuda:0',initialization='pretrained',seed=0):
         from tools.evaluation_protocol import read_json
         root=project_root(root)
-        aliases={'rnafm':'RNA-FM','rna-fm':'RNA-FM','RNA-FM':'RNA-FM'}
+        aliases={'rnafm':'RNA-FM','rna-fm':'RNA-FM','RNA-FM':'RNA-FM',
+                 'RNA-FM-HF':'RNA-FM','rna-fm-hf':'RNA-FM'}
         model_id=aliases.get(name,name)
         registered={m['model_id'] for m in RNAHub.list(root=root)}
         if model_id not in registered:raise ModelUnavailableError('UNREGISTERED_MODEL:'+str(name))
         if model_id!='RNA-FM':raise ModelUnavailableError('ADAPTER_NOT_IMPLEMENTED_NO_MODEL_SUBSTITUTION:'+model_id)
         if not isinstance(device,str) or not device.startswith('cuda:'):
             raise ModelUnavailableError('ALL_FM_FORWARD_REQUIRES_GPU_NO_CPU_FALLBACK')
+        from .compute_guard import require_compute_lease
+        require_compute_lease()
         config=read_json(root/'configs/native_sdk.json')
         path=Path(manifest).expanduser() if manifest is not None else Path(config['model_manifest'])
         path=(path if path.is_absolute() else root/path).resolve()
@@ -64,4 +67,7 @@ class RNAHub:
             adapter=RNAFMAdapter(data,device=device,initialization=initialization,seed=seed)
         except ImportError as exc:
             raise ModelUnavailableError('USE_THE_VERIFIED_LOCAL_GPU_ENVIRONMENT:'+str(exc)) from exc
-        return RNAEncoder(model_id,adapter,data)
+        encoder=RNAEncoder(model_id,adapter,data)
+        encoder.requested_name=name
+        encoder.deployment='RNA-FM-HF' if name in ('RNA-FM-HF','rna-fm-hf') else 'RNA-FM'
+        return encoder

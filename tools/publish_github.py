@@ -43,7 +43,13 @@ def publish(candidate, owner, name, report_path):
     # Validate files before reading any secret and before creating remote state.
     manifest = json.loads((candidate / 'PUBLIC_FILE_MANIFEST.json').read_text())
     intended = {f['path'] for f in manifest['files']} | {'PUBLIC_FILE_MANIFEST.json'}
-    actual = {str(p.relative_to(candidate)) for p in candidate.rglob('*') if p.is_file() and '.git' not in p.relative_to(candidate).parts}
+    actual = {
+        str(p.relative_to(candidate))
+        for p in candidate.rglob('*')
+        if p.is_file()
+        and not any(part in {'.git', '__pycache__'}
+                    for part in p.relative_to(candidate).parts)
+    }
     if actual != intended:
         raise ValueError('candidate contains unmanifested or missing files')
     for row in manifest['files']:

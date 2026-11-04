@@ -1,0 +1,196 @@
+{
+  "version": "rnagym-candidate-panel-20261103-v1.2",
+  "status": "CANDIDATE_ONLY_NOT_AN_ADMITTED_PANEL",
+  "selection_basis": [
+    "biological identity",
+    "task coverage",
+    "independent source families",
+    "sample quality",
+    "rights gaps"
+  ],
+  "selection_inputs": [
+    "nine evidence identities/Methods/source audits",
+    "structure label alignment evidence"
+  ],
+  "model_scores_used_for_selection": false,
+  "members": [
+    {
+      "dataset": "5UTR/077_danio_embryo_NOT_APPLICABLE_OR_UNKNOWN",
+      "canonical_tasks": [
+        "MRL_EXACT"
+      ],
+      "domain": "Function & Regulation",
+      "candidate_tier": "Core",
+      "source_family": "REIMAO_PINTO_2025_ZEBRAFISH_UTR",
+      "selection_reason": "Biological readout/source coverage; 5UTR-derived tested inserts. All 18,021 local annotation rows and log2_MRL_6hpf labels match; 8,207 inserts are shorter than native UTR. Publisher release/accession chain, Methods, rights and signature remain HOLD. Not TE/RRS; legacy split is random-ID, not gene-OOD.",
+      "rights": "HOLD",
+      "scientific_admission": "HOLD",
+      "formal_score_eligible": false,
+      "evidence": "runs/20261102_taxonomy_admission_adaptation_v1/scientific_evidence/35eec65a06723185",
+      "candidate_gene_protocol": "RNAGYM_DANIO_GENE_GROUPED_V1_1",
+      "legacy_scope": "D1_RANDOM_ID_NOT_GENE_OOD",
+      "evidence_update": "runs/20261102_blocker_optimization_v1/scientific_evidence_v1_1/35eec65a06723185/evidence_update.json"
+    },
+    {
+      "dataset": "DMS_Andreasson_2020_ribozyme",
+      "canonical_tasks": [
+        "DMS_FITNESS"
+      ],
+      "domain": "Perturbation",
+      "candidate_tier": "Core",
+      "source_family": "ANDREASSON_2020_GLMS",
+      "selection_reason": "Biological readout/source coverage; full retained 74nt RNA variants. All 7,343 processed labels exactly match original kcat in s^-1, not organism fitness or concentration-specific kobs. Rights, redistribution and authorized scientific signature remain HOLD; same-WT scope only.",
+      "rights": "HOLD",
+      "scientific_admission": "HOLD",
+      "formal_score_eligible": false,
+      "evidence": "runs/20261102_taxonomy_admission_adaptation_v1/scientific_evidence/de383a87b2e3bf38",
+      "label_variant": "original_kcat_s^-1",
+      "evidence_update": "runs/20261102_blocker_optimization_v1/scientific_evidence_v1_1/de383a87b2e3bf38/evidence_update.json"
+    },
+    {
+      "dataset": "DMS_Domingo_2018_tRNA",
+      "canonical_tasks": [
+        "DMS_FITNESS"
+      ],
+      "domain": "Perturbation",
+      "candidate_tier": "Core",
+      "source_family": "DOMINGO_2018_TRNA",
+      "selection_reason": "Biological readout/source coverage; Yeast Arg-CCU tRNA variants; competitive-growth phenotype. Original article describes ln fitness relative to S.cerevisiae WT; secondary score-to-supplement column binding must still be confirmed.",
+      "rights": "HOLD",
+      "scientific_admission": "HOLD",
+      "formal_score_eligible": false,
+      "evidence": "runs/20261102_taxonomy_admission_adaptation_v1/scientific_evidence/f80a37abaed24031",
+      "evidence_update": "runs/20261102_blocker_optimization_v1/scientific_evidence_v1_1/f80a37abaed24031/evidence_update.json"
+    },
+    {
+      "dataset": "EUKA_karner_decay_rate_763b01f0f301",
+      "canonical_tasks": [
+        "UTR3_STABILITY"
+      ],
+      "domain": "Function & Regulation",
+      "candidate_tier": "Core",
+      "source_family": "KARNER_2026_BRCA_SLAM",
+      "selection_reason": "Biological readout/source coverage; Released3UTR fragment and six cell-specific log-decay estimates plus derived mean_log_decay. Retain log rate; do not call it measured half-life.",
+      "rights": "HOLD",
+      "scientific_admission": "HOLD",
+      "formal_score_eligible": false,
+      "evidence": "runs/20261102_taxonomy_admission_adaptation_v1/scientific_evidence/9856cc4dedc3ad64",
+      "evidence_update": "runs/20261102_blocker_optimization_v1/scientific_evidence_v1_1/9856cc4dedc3ad64/evidence_update.json"
+    },
+    {
+      "dataset": "MRNA_mrl-sugimoto",
+      "canonical_tasks": [
+        "MRL_PROXY"
+      ],
+      "domain": "Function & Regulation",
+      "candidate_tier": "Secondary Proxy",
+      "source_family": "SUGIMOTO_2022_HP5",
+      "selection_reason": "Biological readout/source coverage; cDNA input, not automatically CDS. HP5 MRL is a ribosome-number-weighted fraction count average across fractions1..8. Exact secondary HF target scale and original isoform/condition remain unbound.",
+      "rights": "HOLD",
+      "scientific_admission": "HOLD",
+      "formal_score_eligible": false,
+      "evidence": "runs/20261102_taxonomy_admission_adaptation_v1/scientific_evidence/29a18ee088a9f133",
+      "evidence_update": "runs/20261102_blocker_optimization_v1/scientific_evidence_v1_1/29a18ee088a9f133/evidence_update.json"
+    },
+    {
+      "dataset": "MRNA_rnahl-saluki-human",
+      "canonical_tasks": [
+        "HALF_LIFE"
+      ],
+      "domain": "Function & Regulation",
+      "candidate_tier": "Secondary Proxy",
+      "source_family": "AGARWAL_2022_SALUKI_COMPENDIUM",
+      "selection_reason": "Biological readout/source coverage; Published human-specific PC1 of standardized/imputed/quantile-normalized half-life compendium; dimensionless, not hours. Canonical legacy ID preserved; endpoint_variant=PC1_HUMAN, never pooled with raw half-life.",
+      "rights": "HOLD",
+      "scientific_admission": "HOLD",
+      "formal_score_eligible": false,
+      "evidence": "runs/20261102_taxonomy_admission_adaptation_v1/scientific_evidence/2cfbeb4b201de02f",
+      "evidence_update": "runs/20261102_blocker_optimization_v1/scientific_evidence_v1_1/2cfbeb4b201de02f/evidence_update.json"
+    },
+    {
+      "dataset": "MRNA_rnahl-saluki-mouse",
+      "canonical_tasks": [
+        "HALF_LIFE"
+      ],
+      "domain": "Function & Regulation",
+      "candidate_tier": "Secondary Proxy",
+      "source_family": "AGARWAL_2022_SALUKI_COMPENDIUM",
+      "selection_reason": "Biological readout/source coverage; Published mouse-specific dimensionless PC1; distinct endpoint_variant=PC1_MOUSE. No PC1-to-hours conversion; human/mouse are one publication family, not duplicate source votes.",
+      "rights": "HOLD",
+      "scientific_admission": "HOLD",
+      "formal_score_eligible": false,
+      "evidence": "runs/20261102_taxonomy_admission_adaptation_v1/scientific_evidence/6a65dde961155a0c",
+      "evidence_update": "runs/20261102_blocker_optimization_v1/scientific_evidence_v1_1/6a65dde961155a0c/evidence_update.json"
+    },
+    {
+      "dataset": "WANG_Archivell_Nr",
+      "canonical_tasks": [
+        "NCRNA_FAMILY"
+      ],
+      "domain": "Function & Regulation",
+      "candidate_tier": "Extended",
+      "source_family": "ARCHIVEII_WANG_RELEASE",
+      "selection_reason": "Biological readout/source coverage; Closed-set family classification on1,273 nonredundant released sequences. Not an independently measured molecular assay or generated binary sequence-pair similarity labels.",
+      "rights": "HOLD",
+      "scientific_admission": "HOLD",
+      "formal_score_eligible": false,
+      "evidence": "runs/20261102_taxonomy_admission_adaptation_v1/scientific_evidence/e46e4a45df13d025",
+      "evidence_update": "runs/20261102_blocker_optimization_v1/scientific_evidence_v1_1/e46e4a45df13d025/evidence_update.json"
+    },
+    {
+      "dataset": "PERSIST_MRL_HL_PAIR",
+      "canonical_tasks": [
+        "MRL_HL_PAIR"
+      ],
+      "domain": "Function & Regulation",
+      "candidate_tier": "Extended",
+      "source_family": "LEPPEK_2022_PERSIST_COUNT_ONCE",
+      "selection_reason": "Biological readout/source coverage; Joint per-construct ribosome-load/in-cell-half-life endpoint.233 source constructs,203 rows with both outcomes; 30 are source finite-outcome exclusions, not sequence incompatibility exclusions.",
+      "rights": "HOLD",
+      "scientific_admission": "HOLD",
+      "formal_score_eligible": false,
+      "evidence": "runs/20261102_taxonomy_admission_adaptation_v1/scientific_evidence/persist",
+      "evidence_update": "runs/20261102_blocker_optimization_v1/scientific_evidence_v1_1/persist/evidence_update.json"
+    },
+    {
+      "dataset": "RNA3DB_REAL_COORDINATE_ANCHOR_V1",
+      "canonical_tasks": [
+        "CMP",
+        "DMP"
+      ],
+      "domain": "Structure",
+      "candidate_tier": "Core",
+      "source_family": "RNA3DB_PDB_CHAIN_SOURCE_GROUPS",
+      "selection_reason": "Real chain/residue-aligned spatial geometry, distinct contact and distance endpoints. Three cached chains/two groups are technical anchor only.",
+      "rights": "HOLD_CHAIN_LEVEL",
+      "scientific_admission": "HOLD",
+      "formal_score_eligible": false,
+      "evidence": "runs/20261102_taxonomy_admission_adaptation_v1/structure_anchor",
+      "learned_anchor_evidence": "runs/20261102_blocker_optimization_v1/structure_learned_anchor/summary.json"
+    }
+  ],
+  "formal_scoring_sets": {
+    "Structure": [],
+    "Function & Regulation": [],
+    "Perturbation": [],
+    "Engineering & Design": []
+  },
+  "engineering_design": "Independent track; no classic schema-bound approved anchor yet",
+  "source_weight_rules": [
+    "PERSIST joint endpoints count once per assay/source",
+    "Saluki human/mouse share publication family; no added independent-source weight",
+    "RNA3DB related structures/repeated chain sequences count by frozen source group",
+    "CMP and DMP remain separate task metrics; no duplicate source votes in future aggregates"
+  ],
+  "universal_score_enabled": false,
+  "formal_multi_seed_approved": false,
+  "human_approved": false,
+  "parent_panel_sha256": "998963dbd8501769e4b82c6f188356d4b821a723754f4e2b7b4e36c21af3d5aa",
+  "shared_input_policy": "identical inputs across distinct assays do not establish duplicate assays; pooled/transfer experiments require cross-dataset group controls",
+  "updates_not_membership_changes": [
+    "Danio local source/label mapping and new gene-grouped candidate protocol",
+    "Andreasson source label identity=kcat per second",
+    "RNA3DB real train-only CPU learned anchor added",
+    "all formal score sets remain empty"
+  ]
+}
