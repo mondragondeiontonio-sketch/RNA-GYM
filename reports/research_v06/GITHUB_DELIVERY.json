@@ -1,0 +1,55 @@
+{
+  "schema": "rnagym.research_v06.github_delivery.v1",
+  "implementation_commit": "11cc5b2c0f15463af9c253f39e908ece483ab602",
+  "base_commit": "27220368a186f2c4568fede27db963f23b4302dd",
+  "branch": "feat/mrna-v06-research-platform",
+  "pr_number": 7,
+  "pr_url": "https://github.com/mondragondeiontonio-sketch/RNA-GYM/pull/7",
+  "state": "OPEN_NOT_MERGED",
+  "checks_verified": [
+    {
+      "__typename": "CheckRun",
+      "completedAt": "2026-11-06T16:09:03Z",
+      "conclusion": "SUCCESS",
+      "detailsUrl": "https://github.com/mondragondeiontonio-sketch/RNA-GYM/actions/runs/42249538886/job/128000623659",
+      "name": "research-cpu",
+      "startedAt": "2026-11-06T16:08:23Z",
+      "status": "COMPLETED",
+      "workflowName": "V0.6 CPU research and publication gates"
+    },
+    {
+      "__typename": "CheckRun",
+      "completedAt": "2026-11-06T16:09:02Z",
+      "conclusion": "SUCCESS",
+      "detailsUrl": "https://github.com/mondragondeiontonio-sketch/RNA-GYM/actions/runs/42249527846/job/128000583881",
+      "name": "research-cpu",
+      "startedAt": "2026-11-06T16:08:19Z",
+      "status": "COMPLETED",
+      "workflowName": "V0.6 CPU research and publication gates"
+    },
+    {
+      "__typename": "CheckRun",
+      "completedAt": "2026-11-06T16:08:43Z",
+      "conclusion": "SUCCESS",
+      "detailsUrl": "https://github.com/mondragondeiontonio-sketch/RNA-GYM/actions/runs/42249538930/job/128000624562",
+      "name": "verify",
+      "startedAt": "2026-11-06T16:08:23Z",
+      "status": "COMPLETED",
+      "workflowName": "Verify and deploy RNA-Gym audit preview"
+    },
+    {
+      "__typename": "CheckRun",
+      "completedAt": "2026-11-06T16:08:43Z",
+      "conclusion": "SKIPPED",
+      "detailsUrl": "https://github.com/mondragondeiontonio-sketch/RNA-GYM/actions/runs/42249538930/job/128000839940",
+      "name": "deploy",
+      "startedAt": "2026-11-06T16:08:44Z",
+      "status": "COMPLETED",
+      "workflowName": "Verify and deploy RNA-Gym audit preview"
+    }
+  ],
+  "formal_admitted": 0,
+  "new_gpu_hours": 0,
+  "raw_private_files_published": false,
+  "clock_note": "LOCAL_HOST_UTC_AND_GITHUB_EVENT_CLOCKS_DIFFER_APPROX_8_HOURS_RAW_VALUES_PRESERVED_NOT_USED_FOR_RUNTIME_ESTIMATES"
+}

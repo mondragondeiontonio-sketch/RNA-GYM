@@ -1,0 +1,37 @@
+{
+  "schema": "rnagym.research_v06.engineering_acceptance.v1",
+  "date_utc": "2026-11-07",
+  "initial_suite": {
+    "tests": 465,
+    "passed": 440,
+    "skipped": 25
+  },
+  "final_suite": {
+    "tests": 495,
+    "passed": 470,
+    "skipped": 25,
+    "failures": 0,
+    "errors": 0
+  },
+  "new_v06_tests": 30,
+  "new_v06_tests_passed": 30,
+  "public_candidate": "PASS_METADATA_CODE_ALLOWLIST",
+  "historical_public_snapshot_files": 469,
+  "local_protected_files": 65,
+  "local_protected_changed": 0,
+  "inherited_utr_fold_hashes_verified": 1020,
+  "historical_metric_matrix_hash": "MATCH",
+  "historical_fold_metric_hash": "MATCH",
+  "formal_admitted": 0,
+  "new_gpu_hours": 0,
+  "original_deterministic_verifiers": [
+    "site",
+    "upstream_split_registry",
+    "task_bundles",
+    "workstream_index",
+    "fine_taxonomy"
+  ],
+  "figure_visual_qa": "BLOCKED_SANDBOX_HELPER_NOT_AVAILABLE",
+  "remote_ci": "SUCCESS_VERIFIED_IMPLEMENTATION_COMMIT_11cc5b2",
+  "github_delivery": "reports/research_v06/GITHUB_DELIVERY.json"
+}

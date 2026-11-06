@@ -1,0 +1,37 @@
+{
+  "status": "PLANNED_REQUEST_NOT_AUTHORIZED_NOT_EXECUTED",
+  "model_sha": "PENDING_CHECKPOINT_REVIEW",
+  "tokenization": "PENDING_LOCAL_TOKENIZER_LENGTH_PROFILE",
+  "dataset_version": "PENDING_SCIENTIFIC_ADMISSION",
+  "split": "VERSIONED_S_OUT_THEN_LEGAL_CELL_OOD",
+  "track": [
+    "MATCHED_SCRATCH",
+    "FROZEN_RIDGE",
+    "FROZEN_MLP",
+    "LORA",
+    "FULL_FT"
+  ],
+  "seeds": [
+    6,
+    17,
+    29
+  ],
+  "eligible_sequences": null,
+  "sum_token_lengths": null,
+  "batch_tokens": null,
+  "peak_vram_observed": null,
+  "throughput_source": "NO_NEW_GPU_PROFILE_AUTHORIZED",
+  "steps_per_epoch": null,
+  "epochs": null,
+  "HPO_trials": null,
+  "expected_gpu_hours": null,
+  "walltime_range": "UNKNOWN_UNTIL_MEASURED_PROFILE",
+  "GPU_type": "MUST_IDENTIFY_ACTUAL_DEVICE_V100_NOT_4090_ASSUMPTIONS",
+  "retries": 0,
+  "hard_scope_cap": {
+    "requested_profile_gpu_hours": 0.25,
+    "currently_authorized_new_gpu_hours": 0
+  },
+  "stop_rule": "NO_GPU_EXECUTION_WITHOUT_NEW_EXPLICIT_SCOPE; STOP_AT_SCOPE_CAP_OR_OOM",
+  "full_matrix_budget": "UNKNOWN_PROFILE_REQUIRED_NOT_THE_OLD_150_OR_670_HOURS"
+}

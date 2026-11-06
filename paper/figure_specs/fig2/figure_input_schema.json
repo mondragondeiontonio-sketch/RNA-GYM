@@ -1,0 +1,29 @@
+{
+  "figure_id": 2,
+  "title": "From UTR sequence to regulatory phenotypes",
+  "required_evidence": [
+    "Readout-separated 6+6 comparisons with matched baseline and model evidence"
+  ],
+  "rights_aggregate": false,
+  "rights_review_status": "UNKNOWN",
+  "local_only": true,
+  "status": "BLOCKED_REVIEWED_MODEL_COMPARISON",
+  "table_schema": {
+    "type": "array",
+    "items": {
+      "type": "object",
+      "required": [
+        "data_source",
+        "n_constructs",
+        "n_independent_assays",
+        "n_biological_replicates",
+        "split_hash",
+        "metric",
+        "CI",
+        "code_sha",
+        "label",
+        "value"
+      ]
+    }
+  }
+}

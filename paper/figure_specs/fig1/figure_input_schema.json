@@ -1,0 +1,29 @@
+{
+  "figure_id": 1,
+  "title": "Assay-aware mRNA regulatory data atlas",
+  "required_evidence": [
+    "Public registry counts and source/assay independence gaps"
+  ],
+  "rights_aggregate": true,
+  "rights_review_status": "APPROVED",
+  "local_only": false,
+  "status": "PARTIAL_METADATA_ONLY",
+  "table_schema": {
+    "type": "array",
+    "items": {
+      "type": "object",
+      "required": [
+        "data_source",
+        "n_constructs",
+        "n_independent_assays",
+        "n_biological_replicates",
+        "split_hash",
+        "metric",
+        "CI",
+        "code_sha",
+        "label",
+        "value"
+      ]
+    }
+  }
+}

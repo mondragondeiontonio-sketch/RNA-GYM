@@ -1,0 +1,29 @@
+{
+  "figure_id": 6,
+  "title": "From prediction to reproducible mRNA selection",
+  "required_evidence": [
+    "Independent held-out selection or prospective measurements, no optimizer self-scoring"
+  ],
+  "rights_aggregate": false,
+  "rights_review_status": "UNKNOWN",
+  "local_only": true,
+  "status": "BLOCKED_INDEPENDENT_VALIDATION",
+  "table_schema": {
+    "type": "array",
+    "items": {
+      "type": "object",
+      "required": [
+        "data_source",
+        "n_constructs",
+        "n_independent_assays",
+        "n_biological_replicates",
+        "split_hash",
+        "metric",
+        "CI",
+        "code_sha",
+        "label",
+        "value"
+      ]
+    }
+  }
+}

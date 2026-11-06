@@ -1,0 +1,32 @@
+{
+  "version": "mrna_design.scoring.v2",
+  "replaces_v1": false,
+  "capabilities": [
+    "Translation/Reporter",
+    "Stability/Persistence",
+    "Cell-context Regulation"
+  ],
+  "gated_extensions": [
+    "Joint",
+    "Poly(A)",
+    "Design"
+  ],
+  "formal_admitted": 0,
+  "universal_score": null,
+  "primary_metrics": [
+    "per_cell_macro_spearman",
+    "per_cell_macro_mae"
+  ],
+  "undefined": "NA_UNDEFINED_NOT_ZERO_NO_REWEIGHT",
+  "hierarchy": [
+    "source_family",
+    "assay",
+    "cell_macro"
+  ],
+  "same_assay_vote": "ONCE",
+  "interaction_gain": "S_INTERACTION_MINUS_S_ADDITIVE",
+  "error_gain": "E_ADDITIVE_MINUS_E_INTERACTION",
+  "ci": "PAIRED_CONNECTED_SEQUENCE_GROUP_BOOTSTRAP_CONDITIONAL_FIXED_MODELS",
+  "bootstrap_replicates": 200,
+  "no_replicates": "NO_MEASUREMENT_NOISE_OR_CAUSAL_CLAIM"
+}

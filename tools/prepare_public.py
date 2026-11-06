@@ -72,6 +72,14 @@ def selected_files(root):
         selected += [str(p.relative_to(root)) for p in sorted((root / 'results/leaderboards'/scope).glob('*.tsv'))]
     selected += [str(p.relative_to(root)) for p in sorted((root / 'site').rglob('*'))
                  if p.is_file()]
+    # V0.6: nested methods/configs/tests plus reviewed public aggregate artifacts.
+    for folder in ('rna_gym/research_v06', 'tools/mrna_design', 'tests/mrna_design',
+                   'configs/studies/mrna_design_v06', 'docs/mrna_design',
+                   'reports/research_v06', 'paper', 'manifests'):
+        selected += [str(p.relative_to(root)) for p in sorted((root / folder).rglob('*'))
+                     if p.is_file() and '__pycache__' not in p.parts
+                     and p.suffix in {'.py', '.json', '.yaml', '.md', '.tsv', '.svg'}]
+    selected += ['.github/workflows/research-v06.yml']
     return sorted(set(selected))
 
 

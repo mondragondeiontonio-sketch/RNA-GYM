@@ -1,0 +1,40 @@
+{
+  "source_id": "REQUIRED",
+  "source_release": "REQUIRED",
+  "source_doi": "NOT_REPORTED",
+  "source_accession": "NOT_REPORTED",
+  "assay_id": "REQUIRED",
+  "kind": "tria_decay",
+  "readout_id": "FITTED_DECAY_RATE",
+  "label_raw_unit": "UNKNOWN",
+  "label_formula": "AUTHOR_VALUE_UNCHANGED",
+  "label_direction": "UNKNOWN",
+  "expected_cells": 47,
+  "selected_cells": [
+    "A-172",
+    "A-427",
+    "BT-474"
+  ],
+  "raw_files": [
+    {
+      "path": "INPUT.csv",
+      "sha256": "REQUIRED_SHA256"
+    }
+  ],
+  "rights_research": false,
+  "rights_evaluate": false,
+  "rights_redistribute": false,
+  "rights_aggregate": false,
+  "rights_review_status": "UNKNOWN",
+  "local_only": true,
+  "species": "NOT_REPORTED",
+  "cell_ontology": "NOT_REPORTED",
+  "delivery_mode": "NOT_REPORTED",
+  "cap_type": "NOT_REPORTED",
+  "nucleotide_modification": "NOT_REPORTED",
+  "protein_cds_id": "NOT_REPORTED",
+  "backbone_id": "NOT_REPORTED",
+  "dose": "NOT_REPORTED",
+  "batch_id": "NOT_REPORTED",
+  "scientific_review_status": "SCIENTIFIC_HOLD"
+}

@@ -1,0 +1,29 @@
+{
+  "figure_id": 4,
+  "title": "Pretraining, adaptation and distribution shift",
+  "required_evidence": [
+    "Matched Scratch/Frozen/LoRA/FT, sample efficiency, actual compute profile"
+  ],
+  "rights_aggregate": false,
+  "rights_review_status": "UNKNOWN",
+  "local_only": true,
+  "status": "BLOCKED_MATCHED_MATRIX_AND_GPU_PROFILE",
+  "table_schema": {
+    "type": "array",
+    "items": {
+      "type": "object",
+      "required": [
+        "data_source",
+        "n_constructs",
+        "n_independent_assays",
+        "n_biological_replicates",
+        "split_hash",
+        "metric",
+        "CI",
+        "code_sha",
+        "label",
+        "value"
+      ]
+    }
+  }
+}

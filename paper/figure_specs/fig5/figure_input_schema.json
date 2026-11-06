@@ -1,0 +1,29 @@
+{
+  "figure_id": 5,
+  "title": "Joint translation-stability and Poly(A) context",
+  "required_evidence": [
+    "Version-correct same-construct PERSIST MRL/HL or real factorial tail measurements"
+  ],
+  "rights_aggregate": false,
+  "rights_review_status": "UNKNOWN",
+  "local_only": true,
+  "status": "BLOCKED_PERSIST_LABEL_VERSION_AND_TAIL_DATA",
+  "table_schema": {
+    "type": "array",
+    "items": {
+      "type": "object",
+      "required": [
+        "data_source",
+        "n_constructs",
+        "n_independent_assays",
+        "n_biological_replicates",
+        "split_hash",
+        "metric",
+        "CI",
+        "code_sha",
+        "label",
+        "value"
+      ]
+    }
+  }
+}
