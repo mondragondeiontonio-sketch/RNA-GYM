@@ -12,6 +12,8 @@ dependencies = []
 [project.optional-dependencies]
 research-v06 = ["numpy==2.2.6", "scipy==1.14.1", "scikit-learn==1.5.2", "matplotlib==3.10.9"]
 
+legacy-replay = ["pyarrow==17.0.0"]
+
 [tool.setuptools.packages.find]
 where = ["."]
 include = ["rna_gym*", "tools*"]

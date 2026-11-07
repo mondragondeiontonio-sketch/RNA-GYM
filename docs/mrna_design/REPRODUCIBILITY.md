@@ -96,3 +96,34 @@ No missing value is filled, labels are not rescaled or sign-flipped, and context
 parameters absent from source material are NOT_REPORTED, not inferred controls.
 
 CI/fixture PASS establishes engineering behavior, **not assay admission**.
+
+## Reuse completed UTR_bench Frozen predictions without GPU
+
+The user's original ten-fold files and frozen 6+6 panel can be reused directly.
+The three-fold pilot is a distinct protocol and is not silently substituted.
+`replay_legacy_frozen` never loads a model, creates a split or changes an old
+prediction. Install the optional Parquet reader with:
+
+```bash
+python -m pip install -e '.[research-v06,legacy-replay]'
+CUDA_VISIBLE_DEVICES='' OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 \
+python -m tools.mrna_design.replay_legacy_frozen \
+  --matrix "$MATRIX" --project-root "$FROZEN_PROJECT" --raw-root "$UTR_RAW_ROOT" \
+  --registry data/registries/utr_legacy_102.json \
+  --historical data/registries/utr_historical_result_status.json \
+  --dataset 3UTR/007_com_HepG2_Set2 --out runs/legacy-raw-replay-001
+```
+
+Every original fold hash, completed-summary/OOF receipt, sequence hash, row ID,
+raw/scaled truth and original test membership must match. Inverse parameters
+are computed from **original train rows only** and verified against all source
+z-scores with fixed tolerances. No scale/offset is fitted on test truth.
+The new output is `TRAIN_ONLY_RECONSTRUCTED_NOT_ORIGINAL_STORED_METADATA`:
+this is an independently reproducible reconstruction, **not recovery of missing
+original stored metadata**. Historical `RAW_INVERSE_PENDING`, admission and
+source review remain unchanged. Raw-label scale may itself be logarithmic or a
+transformed readout; no additional log or sign conversion is performed.
+
+All reconstructed predictions and assay statistics remain local-only pending
+copy-specific rights and scientific review. This CPU work requires no MD job
+termination, GPU allocation, CUDA context, model forward pass or new training.
