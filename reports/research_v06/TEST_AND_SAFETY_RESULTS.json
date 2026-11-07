@@ -32,5 +32,6 @@
     "fine_taxonomy"
   ],
   "figure_visual_qa": "BLOCKED_SANDBOX_HELPER_NOT_AVAILABLE",
-  "remote_ci": "PENDING_PR_RUN_NOT_CLAIMED_COMPLETE"
+  "remote_ci": "SUCCESS_VERIFIED_IMPLEMENTATION_COMMIT_11cc5b2",
+  "github_delivery": "reports/research_v06/GITHUB_DELIVERY.json"
 }

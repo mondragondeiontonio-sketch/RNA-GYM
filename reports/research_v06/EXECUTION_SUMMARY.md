@@ -86,3 +86,21 @@ No PR is automatically merged.
 
 All six have specs, input schemas, data-status tables and executable Python
 wrappers. Missing evidence emits BLOCKED_DATA, never invented model results.
+
+## Actual GitHub delivery
+
+Feature branch: `feat/mrna-v06-research-platform`.
+Implementation commit: `11cc5b2c0f15463af9c253f39e908ece483ab602`.
+Base: `27220368a186f2c4568fede27db963f23b4302dd`.
+[PR #7](https://github.com/mondragondeiontonio-sketch/RNA-GYM/pull/7) is **OPEN**,
+not merged. The original `verify` job and dedicated `research-cpu` jobs completed
+**SUCCESS** for the implementation commit; Pages `deploy` was correctly skipped
+on the PR. Raw check URLs and states are in `GITHUB_DELIVERY.json`.
+
+Public source code, configurations, synthetic fixtures, safe metadata, methods,
+figure contracts and website changes are pushed. Actual source data, local
+predictions, private source paths, weights and unreviewed phenotype statistics
+are absent. Production Pages is not deployed without a separately approved merge.
+
+Local host and GitHub event clocks differ by approximately eight hours; original
+timestamps are retained, not silently reconciled or used as elapsed CPU time.
