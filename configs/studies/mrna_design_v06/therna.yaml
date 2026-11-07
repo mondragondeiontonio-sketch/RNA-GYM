@@ -1,0 +1,22 @@
+{
+  "source_penta": "therna/Penta-47x27K",
+  "source_tria": "therna/Tria-47x28K",
+  "penta_readout": "GEX_NORMALIZED_REPORTER",
+  "tria_readouts": [
+    "NORMALIZED_RNA_ABUNDANCE",
+    "FITTED_DECAY_RATE"
+  ],
+  "expected_cells": 47,
+  "protocols": [
+    "S-OUT",
+    "C-OUT-ID",
+    "C-OUT-DESC",
+    "SC-OUT",
+    "TIME-OUT"
+  ],
+  "C-OUT-FEW": "PLANNED_NOT_IMPLEMENTED",
+  "cell_descriptor_status": "NOT_AVAILABLE",
+  "replicate_default": "REPLICATES_NOT_AVAILABLE",
+  "dna_t0_track": "MEASURED_COVARIATE_ONLY_NOT_SEQUENCE_INPUT",
+  "penta_actual_status": "BLOCKED_MISSING_RAW_TARGET"
+}

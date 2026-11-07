@@ -1,0 +1,18 @@
+{
+  "version": "mrna_design_v06",
+  "automatic_download": false,
+  "raw_root": "CLI_REQUIRED",
+  "local_copy_rights_default": "UNKNOWN",
+  "observation_identity": [
+    "source_release",
+    "assay_id",
+    "construct_id",
+    "readout_id",
+    "cell_id",
+    "timepoint_value",
+    "biological_replicate"
+  ],
+  "unknown_fields": "NOT_REPORTED_NOT_IMPUTED",
+  "existing_registry": "data/registries/utr_legacy_102.json",
+  "candidate_248": "NOT_LOCATED"
+}

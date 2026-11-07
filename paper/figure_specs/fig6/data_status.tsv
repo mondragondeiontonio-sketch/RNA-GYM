@@ -1,0 +1,2 @@
+figure_id	status	required_evidence
+6	BLOCKED_INDEPENDENT_VALIDATION	Independent held-out selection or prospective measurements, no optimizer self-scoring

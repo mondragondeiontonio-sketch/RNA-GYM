@@ -1,0 +1,2 @@
+figure_id	status	required_evidence
+4	BLOCKED_MATCHED_MATRIX_AND_GPU_PROFILE	Matched Scratch/Frozen/LoRA/FT, sample efficiency, actual compute profile

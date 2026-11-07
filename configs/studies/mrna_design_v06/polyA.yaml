@@ -1,0 +1,26 @@
+{
+  "tasks": [
+    "APA_USAGE",
+    "TAIL_LENGTH_DYNAMICS",
+    "TAIL_DESIGN_FUNCTION"
+  ],
+  "status": "SCIENTIFIC_HOLD",
+  "real_admitted_training_samples": 0,
+  "expression_pseudolabels": false,
+  "factorial_required_for_interaction": [
+    "UTR",
+    "TAIL",
+    "CELL"
+  ],
+  "design_length_not_measured_length": true,
+  "required_measurement_qc": [
+    "platform",
+    "caller_version",
+    "selection_method",
+    "biological_sample_id",
+    "calibration",
+    "topology",
+    "linkage",
+    "modification"
+  ]
+}

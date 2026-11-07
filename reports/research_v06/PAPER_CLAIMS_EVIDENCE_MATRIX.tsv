@@ -1,0 +1,7 @@
+claim	evidence	status	figure	allowed_language
+Legacy view inventory	Existing public registry	SUPPORTED_PUBLIC_METADATA	1	102 views, not 102 independent assays
+Predictable interaction	Local CPU pilot and nonuniform controls	PRELIMINARY_NOT_PAPER_RESULT	3	Exploratory only; noise not identified
+FM pretraining benefit	Historical unmatched exploratory results	UNTESTED_MATCHED_ATTRIBUTION	4	No identified pretraining gain
+Joint translation stability	PERSIST version-mismatched half-life	SCIENTIFIC_HOLD	5	No tradeoff estimate
+Tail x UTR x Cell	No factorial measured data	NOT_IDENTIFIABLE	5	Hypothesis only
+Independent design benefit	No independent validation	UNTESTED_HYPOTHESIS	6	No efficacy claim

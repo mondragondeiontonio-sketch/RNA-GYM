@@ -1,0 +1,14 @@
+{
+  "backend": "python",
+  "figure_ids": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+  ],
+  "source_policy": "REAL_PUBLIC_APPROVED_OR_BLOCKED_DATA",
+  "figure1": "PARTIAL_PUBLIC_REGISTRY_METADATA",
+  "figure2_to_6": "BLOCKED_SCIENTIFIC_OR_RIGHTS_EVIDENCE"
+}

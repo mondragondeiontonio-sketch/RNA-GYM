@@ -42,6 +42,34 @@
 > See the [split and admission audit](docs/SPLIT_ADMISSION_AUDIT.md).
 > The website is an audit preview with its own dated snapshots.
 
+## Context-aware mRNA research track V0.6 · 2026-11-06
+
+An incremental **CPU-only, evidence-gated research layer** now provides explicit
+Source/Assay/Construct identities, local THERNA import/QC, legal axis splits,
+B0–B4 baselines, saved-prediction replay, true-label Poly(A) gates and six
+source-aware figure contracts. Existing data, Frozen results, splits and GPU
+ledgers are preserved. **Formal admission remains zero.**
+
+```bash
+python -m pip install -e '.[research-v06]'
+python -m tools.mrna_design --help
+python -m tools.mrna_design e2e --out runs/v06-demo-001
+```
+
+The demo is synthetic, not biological evidence. Actual authorized Tria CPU
+analyses remain local pending copy-specific publication rights and assay review.
+No new GPU job, weight download or automatic main merge is authorized.
+Penta raw-source recovery, the missing 248 candidate audit table, independent
+cell descriptors, PERSIST half-life version matching and measured Poly(A) labels
+remain explicit blockers, not substituted data.
+
+See [reproduction commands](docs/mrna_design/REPRODUCIBILITY.md),
+[THERNA protocol](docs/mrna_design/THERNA_PROTOCOL.md),
+[data atlas](docs/mrna_design/DATA_ATLAS.md),
+[Poly(A) evidence gates](docs/mrna_design/POLYA_PROTOCOL.md),
+[execution summary](reports/research_v06/EXECUTION_SUMMARY.md) and the
+[public research status](site/mrna-design.html).
+
 ## Real bounded API workflow · 2026-11-03
 
 The local [AdaptationPilot API](docs/ADAPTATION_API.md) now accepts the explicit

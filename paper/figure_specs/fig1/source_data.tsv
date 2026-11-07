@@ -1,0 +1,3 @@
+label	value	data_source	n_constructs	n_independent_assays	n_biological_replicates	split_hash	metric	CI	code_sha	evidence_kind
+5-prime UTR	41	data/registries/utr_legacy_102.json	UNKNOWN	UNKNOWN	UNKNOWN	NOT_APPLICABLE	legacy_view_count	NOT_APPLICABLE	2a64da3546a90ed61f8a2c13e2ec9280379609496506c00e23c9577e552efd3a	PUBLIC_REGISTRY_METADATA
+3-prime UTR	61	data/registries/utr_legacy_102.json	UNKNOWN	UNKNOWN	UNKNOWN	NOT_APPLICABLE	legacy_view_count	NOT_APPLICABLE	2a64da3546a90ed61f8a2c13e2ec9280379609496506c00e23c9577e552efd3a	PUBLIC_REGISTRY_METADATA

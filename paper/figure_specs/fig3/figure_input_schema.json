@@ -1,0 +1,29 @@
+{
+  "figure_id": 3,
+  "title": "Predictability of Sequence x Cell x Time",
+  "required_evidence": [
+    "Penta/Tria B0-B5, paired interaction CI, noise controls, legal OOD"
+  ],
+  "rights_aggregate": false,
+  "rights_review_status": "UNKNOWN",
+  "local_only": true,
+  "status": "LOCAL_EXPLORATORY_RIGHTS_AND_ASSAY_HOLD",
+  "table_schema": {
+    "type": "array",
+    "items": {
+      "type": "object",
+      "required": [
+        "data_source",
+        "n_constructs",
+        "n_independent_assays",
+        "n_biological_replicates",
+        "split_hash",
+        "metric",
+        "CI",
+        "code_sha",
+        "label",
+        "value"
+      ]
+    }
+  }
+}

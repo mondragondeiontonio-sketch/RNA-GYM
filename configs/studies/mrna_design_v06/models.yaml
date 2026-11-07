@@ -1,0 +1,38 @@
+{
+  "seed": 6,
+  "max_k": 3,
+  "interaction_rank": 4,
+  "ridge_alphas": [
+    1.0,
+    10.0
+  ],
+  "bootstrap_replicates": 200,
+  "max_observations": 10000,
+  "max_sequences_per_role": {
+    "train": 512,
+    "val": 128,
+    "test": 512
+  },
+  "track_status": {
+    "TRAD_BASELINE": "IMPLEMENTED_CPU",
+    "MATCHED_SCRATCH": "PLANNED_GPU_HOLD",
+    "FROZEN_RIDGE": "REUSE_EXISTING_PILOT",
+    "FROZEN_MLP": "REUSE_EXISTING_PILOT",
+    "LORA": "REUSE_EXISTING_EXPLORATORY_ONLY",
+    "FULL_FT": "PLANNED_GPU_HOLD"
+  },
+  "learning_curve_sizes": [
+    128,
+    512,
+    2048,
+    8192,
+    "FULL"
+  ],
+  "learning_curve_seeds": [
+    6,
+    17,
+    29
+  ],
+  "B4_method": "TRAIN_ONLY_SVD_KMER_FACTORS_TIMES_CONTEXT_RIDGE",
+  "cpu_scope": "BOUND_METADATA_SELECTED_THREE_CELLS_NOT_TEST_SELECTED"
+}

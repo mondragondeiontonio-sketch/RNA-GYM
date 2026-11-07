@@ -9,6 +9,9 @@ description = "Native RNAHub/RNABenchmark interface over the RNA Gym research ch
 requires-python = ">=3.10"
 dependencies = []
 
+[project.optional-dependencies]
+research-v06 = ["numpy==2.2.6", "scipy==1.14.1", "scikit-learn==1.5.2", "matplotlib==3.10.9"]
+
 [tool.setuptools.packages.find]
 where = ["."]
 include = ["rna_gym*", "tools*"]
